@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Admin;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,13 @@ class checkAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        if (auth('admin')->check()) {
+            $admin = Admin::find(auth('admin')->user()->id);
+            if ($admin && $admin->status == Admin::STATUS_ACTIVE) {
+                return $next($request);
+            }
+            auth('admin')->logout();
+        }
+        return redirect()->route('admin.login');
     }
 }

@@ -19,7 +19,6 @@ class seed_admin extends Seeder
         DB::table('admins')->delete();
 
         Admin::create([
-            'admin' => true,
             'status' => Admin::STATUS_ACTIVE,
             'name' => 'Quản trị viên',
             'email' => 'admin@gmail.com',
