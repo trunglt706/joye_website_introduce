@@ -14,10 +14,8 @@ class Admin extends Model
     protected $fillable = [
         'code',
         'name',
-        'phone',
         'email',
         'password',
-        'description',
         'status',
         'last_login',
     ];
@@ -39,14 +37,10 @@ class Admin extends Model
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->code = $model->code ?? generateRandomString(8, true);
         });
-        self::created(function ($model) {
-        });
-        self::updating(function ($model) {
-        });
-        self::updated(function ($model) {
-        });
-        self::deleted(function ($model) {
-        });
+        self::created(function ($model) {});
+        self::updating(function ($model) {});
+        self::updated(function ($model) {});
+        self::deleted(function ($model) {});
     }
 
     const STATUS_ACTIVE = 'active';
@@ -71,11 +65,6 @@ class Admin extends Model
         return $query->where('admins.email', $email);
     }
 
-    public function scopeOfPhone($query, $phone)
-    {
-        return $query->where('admins.phone', $phone);
-    }
-
     public function scopeOfStatus($query, $status)
     {
         return $query->where('admins.status', $status);
@@ -83,6 +72,6 @@ class Admin extends Model
 
     public function scopeSearch($query, $search)
     {
-        return $query->whereAny(['admins.code', 'admins.name', 'admins.phone', 'admins.email'], 'like', "%$search%");
+        return $query->whereAny(['admins.code', 'admins.name', 'admins.email'], 'like', "%$search%");
     }
 }

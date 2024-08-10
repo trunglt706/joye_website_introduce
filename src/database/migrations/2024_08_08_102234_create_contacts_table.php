@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('contacts', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
+            $table->string('code')->unique();
+            $table->string('name');
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('question')->nullable();
+            $table->text('comment')->nullable();
+            $table->enum('status', ['un_active', 'active', 'blocked'])->index()->nullable()->default('un_active');
             $table->timestamps();
         });
     }

@@ -5,28 +5,30 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Question extends Model
+class SettingGroup extends Model
 {
     use HasFactory;
-    protected $table = 'questions';
+    protected $table = 'setting_groups';
 
     protected $fillable = [
         'code',
         'name',
-        'description',
-        'status',
+        'icon',
         'numering',
+        'status'
     ];
 
     protected $hidden = [];
 
-    protected $casts = [];
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s',
+        'updated_at' => 'datetime:Y-m-d H:i:s',
+    ];
 
     public static function boot()
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->code = $model->code ?? generateRandomString();
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->numering = $model->numering ?? self::getOrder();
         });
@@ -47,27 +49,29 @@ class Question extends Model
         return $status == '' ? $_status : $_status["$status"];
     }
 
-    public function scopeOfCode($query, $code)
-    {
-        return $query->where('questions.code', $code);
-    }
-
     public function scopeOfStatus($query, $status)
     {
-        return $query->where('questions.status', $status);
+        return $query->where('setting_groups.status', $status);
     }
 
-    public function scopeSearch($query, $search)
+    public function scopeOfCode($query, $code)
     {
-        return $query->where(function ($query) use ($search) {
-            $query->where('questions.code', 'LIKE', "%$search%")
-                ->orWhere('questions.name', 'LIKE', "%$search%");
-        });
+        return $query->where('setting_groups.code', $code);
+    }
+
+    public function settings()
+    {
+        return $this->hasMany(Setting::class, 'group_id', 'id')->where('status', self::STATUS_ACTIVE);
+    }
+
+    public function settingAll()
+    {
+        return $this->hasMany(Setting::class, 'group_id', 'id');
     }
 
     public static function getOrder()
     {
-        $max = Question::max('numering') ?? 0;
+        $max = SettingGroup::max('numering') ?? 0;
         return $max + 1;
     }
 }

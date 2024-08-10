@@ -12,7 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
+            $table->string('slug')->unique();
+            $table->string('code')->unique();
+            $table->string('name');
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->text('content')->nullable();
+            $table->integer('important')->nullable()->default(0);
+            $table->json('tags')->nullable();
+            $table->enum('status', ['draft', 'active', 'blocked'])->index()->nullable()->default('draft');
             $table->timestamps();
         });
     }

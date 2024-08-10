@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('admin_menus', function (Blueprint $table) {
             $table->id();
+            $table->integer('parent_id')->nullable();
+            $table->string('route_name')->nullable();
+            $table->string('name');
+            $table->string('icon')->nullable();
+            $table->integer('numering')->nullable();
+            $table->json('active_route_name')->nullable();
+            $table->json('roles')->nullable();
+            $table->enum('status', ['active', 'blocked'])->default('blocked');
             $table->timestamps();
         });
     }

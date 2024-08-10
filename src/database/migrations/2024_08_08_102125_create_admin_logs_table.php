@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('admin_logs', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
+            $table->string('code')->unique();
+            $table->unsignedBigInteger('admin_id')->index()->nullable();
+            $table->string('link');
+            $table->string('content');
+            $table->string('ip')->nullable();
+            $table->json('payload')->nullable();
+            $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
             $table->timestamps();
         });
     }

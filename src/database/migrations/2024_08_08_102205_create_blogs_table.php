@@ -12,8 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
+            $table->unsignedBigInteger('group_id')->index()->nullable();
+            $table->string('slug')->unique();
+            $table->string('code')->unique();
+            $table->string('name');
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->text('content')->nullable();
+            $table->integer('important')->nullable()->default(0);
+            $table->json('tags')->nullable();
+            $table->enum('status', ['draft', 'active', 'blocked'])->index()->nullable()->default('draft');
             $table->timestamps();
+            $table->foreign('group_id')->references('id')->on('blog_groups');
         });
     }
 

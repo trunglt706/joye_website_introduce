@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('questions', function (Blueprint $table) {
+        Schema::create('setting_groups', function (Blueprint $table) {
             $table->id()->index();
             $table->string('code')->unique();
             $table->string('name');
-            $table->text('description')->nullable();
-            $table->integer('numering')->nullable();
+            $table->string('icon')->nullable();
+            $table->integer('numering')->nullable()->default(0);
             $table->enum('status', ['active', 'blocked'])->index()->nullable()->default('active');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('questions');
+        Schema::dropIfExists('setting_groups');
     }
 };

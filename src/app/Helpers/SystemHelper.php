@@ -1,15 +1,10 @@
 <?php
 
-use App\Models\AdminHistory;
+use App\Http\Controllers\DropboxController;
 use App\Models\AdminLog;
 use App\Models\AdminMenu;
-use App\Models\AdminPermission;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Route;
 
 // color
 if (!defined('COLOR_PRIMARY')) {
@@ -145,5 +140,47 @@ if (!function_exists('get_menu_admin')) {
     function get_menu_admin()
     {
         return AdminMenu::with('menus')->whereNull('parent_id')->orderBy('numering', 'ASC')->get();
+    }
+}
+if (!function_exists('check_active_menu')) {
+    function check_active_menu($menus, $class = 'active')
+    {
+        return in_array(Route::currentRouteName(), $menus) ? $class : '';
+    }
+}
+
+if (!defined('MAX_FILE_SIZE_UPLOAD')) {
+    define('MAX_FILE_SIZE_UPLOAD', (5 * 1024));
+}
+
+if (!function_exists('get_link_public')) {
+    function get_link_public($full_link)
+    {
+        $url = str_replace(env('APP_URL') . '/', '', $full_link);
+        return $url;
+    }
+}
+
+if (!function_exists('get_url')) {
+    function get_url($uri)
+    {
+        $dropbox =  new DropboxController();
+        return $dropbox->url($uri);
+    }
+}
+
+if (!function_exists('store_file')) {
+    function store_file($file, $uri)
+    {
+        $dropbox =  new DropboxController();
+        return $dropbox->store($file, $uri);
+    }
+}
+
+if (!function_exists('delete_file')) {
+    function delete_file($uri)
+    {
+        $dropbox =  new DropboxController();
+        return $dropbox->delete($uri);
     }
 }
