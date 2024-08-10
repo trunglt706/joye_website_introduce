@@ -4,13 +4,12 @@
         <div class="row justify-content-center">
             <div class="col-lg-4">
                 <div class="card-group d-block d-md-flex row">
-                    <div class="card col-md-7 p-4 mb-0">
+                    <div class="card col-md-7 p-2 mb-0">
                         <div class="card-body">
                             <form action="{{ route('admin.login_post') }}" method="post">
                                 @csrf
-                                <h3>Đăng nhập</h3>
-                                <p class="text-body-secondary mb-2">Tài khoản quản trị viên</p>
-                                @include('general.error')
+                                <h3 class="text-center mb-2 text-uppercase">Đăng nhập</h3>
+                                @include('guest.general.error')
                                 <div class="input-group my-3">
                                     <span class="input-group-text">
                                         <svg class="icon">

@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Middleware\checkAdmin;
 use Illuminate\Support\Facades\Route;
 
-Route::name('admin.')->group(function () {
+Route::name('admin.')->prefix('admin')->group(function () {
     Route::get('login', [AuthController::class, 'login'])->name('login');
     Route::post('login', [AuthController::class, 'login_post'])->name('login_post');
 
