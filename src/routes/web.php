@@ -14,7 +14,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('gioi-thieu', [AboutController::class, 'index'])->name('about');
 // trang dịch vụ
 Route::get('dich-vu', [ServiceController::class, 'index'])->name('service');
-Route::get('dich-vu/{slug}', [ServiceController::class, 'detail'])->name('service');
+Route::get('dich-vu/{slug}', [ServiceController::class, 'detail'])->name('service.detail');
 // trang câu hỏi thường gặp
 Route::get('faq', [FaqController::class, 'index'])->name('faq');
 // trang liên hệ

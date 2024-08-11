@@ -25,7 +25,7 @@
                             <a class="nav-link {{Route::currentRouteName() == 'about' ? 'active' : ''}}" href="/gioi-thieu">Giới thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{Route::currentRouteName() == 'service' ? 'active' : ''}}" href="/dich-vu">Dịch vụ</a>
+                            <a class="nav-link {{(Route::currentRouteName() == 'service' || Route::currentRouteName() == 'service.detail') ? 'active' : ''}}" href="/dich-vu">Dịch vụ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{(Route::currentRouteName() == 'blog' || Route::currentRouteName() == 'blog.detail') ? 'active' : ''}}" href="/tin-tuc">Tin tức</a>
