@@ -6,24 +6,23 @@
                 <li class="breadcrumb-item">
                     <a href="{{ route('admin.index') }}">Trang chủ</a>
                 </li>
-                <li class="breadcrumb-item active">Tài khoản quản trị</li>
+                <li class="breadcrumb-item active">Nhóm bài viết</li>
             </ol>
         </nav>
-        @include('admin.admin.filter')
+        @include('admin.blog_group.filter')
         <div class="table-responsive table-loading">
             <table class="table border mb-0">
                 <thead class="fw-semibold text-nowrap">
                     <tr class="align-middle">
                         <th class="bg-body-secondary text-center w-100px">#</th>
-                        <th class="bg-body-secondary">Họ tên</th>
-                        <th class="bg-body-secondary">Email</th>
-                        <th class="bg-body-secondary">Quyền</th>
+                        <th class="bg-body-secondary">Tên nhóm</th>
+                        <th class="bg-body-secondary">Số bài viết</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
-                        <th class="bg-body-secondary text-end w-150px">Last login</th>
+                        <th class="bg-body-secondary text-end w-150px">Ngày tạo</th>
                     </tr>
                 </thead>
                 <tbody id="load-table">
-                    <td colspan="6" class="text-center empty-data">
+                    <td colspan="5" class="text-center empty-data">
                         <div class="text-center">
                             Không có dữ liệu
                         </div>
@@ -32,23 +31,15 @@
             </table>
         </div>
     </div>
-    @include('admin.admin.create')
+    @include('admin.blog_group.create')
 @endsection
 @push('js')
     <script>
-        const routeList = "{{ route('admin.admin.table') }}";
+        const routeList = "{{ route('admin.blog_group.table') }}";
         filterTable();
 
         function filterTable(currentPage = 1) {
             loadTable(routeList, currentPage);
         };
-
-        $(document).on('click', '#flexSwitchCheckAdmin', function() {
-            if ($(this).is(":checked")) {
-                $('.div-role').addClass('d-none');
-            } else {
-                $('.div-role').removeClass('d-none');
-            }
-        })
     </script>
 @endpush

@@ -10,14 +10,13 @@ use App\Http\Controllers\Admin\LogActionController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Middleware\checkAdmin;
 use Illuminate\Support\Facades\Route;
 
-Route::name('admin.')->prefix('admin')->group(function () {
-    Route::get('login', [AuthController::class, 'login'])->name('login');
-    Route::post('login', [AuthController::class, 'login_post'])->name('login_post');
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'login_post'])->name('login_post');
 
-    Route::middleware([checkAdmin::class])->group(function () {
+Route::name('admin.')->prefix('admin')->group(function () {
+    Route::middleware(['checkAdmin'])->group(function () {
         Route::get('', [HomeController::class, 'index'])->name('index');
         Route::get('logout', [HomeController::class, 'logout'])->name('logout');
         Route::name('log_action.')->prefix('log_action')->group(function () {
@@ -37,26 +36,35 @@ Route::name('admin.')->prefix('admin')->group(function () {
             Route::get('', [BlogController::class, 'index'])->name('index');
             Route::get('table', [BlogController::class, 'table'])->name('table');
             Route::get('/{id}', [BlogController::class, 'detail'])->name('detail');
+            Route::post('create', [BlogController::class, 'create'])->name('create');
+            Route::post('update', [BlogController::class, 'update'])->name('update');
         });
         Route::name('blog_group.')->prefix('blog_group')->group(function () {
             Route::get('', [BlogGroupController::class, 'index'])->name('index');
             Route::get('table', [BlogGroupController::class, 'table'])->name('table');
             Route::get('/{id}', [BlogGroupController::class, 'detail'])->name('detail');
+            Route::post('create', [BlogGroupController::class, 'create'])->name('create');
+            Route::post('update', [BlogGroupController::class, 'update'])->name('update');
         });
         Route::name('service.')->prefix('service')->group(function () {
             Route::get('', [ServiceController::class, 'index'])->name('index');
             Route::get('table', [ServiceController::class, 'table'])->name('table');
             Route::get('/{id}', [ServiceController::class, 'detail'])->name('detail');
+            Route::post('create', [ServiceController::class, 'create'])->name('create');
+            Route::post('update', [ServiceController::class, 'update'])->name('update');
         });
         Route::name('contact.')->prefix('contact')->group(function () {
             Route::get('', [ContactController::class, 'index'])->name('index');
             Route::get('table', [ContactController::class, 'table'])->name('table');
             Route::get('/{id}', [ContactController::class, 'detail'])->name('detail');
+            Route::post('update', [ContactController::class, 'update'])->name('update');
         });
         Route::name('faq.')->prefix('faq')->group(function () {
             Route::get('', [QuestionController::class, 'index'])->name('index');
             Route::get('table', [QuestionController::class, 'table'])->name('table');
             Route::get('/{id}', [QuestionController::class, 'detail'])->name('detail');
+            Route::post('create', [QuestionController::class, 'create'])->name('create');
+            Route::post('update', [QuestionController::class, 'update'])->name('update');
         });
         Route::name('setting.')->prefix('setting')->group(function () {
             Route::get('', [SettingController::class, 'index'])->name('index');

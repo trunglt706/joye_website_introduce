@@ -17,13 +17,11 @@
                         <th class="bg-body-secondary text-center w-100px">#</th>
                         <th class="bg-body-secondary">Họ tên</th>
                         <th class="bg-body-secondary">Email</th>
-                        <th class="bg-body-secondary">Quyền</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
-                        <th class="bg-body-secondary text-end w-150px">Last login</th>
                     </tr>
                 </thead>
                 <tbody id="load-table">
-                    <td colspan="6" class="text-center empty-data">
+                    <td colspan="4" class="text-center empty-data">
                         <div class="text-center">
                             Không có dữ liệu
                         </div>
@@ -42,13 +40,5 @@
         function filterTable(currentPage = 1) {
             loadTable(routeList, currentPage);
         };
-
-        $(document).on('click', '#flexSwitchCheckAdmin', function() {
-            if ($(this).is(":checked")) {
-                $('.div-role').addClass('d-none');
-            } else {
-                $('.div-role').removeClass('d-none');
-            }
-        })
     </script>
 @endpush

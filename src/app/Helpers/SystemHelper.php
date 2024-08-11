@@ -115,7 +115,7 @@ if (!function_exists('generate_limit_select')) {
     function generate_limit_select($values = [10, 20, 50, 100], $modal = "", $class = "form-filter")
     {
         $data_modal = $modal ? "data-modal='$modal'" : '';
-        $string = '<div class="w-75px me-1"><select name="limit" class="form-select filter-limit ' . $class . '" ' . $data_modal . '>';
+        $string = '<div class="w-75px mx-1"><select name="limit" class="form-select filter-limit ' . $class . '" ' . $data_modal . '>';
         foreach ($values as $key => $v) {
             $selected = $key == 0 ? ' selected' : '';
             $string .= '<option value="' . $v . '" ' . $selected . '>' . $v . '</option>';
