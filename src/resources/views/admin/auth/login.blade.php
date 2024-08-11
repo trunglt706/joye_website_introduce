@@ -6,7 +6,7 @@
                 <div class="card-group d-block d-md-flex row">
                     <div class="card col-md-7 p-2 mb-0">
                         <div class="card-body">
-                            <form action="{{ route('admin.login_post') }}" method="post">
+                            <form action="{{ route('login_post') }}" method="post">
                                 @csrf
                                 <h3 class="text-center mb-2 text-uppercase">Đăng nhập</h3>
                                 @include('guest.general.error')

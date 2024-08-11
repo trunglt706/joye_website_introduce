@@ -23,6 +23,6 @@ class checkAdmin
             }
             auth('admin')->logout();
         }
-        return redirect()->route('admin.login');
+        return redirect()->route('login');
     }
 }

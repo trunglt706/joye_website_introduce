@@ -10,14 +10,13 @@ use App\Http\Controllers\Admin\LogActionController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Middleware\checkAdmin;
 use Illuminate\Support\Facades\Route;
 
-Route::name('admin.')->prefix('admin')->group(function () {
-    Route::get('login', [AuthController::class, 'login'])->name('login');
-    Route::post('login', [AuthController::class, 'login_post'])->name('login_post');
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'login_post'])->name('login_post');
 
-    Route::middleware([checkAdmin::class])->group(function () {
+Route::name('admin.')->prefix('admin')->group(function () {
+    Route::middleware(['checkAdmin'])->group(function () {
         Route::get('', [HomeController::class, 'index'])->name('index');
         Route::get('logout', [HomeController::class, 'logout'])->name('logout');
         Route::name('log_action.')->prefix('log_action')->group(function () {

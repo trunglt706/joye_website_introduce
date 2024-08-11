@@ -15,9 +15,9 @@ class AuthController extends Controller
      */
     public function login()
     {
-        if (Auth::guard('admin')->check()) {
-            return redirect()->route('admin.index');
-        }
+        // if (Auth::guard('admin')->check()) {
+        //     return redirect()->route('admin.index');
+        // }
         return view('admin.auth.login');
     }
 
