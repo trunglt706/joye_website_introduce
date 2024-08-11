@@ -8,19 +8,17 @@
             {!! generate_limit_select() !!}
         </div>
         <div class="d-flex justify-content-end">
-            @if (auth('admin')->user()->can('admin|admin|view'))
-                <div class="me-1 w-200px hide-mobile">
-                    <select class="form-select form-filter" name="admin_id">
-                        <option value="" selected>-- Tài khoản --</option>
-                        @foreach ($data['admins'] as $item)
-                            <option value="{{ $item->id }}">{{ $item->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            @endif
+            <div class="me-1 w-200px hide-mobile">
+                <select class="form-select form-filter" name="admin_id">
+                    <option value="" selected>-- Tài khoản --</option>
+                    @foreach ($data['admins'] as $item)
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                    @endforeach
+                </select>
+            </div>
             <div class="me-1 w-150px hide-mobile">
                 <input type="text" class="form-control datepicker" value="" name="date"
-                    placeholder="Chọn ngày">
+                    placeholder="Thời gian">
             </div>
             <div class="btn-group">
                 <button class="btn btn-outline-primary" type="submit">

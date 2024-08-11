@@ -16,7 +16,16 @@
             <table class="table table-bordered">
                 <tr>
                     <td class="text-nowrap"><b>- Mã:</b> #{{ $data->code }}</td>
-                    <td class="text-nowrap"><b>- Tài khoản:</b> {{ $data->admin->name }}</td>
+                    <td class="text-nowrap">
+                        <b>- Tài khoản:</b>
+                        @if ($data->admin)
+                            <a href="{{ route('admin.admin.detail', ['id' => $data->admin_id]) }}">
+                                {{ $data->admin->name }}
+                            </a>
+                        @else
+                            (Không có dữ liệu)
+                        @endif
+                    </td>
                     <td class="text-nowrap"><b>- IP address:</b> {{ $data->ip }}</td>
                     <td class="text-nowrap"><b>- Thời gian:</b> {{ date('H:i d/m/Y', $data->created_at) }}</td>
                 </tr>
