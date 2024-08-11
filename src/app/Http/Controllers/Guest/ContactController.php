@@ -9,7 +9,9 @@ class ContactController extends Controller
     /**
      * Chuyến đến trang liên hệ
      */
-    public function index() {}
+    public function index() {
+        return view('guest.contact.index');
+    }
 
     /**
      * Hàm lưu thông tin liên hệ

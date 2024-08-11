@@ -9,5 +9,14 @@ class ServiceController extends Controller
     /**
      * Chuyến đến trang dịch vụ
      */
-    public function index() {}
+    public function index() {
+        return view('guest.service.index');
+    }
+
+    /**
+     * Chuyến đến trang chi tiết dịch vụ
+     */
+    public function detail($slug) {
+        return view('guest.service.detail');
+    }
 }

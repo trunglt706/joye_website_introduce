@@ -1,2 +1,8 @@
-{{-- Trang thông tin liên hệ --}}
-{{-- Cho phép khách gửi thông tin liên hệ đến website --}}
+@extends('guest.layout')
+@section('title','Liên hệ')
+@section('keywords','')
+@section('description','')
+@section('image', '')
+@section('content')
+    <br><br><br>
+@endsection

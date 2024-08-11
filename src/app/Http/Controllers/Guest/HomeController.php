@@ -9,5 +9,7 @@ class HomeController extends Controller
     /**
      * Chuyến đến trang chủ
      */
-    public function index() {}
+    public function index() {
+        return view('guest.home.index');
+    }
 }

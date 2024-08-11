@@ -9,5 +9,7 @@ class FaqController extends Controller
     /**
      * Chuyến đến trang câu hỏi thường gặp
      */
-    public function index() {}
+    public function index() {
+        return view('guest.faq.index');
+    }
 }

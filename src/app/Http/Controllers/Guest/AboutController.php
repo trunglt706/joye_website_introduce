@@ -9,5 +9,7 @@ class AboutController extends Controller
     /**
      * Chuyến đến trang giới thiệu công ty
      */
-    public function index() {}
+    public function index() {
+        return view('guest.about.index');
+    }
 }
