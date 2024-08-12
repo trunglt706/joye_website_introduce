@@ -22,7 +22,7 @@
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
             <td>
-                <div class="text-end">{{ $item->counts_blog }}</div>
+                <div class="text-end">{{ $item->blogs_count }}</div>
             </td>
             <td class="text-end">
                 <span class="badge bg-{{ $status[1] }}">
@@ -30,7 +30,8 @@
                 </span>
             </td>
             <td class="text-end">
-                <div class="text-nowrap">{{ $item->last_login ? date('H:i d/m/Y', $item->last_login) : '-' }}</div>
+                <div class="text-nowrap">{{ $item->created_at ? date('H:i d/m/Y', strtotime($item->created_at)) : '-' }}
+                </div>
             </td>
         </tr>
     @endforeach

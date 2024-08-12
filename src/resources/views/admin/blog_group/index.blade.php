@@ -16,7 +16,7 @@
                     <tr class="align-middle">
                         <th class="bg-body-secondary text-center w-100px">#</th>
                         <th class="bg-body-secondary">Tên nhóm</th>
-                        <th class="bg-body-secondary">Số bài viết</th>
+                        <th class="bg-body-secondary text-end">Số bài viết</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
                         <th class="bg-body-secondary text-end w-150px">Ngày tạo</th>
                     </tr>

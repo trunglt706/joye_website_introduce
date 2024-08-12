@@ -70,4 +70,9 @@ class BlogGroup extends Model
                 ->orWhere('blog_groups.name', 'LIKE', "%$search%");
         });
     }
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class, 'group_id');
+    }
 }

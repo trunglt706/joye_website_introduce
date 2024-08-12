@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogGroup;
+use Illuminate\Support\Facades\DB;
 
 class BlogGroupController extends Controller
 {
@@ -35,7 +36,7 @@ class BlogGroupController extends Controller
         $search = request('search', '');
         $status = request('status', '');
 
-        $list = BlogGroup::query();
+        $list = BlogGroup::withCount('blogs');
         $list = $search != '' ? $list->search($search) : $list;
         $list = $status != '' ? $list->ofStatus($status) : $list;
         $list = $list->latest()->paginate($limit);
@@ -51,7 +52,7 @@ class BlogGroupController extends Controller
      */
     public function detail($id)
     {
-        $data = BlogGroup::findOrFail($id);
+        $data = BlogGroup::withCount('blogs')->findOrFail($id);
         return view('admin.blog_group.detail', compact('data'));
     }
 
@@ -63,11 +64,10 @@ class BlogGroupController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['password'] = Hash::make($data['password']);
-            $data['active'] = isset($data['active']) && $data['active'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_ACTIVE;
-            $data = Admin::create($data);
+            $data['active'] = isset($data['active']) && $data['active'] == BlogGroup::STATUS_ACTIVE ? BlogGroup::STATUS_ACTIVE : BlogGroup::STATUS_ACTIVE;
+            $data = BlogGroup::create($data);
             DB::commit();
-            admin_save_log("Quản trị viên #$data->name vừa mới được tạo", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);
+            admin_save_log("Nhóm bài viết #$data->name vừa mới được tạo", route("admin.blog_group.detail", ['id' => $data->id]), $this->admin->id);
             return response()->json([
                 'status' => 200,
                 'message' => 'Tạo mới thành công',
@@ -92,12 +92,12 @@ class BlogGroupController extends Controller
         try {
             DB::beginTransaction();
             $id = request('id', '');
-            $data = Admin::findOrFail($id);
-            $_request = request()->only('name', 'role_id', 'status');
-            $data['status'] = isset($_request['status']) && $_request['status'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_BLOCKED;
+            $data = BlogGroup::findOrFail($id);
+            $_request = request()->only('name', 'image', 'status');
+            $data['status'] = isset($_request['status']) && $_request['status'] == BlogGroup::STATUS_ACTIVE ? BlogGroup::STATUS_ACTIVE : BlogGroup::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
-            admin_save_log("Quản trị viên #$data->name vừa mới được cập nhật thông tin cá nhân", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);
+            admin_save_log("Nhóm bài viết #$data->name vừa mới được cập nhật thông tin", route("admin.blog_group.detail", ['id' => $data->id]), $this->admin->id);
             return response()->json([
                 'status' => 200,
                 'message' => 'Cập nhật thành công',

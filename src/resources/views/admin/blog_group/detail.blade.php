@@ -19,10 +19,10 @@
         <div class="table-responsive">
             <table class="table table-bordered">
                 <tr>
-                    <td class="bg-body-secondary w-175px text-nowrap">- Mã nhóm</td>
-                    <td>{{ $data->code }}</td>
                     <td class="bg-body-secondary w-175px text-nowrap">- Tên nhóm</td>
                     <td>{{ $data->name }}</td>
+                    <td class="bg-body-secondary w-175px text-nowrap">- SL bài viết</td>
+                    <td>{{ $data->blogs_count }}</td>
                 </tr>
                 <tr>
                     <td class="bg-body-secondary text-nowrap">- Trạng thái</td>
@@ -34,7 +34,7 @@
                     <td class="bg-body-secondary text-nowrap">- Ngày tạo</td>
                     <td>
                         <div class="text-nowrap">
-                            {{ $data->created_at ? date('H:i d/m/Y', $data->created_at) : '-' }}</div>
+                            {{ $data->created_at ? date('H:i d/m/Y', strtotime($data->created_at)) : '-' }}</div>
                     </td>
                 </tr>
             </table>
@@ -44,14 +44,11 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>
-                            <svg class="nav-icon icon">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                            </svg>
                             Thông tin nhóm
                         </h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.admin.update') }}" method="POST" class="form-update">
+                        <form action="{{ route('admin.blog_group.update') }}" method="POST" class="form-update">
                             @csrf
                             <input type="hidden" name="id" value="{{ $data->id }}">
                             <div class="mb-2 form-group">
@@ -59,7 +56,7 @@
                                 <input type="text" required class="form-control" placeholder="Nhập tên nhóm"
                                     name="name" value="{{ $data->name }}">
                             </div>
-                            <div class="form-check form-switch mb-2">
+                            <div class="form-check form-switch mb-4">
                                 <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
                                     id="flexSwitchCheckStatus" {{ $data->status == 'active' ? 'checked' : '' }}>
                                 <label class="form-check-label" for="flexSwitchCheckStatus">
