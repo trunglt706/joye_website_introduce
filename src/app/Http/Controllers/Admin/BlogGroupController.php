@@ -54,4 +54,63 @@ class BlogGroupController extends Controller
         $data = BlogGroup::findOrFail($id);
         return view('admin.blog_group.detail', compact('data'));
     }
+
+    /**
+     * Tạo tài khoản
+     */
+    public function create()
+    {
+        try {
+            DB::beginTransaction();
+            $data = request()->all();
+            $data['password'] = Hash::make($data['password']);
+            $data['active'] = isset($data['active']) && $data['active'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_ACTIVE;
+            $data = Admin::create($data);
+            DB::commit();
+            admin_save_log("Quản trị viên #$data->name vừa mới được tạo", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);
+            return response()->json([
+                'status' => 200,
+                'message' => 'Tạo mới thành công',
+                'type' => 'success',
+            ]);
+        } catch (\Throwable $th) {
+            showLog($th);
+            DB::rollBack();
+            return response()->json([
+                'status' => 500,
+                'message' => 'Lỗi tạo mới',
+                'type' => 'error'
+            ]);
+        }
+    }
+
+    /**
+     * Cập nhật thông tin tài khoản
+     */
+    public function update()
+    {
+        try {
+            DB::beginTransaction();
+            $id = request('id', '');
+            $data = Admin::findOrFail($id);
+            $_request = request()->only('name', 'role_id', 'status');
+            $data['status'] = isset($_request['status']) && $_request['status'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_BLOCKED;
+            $data->update($_request);
+            DB::commit();
+            admin_save_log("Quản trị viên #$data->name vừa mới được cập nhật thông tin cá nhân", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);
+            return response()->json([
+                'status' => 200,
+                'message' => 'Cập nhật thành công',
+                'type' => 'success'
+            ]);
+        } catch (\Throwable $th) {
+            showLog($th);
+            DB::rollBack();
+            return response()->json([
+                'status' => 500,
+                'message' => 'Lỗi cập nhật',
+                'type' => 'error'
+            ]);
+        }
+    }
 }

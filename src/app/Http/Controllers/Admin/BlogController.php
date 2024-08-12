@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\BlogGroup;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -60,5 +61,53 @@ class BlogController extends Controller
             'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
         ];
         return view('admin.blog.detail', compact('data'));
+    }
+
+    /**
+     * Chuyến đến trang tạo bài viết
+     */
+    public function create()
+    {
+        $data = [
+            'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+        ];
+        return view('admin.blog.create', compact('data'));
+    }
+
+    /**
+     * Hàm thêm mới bài viết
+     */
+    public function insert()
+    {
+        try {
+            DB::beginTransaction();
+            $data = request()->all();
+            $data = Blog::create($data);
+            DB::commit();
+            return redirect()->back()->with('success', 'Tạo mới bài viết thành công');
+        } catch (\Throwable $th) {
+            showLog($th);
+            DB::rollBack();
+            return redirect()->back()->with('error', 'Tạo mới bài viết thất bại!');
+        }
+    }
+
+    /**
+     * Cập nhật thông tin bài viết
+     */
+    public function update($id)
+    {
+        try {
+            DB::beginTransaction();
+            $_request = request()->all();
+            $data = Blog::findOrFaild(request('id', ''));
+            $data->update($_request);
+            DB::commit();
+            return redirect()->back()->with('success', 'Cập nhật bài viết thành công');
+        } catch (\Throwable $th) {
+            showLog($th);
+            DB::rollBack();
+            return redirect()->back()->with('error', 'Cập nhật bài viết thất bại!');
+        }
     }
 }
