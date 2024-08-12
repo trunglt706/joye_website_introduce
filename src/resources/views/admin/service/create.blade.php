@@ -1,22 +1,27 @@
 <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="{{ route('admin.blog_group.create') }}" id="form-create" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.service.create') }}" id="form-create" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tạo mới nhóm bài viết</h5>
+                    <h5 class="modal-title">Tạo mới dịch vụ</h5>
                     <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-4 py-1">
                     <div class="mb-2 form-group">
-                        <label class="form-label">Tên nhóm *</label>
-                        <input type="text" required class="form-control" placeholder="Nhập tên" name="name">
+                        <label class="form-label">Tên dịch vụ *</label>
+                        <input type="text" required class="form-control" placeholder="Nhập tên dịch vụ"
+                            name="name">
+                    </div>
+                    <div class="mb-2 form-group">
+                        <label class="form-label">Mô tả</label>
+                        <textarea name="content" rows="3" class="form-control" placeholder="Nhập nội dung"></textarea>
                     </div>
                     <div class="form-check form-switch my-2">
                         <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
                             id="flexSwitchCheckStatus" checked>
                         <label class="form-check-label" for="flexSwitchCheckStatus">
-                            Kích hoạt nhóm
+                            Kích hoạt dịch vụ
                         </label>
                     </div>
                 </div>

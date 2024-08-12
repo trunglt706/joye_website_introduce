@@ -57,7 +57,7 @@ class BlogGroupController extends Controller
     }
 
     /**
-     * Tạo tài khoản
+     * Tạo nhóm bài viết
      */
     public function create()
     {
@@ -85,7 +85,7 @@ class BlogGroupController extends Controller
     }
 
     /**
-     * Cập nhật thông tin tài khoản
+     * Cập nhật thông tin nhóm bài viết
      */
     public function update()
     {
