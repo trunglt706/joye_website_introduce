@@ -113,4 +113,33 @@ class BlogGroupController extends Controller
             ]);
         }
     }
+
+    /**
+     * Xóa nhóm bài viết
+     */
+    public function destroy()
+    {
+        DB::beginTransaction();
+        try {
+            $data = BlogGroup::withCount('blogs')->find(request('id'));
+            if (!is_null($data) && $data->blogs_count == 0) {
+                $data->delete();
+                admin_save_log("Nhóm bài viết #$data->name vừa mới bị xóa");
+                DB::commit();
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Xóa thành công',
+                    'type' => 'success',
+                ]);
+            }
+        } catch (\Throwable $th) {
+            showLog($th);
+        }
+        DB::rollBack();
+        return response()->json([
+            'status' => 500,
+            'message' => 'Có lỗi xãy ra!',
+            'type' => 'error',
+        ]);
+    }
 }

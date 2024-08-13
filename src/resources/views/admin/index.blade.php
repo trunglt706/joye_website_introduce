@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>ADMIN | {{ env('APP_NAME') }}</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favico.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_option('seo-favico') }}">
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('admin.style')

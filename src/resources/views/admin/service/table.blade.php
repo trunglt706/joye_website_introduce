@@ -17,6 +17,12 @@
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                     </svg>
                 </a>
+                <button data-bs-toggle="tooltip" title="Xóa" class="btn btn-danger btn-sm btn-delete"
+                    onclick="confirmDelete('{{ $item->id }}')">
+                    <svg class="icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash"></use>
+                    </svg>
+                </button>
             </td>
             <td>
                 <div class="text-nowrap">{{ $item->name }}</div>

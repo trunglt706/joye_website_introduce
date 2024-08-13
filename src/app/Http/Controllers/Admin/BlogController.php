@@ -129,4 +129,33 @@ class BlogController extends Controller
             ]);
         }
     }
+
+    /**
+     * Xóa bài viết
+     */
+    public function destroy()
+    {
+        DB::beginTransaction();
+        try {
+            $data = Blog::find(request('id'));
+            if (!is_null($data)) {
+                $data->delete();
+                admin_save_log("Bài viết #$data->name vừa mới bị xóa");
+                DB::commit();
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Xóa thành công',
+                    'type' => 'success',
+                ]);
+            }
+        } catch (\Throwable $th) {
+            showLog($th);
+        }
+        DB::rollBack();
+        return response()->json([
+            'status' => 500,
+            'message' => 'Có lỗi xãy ra!',
+            'type' => 'error',
+        ]);
+    }
 }

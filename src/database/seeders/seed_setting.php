@@ -29,26 +29,26 @@ class seed_setting extends Seeder
             'code' => 'seo-logo',
             'name' => 'Logo website',
             'type' => Setting::TYPE_FILE,
-            'value' => asset('assets/images/logo.png')
+            'value' => 'uploads/setting/logo.png'
         ]);
         Setting::create([
             'group_id' => $seo->id,
             'code' => 'seo-favico',
             'name' => 'Favico website',
             'type' => Setting::TYPE_FILE,
-            'value' => asset('assets/images/favico.png')
+            'value' => 'uploads/setting/favico.png'
         ]);
         Setting::create([
             'group_id' => $seo->id,
             'code' => 'seo-name',
             'name' => 'Tên website',
-            'value' => 'Diamontour'
+            'value' => 'Joye'
         ]);
         Setting::create([
             'group_id' => $seo->id,
             'code' => 'seo-description',
             'name' => 'Mô tả website',
-            'value' => 'Trang chủ Diamondtour Vinh hạnh mang đến trải nghiệm khác biệt trên mỗi hành trình!'
+            'value' => 'Nơi cung cấp giải pháp tốt nhất về thương mại điện tử và livestreaming'
         ]);
     }
 }

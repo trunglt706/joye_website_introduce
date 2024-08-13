@@ -123,4 +123,33 @@ class ServiceController extends Controller
             ]);
         }
     }
+
+    /**
+     * Xóa dịch vụ
+     */
+    public function destroy()
+    {
+        DB::beginTransaction();
+        try {
+            $data = Service::find(request('id'));
+            if (!is_null($data)) {
+                $data->delete();
+                admin_save_log("Dịch vụ #$data->name vừa mới bị xóa");
+                DB::commit();
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Xóa thành công',
+                    'type' => 'success',
+                ]);
+            }
+        } catch (\Throwable $th) {
+            showLog($th);
+        }
+        DB::rollBack();
+        return response()->json([
+            'status' => 500,
+            'message' => 'Có lỗi xãy ra!',
+            'type' => 'error',
+        ]);
+    }
 }
