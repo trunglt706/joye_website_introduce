@@ -108,9 +108,9 @@ class BlogController extends Controller
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
-                $data['image'] = store_file($file, $this->dir);
+                $_request['image'] = store_file($file, $this->dir);
             }
-            $data['status'] = isset($_request['status']) && $_request['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
+            $_request['status'] = isset($_request['status']) && $_request['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
             admin_save_log("Bài viết #$data->name vừa mới được cập nhật thông tin", route("admin.blog.detail", ['id' => $data->id]), $this->admin->id);
