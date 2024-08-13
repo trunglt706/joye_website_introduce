@@ -24,7 +24,11 @@
                         </div>
                     </div>
                     <div class="mb-2 form-group">
-                        <label class="form-label">Mô tả</label>
+                        <label class="form-label">Mô tả ngắn</label>
+                        <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả ngắn"></textarea>
+                    </div>
+                    <div class="mb-2 form-group">
+                        <label class="form-label">Nội dung</label>
                         <textarea name="content" rows="3" id="ckeditor" class="form-control" placeholder="Nhập nội dung"></textarea>
                     </div>
                     <div class="form-check form-switch my-2">

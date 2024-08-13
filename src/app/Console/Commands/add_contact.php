@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Contact;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class add_contact extends Command
 {
@@ -26,6 +27,7 @@ class add_contact extends Command
      */
     public function handle()
     {
+        DB::table('contacts')->delete();
         Contact::create([
             'name' => 'Nguyễn Văn A',
             'email' => 'a@gmail.com',

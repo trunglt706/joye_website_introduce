@@ -31,7 +31,7 @@ class Service extends Model
         self::creating(function ($model) {
             $model->code = $model->code ?? generateRandomString();
             $model->slug = $model->slug ?? Str::slug($model->name);
-            $model->status = $model->status ?? self::STATUS_UN_ACTIVE;
+            $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->important = $model->important ?? 0;
         });
         self::created(function ($model) {});

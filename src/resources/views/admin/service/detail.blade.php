@@ -68,8 +68,12 @@
                             </div>
                         </div>
                         <div class="mb-2 form-group">
-                            <label class="form-label">Mô tả</label>
-                            <textarea name="content" rows="3" id="ckeditor" class="form-control">{{ $data->content }}</textarea>
+                            <label class="form-label">Mô tả ngắn</label>
+                            <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả ngắn">{{ $data->description }}</textarea>
+                        </div>
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Nội dung</label>
+                            <textarea name="content" rows="3" id="ckeditor" placeholder="Nhập nội dung" class="form-control">{{ $data->content }}</textarea>
                         </div>
                         <div class="form-check form-switch mb-4">
                             <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
