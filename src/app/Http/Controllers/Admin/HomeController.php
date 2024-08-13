@@ -35,6 +35,14 @@ class HomeController extends Controller
     }
 
     /**
+     * Chuyển đến trang upload editor
+     */
+    public function upload_editor()
+    {
+        return view('admin.editor');
+    }
+
+    /**
      * Đăng xuất tài khoản
      */
     public function logout()

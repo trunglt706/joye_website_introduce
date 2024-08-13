@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
-    protected $limit_default, $admin;
+    protected $limit_default, $admin, $dir;
 
     public function __construct()
     {
         $this->limit_default = 10;
         $this->admin = auth('admin')->user();
+        $this->dir = 'uploads/blog';
     }
 
     /**
@@ -64,50 +65,68 @@ class BlogController extends Controller
     }
 
     /**
-     * Chuyến đến trang tạo bài viết
-     */
-    public function create()
-    {
-        $data = [
-            'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
-        ];
-        return view('admin.blog.create', compact('data'));
-    }
-
-    /**
      * Hàm thêm mới bài viết
      */
-    public function insert()
+    public function create()
     {
         try {
             DB::beginTransaction();
             $data = request()->all();
+            if (request()->hasFile('image')) {
+                $file = request()->file('image');
+                $data['image'] = store_file($file, $this->dir);
+            }
+            $data['active'] = isset($data['active']) && $data['active'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_ACTIVE;
             $data = Blog::create($data);
             DB::commit();
-            return redirect()->back()->with('success', 'Tạo mới bài viết thành công');
+            admin_save_log("Bài viết #$data->name vừa mới được tạo", route("admin.blog.detail", ['id' => $data->id]), $this->admin->id);
+            return response()->json([
+                'status' => 200,
+                'message' => 'Tạo mới thành công',
+                'type' => 'success',
+            ]);
         } catch (\Throwable $th) {
             showLog($th);
             DB::rollBack();
-            return redirect()->back()->with('error', 'Tạo mới bài viết thất bại!');
+            return response()->json([
+                'status' => 500,
+                'message' => 'Lỗi tạo mới',
+                'type' => 'error'
+            ]);
         }
     }
 
     /**
      * Cập nhật thông tin bài viết
      */
-    public function update($id)
+    public function update()
     {
         try {
             DB::beginTransaction();
             $_request = request()->all();
-            $data = Blog::findOrFaild(request('id', ''));
+            $data = Blog::findOrFail(request('id', ''));
+            if (request()->hasFile('image')) {
+                delete_file($data->image);
+                $file = request()->file('image');
+                $data['image'] = store_file($file, $this->dir);
+            }
+            $data['status'] = isset($_request['status']) && $_request['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
-            return redirect()->back()->with('success', 'Cập nhật bài viết thành công');
+            admin_save_log("Bài viết #$data->name vừa mới được cập nhật thông tin", route("admin.blog.detail", ['id' => $data->id]), $this->admin->id);
+            return response()->json([
+                'status' => 200,
+                'message' => 'Cập nhật thành công',
+                'type' => 'success'
+            ]);
         } catch (\Throwable $th) {
             showLog($th);
             DB::rollBack();
-            return redirect()->back()->with('error', 'Cập nhật bài viết thất bại!');
+            return response()->json([
+                'status' => 500,
+                'message' => 'Lỗi cập nhật',
+                'type' => 'error'
+            ]);
         }
     }
 }

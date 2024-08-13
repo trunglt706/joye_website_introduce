@@ -36,10 +36,98 @@
                     <td class="bg-body-secondary text-nowrap">- Ngày tạo</td>
                     <td>
                         <div class="text-nowrap">
-                            {{ $data['blog']->created_at ? date('H:i d/m/Y', $data['blog']->created_at) : '-' }}</div>
+                            {{ $data['blog']->created_at ? date('H:i d/m/Y', strtotime($data['blog']->created_at)) : '-' }}
+                        </div>
                     </td>
                 </tr>
             </table>
         </div>
+        <div class="d-flex">
+            <div class="me-2">
+                <img src="{{ $data['blog']->image ? get_url($data['blog']->image) : asset('img/no-image.jpg') }}"
+                    class="img-thumbnail preview w-100px" alt="img">
+            </div>
+            <div class="card w-100">
+                <div class="card-header">
+                    <h5>
+                        Thông tin dịch vụ
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('admin.blog.update') }}" method="POST" class="form-update">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $data['blog']->id }}">
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Tiêu đề *</label>
+                            <input type="text" required class="form-control" placeholder="Nhập tiêu đề" name="name"
+                                value="{{ $data['blog']->name }}">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label">Nhóm</label>
+                                <select class="form-select" name="group_id">
+                                    <option value="" selected>-- Chọn --</option>
+                                    @foreach ($data['group'] as $item)
+                                        <option value="{{ $item->id }}"
+                                            {{ $item->id == $data['blog']->group_id ? 'selected' : '' }}>
+                                            {{ $item->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-2 form-group">
+                                    <label class="form-label">Ảnh đại diện</label>
+                                    <input type="file" class="form-control" name="image" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Mô tả ngắn</label>
+                            <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả ngắn">{{ $data['blog']->description }}</textarea>
+                        </div>
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Nội dung *</label>
+                            <textarea name="content" rows="3" id="ckeditor" class="form-control" placeholder="Nhập nội dung">{{ $data['blog']->content }}</textarea>
+                        </div>
+                        <div class="form-check form-switch mb-4">
+                            <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
+                                id="flexSwitchCheckStatus" {{ $data['blog']->status == 'active' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="flexSwitchCheckStatus">
+                                Kích hoạt bài viết
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <svg class="icon icon-lg">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-save"></use>
+                            </svg>
+                            Cập nhật
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
+@push('js')
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            CKEDITOR.replace('ckeditor', {
+                height: 280,
+                toolbar: 'Full',
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+
+            $(document).on('click', 'button[type="submit"]', function() {
+                for (var instanceName in CKEDITOR.instances) {
+                    CKEDITOR.instances[instanceName].updateElement();
+                }
+            })
+        })
+    </script>
+@endpush
