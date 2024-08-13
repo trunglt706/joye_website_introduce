@@ -37,44 +37,78 @@
                 </tr>
             </table>
         </div>
-        <div class="row">
-            <div class="col-md-12 mb-2">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>
-                            Thông tin dịch vụ
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <form action="{{ route('admin.service.update') }}" method="POST" class="form-update">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $data->id }}">
-                            <div class="mb-2 form-group">
-                                <label class="form-label">Tên dịch vụ *</label>
-                                <input type="text" required class="form-control" placeholder="Nhập tên dịch vụ"
-                                    name="name" value="{{ $data->name }}">
+        <div class="d-flex">
+            <div class="me-2">
+                <img src="{{ $data->image ? get_url($data->image) : asset('img/no-image.jpg') }}"
+                    class="img-thumbnail preview w-100px" alt="img">
+            </div>
+            <div class="card w-100">
+                <div class="card-header">
+                    <h5>
+                        Thông tin dịch vụ
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('admin.service.update') }}" method="POST" class="form-update">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $data->id }}">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="mb-2 form-group">
+                                    <label class="form-label">Tên dịch vụ *</label>
+                                    <input type="text" required class="form-control" placeholder="Nhập tên dịch vụ"
+                                        name="name" value="{{ $data->name }}">
+                                </div>
                             </div>
-                            <div class="mb-2 form-group">
-                                <label class="form-label">Mô tả</label>
-                                <textarea name="content" rows="3" class="form-control">{{ $data->content }}</textarea>
+                            <div class="col-md-5">
+                                <div class="mb-2 form-group">
+                                    <label class="form-label">Ảnh đại diện</label>
+                                    <input type="file" class="form-control" name="image" accept="image/*">
+                                </div>
                             </div>
-                            <div class="form-check form-switch mb-4">
-                                <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
-                                    id="flexSwitchCheckStatus" {{ $data->status == 'active' ? 'checked' : '' }}>
-                                <label class="form-check-label" for="flexSwitchCheckStatus">
-                                    Kích hoạt dịch vụ
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                <svg class="icon icon-lg">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-save"></use>
-                                </svg>
-                                Cập nhật
-                            </button>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Mô tả</label>
+                            <textarea name="content" rows="3" id="ckeditor" class="form-control">{{ $data->content }}</textarea>
+                        </div>
+                        <div class="form-check form-switch mb-4">
+                            <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
+                                id="flexSwitchCheckStatus" {{ $data->status == 'active' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="flexSwitchCheckStatus">
+                                Kích hoạt dịch vụ
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <svg class="icon icon-lg">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-save"></use>
+                            </svg>
+                            Cập nhật
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+@push('js')
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            CKEDITOR.replace('ckeditor', {
+                height: 280,
+                toolbar: 'Full',
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+
+            $(document).on('click', 'button[type="submit"]', function() {
+                for (var instanceName in CKEDITOR.instances) {
+                    CKEDITOR.instances[instanceName].updateElement();
+                }
+            })
+        })
+    </script>
+@endpush

@@ -30,7 +30,6 @@ class DropboxController extends Controller
     public function store($content, $uri)
     {
         $url = $content->store($uri, 'public');
-        \Log::debug($url);
         return $url;
     }
 

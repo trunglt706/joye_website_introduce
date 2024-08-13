@@ -30,8 +30,11 @@
             </table>
         </div>
     </div>
+    @include('admin.blog.create')
 @endsection
 @push('js')
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
     <script>
         const routeList = "{{ route('admin.blog.table') }}";
         filterTable();
@@ -39,5 +42,22 @@
         function filterTable(currentPage = 1) {
             loadTable(routeList, currentPage);
         };
+
+        $(document).ready(function() {
+            CKEDITOR.replace('ckeditor', {
+                height: 280,
+                toolbar: 'Full',
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+
+            $(document).on('click', 'button[type="submit"]', function() {
+                for (var instanceName in CKEDITOR.instances) {
+                    CKEDITOR.instances[instanceName].updateElement();
+                }
+            })
+        })
     </script>
 @endpush

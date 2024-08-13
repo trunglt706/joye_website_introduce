@@ -8,12 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class ServiceController extends Controller
 {
-    protected $limit_default, $admin;
+    protected $limit_default, $admin, $dir;
 
     public function __construct()
     {
         $this->limit_default = 10;
         $this->admin = auth('admin')->user();
+        $this->dir = 'uploads/service';
     }
 
     /**
@@ -64,6 +65,10 @@ class ServiceController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
+            if (request()->hasFile('image')) {
+                $file = request()->file('image');
+                $data['image'] = store_file($file, $this->dir);
+            }
             $data['active'] = isset($data['active']) && $data['active'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_ACTIVE;
             $data = Service::create($data);
             DB::commit();
@@ -93,8 +98,13 @@ class ServiceController extends Controller
             DB::beginTransaction();
             $id = request('id', '');
             $data = Service::findOrFail($id);
-            $_request = request()->only('name', 'image', 'content', 'status');
-            $data['status'] = isset($_request['status']) && $_request['status'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
+            $_request = request()->all();
+            if (request()->hasFile('image')) {
+                delete_file($data->image);
+                $file = request()->file('image');
+                $_request['image'] = store_file($file, $this->dir);
+            }
+            $_request['status'] = isset($_request['status']) && $_request['status'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
             admin_save_log("Dịch vụ #$data->name vừa mới được cập nhật thông tin", route("admin.service.detail", ['id' => $data->id]), $this->admin->id);

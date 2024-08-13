@@ -27,7 +27,8 @@
                 </span>
             </td>
             <td class="text-end">
-                <div class="text-nowrap">{{ $item->created_at ? date('H:i d/m/Y', $item->created_at) : '-' }}</div>
+                <div class="text-nowrap">{{ $item->created_at ? date('H:i d/m/Y', strtotime($item->created_at)) : '-' }}
+                </div>
             </td>
         </tr>
     @endforeach
