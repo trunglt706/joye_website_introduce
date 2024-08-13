@@ -57,7 +57,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
             Route::get('', [ContactController::class, 'index'])->name('index');
             Route::get('table', [ContactController::class, 'table'])->name('table');
             Route::get('/{id}', [ContactController::class, 'detail'])->name('detail');
-            Route::post('update', [ContactController::class, 'update'])->name('update');
+            Route::get('update/{id}', [ContactController::class, 'update'])->name('update');
         });
         Route::name('faq.')->prefix('faq')->group(function () {
             Route::get('', [QuestionController::class, 'index'])->name('index');

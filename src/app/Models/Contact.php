@@ -41,8 +41,8 @@ class Contact extends Model
     {
         $_status = [
             self::STATUS_UN_ACTIVE => ['Chưa duyệt', 'dark'],
-            self::STATUS_ACTIVE => ['Đã duyệt', 'success'],
-            self::STATUS_BLOCKED => ['Đã khóa', 'danger'],
+            self::STATUS_ACTIVE => ['Đã xử lý', 'success'],
+            self::STATUS_BLOCKED => ['Không xử lý', 'danger'],
         ];
         return $status == '' ? $_status : $_status["$status"];
     }
