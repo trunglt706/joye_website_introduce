@@ -15,13 +15,16 @@
     <div class="mainmenu ver-2">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="logo logo-light" href="/"><img src="/style/images/logo-light.png" alt="logo"></a>
-                <a href="/" class="logo-default"><img src="/style/images/logo.png" alt="logo"></a>
+                <a class="logo logo-light" href="/"><img src="/style/images/logo-light.png" alt="logo" height="42"></a>
+                <a href="/" class="logo-default"><img src="/style/images/logo.png" alt="logo" height="42"></a>
                 <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#NavbarContent">
                     <span class="icofont-navigation-menu"></span>
                 </button>
                 <div class="navbar-collapse collapse" id="NavbarContent">
                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link {{Route::currentRouteName() == 'home' ? 'active' : ''}}" href="/">Trang chủ</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {{Route::currentRouteName() == 'about' ? 'active' : ''}}" href="/gioi-thieu">Giới thiệu</a>
                         </li>
