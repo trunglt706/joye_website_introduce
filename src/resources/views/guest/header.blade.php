@@ -15,32 +15,40 @@
     <div class="mainmenu">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="logo" href="/"><img src="/style/images/logo.png" alt="logo" height="42"></a>
+                <a class="logo" href="/">
+                    <img src="{{ get_option('seo-logo') }}" alt="logo" height="42">
+                </a>
                 <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#NavbarContent">
                     <span class="icofont-navigation-menu"></span>
                 </button>
                 <div class="navbar-collapse collapse" id="NavbarContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link {{Route::currentRouteName() == 'home' ? 'active' : ''}}" href="/">Trang chủ</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
+                                href="/">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{Route::currentRouteName() == 'about' ? 'active' : ''}}" href="/gioi-thieu">Giới thiệu</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}"
+                                href="/gioi-thieu">Giới thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{(Route::currentRouteName() == 'service' || Route::currentRouteName() == 'service.detail') ? 'active' : ''}}" href="/dich-vu">Dịch vụ</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'service' || Route::currentRouteName() == 'service.detail' ? 'active' : '' }}"
+                                href="/dich-vu">Dịch vụ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{(Route::currentRouteName() == 'blog' || Route::currentRouteName() == 'blog.detail') ? 'active' : ''}}" href="/tin-tuc">Tin tức</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'blog' || Route::currentRouteName() == 'blog.detail' ? 'active' : '' }}"
+                                href="/tin-tuc">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{Route::currentRouteName() == 'faq' ? 'active' : ''}}" href="/faq">FAQs</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}"
+                                href="/faq">FAQs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{Route::currentRouteName() == 'contact' ? 'active' : ''}}" href="/lien-he">Liên hệ</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"
+                                href="/lien-he">Liên hệ</a>
                         </li>
                     </ul>
-                    
+
                     <ul class="nav navbar-nav login-btn">
                         <li class="nav-item log-btn"><a class="nav-link" href="#">LOG IN</a></li>
                     </ul>

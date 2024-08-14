@@ -13,36 +13,35 @@
                 <div class="col-lg-6 col-md-7">
                     <div class="contact-form">
                         <div class="contact-title">
-                            <h4>Don't Hesitate to Contact us</h4>
-                            <h5>We will respond within 24 hours</h5>
+                            <h4>Đừng ngần ngại liên hệ với chúng tôi</h4>
+                            <h5>Chúng tôi sẽ phản hồi trong vòng 24 giờ</h5>
                         </div>
-                        <form id="ajax-contact" action="contact.php" method="post">
+                        @include('guest.general.error')
+                        <form action="{{ route('contact.create') }}" method="post">
+                            @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name*" required="required" data-error="This field is required.">
-                                <div class="help-block with-errors"></div>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Nhập họ tên *" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address*" required="required" data-error="This field is required.">
-                                <div class="help-block with-errors"></div>
+                                <input class="form-control" id="phone" name="phone" placeholder="Nhập số ĐT *"
+                                    required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <textarea class="form-control" id="comment" name="comment" rows="10" placeholder="Gửi nội dung" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" name="message" rows="10" placeholder="Your Message*" required="required" data-error="Please, leave us a message."></textarea>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <button type="submit">Send Message</button>
-                            <div class="messages"></div>
+                            <button type="submit">Gửi liên hệ</button>
                         </form>
                     </div>
                 </div>
                 <!--end contact form-->
                 <div class="col-md-5 offset-lg-1">
                     <div class="contact-cont">
-                        <h4>Contact Us</h4>
-                        <h2>Get in touch</h2>
-                        <p>You are important to us and we are continuously improving our services to serve you better.</p>
+                        <h2>Liên hệ với chúng tôi</h2>
+                        <p>
+                            Bạn rất quan trọng đối với chúng tôi và chúng tôi luôn nỗ lực cải thiện dịch vụ để phục vụ
+                            bạn tốt hơn
+                        </p>
                         <div class="contact-thumb">
                             <img src="/style/images/contact.png" alt="image">
                         </div>
@@ -53,7 +52,7 @@
             <div class="footer-btm row justify-content-between justify-content-md-start ">
                 <div class="col-lg-6">
                     <div class="copyright-text">
-                        <p class="m-0">&copy; <span class="currentYear"></span> Reloj | All right reserved.</p>
+                        <p class="m-0">&copy; 2024 Joye | All right reserved.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">

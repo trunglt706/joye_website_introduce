@@ -16,7 +16,7 @@
                     <tr class="align-middle">
                         <th class="bg-body-secondary text-center w-100px">#</th>
                         <th class="bg-body-secondary">Họ tên</th>
-                        <th class="bg-body-secondary">Email</th>
+                        <th class="bg-body-secondary">Số ĐT</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
                         <th class="bg-body-secondary text-end w-150px">Thời gian</th>
                     </tr>

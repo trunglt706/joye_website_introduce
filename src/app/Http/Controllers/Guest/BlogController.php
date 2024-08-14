@@ -15,9 +15,21 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $group = request('group', '');
+        $search = request('search', '');
+        $blogs = Blog::ofStatus(Blog::STATUS_ACTIVE);
+        if ($group != '') {
+            $group = BlogGroup::ofSlug($group)->first();
+            if (!is_null($group)) {
+                $blogs = $blogs->groupId($group->id);
+            }
+        }
+        if ($search != '') {
+            $blogs = $blogs->search($search);
+        }
         $data = [
-            'groups' => BlogGroup::withCount('blogs')->ofStatus(BlogGroup::STATUS_ACTIVE)->latest()->select('id', 'name')->get(),
-            'blogs' => Blog::ofStatus(Blog::STATUS_ACTIVE)->latest()->select('id', 'image', 'name', 'created_at', 'description')->paginate(4)
+            'groups' => BlogGroup::withCount('blogs')->ofStatus(BlogGroup::STATUS_ACTIVE)->latest()->get(),
+            'blogs' => $blogs->latest()->select('id', 'image', 'slug', 'name', 'created_at', 'description')->paginate(4)
         ];
         return view('guest.blog.index', compact('data'));
     }
