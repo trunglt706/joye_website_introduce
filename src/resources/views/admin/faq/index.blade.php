@@ -40,5 +40,9 @@
         function filterTable(currentPage = 1) {
             loadTable(routeList, currentPage);
         };
+
+        function confirmDelete(id) {
+            deleteData(id, "{{ route('admin.faq.destroy') }}");
+        }
     </script>
 @endpush

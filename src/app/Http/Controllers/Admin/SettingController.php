@@ -83,7 +83,7 @@ class SettingController extends Controller
                 }
             }
             Setting::groupId($group->id)->ofType(Setting::TYPE_CHECK_BOX)->whereNotIn('id', $checkbox)->update(['value' => 0]);
-            admin_save_log("Danh sách cấu hình thuộc danh mục #$group->name vừa mới được cập nhật", $data);
+            admin_save_log("Danh sách cấu hình thuộc danh mục #$group->name vừa mới được cập nhật");
             DB::commit();
             return redirect()->back()->with('success', 'Cập nhật thành công');
         } catch (\Throwable $th) {

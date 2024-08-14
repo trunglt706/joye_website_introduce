@@ -3,6 +3,7 @@
 use App\Http\Controllers\DropboxController;
 use App\Models\AdminLog;
 use App\Models\AdminMenu;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
@@ -182,5 +183,16 @@ if (!function_exists('delete_file')) {
     {
         $dropbox =  new DropboxController();
         return $dropbox->delete($uri);
+    }
+}
+
+if (!function_exists('get_option')) {
+    function get_option($code, $default = '')
+    {
+        $setting = Setting::ofCode($code)->first();
+        if ($setting->type == Setting::TYPE_FILE) {
+            return get_url($setting->value) ?? $default;
+        }
+        return $setting->value ?? $default;
     }
 }

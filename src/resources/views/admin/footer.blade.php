@@ -3,6 +3,6 @@
         Copyright © 2024
     </div>
     <div class="ms-auto">
-        {{ env('APP_NAME') }}
+        {{ get_option('seo-name') }}
     </div>
 </footer>

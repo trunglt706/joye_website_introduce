@@ -43,6 +43,10 @@
             loadTable(routeList, currentPage);
         };
 
+        function confirmDelete(id) {
+            deleteData(id, "{{ route('admin.blog.destroy') }}");
+        }
+
         $(document).ready(function() {
             CKEDITOR.replace('ckeditor', {
                 height: 280,

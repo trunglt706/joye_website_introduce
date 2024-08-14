@@ -28,6 +28,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
         Route::name('admin.')->prefix('admin')->group(function () {
             Route::get('', [AdminController::class, 'index'])->name('index');
             Route::get('table', [AdminController::class, 'table'])->name('table');
+            Route::get('destroy', [AdminController::class, 'destroy'])->name('destroy');
             Route::get('/{id}', [AdminController::class, 'detail'])->name('detail');
             Route::post('create', [AdminController::class, 'create'])->name('create');
             Route::post('update', [AdminController::class, 'update'])->name('update');
@@ -36,6 +37,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
         Route::name('blog.')->prefix('blog')->group(function () {
             Route::get('', [BlogController::class, 'index'])->name('index');
             Route::get('table', [BlogController::class, 'table'])->name('table');
+            Route::get('destroy', [BlogController::class, 'destroy'])->name('destroy');
             Route::get('/{id}', [BlogController::class, 'detail'])->name('detail');
             Route::post('create', [BlogController::class, 'create'])->name('create');
             Route::post('update', [BlogController::class, 'update'])->name('update');
@@ -43,6 +45,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
         Route::name('blog_group.')->prefix('blog_group')->group(function () {
             Route::get('', [BlogGroupController::class, 'index'])->name('index');
             Route::get('table', [BlogGroupController::class, 'table'])->name('table');
+            Route::get('destroy', [BlogGroupController::class, 'destroy'])->name('destroy');
             Route::get('/{id}', [BlogGroupController::class, 'detail'])->name('detail');
             Route::post('create', [BlogGroupController::class, 'create'])->name('create');
             Route::post('update', [BlogGroupController::class, 'update'])->name('update');
@@ -50,6 +53,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
         Route::name('service.')->prefix('service')->group(function () {
             Route::get('', [ServiceController::class, 'index'])->name('index');
             Route::get('table', [ServiceController::class, 'table'])->name('table');
+            Route::get('destroy', [ServiceController::class, 'destroy'])->name('destroy');
             Route::get('/{id}', [ServiceController::class, 'detail'])->name('detail');
             Route::post('create', [ServiceController::class, 'create'])->name('create');
             Route::post('update', [ServiceController::class, 'update'])->name('update');
@@ -63,6 +67,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
         Route::name('faq.')->prefix('faq')->group(function () {
             Route::get('', [QuestionController::class, 'index'])->name('index');
             Route::get('table', [QuestionController::class, 'table'])->name('table');
+            Route::get('destroy', [QuestionController::class, 'destroy'])->name('destroy');
             Route::get('/{id}', [QuestionController::class, 'detail'])->name('detail');
             Route::post('create', [QuestionController::class, 'create'])->name('create');
             Route::post('update', [QuestionController::class, 'update'])->name('update');

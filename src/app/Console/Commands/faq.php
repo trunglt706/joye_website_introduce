@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Question;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class faq extends Command
 {
@@ -26,17 +27,18 @@ class faq extends Command
      */
     public function handle()
     {
+        DB::table('questions')->delete();
         Question::create([
-            'name' => 'Can I watch local sports in my area?',
-            'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.'
+            'name' => 'Joye cung cấp những giải pháp nào?',
+            'description' => 'Joye cung cấp các giải pháp tốt nhất về thương mại điện tử (các hình thức kinh doanh theo xu hướng), livestreaming (Đang dần trở thành cách thức bán hàng có doanh số tăng trưởng đột biến nhất trong thời đại kinh tế số)'
         ]);
         Question::create([
-            'name' => 'Can I sign in to WatchESPN, Fox Sports Go or NBC Sports?',
-            'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.'
+            'name' => 'Tại sao lại chọn Joye?',
+            'description' => 'JoyE phát triển mạnh mẽ nhờ vào tư duy cởi mở, luôn thử nghiệm và điều chỉnh ý tưởng mới một cách nhanh chóng và tích cực. Chúng tôi mang đến các cơ hội đặc biệt để phát triển nhanh hơn và dẫn đầu xu hướng kinh doanh.'
         ]);
         Question::create([
-            'name' => 'What is the video quality and how much bandwidth do I need?',
-            'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.'
+            'name' => 'Joye đã có những gì?',
+            'description' => 'Chúng tôi sở hữu những chuyên gia với năng lực đặc biệt nhất trong lĩnh vực của mình, có những trải nghiệm với rất nhiều các chiến dịch bán hàng cùng các thương hiệu trong và ngoài nước, luôn cập nhật công nghệ mới và ứng dụng cho đối tác của mình với mức độ tiến hóa cao nhất'
         ]);
     }
 }

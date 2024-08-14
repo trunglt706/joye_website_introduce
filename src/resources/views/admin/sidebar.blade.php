@@ -2,7 +2,7 @@
     <div class="sidebar-header border-bottom">
         <div class="sidebar-brand d-flex justify-content-center w-100">
             <a href="{{ route('admin.index') }}" class="sidebar-brand-full">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo" class="h-60px">
+                <img src="{{ get_option('seo-logo') }}" alt="Logo" class="h-60px">
             </a>
         </div>
         <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark"
