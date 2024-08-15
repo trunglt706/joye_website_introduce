@@ -27,11 +27,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="post-cont">
-                                        <h3><a href="#">Giới thiệu</a></h3>
-                                        <h6><a href="#"><i class="fa fa-user"></i> Admin</a><span class="maydate"><i class="fa fa-calendar-alt"></i> 14 May 2023</span></h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
-                                        <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-                                        <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                                        <h3><a href="#">“Welcome To Our Joy” E</a></h3>
+                                        <h6><a href="#"><i class="fa fa-user"></i> Admin</a><span class="maydate"><i class="fa fa-calendar-alt"></i> 15 Aug 2024</span></h6>
+                                        <div>
+                                        <p>“JoyE là một tổ chức dành giúp những ”Nhà sáng tạo nội dung”
+                                        và các “Doanh nghiệp”, “Nhãn hàng” có thể giới thiệu và cung
+                                        cấp sản phẩm, dịch vụ của mình tới khách hàng mục tiêu
+                                        thông qua nền tảng đa phương tiện.
+                                        Sứ mệnh của chúng tôi là làm cho trải nghiệm của người mua
+                                        với thương mại điện tử trở nên sáng tạo hơn, vui vẻ hơn hơn.
+                                        Qua đó, giúp các “Nhà sáng tạo nội dung”, “Nhà bán hàng” và
+                                        các “Doanh nghiệp, thương hiệu” phát triển và thành công với
+                                        những gì họ làm.”</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -39,9 +47,9 @@
                                         <div class="about-testimonial">
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <div class="img"><img src="/style/images/img-2.jpg" alt=""></div>
-                                                    <div class="name">Mr. Nguyễn Văn B</div>
-                                                    <div class="mini-text">(10 năm kinh nghiệm trong lĩnh vực quảng cáo)</div>
+                                                    <div class="img"><img src="/style/images/about-ceo.png" alt=""></div>
+                                                    <div class="name">Nguyễn Thế Vi</div>
+                                                    <div class="mini-text">(CEO JOYE)</div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="description">
@@ -57,37 +65,60 @@
                             </div>
                             <div class="post-cont">
                                 <div class="about-feature">
-                                    <div class="title">Giá trị khác biệt</div>
-                                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>Delectus repellat non vel! Eum voluptatibus,</div>
+                                    <div class="title">Tại sao chọn chúng tôi?</div>
+                                    <div class="description">
+                                    JoyE phát triển mạnh mẽ nhờ vào tư
+                                    duy cởi mở, luôn thử nghiệm và điều
+                                    chỉnh ý tưởng mới một cách nhanh
+                                    chóng và tích cực. Chúng tôi mang
+                                    đến các cơ hội đặc biệt để phát triển
+                                    nhanh hơn và dẫn đầu xu hướng
+                                    kinh doanh. 
+                                    </div>
                                     <div class="content">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/img-2.jpg" alt="">
+                                                        <img src="/style/images/about-icon1.png" alt="">
                                                     </div>
                                                     <div class="text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        <strong>Chuyên gia</strong><br/>
+                                                        Chúng tôi sở hữu những
+                                                        chuyên gia với năng lực
+                                                        đặc biệt nhất trong lĩnh
+                                                        vực của mình
+
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/img-2.jpg" alt="">
+                                                        <img src="/style/images/about-icon2.png" alt="">
                                                     </div>
                                                     <div class="text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        <strong>Kinh nghiệm</strong><br/>
+                                                        Chúng tôi đã có những
+                                                        trải nghiệm với rất nhiều
+                                                        các chiến dịch bán hàng
+                                                        cùng các thương hiệu
+                                                        trong và ngoài nước
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/img-2.jpg" alt="">
+                                                        <img src="/style/images/about-icon3.png" alt="">
                                                     </div>
                                                     <div class="text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        <strong>Tiến hóa</strong><br/>
+                                                        Chúng tôi luôn cập nhật
+                                                        công nghệ mới và ứng
+                                                        dụng cho đối tác của
+                                                        mình với mức độ tiến hóa
+                                                        cao nhất
                                                     </div>
                                                 </div>
                                             </div>
