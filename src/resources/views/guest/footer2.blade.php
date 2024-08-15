@@ -4,11 +4,11 @@
         <div class="footer-btm mt-0 row">
             <div class="col-lg-6">
                 <div class="copyright-text">
-                    <p class="m-0">&copy; <span class="currentYear"></span> Reloj | All right reserved.</p>
+                    <p class="m-0">&copy; 2024 Joye | All right reserved.</p>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="footer-social text-right">
+                <div class="footer-social text-end">
                     <ul>
                         <li><a href="#"><i class="icofont-facebook"></i></a></li>
                         <li><a href="#"><i class="icofont-linkedin"></i></a></li>

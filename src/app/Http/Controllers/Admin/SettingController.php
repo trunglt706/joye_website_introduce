@@ -32,7 +32,7 @@ class SettingController extends Controller
     }
 
     /**
-     * Hàm cặt nhật giá trị cài đặt
+     * Hàm cập nhật giá trị cài đặt
      */
     public function update()
     {

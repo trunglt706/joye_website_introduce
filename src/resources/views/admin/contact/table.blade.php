@@ -22,7 +22,7 @@
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
             <td>
-                <div class="text-nowrap">{{ $item->email }}</div>
+                <div class="text-nowrap">{{ $item->phone }}</div>
             </td>
             <td class="text-end">
                 <span class="badge bg-{{ $status[1] }}">

@@ -1,5 +1,5 @@
 <!--favicon-->
-<link rel="shortcut icon" type="image/png" href="/style/images/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="{{ get_option('seo-favico') }}" />
 <!--bootstrap css-->
 <link rel="stylesheet" type="text/css" href="/style/css/bootstrap.min.css">
 <!--nice select css-->

@@ -39,8 +39,8 @@
                 <tr>
                     <td class="bg-body-secondary w-175px text-nowrap">- Họ tên</td>
                     <td>{{ $data->name }}</td>
-                    <td class="bg-body-secondary w-175px text-nowrap">- Email</td>
-                    <td>{{ $data->code }}</td>
+                    <td class="bg-body-secondary w-175px text-nowrap">- Số ĐT</td>
+                    <td>{{ $data->phone }}</td>
                 </tr>
                 <tr>
                     <td class="bg-body-secondary text-nowrap">- Trạng thái</td>

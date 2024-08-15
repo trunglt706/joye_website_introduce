@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateContactRequest;
 use App\Models\Contact;
 use Illuminate\Support\Facades\DB;
 
@@ -19,11 +20,11 @@ class ContactController extends Controller
     /**
      * Hàm lưu thông tin liên hệ
      */
-    public function create()
+    public function create(CreateContactRequest $request)
     {
         try {
             DB::beginTransaction();
-            $data = request()->only('name', 'email', 'comment');
+            $data = request()->only('name', 'phone', 'comment');
             Contact::create($data);
             DB::commit();
             return redirect()->back()->with('success', 'Gửi liên hệ thành công');
