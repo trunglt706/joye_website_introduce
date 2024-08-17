@@ -54,8 +54,8 @@
                                                 <div class="col-6">
                                                     <div class="description text-justify">
                                                         &ldquo;
-                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
-                                                        repellat omnis saepe repellendus deserunt
+                                                        Chúng tôi cung cấp các giải pháp tốt nhất về Thương mại điện tử và
+                                                        LiveStreamming đến người dùng đã tin và sử dụng dịch vụ của Joye
                                                         &rdquo;
                                                     </div>
                                                 </div>
