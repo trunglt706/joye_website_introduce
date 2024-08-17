@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <div class="blog-wrap">
+        <div class="pt-3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
@@ -28,14 +28,16 @@
                                 <img src="/style/images/blog-2.jpg" class="img-fluid" alt="{{ $data['blog']->name }}">
                             </div>
                             <div class="post-cont">
-                                <h3>
+                                <h3 class="mt-2">
                                     {{ $data['blog']->name }}
                                 </h3>
                                 <h6><i class="fa fa-user"></i> Admin
                                     <span class="maydate ms-3"><i class="fa fa-calendar-alt"></i>
                                         {{ date('d/m/Y', strtotime($data['blog']->created_at)) }}</span>
                                 </h6>
-                                {!! $data['blog']->content !!}
+                                <div class="mt-2">
+                                    {!! $data['blog']->content !!}
+                                </div>
                             </div>
                         </div>
                         <!--end blog single-->

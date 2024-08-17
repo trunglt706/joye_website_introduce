@@ -386,6 +386,7 @@ p {
     right: 0;
     top: 0;
     width: 52%;
+    z-index: 5;
 }
 
 .caption h4 {
@@ -1757,8 +1758,8 @@ select {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 .pt-120{
     padding-top: 120px;
@@ -1857,7 +1858,7 @@ select {
     border-bottom: 1px solid #7672853d;
     border-radius: 0;
     height: 60px;
-    padding-left: 40px;
+    padding-left: 0px;
     /* color: #76728592; */
     color: #000000c1;
 }
@@ -1878,7 +1879,7 @@ select {
     border-bottom: 1px solid #7672853d;
     border-radius: 0;
     height: 164px;
-    padding: 20px 0 0 40px;
+    padding: 20px 0 0 0px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #000000c1;
@@ -1929,7 +1930,7 @@ select {
 
 .contact-cont h2 {
     font-weight: 700;
-    margin: 15px 0;
+    /* margin: 15px 0; */
 }
 
 .contact-cont p {
@@ -1973,13 +1974,13 @@ select {
     overflow: hidden;
 }
 .footer-area {
-    position: relative;
+    /* position: relative; */
     background-image: -moz-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -webkit-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -ms-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-repeat: no-repeat;
     background-position: left bottom;
-    padding: 120px 0 0;
+    /* padding: 120px 0 0; */
 }
 
 .footer-area::before{
@@ -2010,7 +2011,7 @@ select {
 
 .footer-btm {
     border-top: 1px solid #585273;
-    margin-top: 170px;
+    margin-top: 30px;
     padding: 30px 0;
 }
 
@@ -2025,7 +2026,8 @@ select {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid #585273;
+    background-color: #f87115;
+    border-color: #f87115;
     color: #fff;
     text-align: center;
     line-height: 25px;
@@ -2152,11 +2154,12 @@ select {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 28px;
-    margin-top: 15px
+    margin-top: 15px;
+    text-align: justify;
 }
 
 .post-cont {
-    padding: 10px 25px 40px;
+    padding: 0px 25px 25px;
 }
 .post-cont h6 .maydate{
     font-size: 14px;
@@ -2185,7 +2188,7 @@ select {
 
 .sidebar-widget {
     border: 1px solid #e6f0fa;
-    padding: 30px 30px 20px;
+    padding: 20px;
     border-radius: 10px;
     margin: 0 0 30px;
     background-color: #FCFBFE
@@ -2194,7 +2197,7 @@ select {
 .sidebar-widget h4 {
     font-weight: 700;
     border-bottom: 1px solid #eeeeee;
-    margin: 0 0 25px;
+    margin: 0 0 20px;
     padding: 0 0 10px;
     color: #000
 }
@@ -2219,7 +2222,7 @@ select {
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     border-radius: 0;
-    height: 55px;
+    height: 42px;
     border: 1px solid #e6f0fa;
     border-radius: 30px;
     padding-left: 20px;
@@ -2242,8 +2245,8 @@ select {
     color: #f87115;
     font-size: 18px;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 9px;
+    right: 9px;
     text-align: center;
     background-color: transparent
 }
@@ -2775,6 +2778,7 @@ select {
 }
 .about-testimonial img{
     width: 100%;
+    border-radius: 8px;
 }
 .about-testimonial .description {
     font-style: italic;
@@ -2786,7 +2790,7 @@ select {
 .about-testimonial .name {
     font-size: 25px;
     text-align: center;
-    padding: 15px 0;
+    padding-top: 15px;
 }
 @media screen and (max-width: 768px) {
     .about-testimonial .name {
@@ -2814,6 +2818,7 @@ select {
     font-weight: bold;
     text-align: center;
     font-family: 'Thasadith', sans-serif;
+    color: #000;
 }
 .about-feature .description{
     font-size: 14px;
@@ -2824,7 +2829,7 @@ select {
     width: 70%;
 }
 .about-feature .content {
-    margin-top: 20px;
+    margin-top: 60px;
 }
 .about-feature .content .item {
     padding: 10px 15px;
@@ -2844,6 +2849,7 @@ select {
     font-size: 14px;
     padding-left: 15px;
     line-height: 18px;
+    height: 100px;
 }
 .about-feature .content .item img {
     width: 100%;

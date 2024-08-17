@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <div class="blog-wrap">
+        <div class="pt-3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">

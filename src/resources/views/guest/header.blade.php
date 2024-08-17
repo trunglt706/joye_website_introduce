@@ -50,7 +50,11 @@
                     </ul>
 
                     <ul class="nav navbar-nav login-btn">
-                        <li class="nav-item log-btn"><a class="nav-link" href="#">LOG IN</a></li>
+                        <li class="nav-item log-btn">
+                            <a class="nav-link" href="#">
+                                Đăng nhập
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>

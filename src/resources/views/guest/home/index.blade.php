@@ -333,8 +333,8 @@
                             </div>
                             <img src="/style/images/feature-4.png.jpg.png" class="img-fluid" alt="">
                             <!-- <div class="rec-icon">
-                                        <i class="icofont-disc"></i><span>RECORD</span>
-                                    </div> -->
+                                                                            <i class="icofont-disc"></i><span>RECORD</span>
+                                                                        </div> -->
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-1 mb-30">
@@ -448,23 +448,23 @@
         </div>
         <!--start addon-->
         <!-- <div class="addons text-center">
-                    <h4>AVAILABLE ADD-ONS</h4>
-                    <ul>
-                        <li>Enhanced Cloud DVR</li>
-                        <li>Unlimited Screens</li>
-                        <li>Entertainment Add-on</li>
-                        <li>HBO<sup>R</sup></li>
-                        <li>CINEMAX<sup>R</sup></li>
-                        <li>SHOWTIME<sup>R</sup></li>
-                    </ul>
-                </div> -->
+                                                        <h4>AVAILABLE ADD-ONS</h4>
+                                                        <ul>
+                                                            <li>Enhanced Cloud DVR</li>
+                                                            <li>Unlimited Screens</li>
+                                                            <li>Entertainment Add-on</li>
+                                                            <li>HBO<sup>R</sup></li>
+                                                            <li>CINEMAX<sup>R</sup></li>
+                                                            <li>SHOWTIME<sup>R</sup></li>
+                                                        </ul>
+                                                    </div> -->
         <!--end addon-->
         <div class="add-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
                         <div class="add-section-header">
-                            <h4>AVAILABLE ADD-ONS</h4>
+                            <h4>Đối tác liên kết</h4>
                         </div>
                     </div>
                 </div>
@@ -552,15 +552,14 @@
                 <!--start section heading-->
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                     <div class="sec-heading text-center">
-                        <h4>Take a look on</h4>
-                        <h2>Latest Sports schedule</h2>
+                        <h2>Bài viết nổi bật</h2>
                         <h5>View the schedule below to find out about the live sport you can see on Reloj in the next two
                             weeks</h5>
                     </div>
                 </div>
                 <!--end section heading-->
             </div>
-            <div class="row justify-content-center mb-xl-5 mb-4">
+            {{-- <div class="row justify-content-center mb-xl-5 mb-4">
                 <div class="col-xxl-8">
                     <div class="schedule-search">
                         <div class="search-left d-flex align-items-center gap-xxl-4 gap-2">
@@ -640,7 +639,7 @@
                     </div>
                 </div>
                 <!--end schedule date-->
-            </div>
+            </div> --}}
             <div class="row">
                 <!--start channel single-->
                 <div class="col-lg-4 col-md-6">
@@ -732,7 +731,7 @@
         </div>
     </section>
     <!--end sport schedule area-->
-    <!--start faq area-->
+    {{-- <!--start faq area-->
     <section id="faq-area" data-scroll-index="5">
         <div class="container">
             <div class="row">
@@ -823,14 +822,13 @@
             </div>
         </div>
     </section>
-    <!--end faq area-->
+    <!--end faq area--> --}}
     <section class="testimonial-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                     <div class="sec-heading text-center">
-                        <h4>TESTIMONIALS</h4>
-                        <h2>5000+ Happy Customers</h2>
+                        <h2>Hơn 5000+ khách hài lòng</h2>
                         <h5>View the schedule below to find out about the live sport you can see on Reloj in the next two
                             weeks</h5>
                     </div>

@@ -7,7 +7,8 @@
              <form>
                  <div class="widget-serch form-group">
                      <input type="hidden" name="group" value="{{ isset($_GET['group']) ? $_GET['group'] : '' }}">
-                     <input type="text" class="form-control" name="search" placeholder="Tìm bài viết ...">
+                     <input type="text" class="form-control" value="{{ isset($_GET['search']) ? $_GET['search'] : '' }}"
+                         name="search" placeholder="Tìm bài viết ...">
                      <button type="submit"><i class="fa fa-search"></i></button>
                  </div>
              </form>
