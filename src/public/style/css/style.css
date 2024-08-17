@@ -1596,6 +1596,35 @@ p {
         gap: 20px;
         border-radius: 10px;
     }
+    .footer-btm {
+        margin-top: 0px !important;
+    }
+    #footer, .contact-cont {
+        padding-top: 10px !important;
+    }
+    .post-cont h3 a {
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+    .about-feature .description {
+        text-align: justify !important;
+        width: 100% !important;
+    }
+    .card {
+        border-radius: 12px !important;
+    }
+    .contact-cont h2 {
+        color: #000 !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .contact-cont p {
+        text-align: center !important;
+    }
+    .contact-form button {
+        width: 100%;
+    }
 }
 .darkcss-cusm .nice-select .current{
     color: #fff !important;

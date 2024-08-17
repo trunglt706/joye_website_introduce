@@ -1,3 +1,6 @@
+@php
+    $currentRoute = Route::currentRouteName();
+@endphp
 <!--start preloader-->
 <div class="preloader">
     <div class="d-table">
@@ -24,28 +27,27 @@
                 <div class="navbar-collapse collapse" id="NavbarContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
-                                href="/">Trang chủ</a>
+                            <a class="nav-link {{ $currentRoute == 'home' ? 'active' : '' }}" href="/">Trang
+                                chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}"
-                                href="/gioi-thieu">Giới thiệu</a>
+                            <a class="nav-link {{ $currentRoute == 'about' ? 'active' : '' }}" href="/gioi-thieu">Giới
+                                thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'service' || Route::currentRouteName() == 'service.detail' ? 'active' : '' }}"
+                            <a class="nav-link {{ $currentRoute == 'service' || $currentRoute == 'service.detail' ? 'active' : '' }}"
                                 href="/dich-vu">Dịch vụ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'blog' || Route::currentRouteName() == 'blog.detail' ? 'active' : '' }}"
+                            <a class="nav-link {{ $currentRoute == 'blog' || $currentRoute == 'blog.detail' ? 'active' : '' }}"
                                 href="/tin-tuc">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}"
-                                href="/faq">FAQs</a>
+                            <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}" href="/faq">FAQs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"
-                                href="/lien-he">Liên hệ</a>
+                            <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}" href="/lien-he">Liên
+                                hệ</a>
                         </li>
                     </ul>
 
