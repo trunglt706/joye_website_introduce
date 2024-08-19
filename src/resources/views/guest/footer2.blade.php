@@ -12,7 +12,7 @@
                     <ul>
                         @foreach ($socials as $item)
                             <li>
-                                <a href="{{ $item->link ?? '#' }}">
+                                <a href="{{ $item->link ?? '#' }}" title="{{ $item->name }}">
                                     <img src="{{ $item->image }}" alt="">
                                 </a>
                             </li>

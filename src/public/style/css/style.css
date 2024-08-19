@@ -2056,16 +2056,18 @@ select {
 }
 
 .footer-social li a {
-    display: block;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #f87115;
-    border-color: #f87115;
+    background-color: #fff;
+    border-color: #fff;
     color: #fff;
     text-align: center;
     line-height: 25px;
     margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer-social li a  i{
     font-size: 14px;
@@ -2074,12 +2076,19 @@ select {
 .footer-social li {
     display: inline-block;
 }
+.footer-social img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
 
 .footer-social li a:hover {
     background-color: #f87115;
     border-color: #f87115;
     -webkit-box-shadow: 0px 8px 10px 0px rgba(20, 34, 58);
     box-shadow: 0px 8px 10px 0px rgba(20, 34, 58);
+    transform: scale(1.05);
+    transition: transform .4s ease-in-out;
 }
 
 #footer.default {
