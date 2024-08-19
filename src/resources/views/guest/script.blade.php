@@ -6,6 +6,8 @@
 <script src="/style/js/jquery.nice-select.min.js"></script>
 <!--bootstrap js-->
 <script src="/style/js/bootstrap.min.js"></script>
+<!--bootstrap bundle js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!--counter js-->
 <script src="/style/js/waypoints.js"></script>
 <script src="/style/js/counterup.min.js"></script>

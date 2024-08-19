@@ -55,7 +55,7 @@
                     </ul>
                     <ul class="nav navbar-nav login-btn">
                         <li class="nav-item log-btn">
-                            <a class="nav-link" href="#">Đăng nhập</a>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#open-contact" onclick='return false'>Đăng ký tư vấn</a>
                         </li>
                     </ul>
                 </div>
