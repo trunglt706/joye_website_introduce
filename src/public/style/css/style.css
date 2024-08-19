@@ -2059,11 +2059,10 @@ select {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #676767;
     border-color: #fff;
     color: #fff;
     text-align: center;
-    line-height: 25px;
     margin-right: 5px;
     display: flex;
     justify-content: center;
@@ -2330,17 +2329,30 @@ select {
     display: inline-block;
 }
 
-.blog-pagination li a {
-    display: block;
+.blog-pagination li .page-link {
     width: 48px;
     height: 48px;
     background-color: #f1f5f7;
-    line-height: 48px;
     border-radius: 50%;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    margin: 0 2px;
+    margin: 0 4px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f87115;
+    border-top-left-radius: 50%!important;
+    border-bottom-left-radius: 50%!important;
+    border-top-right-radius: 50%!important;
+    border-bottom-right-radius: 50%!important;
+}
+.blog-pagination li.active .page-link {
+    background-color: #f87115;
+    border: 1px solid #f87115;
+    color: #FFF
+}
+.blog-pagination li.disabled .page-link {
+    color: #cccccc;
 }
 
 .blog-pagination li a.active,
@@ -3174,4 +3186,12 @@ div#whatsapp-vr .phone-vr .phone-vr-img-circle img {
 }
 .scroll-to-top a{
 	color: #f87115;
+}
+/*Pagination*/
+.pagination {
+    margin-bottom: 50px;
+}
+/*End Pagination*/
+#page-cont {
+    padding-bottom: 50px;
 }
