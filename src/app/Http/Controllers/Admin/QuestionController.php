@@ -97,7 +97,7 @@ class QuestionController extends Controller
             $data['status'] = isset($_request['status']) && $_request['status'] == Question::STATUS_ACTIVE ? Question::STATUS_ACTIVE : Question::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
-            admin_save_log("Câu hỏi #$data->name vừa mới được cập nhật thông tin cá nhân", route("admin.faq.detail", ['id' => $data->id]), $this->admin->id);
+            admin_save_log("Câu hỏi #$data->name vừa mới được cập nhật thông tin", route("admin.faq.detail", ['id' => $data->id]), $this->admin->id);
             return response()->json([
                 'status' => 200,
                 'message' => 'Cập nhật thành công',

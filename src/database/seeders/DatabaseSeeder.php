@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(seed_admin_menu::class);
         $this->call(seed_setting::class);
         $this->call(seed_service::class);
+        $this->call(seed_social::class);
     }
 }

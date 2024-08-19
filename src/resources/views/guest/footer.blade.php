@@ -23,9 +23,13 @@
                 <div class="col-lg-6">
                     <div class="footer-social d-flex position-relative justify-content-center justify-content-md-end">
                         <ul>
-                            <li><a href="javascript:void(0)"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="icofont-linkedin"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="icofont-twitter"></i></a></li>
+                            @foreach ($socials as $item)
+                                <li>
+                                    <a href="{{ $item->link ?? '#' }}">
+                                        <img src="{{ $item->image }}" alt="">
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

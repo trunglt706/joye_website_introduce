@@ -10,9 +10,13 @@
             <div class="col-lg-6">
                 <div class="footer-social text-end">
                     <ul>
-                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                        <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                        @foreach ($socials as $item)
+                            <li>
+                                <a href="{{ $item->link ?? '#' }}">
+                                    <img src="{{ $item->image }}" alt="">
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

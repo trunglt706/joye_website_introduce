@@ -25,6 +25,9 @@
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-save"></use>
                     </svg> Cập nhật
                 </a>
+                <a class="btn btn-warning" href="{{ route('admin.social.index') }}">
+                    Mạng liên kết
+                </a>
             </div>
         </div>
         <ul class="nav nav-tabs" id="myTab" role="tablist">

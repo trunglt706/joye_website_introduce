@@ -92,7 +92,7 @@ class seed_admin_menu extends Seeder
             'name' => 'Cài đặt',
             'route_name' => route('admin.setting.index'),
             'icon' => 'cog',
-            'active_route_name' => json_encode(['admin.setting.index'])
+            'active_route_name' => json_encode(['admin.setting.index', 'admin.social.index', 'admin.social.detail'])
         ]);
     }
 }

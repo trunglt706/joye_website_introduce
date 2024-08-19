@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\LogActionController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SocialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
@@ -75,6 +76,14 @@ Route::name('admin.')->prefix('admin')->group(function () {
         Route::name('setting.')->prefix('setting')->group(function () {
             Route::get('', [SettingController::class, 'index'])->name('index');
             Route::post('update', [SettingController::class, 'update'])->name('update');
+        });
+        Route::name('social.')->prefix('social')->group(function () {
+            Route::get('', [SocialController::class, 'index'])->name('index');
+            Route::get('table', [SocialController::class, 'table'])->name('table');
+            Route::get('destroy', [SocialController::class, 'destroy'])->name('destroy');
+            Route::get('/{id}', [SocialController::class, 'detail'])->name('detail');
+            Route::post('create', [SocialController::class, 'create'])->name('create');
+            Route::post('update', [SocialController::class, 'update'])->name('update');
         });
     });
 });
