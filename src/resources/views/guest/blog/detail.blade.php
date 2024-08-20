@@ -31,18 +31,21 @@
                                 <h3 class="mt-2">
                                     {{ $data['blog']->name }}
                                 </h3>
-                                <h6><i class="fa fa-user"></i> Admin
-                                    <span class="maydate ms-3"><i class="fa fa-calendar-alt"></i>
-                                        {{ date('d/m/Y', strtotime($data['blog']->created_at)) }}</span>
-                                </h6>
-                                <div class="footer-social text-end">
-                                    <ul>
-                                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                        <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">
+                                        <i class="fa fa-user"></i> Admin
+                                        <span class="maydate ms-3"><i class="fa fa-calendar-alt"></i>
+                                            {{ date('d/m/Y', strtotime($data['blog']->created_at)) }}</span>
+                                    </h6>
+                                    <div class="footer-social text-end">
+                                        <ul>
+                                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                            <li><a href="#"><i class="icofont-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="mt-2">
+                                <div class="mt-3">
                                     {!! $data['blog']->content !!}
                                 </div>
                             </div>
@@ -56,55 +59,21 @@
                                 <div class="col-md-12">
                                     <div class="text-center">
                                         <h2>Bài viết liên quan</h2>
-                                        
                                     </div>
                                 </div>
                                 <!--end section heading-->
                             </div>
-                            
                             <div class="row">
-                                <!--start channel single-->
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="chanl-single">
-                                        <img src="/style/images/chanl-img-3.jpg" class="img-fluid" alt="">
-                                        <div class="chanl-cont">
-                                            <h5 class="m-0"><a href="">MLB NETWORK</a></h5>
-                                            <p>MLB Network | Live now</p>
-                                        </div>
-                                        <div class="chanl-single-logo">
-                                            <a href="#"><img src="/style/images/4.jpg" alt="logo"></a>
+                                @for ($i = 0; $i < 3; $i++)
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="chanl-single">
+                                            <img src="/style/images/chanl-img-3.jpg" class="img-fluid" alt="">
+                                            <div class="chanl-cont">
+                                                <p>MLB Network | Live now</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--end channel single-->
-                                <!--start channel single-->
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="chanl-single">
-                                        <img src="/style/images/chanl-img-4.jpg" class="img-fluid" alt="">
-                                        <div class="chanl-cont">
-                                            <h5 class="m-0"><a href="">REAL SOCIEDAD V ESPANYOL</a></h5>
-                                            <p>Soccer | Watch live at 2:00</p>
-                                        </div>
-                                        <div class="chanl-single-logo">
-                                            <a href="#"><img src="/style/images/5.jpg" alt="logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end channel single-->
-                                <!--start channel single-->
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="chanl-single">
-                                        <img src="/style/images/chanl-img-5.jpg" class="img-fluid" alt="">
-                                        <div class="chanl-cont">
-                                            <h5 class="m-0"><a href="">MASTERS - DAY 3</a></h5>
-                                            <p>Snooker | Watch live at 19:00</p>
-                                        </div>
-                                        <div class="chanl-single-logo">
-                                            <a href="#"><img src="/style/images/6.jpg" alt="logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end channel single-->
+                                @endfor
                             </div>
                         </section>
                     </div>

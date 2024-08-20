@@ -914,8 +914,10 @@ p {
 }
 
 .platform-item img{
-    width: 75px;
+    height: 75px;
     transition: all 0.4s;
+    max-width: 90%;
+    border-radius: 8px;
 }
 
 .platform-item .title{
@@ -929,6 +931,8 @@ p {
     margin-right: auto;
     color: #2b4661;
     font-weight: 500;
+    height: 50px;
+    overflow: hidden;
 }
 
 .owl-carousel .owl-item img {
@@ -2937,8 +2941,8 @@ select {
     position: relative;
     visibility: visible;
     background-color: transparent;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 60px;
     cursor: pointer;
     z-index: 11;
     -webkit-backface-visibility: hidden;
@@ -2950,13 +2954,13 @@ select {
 }
 
 .phone-vr-circle-fill {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     top: 12px;
     left: 12px;
     position: absolute;
-    box-shadow: 0 0 0 0 #c31d1d;
-    background-color: rgba(230, 8, 8, 0.7);
+    /* box-shadow: 0 0 0 0 #f87115; */
+    background-color: rgba(230, 97, 8, 0.4);
     border-radius: 50%;
     border: 2px solid transparent;
     -webkit-animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
@@ -2970,12 +2974,12 @@ select {
 }
 
 .phone-vr-img-circle {
-    background-color: #e60808;
+    background-color: #f87115;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    top: 25px;
-    left: 25px;
+    top: 20px;
+    left: 19px;
     position: absolute;
     border-radius: 50%;
     overflow: hidden;
@@ -2990,9 +2994,9 @@ select {
     line-height: 37px;
 }
 
-.phone-vr-img-circle img {
-    max-height: 25px;
-    max-width: 27px;
+#gom-all-in-one img {
+    height: 25px;
+    width: 27px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3000,6 +3004,7 @@ select {
     -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
+    border-radius: 50%;
 }
 
 @-webkit-keyframes phone-vr-circle-fill {
@@ -3087,33 +3092,6 @@ select {
     }
 }
 
-#zalo-vr .phone-vr-circle-fill {
-    box-shadow: 0 0 0 0 #2196F3;
-    background-color: rgba(33, 150, 243, 0.7);
-}
-
-#zalo-vr .phone-vr-img-circle {
-    background-color: #2196F3;
-}
-
-#whatsapp-vr .phone-vr-circle-fill {
-    box-shadow: 0 0 0 0 #1bd741;
-    background-color: rgb(27, 215, 65, 0.7);
-}
-
-#whatsapp-vr .phone-vr-img-circle {
-    background-color: #1bd741;
-}
-
-#viber-vr .phone-vr-circle-fill {
-    box-shadow: 0 0 0 0 #714497;
-    background-color: rgba(113, 68, 151, 0.8);
-}
-
-#viber-vr .phone-vr-img-circle {
-    background-color: #714497;
-}
-
 #contact-vr .phone-vr-circle-fill {
     box-shadow: 0 0 0 0 #2196F3;
     background-color: rgba(33, 150, 243, 0.7);
@@ -3121,35 +3099,6 @@ select {
 
 #contact-vr .phone-vr-img-circle {
     background-color: #2196F3;
-}
-
-div#whatsapp-vr .phone-vr .phone-vr-circle-fill {
-    box-shadow: 0 0 0 0 #1fd744;
-    background-color: rgb(35 217 72 / 70%);
-}
-
-div#whatsapp-vr .phone-vr .phone-vr-img-circle {
-    background: #1cd741;
-}
-
-div#whatsapp-vr .phone-vr .phone-vr-img-circle img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-}
-
-#fanpage-vr img {
-    max-width: 35px;
-    max-height: 35px;
-}
-
-#fanpage-vr .phone-vr-img-circle {
-    background-color: #1877f2;
-}
-
-#fanpage-vr .phone-vr-circle-fill {
-    box-shadow: 0 0 0 0 rgb(24 119 242 / 65%);
-    background-color: rgb(24 119 242 / 70%);
 }
 
 #gom-all-in-one .button-contact {
@@ -3179,8 +3128,8 @@ div#whatsapp-vr .phone-vr .phone-vr-img-circle img {
 	display: inline-block;
     position: fixed;
     z-index: 99;
-    right: 30px;
-    bottom: 30px;
+    right: 21px;
+    bottom: 35px;
     font-size: 30px;
     transform: rotate(-90deg);
 }

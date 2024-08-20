@@ -74,7 +74,6 @@
             <div class="row">
                 <div class="offset-md-6 col-md-6">
                     <div class="strm-cont wow fadeInUp" data-wow-delay="0.5s">
-                        <h4>Top networks for sports</h4>
                         <h2>Your Live Sports Streaming Platform</h2>
                         <h5>Catch 50+ Live and On Demand channels, including your favorite sports on ESPN, FS1, NBCSN, and
                             regional sports in many cities.Certain local channels may not be available in all locations.
@@ -107,7 +106,6 @@
                 <!--start section heading-->
                 <div class="col-md-8 offset-md-2 position-relative wow fadeInUp" data-wow-delay="0.5s">
                     <div class="sec-heading text-center">
-                        <h4>Some Fact</h4>
                         <h2 class="counter-title">Continuous in Number</h2>
                         <h5>Take entertainment with you anywhere. Start watching today!</h5>
                     </div>
@@ -163,10 +161,12 @@
                 <!--start section heading-->
                 <div class="col-md-8 offset-md-2 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="sec-heading text-center">
-                        <h4>Explore Amazing Features</h4>
-                        <h2 class="counter-title">Seamless Sports Streaming Platform</h2>
-                        <h5>To build a sports streaming platform with buffer-free viewing experience, live streaming and
-                            multiple monetization options.</h5>
+                        <h2 class="counter-title">Dự án nổi bật</h2>
+                        <h5>
+                            Joye đã quản lý và làm việc cùng với hơn 200 KOLs, KOC trong các dự án lớn nhỏ với các thương
+                            hiệu trong và ngoài nước, đặc biệt là các nền tảng như Tiktok Việt Nam, Facebook Gaming và các
+                            tổ chức có tiếng khác.
+                        </h5>
                     </div>
                 </div>
                 <!--end section heading-->
@@ -180,38 +180,17 @@
                     <div class="platform-slider-area">
                         <div class="platform-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="platform-item">
-                                        <img src="/style/images/instant-setup.png" alt="image">
-                                        <h5 class="title">Instant Setup</h5>
-                                        <p>Pick your favorite teams, sports, or leagues and we'll
-                                            recommend games for you based on your selections.</p>
+                                @foreach ($data['projects'] as $item)
+                                    <div class="swiper-slide">
+                                        <div class="platform-item">
+                                            <img src="{{ $item->image }}" alt="image">
+                                            <h5 class="title">{{ $item->name }}</h5>
+                                            <p>
+                                                {{ $item->description }}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="platform-item">
-                                        <img src="/style/images/hd-quality.png" alt="image">
-                                        <h5 class="title">HD Quality</h5>
-                                        <p>Pick your favorite teams, sports, or leagues and we'll
-                                            recommend games for you based on your selections.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="platform-item">
-                                        <img src="/style/images/thousand-channel.png" alt="image">
-                                        <h5 class="title">Thousand Channels</h5>
-                                        <p>Pick your favorite teams, sports, or leagues and we'll
-                                            recommend games for you based on your selections.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="platform-item">
-                                        <img src="/style/images/multi-devices.png" alt="image">
-                                        <h5 class="title">Multi Devices</h5>
-                                        <p>Pick your favorite teams, sports, or leagues and we'll
-                                            recommend games for you based on your selections.</p>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -333,8 +312,8 @@
                             </div>
                             <img src="/style/images/feature-4.png.jpg.png" class="img-fluid" alt="">
                             <!-- <div class="rec-icon">
-                                                                            <i class="icofont-disc"></i><span>RECORD</span>
-                                                                        </div> -->
+                                                                                                                    <i class="icofont-disc"></i><span>RECORD</span>
+                                                                                                                </div> -->
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-1 mb-30">
@@ -448,16 +427,16 @@
         </div>
         <!--start addon-->
         <!-- <div class="addons text-center">
-                                                        <h4>AVAILABLE ADD-ONS</h4>
-                                                        <ul>
-                                                            <li>Enhanced Cloud DVR</li>
-                                                            <li>Unlimited Screens</li>
-                                                            <li>Entertainment Add-on</li>
-                                                            <li>HBO<sup>R</sup></li>
-                                                            <li>CINEMAX<sup>R</sup></li>
-                                                            <li>SHOWTIME<sup>R</sup></li>
-                                                        </ul>
-                                                    </div> -->
+                                                                                                <h4>AVAILABLE ADD-ONS</h4>
+                                                                                                <ul>
+                                                                                                    <li>Enhanced Cloud DVR</li>
+                                                                                                    <li>Unlimited Screens</li>
+                                                                                                    <li>Entertainment Add-on</li>
+                                                                                                    <li>HBO<sup>R</sup></li>
+                                                                                                    <li>CINEMAX<sup>R</sup></li>
+                                                                                                    <li>SHOWTIME<sup>R</sup></li>
+                                                                                                </ul>
+                                                                                            </div> -->
         <!--end addon-->
         <div class="add-section">
             <div class="container">
@@ -828,9 +807,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                     <div class="sec-heading text-center">
-                        <h2>Hơn 5000+ khách hài lòng</h2>
-                        <h5>View the schedule below to find out about the live sport you can see on Reloj in the next two
-                            weeks</h5>
+                        <h2>Khách hàng nói gì về JOYE</h2>
                     </div>
                 </div>
             </div>
@@ -846,21 +823,15 @@
                         <div class="client-element-three">
                             <img src="/style/images/Asset 5.png" alt="image">
                         </div>
-                        <div class="client-icon-one">
-                            <img src="/style/images/Asset 2.png" alt="image">
-                        </div>
-                        <div class="client-icon-two">
-                            <img src="/style/images/Asset 3.png" alt="image">
-                        </div>
                         <div class="client-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="client-item">
                                         <div class="client-thumb">
-                                            <img src="/style/images/client.jpg" alt="image">
+                                            <img src="/style/images/comment1.png" alt="image">
                                         </div>
-                                        <h5 class="title">Shahidul Islam</h5>
-                                        <span class="sub-title">UI/UX Designer</span>
+                                        <h5 class="title">Isadora</h5>
+                                        <span class="sub-title">Bách hoá ngon</span>
                                         <div class="client-icon">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -868,18 +839,19 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                         </div>
-                                        <p>“A successful marketing plan relies heavily on the pulling-power of advertising
-                                            copy. Writing result-oriented ad copy is difficult, as it must consumers to take
-                                            action.”</p>
+                                        <p>“Kết quả thay đổi rõ rệt sau khi hợp tác với agency. Đội ngũ hỗ trợ tận tình và
+                                            giúp tối ưu hóa chiến lược. Kết quả tuyệt vời!”</p>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="client-item">
                                         <div class="client-thumb">
-                                            <img src="/style/images/img-1.jpg" alt="image">
+                                            <img src="/style/images/comment2.png" alt="image">
                                         </div>
-                                        <h5 class="title">Pranto Islam</h5>
-                                        <span class="sub-title">Web Developer</span>
+                                        <h5 class="title">Mr. Nguyên Hữu Thái Hòa</h5>
+                                        <span class="sub-title">
+                                            Giám đốc Trung Tâm Khoa Học Tư Duy CTS, VIỆN TRÍ VIỆT
+                                        </span>
                                         <div class="client-icon">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -887,18 +859,17 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                         </div>
-                                        <p>“A successful marketing plan relies heavily on the pulling-power of advertising
-                                            copy. Writing result-oriented ad copy is difficult, as it must consumers to take
-                                            action.”</p>
+                                        <p>“Rất hài lòng với dịch vụ của JOYE. Lượng người xem và tương tác trên trang tăng
+                                            gấp đôi sau một tháng hợp tác! Rất đáng đầu tư!”</p>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="client-item">
                                         <div class="client-thumb">
-                                            <img src="/style/images/img-2.jpg" alt="image">
+                                            <img src="/style/images/comment3.png" alt="image">
                                         </div>
-                                        <h5 class="title">Saidul Islam</h5>
-                                        <span class="sub-title">Manager </span>
+                                        <h5 class="title">Jezebel Tro</h5>
+                                        <span class="sub-title">Hương thuận hoà </span>
                                         <div class="client-icon">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -906,9 +877,8 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                         </div>
-                                        <p>“A successful marketing plan relies heavily on the pulling-power of advertising
-                                            copy. Writing result-oriented ad copy is difficult, as it must consumers to take
-                                            action.”</p>
+                                        <p>“Đây là lần đầu tiên tôi thực sự ấn tượng. Dịch vụ livestream rất chuyên nghiệp
+                                            và hiệu quả. Rất đáng thử!”</p>
                                     </div>
                                 </div>
                             </div>
