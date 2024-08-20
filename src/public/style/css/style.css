@@ -752,8 +752,8 @@ p {
     background-size: cover;
     background-position: center;
     position: relative;
-    padding-top: 170px;
-    padding-bottom: 280px;
+    padding-top: 70px;
+    padding-bottom: 160px;
 }
 
 #counter-area .sec-heading{
@@ -857,7 +857,7 @@ p {
 
 .platform-area{
     margin-top: -130px;
-    padding-top: 170px;
+    padding-top: 50px;
     position: relative;
     background-image: url(../images/platform.jpg);
     background-size: cover;
@@ -880,7 +880,7 @@ p {
 }
 
 .platform-area .sec-heading{
-    padding-bottom: 215px;
+    padding-bottom: 160px;
     margin-top: -10px;
 }
 
@@ -946,7 +946,7 @@ p {
 ---------------------------------------------------------------------------------------*/
 
 .sec-heading {
-    padding: 0 0 65px
+    padding: 0 0 20px
 }
 
 .sec-heading h4 {
@@ -972,7 +972,7 @@ p {
 ---------------------------------------------------------------------------------------*/
 
 #feat-area {
-    padding: 100px 0 170px;
+    padding: 40px 0 170px;
 }
 
 .feat-single {
@@ -1129,7 +1129,7 @@ p {
 ---------------------------------------------------------------------------------------*/
 
 #pricing-area {
-    padding: 0 0 90px;
+    padding: 0px;
 }
 
 #pricing-area .sec-heading{
@@ -1424,7 +1424,7 @@ p {
 #sport-schdul-area {
     background-image: url(../images/schedule-bg.png);
     background-repeat: no-repeat;
-    padding: 120px 0 80px;
+    padding: 50px 0 30px;
     background-size: cover
 }
 
@@ -1434,10 +1434,12 @@ p {
 
 .chanl-single {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     width: 100%;
     overflow: hidden;
     transition: all 0.4s;
+    border-radius: 4px;
+    border: 1px solid #d2cece;
 }
 .chanl-single:hover img{
    transform: scale(1.088);
@@ -1451,7 +1453,8 @@ p {
 .chanl-single img{
     width: 100%;
     transition: all 0.4s;
-    border-radius: 16px;
+    /* border-radius: 16px; */
+    height: 220px;
 }
 
 .chanl-single:before {
@@ -1461,7 +1464,7 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(20, 50, 80, 0.7);
+    /* background-color: rgba(20, 50, 80, 0.7); */
     border-radius: 10px;
 }
 
@@ -1493,12 +1496,16 @@ p {
 .chanl-cont {
     position: absolute;
     bottom: 0px;
-    background-image: -moz-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
+    background-color: rgba(20, 50, 80, 0.7);
+    /* background-image: -moz-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -webkit-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
-    background-image: -ms-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
+    background-image: -ms-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%); */
     width: 100%;
-    padding-top: 10px;
-    padding-left: 30px;
+    /* padding-top: 10px;
+    padding-left: 30px; */
+    height: 60px;
+    overflow: hidden;
+    padding: 6px;
 }
 
 .chanl-cont h5 a {
@@ -1513,9 +1520,11 @@ p {
 }
 
 .chanl-cont p {
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Open Sans', sans-serif;
     color: #ddd;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
 .calendr-item {
@@ -2651,14 +2660,14 @@ select {
 }
 
 .testimonial-section{
-    padding-top: 100px;
+    padding-top: 0px;
     overflow: hidden;
 }
 
 .client-item-area{
     position: relative;
-    padding-top: 170px;
-    padding-bottom: 152px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     background-image: -moz-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -webkit-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -ms-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);

@@ -44,7 +44,6 @@ class BlogController extends Controller
         $data = [
             'blog' => $blog,
             'other' => Blog::ofStatus(Blog::STATUS_ACTIVE)->where('id', '<>', $blog->id)->where('group_id', $blog->group_id)->select('id', 'slug', 'name', 'image', 'description')->limit(5)->get(),
-            'groups' => BlogGroup::withCount('blogs')->ofStatus(BlogGroup::STATUS_ACTIVE)->latest()->get(),
         ];
         return view('guest.blog.detail', compact('data'));
     }

@@ -12,7 +12,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $list = Service::paginate(8);
+        $list = Service::OfStatus(Service::STATUS_ACTIVE)->select('id', 'slug', 'name', 'image')->paginate(8);
         return view('guest.service.index', compact('list'));
     }
 
@@ -21,6 +21,11 @@ class ServiceController extends Controller
      */
     public function detail($slug)
     {
-        return view('guest.service.detail');
+        $service = Service::ofStatus(Service::STATUS_ACTIVE)->ofSlug($slug)->firstOrFail();
+        $data = [
+            'service' => $service,
+            'other' => Service::ofStatus(Service::STATUS_ACTIVE)->where('id', '<>', $service->id)->select('id', 'slug', 'name', 'image', 'description')->limit(5)->get(),
+        ];
+        return view('guest.service.detail', compact('data'));
     }
 }

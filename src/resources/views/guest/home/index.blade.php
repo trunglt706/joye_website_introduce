@@ -206,8 +206,7 @@
                 <!--start section heading-->
                 <div class="col-md-8 offset-md-2">
                     <div class="sec-heading feat text-center">
-                        <h4>An Exhaustive list of</h4>
-                        <h2>Amazing Features</h2>
+                        <h3>Amazing Features</h3>
                         <h5>Watch the game live at home or on the go. Stream live games from major college and pro leagues,
                             including the NCAA, NBA, NHL, NFL, the English Premier League, and more.</h5>
                     </div>
@@ -312,8 +311,8 @@
                             </div>
                             <img src="/style/images/feature-4.png.jpg.png" class="img-fluid" alt="">
                             <!-- <div class="rec-icon">
-                                                                                                                    <i class="icofont-disc"></i><span>RECORD</span>
-                                                                                                                </div> -->
+                                                                                                                                            <i class="icofont-disc"></i><span>RECORD</span>
+                                                                                                                                        </div> -->
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-1 mb-30">
@@ -427,23 +426,23 @@
         </div>
         <!--start addon-->
         <!-- <div class="addons text-center">
-                                                                                                <h4>AVAILABLE ADD-ONS</h4>
-                                                                                                <ul>
-                                                                                                    <li>Enhanced Cloud DVR</li>
-                                                                                                    <li>Unlimited Screens</li>
-                                                                                                    <li>Entertainment Add-on</li>
-                                                                                                    <li>HBO<sup>R</sup></li>
-                                                                                                    <li>CINEMAX<sup>R</sup></li>
-                                                                                                    <li>SHOWTIME<sup>R</sup></li>
-                                                                                                </ul>
-                                                                                            </div> -->
+                                                                                                                        <h4>AVAILABLE ADD-ONS</h4>
+                                                                                                                        <ul>
+                                                                                                                            <li>Enhanced Cloud DVR</li>
+                                                                                                                            <li>Unlimited Screens</li>
+                                                                                                                            <li>Entertainment Add-on</li>
+                                                                                                                            <li>HBO<sup>R</sup></li>
+                                                                                                                            <li>CINEMAX<sup>R</sup></li>
+                                                                                                                            <li>SHOWTIME<sup>R</sup></li>
+                                                                                                                        </ul>
+                                                                                                                    </div> -->
         <!--end addon-->
         <div class="add-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
                         <div class="add-section-header">
-                            <h4>Đối tác liên kết</h4>
+                            <h3>Đối tác liên kết</h3>
                         </div>
                     </div>
                 </div>
@@ -492,7 +491,7 @@
     </section>
     <!--end pricing area-->
     <!--start download area-->
-    <section id="download-area">
+    {{-- <section id="download-area">
         <div class="container">
             <div class="download-cont-area">
                 <div class="row">
@@ -522,7 +521,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--end download area-->
     <!--start sport schedule area-->
     <section id="sport-schdul-area" data-scroll-index="4">
@@ -531,9 +530,7 @@
                 <!--start section heading-->
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                     <div class="sec-heading text-center">
-                        <h2>Bài viết nổi bật</h2>
-                        <h5>View the schedule below to find out about the live sport you can see on Reloj in the next two
-                            weeks</h5>
+                        <h3>Bài viết nổi bật</h3>
                     </div>
                 </div>
                 <!--end section heading-->
@@ -807,7 +804,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                     <div class="sec-heading text-center">
-                        <h2>Khách hàng nói gì về JOYE</h2>
+                        <h3>Khách hàng nói gì về JOYE</h3>
                     </div>
                 </div>
             </div>

@@ -21,16 +21,20 @@
         <div class="pt-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-9 mb-2">
                         <!--start blog single-->
                         <div class="blog-single">
-                            <div class="post-media">
+                            {{-- <div class="post-media">
                                 <img src="/style/images/blog-2.jpg" class="img-fluid" alt="{{ $data['blog']->name }}">
-                            </div>
+                            </div> --}}
                             <div class="post-cont">
-                                <h3 class="mt-2">
+                                <h3>
                                     {{ $data['blog']->name }}
                                 </h3>
+                                <div class="mt-3">
+                                    {!! $data['blog']->content !!}
+                                </div>
+                                <hr>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="mb-0">
                                         <i class="fa fa-user"></i> Admin
@@ -38,48 +42,25 @@
                                             {{ date('d/m/Y', strtotime($data['blog']->created_at)) }}</span>
                                     </h6>
                                     <div class="footer-social text-end">
-                                        <ul>
-                                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                            <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                        </ul>
+                                        <div class="sharethis-inline-share-buttons"></div>
                                     </div>
-                                </div>
-                                <div class="mt-3">
-                                    {!! $data['blog']->content !!}
                                 </div>
                             </div>
                         </div>
                         <!--end blog single-->
-
-                        <!--Relative Post-->
-                        <section>
-                            <div class="row">
-                                <!--start section heading-->
-                                <div class="col-md-12">
-                                    <div class="text-center">
-                                        <h2>Bài viết liên quan</h2>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        @foreach ($data['other'] as $item)
+                            <a href="{{ route('blog.detail', ['slug' => $item->slug]) }}">
+                                <div class="chanl-single">
+                                    <img src="/style/images/blog-2.jpg" class="img-fluid" alt="">
+                                    <div class="chanl-cont">
+                                        <p>{{ $item->name }}</p>
                                     </div>
                                 </div>
-                                <!--end section heading-->
-                            </div>
-                            <div class="row">
-                                @for ($i = 0; $i < 3; $i++)
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="chanl-single">
-                                            <img src="/style/images/chanl-img-3.jpg" class="img-fluid" alt="">
-                                            <div class="chanl-cont">
-                                                <p>MLB Network | Live now</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endfor
-                            </div>
-                        </section>
+                            </a>
+                        @endforeach
                     </div>
-                    <!--start blog sidebar-->
-                    @include('guest.blog.sidebar')
-                    <!--end blog sidebar-->
                 </div>
             </div>
         </div>
