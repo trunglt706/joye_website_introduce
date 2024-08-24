@@ -27,17 +27,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="post-cont">
-                                        <h3><a href="#">“Welcome To Our Joy” E</a></h3>
+                                        <h3><a href="#" style="font-size: 40px;">“Welcome To Our Joy <b
+                                                    style="color: #e4118c">E</b>”</a></h3>
                                         <div class="text-justify">
                                             <p>“JoyE là một tổ chức dành giúp những ”Nhà sáng tạo nội dung”
-                                                và các “Doanh nghiệp”, “Nhãn hàng” có thể giới thiệu và cung
+                                                và các “Doanh nghiệp”,
+                                                “Nhãn hàng” có thể giới thiệu và cung
                                                 cấp sản phẩm, dịch vụ của mình tới khách hàng mục tiêu
-                                                thông qua nền tảng đa phương tiện.
+                                                thông qua nền tảng đa phương tiện.<br /><br />
                                                 Sứ mệnh của chúng tôi là làm cho trải nghiệm của người mua
-                                                với thương mại điện tử trở nên sáng tạo hơn, vui vẻ hơn hơn.
-                                                Qua đó, giúp các “Nhà sáng tạo nội dung”, “Nhà bán hàng” và
-                                                các “Doanh nghiệp, thương hiệu” phát triển và thành công với
-                                                những gì họ làm.”</p>
+                                                với thương mại điện tử trở nên sáng tạo hơn, vui vẻ hơn. Qua
+                                                đó, giúp các “Nhà sáng tạo nội dung”,
+                                                “Nhà bán hàng” và các “Doanh nghiệp, thương hiệu” phát triển và thành công
+                                                với những gì họ làm.”</p>
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +68,7 @@
                             </div>
                             <div class="post-cont">
                                 <div class="about-feature">
-                                    <div class="title mt-4">Tại sao chọn chúng tôi?</div>
+                                    <div class="title mt-5 text-uppercase">Tại sao chọn chúng tôi?</div>
                                     <div class="description text-justify">
                                         JoyE phát triển mạnh mẽ nhờ vào tư
                                         duy cởi mở, luôn thử nghiệm và điều
@@ -81,7 +83,7 @@
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/about-icon1.png" alt="">
+                                                        <img src="/style/images/businessman.png" alt="">
                                                     </div>
                                                     <div class="text text-justify">
                                                         <strong>Chuyên gia</strong><br />
@@ -96,7 +98,7 @@
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/about-icon2.png" alt="">
+                                                        <img src="/style/images/like.png" alt="">
                                                     </div>
                                                     <div class="text text-justify">
                                                         <strong>Kinh nghiệm</strong><br />
@@ -111,7 +113,7 @@
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/about-icon3.png" alt="">
+                                                        <img src="/style/images/trustworthy.png" alt="">
                                                     </div>
                                                     <div class="text text-justify">
                                                         <strong>Tiến hóa</strong><br />

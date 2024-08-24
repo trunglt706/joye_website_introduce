@@ -42,7 +42,7 @@ body {
 }
 
 body {
-    font-family: 'Thasadith', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 400;
     color: #143250;
     position: relative;
@@ -131,7 +131,7 @@ p {
     border: 1px solid #f87115;
     padding: 12px 45px;
     border-radius: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     text-transform: uppercase;
     font-weight: 600;
     transition: all 0.3s;
@@ -307,7 +307,7 @@ p {
 
 .navbar-nav .nav-link {
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     text-transform: uppercase;
     color: #143250
 }
@@ -397,7 +397,7 @@ p {
 .caption h4 {
     font-weight: 600;
     color: #f87115;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 28px;
     line-height: 38px;
 }
@@ -409,7 +409,7 @@ p {
 
 .caption h5 {
     font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     color: #2b4661;
     font-size: 24px;
     line-height: 34px;
@@ -420,7 +420,7 @@ p {
     border: 1px solid #f87115;
     padding: 12px 45px;
     border-radius: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     text-transform: uppercase;
     font-weight: 600;
     margin-right: 20px;
@@ -666,7 +666,7 @@ p {
 .strm-cont h4 {
     color: #f87115;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     margin-bottom: 15px;
 }
 
@@ -676,7 +676,7 @@ p {
 }
 
 .strm-cont h5 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 300;
 }
 
@@ -721,7 +721,7 @@ p {
 .flatfrm-list h5 a {
     display: inline-block;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
 }
 
 .flatfrm-list h5 a:hover {
@@ -846,7 +846,7 @@ p {
 .counter-single p {
     text-transform: uppercase;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
 }
 
 .platform-section{
@@ -952,7 +952,7 @@ p {
 .sec-heading h4 {
     color: #f87115;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     margin-bottom: 14px;
 }
 
@@ -962,7 +962,7 @@ p {
 }
 
 .sec-heading h5 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 300;
 }
 
@@ -1000,7 +1000,7 @@ p {
 .feat-cont h5 {
     color: #f87115;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
 }
 
 .feat-cont h3 {
@@ -1013,7 +1013,7 @@ p {
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     margin-bottom: 32px;
 }
 
@@ -1050,7 +1050,7 @@ p {
 }
 
 .rec-icon span {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 15px;
 }
 
@@ -1206,7 +1206,7 @@ p {
 }
 
 .price-details li {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     color: #2b4661;
     border-bottom: 2px dotted #7672853d;
     padding: 10px 0;
@@ -1218,7 +1218,7 @@ p {
     border-radius: 30px;
     background-color: #f87115;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     text-transform: uppercase;
     font-weight: 600;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(20, 50, 80, 0.4);
@@ -1281,7 +1281,7 @@ p {
 
 .addons li {
     display: inline-block;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(20, 50, 80, 0.25);
     box-shadow: 0px 5px 10px 0px rgba(20, 50, 80, 0.25);
     padding: 12px 20px;
@@ -1344,7 +1344,7 @@ p {
 
 .down-cont h5 {
     color: #f87115;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -1358,7 +1358,7 @@ p {
 .down-cont p {
     font-size: 20px;
     line-height: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 300;
     color: #fff;
 }
@@ -1398,7 +1398,7 @@ p {
 
 .down-btn a small {
     font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 600;
 }
 
@@ -1503,7 +1503,7 @@ p {
     width: 100%;
     /* padding-top: 10px;
     padding-left: 30px; */
-    height: 60px;
+    height: 40px;
     overflow: hidden;
     padding: 6px;
 }
@@ -1521,8 +1521,8 @@ p {
 
 .chanl-cont p {
     font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
-    color: #ddd;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    color: #fff;
     margin-bottom: 0px;
     text-align: center;
 }
@@ -1546,7 +1546,7 @@ p {
 }
 
 .calendr-item p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 600;
     font-size: 14px;
     color: #4a5867;
@@ -1692,7 +1692,7 @@ p {
 .search-left .month-style{
     color: #2b4661;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
 
 }
 .search-left .nice-select{
@@ -1717,7 +1717,7 @@ p {
 .search-left .nice-select .current{
     color: #2b4661;
     font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
 }
 .search-left .nice-select .list{
@@ -1729,21 +1729,21 @@ p {
     border: 1px solid #dddddd;
     padding: 0px 4px;
     font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
 }
 .search-left .nice-select .option.focus, .nice-select .option.selected.focus {
     background-color: #f87115;
     color: #fff;
     font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
 }
 .search-left .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
     background-color: #f87115;
     color: #fff;
     font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
 }
 /*nice select customize*/
@@ -1752,7 +1752,7 @@ p {
 .selc-month select,
 .sort-by p,
 .selc-sports select {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 600;
 }
 
@@ -1808,6 +1808,9 @@ select {
     padding-top: 50px;
     padding-bottom: 30px;
 }
+#faq-area .card {
+    border-radius: 17px !important;
+}
 .pt-120{
     padding-top: 120px;
 }
@@ -1827,7 +1830,7 @@ select {
 
 .card-header a {
     display: block;
-    padding: 26px 65px 26px 30px;
+    padding: 15px 65px 15px 30px;
     border-radius: 45px;
     font-weight: 700;
     font-size: 21px;
@@ -1847,7 +1850,7 @@ select {
     line-height: 40px;
     font-size: 16px;
     color: #f87115;
-    top: 22px;
+    top: 10px;
 }
 
 .card {
@@ -1859,7 +1862,7 @@ select {
 }
 
 .card-body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 18px;
     line-height: 28px;
     padding: 27px 30px 28px;
@@ -1879,140 +1882,70 @@ select {
 /*-------------------------------------------------------------------------------------
     contact area
 ---------------------------------------------------------------------------------------*/
-
-.contact-form {
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(22, 133, 244, 0.3);
-    box-shadow: 0px 0px 15px 0px rgba(22, 133, 244, 0.3);
-    border-radius: 10px;
-    padding: 52px 30px 60px;
-    background-color: #fff;
+.box-contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #0E0700;
 }
-.contact-formdark .form-group ::placeholder{
-    color: #cab6b6 !important;
+.box-contact-page .block-contact-information {
+    flex: 0 0 auto;
+    width: 35%;
 }
-.contact-formdark .form-group input{
-    color: #fff !important;
-    border-bottom: 1px solid #7672853d;
+.box-contact-page .block-contact-information,
+.box-contact-page .block-contact-map {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
 }
-.contact-formdark .form-group textarea{
+.block-contact-information .block-images {
+    height: 250px;
+}
+.block-contact-information .block-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.block-contact-information .block-article .-title {
+    padding: 15px;
     color: #fff;
-}
-
-.contact-form input {
-    border: 0;
-    font-family: 'Open Sans', sans-serif;
+    background: #0E0700;
     font-size: 14px;
-    border-bottom: 1px solid #7672853d;
-    border-radius: 0;
-    height: 60px;
-    padding-left: 0px;
-    /* color: #76728592; */
-    color: #000000c1;
+    font-weight: bold;
 }
-.contact-form input::placeholder{
-    color: #76728592;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #f87115;
-    -webkit-box-shadow: 0 0;
-    box-shadow: 0 0;
-    /* color: #76728592; */
-}
-
-.contact-form textarea {
-    border: 0;
-    border-bottom: 1px solid #7672853d;
-    border-radius: 0;
-    height: 164px;
-    padding: 20px 0 0 0px;
-    font-family: 'Open Sans', sans-serif;
+.block-contact-information .block-article .-content {
     font-size: 14px;
-    color: #000000c1;
-}
-.contact-form ::placeholder{
-    color: #76728592 !important;
-}
-
-.contact-form button {
-    background-color: #f87115;
-    border: 0;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    padding: 18px 50px;
-    border-radius: 30px;
-    margin: 24px 0 0;
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
-    box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
-}
-
-.contact-form button:hover {
-    background-color: #e0620b;
-}
-
-.contact-title h4 {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 40px;
-    margin-bottom: 5px;
-}
-
-.contact-title h5 {
-    font-family: 'Open Sans', sans-serif;
+    padding: 10px 30px;
     font-weight: 400;
 }
-
-.contact-title {
-    margin: 0 0 60px;
+.box-contact-page .block-contact-map {
+    flex: 0 0 auto;
+    width: 65%;
+    padding: 10px 30px;
 }
-
-.contact-cont h4 {
-    font-weight: 600;
-    color: #f87115;
-    font-family: 'Open Sans', sans-serif;
+.block-contact-map .form-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+    font-size: 13px;
 }
-
-.contact-cont h2 {
-    font-weight: 700;
-    /* margin: 15px 0; */
+.block-contact-map button[type="submit"] {
+    border: 1px solid #f87115;
+    background-color: #f87115;
+    color: #fff !important;
+    padding: 6px 30px;
+    margin-top: 10px;
+    border-radius: 30px;
 }
-
-.contact-cont p {
-    font-size: 18px;
-    line-height: 28px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.contact-element {
-    position: absolute;
-    right: 9%;
-    top: 27%;
-    z-index: 9;
-    animation: giraffe 3s linear infinite;
-}
-
-.help-block.with-errors li {
-    color: #ff0000;
-    margin: 4px 0 0;
-}
-
-.messages {
-    margin: 15px 0 0
-}
-
-.messages button {
-    color: #000;
-    padding: 0;
-    background-color: transparent
-}
-
-.messages button:hover {
-    background-color: transparent
-}
-
 
 /*-------------------------------------------------------------------------------------
     footer area
@@ -2064,7 +1997,7 @@ select {
 
 .copyright-text p {
     color: #e3e6fc;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 14px;
 }
 
@@ -2115,7 +2048,7 @@ select {
 ---------------------------------------------------------------------------------------*/
 
 .page-breadcrumb {
-    background-image: url(../images/blog-1.jpg);
+    background-image: url(../images/bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2141,13 +2074,13 @@ select {
     font-size: 60px;
     font-weight: 700;
     color: #fff;
-    margin: 0 0 36px;
+    margin: 0 0 15px;
 }
 
 .breadcrumb-cont ul li {
     display: inline-block;
     color: #fff;
-    font-family: 'Open Sans', sans-serif
+    font-family: VerdanaPro-Bold, Times New Roman Bold
 }
 
 .breadcrumb-cont ul li a {
@@ -2199,7 +2132,7 @@ select {
 .post-cont h6 a {
     display: inline-block;
     padding: 0 20px 6px 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     color: #3d446f;
     font-size: 15px
 }
@@ -2210,7 +2143,7 @@ select {
 
 .post-cont p {
     color: #555;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
     line-height: 28px;
     margin-top: 15px;
@@ -2233,7 +2166,7 @@ select {
 .post-btn a {
     display: inline-block;
     color: #3d446f;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-weight: 600;
     text-decoration: underline;
     margin: 10px 0 0
@@ -2268,7 +2201,7 @@ select {
 .sidebar-widget li a {
     display: block;
     color: #3d446f;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
     line-height: 26px
 }
@@ -2279,7 +2212,7 @@ select {
 
 .sidebar-widget input {
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     border-radius: 0;
     height: 42px;
     border: 1px solid #e6f0fa;
@@ -2347,7 +2280,7 @@ select {
     height: 48px;
     background-color: #f1f5f7;
     border-radius: 50%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     margin: 0 4px;
     position: relative;
     display: flex;
@@ -2477,7 +2410,7 @@ select {
 }
 
 .comnt-text>p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     color: #777
 }
 
@@ -2490,7 +2423,7 @@ select {
     height: 55px;
     padding-left: 20px;
     border: 1px solid #e6f0fa;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     border-radius: 30px;
     margin-bottom: 24px;
 }
@@ -2506,7 +2439,7 @@ select {
     font-size: 14px;
     padding-left: 20px;
     border: 1px solid #e6f0fa;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     border-radius: 30px;
     outline: none;
 }
@@ -2523,7 +2456,7 @@ select {
     padding: 14px 40px;
     border-radius: 30px;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     margin: 25px 0 0;
     -webkit-box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
     box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
@@ -2654,7 +2587,7 @@ select {
     line-height: 1;
     height: 12px;
     color: #143250;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     text-align: center;
     padding-top: 3px;
 }
@@ -2841,12 +2774,12 @@ select {
 .about-testimonial {
     background: #000;
     padding: 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 30px;
 }
 .about-testimonial *{
     color: #FFF;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
 }
 .about-testimonial img{
     width: 100%;
@@ -2876,12 +2809,12 @@ select {
     font-size: 14px;
     text-align: center;
 }
-.about-feature {
-
+.about-feature strong {
+    color: #f87115;
 }
 .about-feature *{
     color: #555;
-    font-family: 'Open Sans', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     font-size: 16px;
     line-height: 28px;
 }
@@ -2889,7 +2822,7 @@ select {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Thasadith', sans-serif;
+    font-family: VerdanaPro-Bold, Times New Roman Bold;
     color: #f87115;
 }
 .about-feature .description{

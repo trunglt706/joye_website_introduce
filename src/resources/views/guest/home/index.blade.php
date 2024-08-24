@@ -251,9 +251,6 @@
                             <div class="feat-element-three">
                                 <img src="/style/images/Star.png" alt="image">
                             </div>
-                            <div class="feat-element-four">
-                                <img src="/style/images/like.png" alt="image">
-                            </div>
                             <img src="/style/images/feature-2.png.jpg.png" class="img-fluid" alt="">
                         </div>
                     </div>
@@ -311,8 +308,8 @@
                             </div>
                             <img src="/style/images/feature-4.png.jpg.png" class="img-fluid" alt="">
                             <!-- <div class="rec-icon">
-                                                                                                                                            <i class="icofont-disc"></i><span>RECORD</span>
-                                                                                                                                        </div> -->
+                                                                                                                                                            <i class="icofont-disc"></i><span>RECORD</span>
+                                                                                                                                                        </div> -->
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-1 mb-30">
@@ -426,18 +423,18 @@
         </div>
         <!--start addon-->
         <!-- <div class="addons text-center">
-                                                                                                                        <h4>AVAILABLE ADD-ONS</h4>
-                                                                                                                        <ul>
-                                                                                                                            <li>Enhanced Cloud DVR</li>
-                                                                                                                            <li>Unlimited Screens</li>
-                                                                                                                            <li>Entertainment Add-on</li>
-                                                                                                                            <li>HBO<sup>R</sup></li>
-                                                                                                                            <li>CINEMAX<sup>R</sup></li>
-                                                                                                                            <li>SHOWTIME<sup>R</sup></li>
-                                                                                                                        </ul>
-                                                                                                                    </div> -->
+                                                                                                                                        <h4>AVAILABLE ADD-ONS</h4>
+                                                                                                                                        <ul>
+                                                                                                                                            <li>Enhanced Cloud DVR</li>
+                                                                                                                                            <li>Unlimited Screens</li>
+                                                                                                                                            <li>Entertainment Add-on</li>
+                                                                                                                                            <li>HBO<sup>R</sup></li>
+                                                                                                                                            <li>CINEMAX<sup>R</sup></li>
+                                                                                                                                            <li>SHOWTIME<sup>R</sup></li>
+                                                                                                                                        </ul>
+                                                                                                                                    </div> -->
         <!--end addon-->
-        <div class="add-section">
+        {{-- <div class="add-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
@@ -487,7 +484,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </section>
     <!--end pricing area-->
     <!--start download area-->
@@ -617,92 +614,19 @@
                 <!--end schedule date-->
             </div> --}}
             <div class="row">
-                <!--start channel single-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chanl-single">
-                        <img src="/style/images/chanl-img-1.jpg" class="img-fluid" alt="">
-                        <div class="chanl-cont-area">
-                            <div class="chanl-cont">
-                                <h5 class="m-0"><a href="">BEIN SPORTS EN ESPAÑOL</a></h5>
-                                <p>beIN SPORTS | Live now</p>
-                            </div>
-                            <div class="chanl-single-logo">
-                                <a href="#"><img src="/style/images/1.jpg" alt="logo"></a>
+                @for ($i = 0; $i < 6; $i++)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="chanl-single">
+                            <img src="/style/images/chanl-img-1.jpg" class="img-fluid" alt="">
+                            <div class="chanl-cont-area">
+                                <div class="chanl-cont">
+                                    <h5 class="m-0"><a href="">BEIN SPORTS EN ESPAÑOL</a></h5>
+                                    <p>beIN SPORTS | Live now</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--end channel single-->
-                <!--start channel single-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chanl-single">
-                        <img src="/style/images/chanl-img-1.jpg" class="img-fluid" alt="">
-                        <div class="chanl-cont">
-                            <h5 class="m-0"><a href="">BEIN SPORTS</a></h5>
-                            <p>beIN SPORTS | Live now</p>
-                        </div>
-                        <div class="chanl-single-logo">
-                            <a href="#"><img src="/style/images/2.jpg" alt="logo"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--end channel single-->
-                <!--start channel single-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chanl-single">
-                        <img src="/style/images/chanl-img-2.jpg" class="img-fluid" alt="">
-                        <div class="chanl-cont">
-                            <h5 class="m-0"><a href="">NFL NETWORK</a></h5>
-                            <p>Football | Live now</p>
-                        </div>
-                        <div class="chanl-single-logo">
-                            <a href="#"><img src="/style/images/3.jpg" alt="logo"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--end channel single-->
-                <!--start channel single-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chanl-single">
-                        <img src="/style/images/chanl-img-3.jpg" class="img-fluid" alt="">
-                        <div class="chanl-cont">
-                            <h5 class="m-0"><a href="">MLB NETWORK</a></h5>
-                            <p>MLB Network | Live now</p>
-                        </div>
-                        <div class="chanl-single-logo">
-                            <a href="#"><img src="/style/images/4.jpg" alt="logo"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--end channel single-->
-                <!--start channel single-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chanl-single">
-                        <img src="/style/images/chanl-img-4.jpg" class="img-fluid" alt="">
-                        <div class="chanl-cont">
-                            <h5 class="m-0"><a href="">REAL SOCIEDAD V ESPANYOL</a></h5>
-                            <p>Soccer | Watch live at 2:00</p>
-                        </div>
-                        <div class="chanl-single-logo">
-                            <a href="#"><img src="/style/images/5.jpg" alt="logo"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--end channel single-->
-                <!--start channel single-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chanl-single">
-                        <img src="/style/images/chanl-img-5.jpg" class="img-fluid" alt="">
-                        <div class="chanl-cont">
-                            <h5 class="m-0"><a href="">MASTERS - DAY 3</a></h5>
-                            <p>Snooker | Watch live at 19:00</p>
-                        </div>
-                        <div class="chanl-single-logo">
-                            <a href="#"><img src="/style/images/6.jpg" alt="logo"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--end channel single-->
+                @endfor
             </div>
         </div>
     </section>
