@@ -1835,6 +1835,7 @@ select {
     font-weight: 700;
     font-size: 21px;
     line-height: 31px;
+    color: #f87115;
 }
 
 .card-header a:after {
@@ -2081,6 +2082,9 @@ select {
     display: inline-block;
     color: #fff;
     font-family: VerdanaPro-Bold, Times New Roman Bold
+}
+.breadcrumb-cont ul li.active {
+    color: #f87115 !important;
 }
 
 .breadcrumb-cont ul li a {

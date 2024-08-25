@@ -16,7 +16,7 @@
                     <ul>
                         <li><a href="{{ route('home') }}"><i class="icofont-home"></i> Trang chủ</a></li>
                         <li><small>></small></li>
-                        <li>Tin tức</li>
+                        <li class="active">Tin tức</li>
                     </ul>
                 </div>
             </div>

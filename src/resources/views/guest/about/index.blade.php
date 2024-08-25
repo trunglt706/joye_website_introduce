@@ -13,7 +13,7 @@
                     <ul>
                         <li><a href="#"><i class="icofont-home"></i> Home</a></li>
                         <li><small>></small></li>
-                        <li>Giới thiệu</li>
+                        <li class="active">Giới thiệu</li>
                     </ul>
                 </div>
             </div>
