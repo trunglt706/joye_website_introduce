@@ -2,157 +2,158 @@
     "use strict";
 
     $(document).ready(function () {
-
         /*---------------------------------------------------
             calendr carousel
         ----------------------------------------------------*/
-        $('.calendr-carousel').owlCarousel({
+        $(".calendr-carousel").owlCarousel({
             loop: true,
-            navText: ['<i class="icofont-simple-left"></i>', '<i class="icofont-simple-right"></i>'],
+            navText: [
+                '<i class="icofont-simple-left"></i>',
+                '<i class="icofont-simple-right"></i>',
+            ],
             nav: true,
             autoplay: true,
             autoplayTimeout: 5000,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn',
+            animateOut: "fadeOut",
+            animateIn: "fadeIn",
             smartSpeed: 450,
             margin: 20,
             responsive: {
                 0: {
-                    items: 2
+                    items: 2,
                 },
                 768: {
-                    items: 4
+                    items: 4,
                 },
                 991: {
-                    items: 5
+                    items: 5,
                 },
                 1200: {
-                    items: 8
+                    items: 8,
                 },
                 1920: {
-                    items: 8
-                }
-            }
+                    items: 8,
+                },
+            },
         });
-
 
         /*---------------------------------------------------
             calendr carousel
         ----------------------------------------------------*/
         // slider
-        var swiper = new Swiper('.platform-slider', {
+        var swiper = new Swiper(".platform-slider", {
             slidesPerView: 4,
             spaceBetween: 0,
             loop: true,
             autoplay: {
-            delay: 1000,
+                delay: 1000,
             },
             speed: 2000,
             breakpoints: {
-            1199: {
-                slidesPerView: 3,
+                1199: {
+                    slidesPerView: 3,
+                },
+                991: {
+                    slidesPerView: 2,
+                },
+                767: {
+                    slidesPerView: 1,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
             },
-            991: {
-                slidesPerView: 2,
-            },
-            767: {
-                slidesPerView: 1,
-            },
-            575: {
-                slidesPerView: 1,
-            },
-            }
         });
 
         // slider
-        var swiper = new Swiper('.add-slider', {
+        var swiper = new Swiper(".add-slider", {
             slidesPerView: 6,
             spaceBetween: 8,
             loop: true,
             autoplay: {
-            speeds: 1000,
-            delay: 2000,
+                speeds: 1000,
+                delay: 2000,
             },
             speeds: 2000,
             breakpoints: {
-            1199: {
-                slidesPerView: 4,
+                1199: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 2,
+                },
+                450: {
+                    slidesPerView: 2,
+                },
+                400: {
+                    slidesPerView: 1,
+                },
             },
-            991: {
-                slidesPerView: 3,
-            },
-            767: {
-                slidesPerView: 2,
-            },
-            575: {
-                slidesPerView: 2,
-            },
-            450: {
-                slidesPerView: 2,
-            },
-            400: {
-                slidesPerView: 1,
-            },
-            }
         });
 
         // slider
-        var swiper = new Swiper('.client-slider', {
+        var swiper = new Swiper(".client-slider", {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: ".swiper-pagination",
                 clickable: true,
             },
             speed: 2000,
             autoplay: {
-            delay: 2000,
+                delay: 2000,
             },
             breakpoints: {
-            991: {
-                slidesPerView: 1,
+                991: {
+                    slidesPerView: 1,
+                },
+                767: {
+                    slidesPerView: 1,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
             },
-            767: {
-                slidesPerView: 1,
-            },
-            575: {
-                slidesPerView: 1,
-            },
-            }
         });
 
         /*---------------------------------------------------
             counter
         ----------------------------------------------------*/
-        $('.counter-single h2').counterUp({
-            delay: 10, // the delay time in ms
-            time: 1000 // the speed time in ms
-        });
+        // $('.counter-single h2').counterUp({
+        //     delay: 10, // the delay time in ms
+        //     time: 1000 // the speed time in ms
+        // });
 
         //nice select
-            $('select').niceSelect();
+        $("select").niceSelect();
         //--Nice Select--
 
         /*---------------------------------------------------
             magnific popUp
         ----------------------------------------------------*/
-        $('.popup-video').magnificPopup({
-            type: 'video'
+        $(".popup-video").magnificPopup({
+            type: "video",
         });
 
         /*---------------------------------------------------
             ripple effect
         ----------------------------------------------------*/
-        $('.ripple-effect').ripples({
+        $(".ripple-effect").ripples({
             resolution: 512,
             dropRadius: 20,
-            perturbance: 0.04
+            perturbance: 0.04,
         });
 
         // banner image tilt effect
-        $('.feat-img--style').tilt({
-            reset: true
+        $(".feat-img--style").tilt({
+            reset: true,
         });
 
         // wow js init
@@ -160,13 +161,13 @@
 
         // automatic drops
         setInterval(function () {
-            var $el = $('.ripple-effect');
+            var $el = $(".ripple-effect");
             var x = Math.random() * $el.outerWidth();
             var y = Math.random() * $el.outerHeight();
             var dropRadius = 20;
             var strength = 0.04 + Math.random() * 0.04;
 
-            $el.ripples('drop', x, y, dropRadius, strength);
+            $el.ripples("drop", x, y, dropRadius, strength);
         }, 1000);
 
         /*---------------------------------------------------
@@ -175,29 +176,28 @@
         $(".text-typed").each(function () {
             var $this = $(this);
             $this.typed({
-                strings: $this.attr('data-elements').split(','),
+                strings: $this.attr("data-elements").split(","),
                 typeSpeed: 100, // typing speed
-                backDelay: 3000 // pause before backspacing
+                backDelay: 3000, // pause before backspacing
             });
         });
         /*---------------------------------------------------
             scrollIt plugin activation
         ----------------------------------------------------*/
         $.scrollIt();
-
     });
 
     /*click able menus */
-	$(".mclick").on("click", function () {
-		$(this).toggleClass("reply-active");
-		$(this).parent().next(".menucontent").slideToggle();
-	});
+    $(".mclick").on("click", function () {
+        $(this).toggleClass("reply-active");
+        $(this).parent().next(".menucontent").slideToggle();
+    });
     /*click able menus */
 
     /*---------------------------------------------------
         sticky header
     ----------------------------------------------------*/
-    $(window).on('scroll', function () {
+    $(window).on("scroll", function () {
         var scroll = $(window).scrollTop();
         if (scroll < 100) {
             $("#header").removeClass("sticky");
@@ -205,46 +205,53 @@
             $("#header").addClass("sticky");
         }
     });
-    
-    
+
     /*---------------------------------------------------
         smooth scroll
     ----------------------------------------------------*/
-    $('a[href*="#"]:not([href="#"]):not([data-toggle])').on('click', function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
+    $('a[href*="#"]:not([href="#"]):not([data-toggle])').on(
+        "click",
+        function () {
+            if (
+                location.pathname.replace(/^\//, "") ==
+                    this.pathname.replace(/^\//, "") &&
+                location.hostname == this.hostname
+            ) {
+                var target = $(this.hash);
+                target = target.length
+                    ? target
+                    : $("[name=" + this.hash.slice(1) + "]");
+                if (target.length) {
+                    $("html, body").animate(
+                        {
+                            scrollTop: target.offset().top,
+                        },
+                        1000
+                    );
+                    return false;
+                }
             }
         }
-    });
+    );
 
     /*---------------------------------------------------
         accordian
     ----------------------------------------------------*/
-    $('.collapse').on('shown.bs.collapse', function () {
-        $(this).prev().addClass('active');
+    $(".collapse").on("shown.bs.collapse", function () {
+        $(this).prev().addClass("active");
     });
 
-    $('.collapse').on('hidden.bs.collapse', function () {
-        $(this).prev().removeClass('active');
+    $(".collapse").on("hidden.bs.collapse", function () {
+        $(this).prev().removeClass("active");
     });
 
     /*---------------------------------------------------
         preloader
     ----------------------------------------------------*/
-    $(window).on('load', function () {
-        $('.preloader').fadeOut(500);
+    $(window).on("load", function () {
+        $(".preloader").fadeOut(500);
     });
 
-
-     // Current Year
-  $(".currentYear").text(new Date().getFullYear());
-
-
-
-}(jQuery));
+    // Current Year
+    $(".currentYear").text(new Date().getFullYear());
+})(jQuery);

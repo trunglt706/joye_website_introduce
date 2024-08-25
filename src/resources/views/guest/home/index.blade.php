@@ -11,12 +11,19 @@
                 <!--start caption-->
                 <div class="col-lg-6 col-md-8">
                     <div class="caption">
-                        <h4>See what’s next</h4>
-                        <h1>Watch Football <br> & other Live Sports</h1>
-                        <h5>Stream the top sports networks and live games from major pro and college leagues, including the
-                            NFL, NBA, NCAA football, NHL, EPL soccer, MLB and more.</h5>
+                        <h2>JOYE CORPORATION</h2>
+                        <h5>
+                            Joye phát triển mạnh mẽ nhờ vào tư duy cởi mở, luôn thử nghiệm và điều chỉnh ý tưởng
+                            một cách nhanh chóng và tích cực. Chúng tôi mang đến các cơ hội đặc biệt để phát triển nhanh hơn
+                            và dẫn đầu xu hướng kinh doanh.
+                        </h5>
                         <div class="caption-btn">
-                            <a class="bg" href="">Start Your Free Trial</a><a href="">Read More</a>
+                            <a class="bg" href="{{ route('about') }}">
+                                Về chúng tôi
+                            </a>
+                            <a href="{{ route('contact') }}">
+                                Liên hệ ngay
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -32,32 +39,28 @@
             </div>
             <div class="core-features row">
                 <!--start core feature single-->
-                <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="core-feat-single text-center">
-                        <div class="icon">
-                            <img src="/style/images/icon-folder.png" class="img-fluid" alt="">
-                        </div>
-                        <h6>No commitments Cancel online at anytime</h6>
-                    </div>
-                </div>
-                <!--end core feature single-->
-                <!--start core feature single-->
-                <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="core-feat-single text-center">
-                        <div class="icon">
-                            <img src="/style/images/icon-responsive.png" class="img-fluid" alt="">
-                        </div>
-                        <h6>Watch anywhere on your own time</h6>
-                    </div>
-                </div>
-                <!--end core feature single-->
-                <!--start core feature single-->
-                <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.9s">
                     <div class="core-feat-single text-center">
                         <div class="icon">
                             <img src="/style/images/icon-token.png" class="img-fluid" alt="">
                         </div>
-                        <h6>Pick your price watch everything</h6>
+                        <h6>Thương mại điện tử</h6>
+                        <p>Hình thức kinh doanh mang tính xu hướng</p>
+                    </div>
+                </div>
+                <!--end core feature single-->
+                <!--start core feature single-->
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="core-feat-single text-center">
+                        <div class="icon">
+                            <img src="/style/images/icon-responsive.png" class="img-fluid" alt="">
+                        </div>
+                        <h6>Livestreaming</h6>
+                        <p>
+                            Đang dần trở thành cách thức bán hàng có
+                            doanh số tăng trưởng đột biến nhất trong
+                            thời đại kinh tế số.
+                        </p>
                     </div>
                 </div>
                 <!--end core feature single-->
@@ -68,139 +71,17 @@
         </div>
     </section>
     <!--end home area-->
-    <!--start streaming platform-->
-    <section id="strm-flatfrm" data-scroll-index="2">
-        <div class="container">
-            <div class="row">
-                <div class="offset-md-6 col-md-6">
-                    <div class="strm-cont wow fadeInUp" data-wow-delay="0.5s">
-                        <h2>Your Live Sports Streaming Platform</h2>
-                        <h5>Catch 50+ Live and On Demand channels, including your favorite sports on ESPN, FS1, NBCSN, and
-                            regional sports in many cities.Certain local channels may not be available in all locations.
-                        </h5>
-                    </div>
-                    <div class="flatfrm-list wow fadeInUp" data-wow-delay="0.9">
-                        <ul>
-                            <li><a href="#"><img src="/style/images/1.jpg" alt="logo"> <br></a></li>
-                            <li><a href="#"><img src="/style/images/2.jpg" alt="logo"> <br></a></li>
-                            <li><a href="#"><img src="/style/images/3.jpg" alt="logo"> <br></a></li>
-                            <li><a href="#"><img src="/style/images/4.jpg" alt="logo"> <br></a></li>
-                            <li><a href="#"><img src="/style/images/5.jpg" alt="logo"> <br></a></li>
-                            <li><a href="#"><img src="/style/images/6.jpg" alt="logo"> <br></a></li>
-                            <li><a href="#"><img src="/style/images/7.jpg" alt="logo"> <br></a></li>
-                        </ul>
-                        <h5><a href="">VIEW CHANNELS IN YOUR AREA <i class="icofont-long-arrow-right"></i></a></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="strm-flatfrm-img">
-            <img src="/style/images/flatform-img.png" class="img-fluid" alt="">
-        </div>
-    </section>
-    <!--end streaming platform-->
-    <!--start counter area-->
-    <section id="counter-area">
-        <div class="container">
-            <div class="row">
-                <!--start section heading-->
-                <div class="col-md-8 offset-md-2 position-relative wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="sec-heading text-center">
-                        <h2 class="counter-title">Continuous in Number</h2>
-                        <h5>Take entertainment with you anywhere. Start watching today!</h5>
-                    </div>
-                </div>
-                <!--end section heading-->
-            </div>
-            <div class="row justify-content-center position-relative">
-                <!--start counter single-->
-                <div class="col-md-4 col-8 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="counter-single text-center">
-                        <div class="icon">
-                            <div class="icon-inner">
-                                <img src="/style/images/icon-user.png" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                        <h2>80,500</h2>
-                        <p>Total Members</p>
-                    </div>
-                </div>
-                <!--end counter single-->
-                <!--start counter single-->
-                <div class="col-md-4 col-8 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="counter-single text-center">
-                        <div class="icon">
-                            <div class="icon-inner">
-                                <img src="/style/images/icon-glass.png" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                        <h2>50,199</h2>
-                        <p>Visitors online</p>
-                    </div>
-                </div>
-                <!--end counter single-->
-                <!--start counter single-->
-                <div class="col-md-4 col-8 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="counter-single text-center">
-                        <div class="icon">
-                            <div class="icon-inner">
-                                <img src="/style/images/icon-user-single.png" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                        <h2>80,510</h2>
-                        <p>Total accounts</p>
-                    </div>
-                </div>
-                <!--end counter single-->
-            </div>
-        </div>
-    </section>
-    <div class="platform-area">
-        <div class="container">
-            <div class="row">
-                <!--start section heading-->
-                <div class="col-md-8 offset-md-2 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="sec-heading text-center">
-                        <h2 class="counter-title">Dự án nổi bật</h2>
-                        <h5>
-                            Joye đã quản lý và làm việc cùng với hơn 200 KOLs, KOC trong các dự án lớn nhỏ với các thương
-                            hiệu trong và ngoài nước, đặc biệt là các nền tảng như Tiktok Việt Nam, Facebook Gaming và các
-                            tổ chức có tiếng khác.
-                        </h5>
-                    </div>
-                </div>
-                <!--end section heading-->
-            </div>
-        </div>
-    </div>
-    <div class="platform-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="platform-slider-area">
-                        <div class="platform-slider">
-                            <div class="swiper-wrapper">
-                                @foreach ($data['projects'] as $item)
-                                    <div class="swiper-slide">
-                                        <div class="platform-item">
-                                            <img src="{{ $item->image }}" alt="image">
-                                            <h5 class="title">{{ $item->name }}</h5>
-                                            <p>
-                                                {{ $item->description }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end counter area-->
+    <!--start service-->
+    @include('guest.home.service')
+    <!--end service-->
+    {{-- start sự khác biet --}}
+    @include('guest.home.khacbiet')
+    {{-- end sự khác biệt --}}
+    <!--start dự án-->
+    @include('guest.home.project')
+    <!--end dự án-->
     <!--start feature area-->
-    <section id="feat-area">
+    {{-- <section id="feat-area">
         <div class="container">
             <div class="row">
                 <!--start section heading-->
@@ -308,8 +189,8 @@
                             </div>
                             <img src="/style/images/feature-4.png.jpg.png" class="img-fluid" alt="">
                             <!-- <div class="rec-icon">
-                                                                                                                                                            <i class="icofont-disc"></i><span>RECORD</span>
-                                                                                                                                                        </div> -->
+                                                                                                                                                                                                                                                                            <i class="icofont-disc"></i><span>RECORD</span>
+                                                                                                                                                                                                                                                                        </div> -->
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-1 mb-30">
@@ -325,10 +206,10 @@
             </div>
         </div>
         <!--end feature single-->
-    </section>
+    </section> --}}
     <!--end feature area-->
     <!--start pricing area-->
-    <section id="pricing-area" data-scroll-index="3">
+    {{-- <section id="pricing-area" data-scroll-index="3">
         <div class="pricing-top">
             <div class="container">
                 <div class="row">
@@ -434,7 +315,7 @@
                                                                                                                                         </ul>
                                                                                                                                     </div> -->
         <!--end addon-->
-        {{-- <div class="add-section">
+        <div class="add-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
@@ -484,8 +365,8 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
-    </section>
+        </div>
+    </section> --}}
     <!--end pricing area-->
     <!--start download area-->
     {{-- <section id="download-area">
@@ -520,117 +401,9 @@
         </div>
     </section> --}}
     <!--end download area-->
-    <!--start sport schedule area-->
-    <section id="sport-schdul-area" data-scroll-index="4">
-        <div class="container">
-            <div class="row">
-                <!--start section heading-->
-                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-                    <div class="sec-heading text-center">
-                        <h3>Bài viết nổi bật</h3>
-                    </div>
-                </div>
-                <!--end section heading-->
-            </div>
-            {{-- <div class="row justify-content-center mb-xl-5 mb-4">
-                <div class="col-xxl-8">
-                    <div class="schedule-search">
-                        <div class="search-left d-flex align-items-center gap-xxl-4 gap-2">
-                            <span class="month-style">Month:</span>
-                            <select>
-                                <option>January</option>
-                                <option>February</option>
-                                <option>March</option>
-                                <option>April</option>
-                                <option>May</option>
-                                <option>June</option>
-                                <option>July</option>
-                            </select>
-                        </div>
-                        <div class="search-left d-flex align-items-center gap-xxl-4 gap-2">
-                            <span class="month-style">Sort by :</span>
-                            <select>
-                                <option>Polularity</option>
-                                <option>All Sports</option>
-                                <option>Most View</option>
-                                <option>Best Reated</option>
-                                <option>All Services</option>
-                                <option>Five clients</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <!--start schedule date-->
-                <div class="col-lg-12">
-                    <div class="calendr-carousel owl-carousel">
-                        <div class="calendr-item text-center">
-                            <h3>15</h3>
-                            <p>Today</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>16</h3>
-                            <p>WED</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>17</h3>
-                            <p>THU</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>18</h3>
-                            <p>FRI</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>19</h3>
-                            <p>SAT</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>20</h3>
-                            <p>SUN</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>21</h3>
-                            <p>MON</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>22</h3>
-                            <p>TUE</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>23</h3>
-                            <p>WED</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>24</h3>
-                            <p>THU</p>
-                        </div>
-                        <div class="calendr-item text-center">
-                            <h3>25</h3>
-                            <p>FRI</p>
-                        </div>
-                    </div>
-                </div>
-                <!--end schedule date-->
-            </div> --}}
-            <div class="row">
-                @for ($i = 0; $i < 6; $i++)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="chanl-single">
-                            <img src="/style/images/chanl-img-1.jpg" class="img-fluid" alt="">
-                            <div class="chanl-cont-area">
-                                <div class="chanl-cont">
-                                    <h5 class="m-0"><a href="">BEIN SPORTS EN ESPAÑOL</a></h5>
-                                    <p>beIN SPORTS | Live now</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endfor
-            </div>
-        </div>
-    </section>
-    <!--end sport schedule area-->
+    <!--start ket qua-->
+    @include('guest.home.ketqua')
+    <!--end ket qua-->
     {{-- <!--start faq area-->
     <section id="faq-area" data-scroll-index="5">
         <div class="container">
@@ -723,91 +496,5 @@
         </div>
     </section>
     <!--end faq area--> --}}
-    <section class="testimonial-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-                    <div class="sec-heading text-center">
-                        <h3>Khách hàng nói gì về JOYE</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="client-item-area">
-                        <div class="client-element-one">
-                            <img src="/style/images/Asset 1.png" alt="image">
-                        </div>
-                        <div class="client-element-two">
-                            <img src="/style/images/Asset 4.png" alt="image">
-                        </div>
-                        <div class="client-element-three">
-                            <img src="/style/images/Asset 5.png" alt="image">
-                        </div>
-                        <div class="client-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-thumb">
-                                            <img src="/style/images/comment1.png" alt="image">
-                                        </div>
-                                        <h5 class="title">Isadora</h5>
-                                        <span class="sub-title">Bách hoá ngon</span>
-                                        <div class="client-icon">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <p>“Kết quả thay đổi rõ rệt sau khi hợp tác với agency. Đội ngũ hỗ trợ tận tình và
-                                            giúp tối ưu hóa chiến lược. Kết quả tuyệt vời!”</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-thumb">
-                                            <img src="/style/images/comment2.png" alt="image">
-                                        </div>
-                                        <h5 class="title">Mr. Nguyên Hữu Thái Hòa</h5>
-                                        <span class="sub-title">
-                                            Giám đốc Trung Tâm Khoa Học Tư Duy CTS, VIỆN TRÍ VIỆT
-                                        </span>
-                                        <div class="client-icon">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <p>“Rất hài lòng với dịch vụ của JOYE. Lượng người xem và tương tác trên trang tăng
-                                            gấp đôi sau một tháng hợp tác! Rất đáng đầu tư!”</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-thumb">
-                                            <img src="/style/images/comment3.png" alt="image">
-                                        </div>
-                                        <h5 class="title">Jezebel Tro</h5>
-                                        <span class="sub-title">Hương thuận hoà </span>
-                                        <div class="client-icon">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <p>“Đây là lần đầu tiên tôi thực sự ấn tượng. Dịch vụ livestream rất chuyên nghiệp
-                                            và hiệu quả. Rất đáng thử!”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('guest.home.feedback')
 @endsection
