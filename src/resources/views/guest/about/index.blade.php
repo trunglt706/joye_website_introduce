@@ -5,7 +5,7 @@
 @section('image', '')
 @section('content')
     <!--start page content-->
-    <section id="page-cont">
+    <section>
         <div class="page-breadcrumb">
             <div class="container">
                 <div class="breadcrumb-cont text-center">
@@ -30,16 +30,16 @@
                                         <h3><a href="#" style="font-size: 40px;">“Welcome To Our Joy <b
                                                     style="color: #e4118c">E</b>”</a></h3>
                                         <div class="text-justify">
-                                            <p>“JoyE là một tổ chức dành giúp những ”Nhà sáng tạo nội dung”
-                                                và các “Doanh nghiệp”,
-                                                “Nhãn hàng” có thể giới thiệu và cung
+                                            <p>JoyE là một tổ chức dành giúp những Nhà sáng tạo nội dung
+                                                và các Doanh nghiệp,
+                                                Nhãn hàng có thể giới thiệu và cung
                                                 cấp sản phẩm, dịch vụ của mình tới khách hàng mục tiêu
                                                 thông qua nền tảng đa phương tiện.<br /><br />
                                                 Sứ mệnh của chúng tôi là làm cho trải nghiệm của người mua
                                                 với thương mại điện tử trở nên sáng tạo hơn, vui vẻ hơn. Qua
-                                                đó, giúp các “Nhà sáng tạo nội dung”,
-                                                “Nhà bán hàng” và các “Doanh nghiệp, thương hiệu” phát triển và thành công
-                                                với những gì họ làm.”</p>
+                                                đó, giúp các Nhà sáng tạo nội dung,
+                                                Nhà bán hàng và các Doanh nghiệp, thương hiệu phát triển và thành công
+                                                với những gì họ làm.</p>
                                         </div>
                                     </div>
                                 </div>
