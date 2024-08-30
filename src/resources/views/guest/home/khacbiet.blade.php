@@ -1,6 +1,6 @@
 <section id="counter-area">
     <div class="container">
-        <div class="row">
+        {{-- <div class="row">
             <!--start section heading-->
             <div class="col-md-8 offset-md-2 position-relative wow fadeInUp" data-wow-delay="0.5s">
                 <div class="sec-heading text-center">
@@ -8,7 +8,7 @@
                 </div>
             </div>
             <!--end section heading-->
-        </div>
+        </div> --}}
         <div class="row justify-content-center position-relative">
             <!--start counter single-->
             <div class="col-md-4 col-8 wow fadeInUp" data-wow-delay="0.7s">
@@ -38,7 +38,7 @@
                     </div>
                     <h2>Sự phát triển liên tục</h2>
                     <p>
-                        hát triển là nền tảng sinh học của
+                        Phát triển là nền tảng sinh học của
                         con người và điều này luôn diễn ra.
                         Nếu bạn không phát triển , bạn sẽ
                         bị lạc hậu

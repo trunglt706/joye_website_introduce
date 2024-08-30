@@ -37,6 +37,12 @@
 <script>
     $(document).ready(function() {
         checkShowSocial();
+        $('.service-icon').mouseenter(function() {
+            $(this).find('.service-name').addClass('active');
+        });
+        $('.service-icon').mouseleave(function() {
+            $(this).find('.service-name').removeClass('active');
+        });
     });
 
     $(window).on('scroll', function() {
