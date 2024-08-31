@@ -1,37 +1,3 @@
-/*----------------------------------------------------------------------------------
-
-Project     :   Reloj - Sports Landing Page
-
--------------------------------------------------------------------------------------*/
-
-
-/*------------------------------------------------------------------------------------
-
-[Table of contents]
-
-default css
-preloader
-header
-home area
-core features
-streaming platform area
-countrer area
-section heading
-features area
-pricing area
-download area
-schedule area
-faq area
-contact area
-footer area
-
---------------------------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------------------------
-    default css
----------------------------------------------------------------------------------------*/
-
 @import url('https://fonts.googleapis.com/css?family=Thasadith&display=swap');
 html,
 body {
@@ -71,10 +37,6 @@ button {
     -webkit-transition: 0.3s;
     transition: 0.3s
 }
-section{
-    /* overflow: hidden; */
-}
-
 button {
     cursor: pointer;
 }
@@ -143,10 +105,6 @@ p {
     -webkit-box-shadow: 0px 10px 20px 0px rgba(20, 50, 80, 0.4);
     box-shadow: 0px 10px 20px 0px rgba(20, 50, 80, 0.4);
 }
-
-
-
-
 
 /* menu affix css */
 .animated {
@@ -324,7 +282,6 @@ p {
     padding: 12px 40px;
     border-radius: 30px;
     animation-name: pulse;
-    /* animation-delay: 1s; */
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
@@ -868,7 +825,6 @@ p {
 }
 
 .counter-single p {
-    /* text-transform: uppercase; */
     color: #fff;
     font-family: "Source Sans 3", sans-serif;
 }
@@ -883,7 +839,6 @@ p {
     margin-top: -130px;
     padding-top: 50px;
     position: relative;
-    background-image: url(../images/platform.jpg);
     background-size: cover;
     background-position: center;
     z-index: 2;
@@ -1003,7 +958,6 @@ p {
 .feat-single {
     position: relative;
     margin-bottom: 60px;
-    /* padding: 85px 0 */
 }
 
 .feat-single:last-child{
@@ -1155,10 +1109,6 @@ p {
 
 #pricing-area {
     padding: 0px;
-}
-
-#pricing-area .sec-heading{
-    /* margin-bottom: 15px; */
 }
 
 .pricing-top {
@@ -1465,18 +1415,17 @@ p {
     border: 1px solid #d2cece;
 }
 .chanl-single:hover img{
-   transform: scale(1.088);
-   border-radius: 32px;
-   overflow: hidden;
+   transform: scale(1.02);
+   /* border-radius: 32px; */
+   /* overflow: hidden; */
 }
 .chanl-single:hover{
-    border-radius: 16px;
+    border-radius: 4px;
     overflow: hidden;
  }
 .chanl-single img{
     width: 100%;
     transition: all 0.4s;
-    /* border-radius: 16px; */
     height: 220px;
 }
 
@@ -1487,7 +1436,6 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(20, 50, 80, 0.7); */
     border-radius: 10px;
 }
 
@@ -1519,13 +1467,8 @@ p {
 .chanl-cont {
     position: absolute;
     bottom: 0px;
-    background-color: rgba(20, 50, 80, 0.7);
-    /* background-image: -moz-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
-    background-image: -webkit-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
-    background-image: -ms-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%); */
+    background-color: rgba(60, 3, 188, 0.6);
     width: 100%;
-    /* padding-top: 10px;
-    padding-left: 30px; */
     height: 40px;
     overflow: hidden;
     padding: 6px;
@@ -1978,13 +1921,11 @@ select {
     overflow: hidden;
 }
 .footer-area {
-    /* position: relative; */
     background-image: -moz-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -webkit-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-image: -ms-linear-gradient( 140deg, rgb(25,18,72) 0%, rgb(111,0,247) 100%);
     background-repeat: no-repeat;
     background-position: left bottom;
-    /* padding: 120px 0 0; */
 }
 
 .footer-area::before{
@@ -1994,7 +1935,6 @@ select {
     top: 0;
     width: 100%;
     height: 100%;
-    /* background-image: url(../images/contact-bg.png); */
     background-repeat: no-repeat;
 }
 
@@ -3117,3 +3057,40 @@ select {
     padding-bottom: 50px;
 }
 
+.btn-primary {
+    background: #D69960;
+    border-color: #D69960;
+}
+.ads img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.page-service .chanl-single {
+    position: unset;
+    display: flex;
+    border: 0px;
+}
+.page-service .chanl-single .chanl-cont {
+    position: unset;
+    background: #fff;
+    padding-left: 12px;
+    height: 100%;
+}
+.page-service .chanl-single img {
+    width: 120px;
+    height: 100px;
+}
+.page-service .chanl-single .title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    height: 48px;
+    overflow: hidden;
+    line-height: 22px;
+}
+.page-service .chanl-single .chanl-cont p {
+    color: #143250;
+    text-align: justify;
+    line-height: 16px;
+    height: 32px;
+    overflow: hidden;
+}

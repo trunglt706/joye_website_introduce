@@ -1,14 +1,14 @@
 <!--jQuery js-->
 <script src="/style/js/jquery-3.7.0.min.js"></script>
-<!--proper js-->
-<script src="/style/js/popper.min.js"></script>
-<!--nice selcet js-->
-<script src="/style/js/jquery.nice-select.min.js"></script>
 <!--bootstrap js-->
 <script src="/style/js/bootstrap.min.js"></script>
 <!--bootstrap bundle js-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/style/js/bootstrap.bundle.min.js"></script>
 @if (in_array(Route::currentRouteName(), ['home']))
+    <!--proper js-->
+    <script src="/style/js/popper.min.js"></script>
+    <!--nice selcet js-->
+    <script src="/style/js/jquery.nice-select.min.js"></script>
     <!--counter js-->
     <script src="/style/js/waypoints.js"></script>
     <script src="/style/js/counterup.min.js"></script>
@@ -28,19 +28,19 @@
     <script src="/style/js/validator.min.js"></script>
     <!-- wow js link -->
     <script src="/style/js/wow.min.js"></script>
+    <!-- swipper js -->
+    <script src="/style/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.service-icon').mouseenter(function() {
+                $(this).find('.service-name').addClass('active');
+            });
+            $('.service-icon').mouseleave(function() {
+                $(this).find('.service-name').removeClass('active');
+            });
+        });
+    </script>
 @endif
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-<!-- swipper js -->
-<script src="/style/js/swiper.min.js"></script>
+<script src="/style/js/tilt.jquery.min.js"></script>
 <!--custom js-->
 <script src="/style/js/custom.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.service-icon').mouseenter(function() {
-            $(this).find('.service-name').addClass('active');
-        });
-        $('.service-icon').mouseleave(function() {
-            $(this).find('.service-name').removeClass('active');
-        });
-    });
-</script>

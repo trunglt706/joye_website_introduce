@@ -18,21 +18,33 @@
                 </div>
             </div>
         </div>
-        <div class="pt-3">
+        <div class="pt-3 page-service">
             <div class="container">
                 <div class="row">
-                    @foreach ($list as $item)
-                        <div class="col-md-3 mb-2">
-                            <a href="{{ route('service.detail', ['slug' => $item->slug]) }}">
-                                <div class="chanl-single">
-                                    <img src="{{ $item->image }}" class="img-fluid" alt="">
-                                    <div class="chanl-cont">
-                                        <p>{{ $item->name }}</p>
-                                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            @foreach ($list as $item)
+                                <div class="col-md-4 mb-2">
+                                    <a href="{{ route('service.detail', ['slug' => $item->slug]) }}">
+                                        <div class="chanl-single">
+                                            <img src="{{ $item->image }}" class="img-fluid" alt="">
+                                            <div class="chanl-cont">
+                                                <div class="title">{{ $item->name }}</div>
+                                                <p class="description">
+                                                    {{ $item->description ?? 'Xây dựng nội dung chuyên nghiệp nâng cao thương hiệu khách hàng' }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            @endforeach
                         </div>
-                    @endforeach
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ads">
+                            <img src="{{ asset('style/images/ads.jpg') }}" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,156 +5,162 @@
         /*---------------------------------------------------
             calendr carousel
         ----------------------------------------------------*/
-        $(".calendr-carousel").owlCarousel({
-            loop: true,
-            navText: [
-                '<i class="icofont-simple-left"></i>',
-                '<i class="icofont-simple-right"></i>',
-            ],
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            animateOut: "fadeOut",
-            animateIn: "fadeIn",
-            smartSpeed: 450,
-            margin: 20,
-            responsive: {
-                0: {
-                    items: 2,
+        if ($(".calendr-carousel").length) {
+            $(".calendr-carousel").owlCarousel({
+                loop: true,
+                navText: [
+                    '<i class="icofont-simple-left"></i>',
+                    '<i class="icofont-simple-right"></i>',
+                ],
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                animateOut: "fadeOut",
+                animateIn: "fadeIn",
+                smartSpeed: 450,
+                margin: 20,
+                responsive: {
+                    0: {
+                        items: 2,
+                    },
+                    768: {
+                        items: 4,
+                    },
+                    991: {
+                        items: 5,
+                    },
+                    1200: {
+                        items: 8,
+                    },
+                    1920: {
+                        items: 8,
+                    },
                 },
-                768: {
-                    items: 4,
-                },
-                991: {
-                    items: 5,
-                },
-                1200: {
-                    items: 8,
-                },
-                1920: {
-                    items: 8,
-                },
-            },
-        });
+            });
+        }
 
         /*---------------------------------------------------
             calendr carousel
         ----------------------------------------------------*/
         // slider
-        var swiper = new Swiper(".platform-slider", {
-            slidesPerView: 4,
-            spaceBetween: 0,
-            loop: true,
-            autoplay: {
-                delay: 1000,
-            },
-            speed: 2000,
-            breakpoints: {
-                1199: {
-                    slidesPerView: 3,
+        if ($(".platform-slider").length) {
+            var swiper = new Swiper(".platform-slider", {
+                slidesPerView: 4,
+                spaceBetween: 0,
+                loop: true,
+                autoplay: {
+                    delay: 1000,
                 },
-                991: {
-                    slidesPerView: 2,
+                speed: 2000,
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 3,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
                 },
-                767: {
-                    slidesPerView: 1,
-                },
-                575: {
-                    slidesPerView: 1,
-                },
-            },
-        });
+            });
+        }
 
         // slider
-        var swiper = new Swiper(".add-slider", {
-            slidesPerView: 6,
-            spaceBetween: 8,
-            loop: true,
-            autoplay: {
-                speeds: 1000,
-                delay: 2000,
-            },
-            speeds: 2000,
-            breakpoints: {
-                1199: {
-                    slidesPerView: 4,
+        if ($(".add-slider").length) {
+            var swiper = new Swiper(".add-slider", {
+                slidesPerView: 6,
+                spaceBetween: 8,
+                loop: true,
+                autoplay: {
+                    speeds: 1000,
+                    delay: 2000,
                 },
-                991: {
-                    slidesPerView: 3,
+                speeds: 2000,
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 4,
+                    },
+                    991: {
+                        slidesPerView: 3,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    575: {
+                        slidesPerView: 2,
+                    },
+                    450: {
+                        slidesPerView: 2,
+                    },
+                    400: {
+                        slidesPerView: 1,
+                    },
                 },
-                767: {
-                    slidesPerView: 2,
-                },
-                575: {
-                    slidesPerView: 2,
-                },
-                450: {
-                    slidesPerView: 2,
-                },
-                400: {
-                    slidesPerView: 1,
-                },
-            },
-        });
+            });
+        }
 
         // slider
-        var swiper = new Swiper(".client-slider", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            speed: 2000,
-            autoplay: {
-                delay: 2000,
-            },
-            breakpoints: {
-                991: {
-                    slidesPerView: 1,
+        if ($(".client-slider").length) {
+            var swiper = new Swiper(".client-slider", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
                 },
-                767: {
-                    slidesPerView: 1,
+                speed: 2000,
+                autoplay: {
+                    delay: 2000,
                 },
-                575: {
-                    slidesPerView: 1,
+                breakpoints: {
+                    991: {
+                        slidesPerView: 1,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
                 },
-            },
-        });
+            });
+        }
 
         /*---------------------------------------------------
             counter
         ----------------------------------------------------*/
-        // $('.counter-single h2').counterUp({
-        //     delay: 10, // the delay time in ms
-        //     time: 1000 // the speed time in ms
-        // });
-
         //nice select
-        $("select").niceSelect();
+        if ($("select").length) $("select").niceSelect();
         //--Nice Select--
 
         /*---------------------------------------------------
             magnific popUp
         ----------------------------------------------------*/
-        $(".popup-video").magnificPopup({
-            type: "video",
-        });
+        if ($(".popup-video").length)
+            $(".popup-video").magnificPopup({
+                type: "video",
+            });
 
         /*---------------------------------------------------
             ripple effect
         ----------------------------------------------------*/
-        $(".ripple-effect").ripples({
-            resolution: 512,
-            dropRadius: 20,
-            perturbance: 0.04,
-        });
+        if ($(".ripple-effect").length)
+            $(".ripple-effect").ripples({
+                resolution: 512,
+                dropRadius: 20,
+                perturbance: 0.04,
+            });
 
         // banner image tilt effect
-        $(".feat-img--style").tilt({
-            reset: true,
-        });
+        if ($(".feat-img--style").length)
+            $(".feat-img--style").tilt({
+                reset: true,
+            });
 
         // wow js init
         new WOW().init();

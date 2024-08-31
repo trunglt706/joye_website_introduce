@@ -27,7 +27,7 @@
                     <div class="form-group mb-2">
                         <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Gửi nội dung" required=""></textarea>
                     </div>
-                    <button type="submit" class="btn btn-danger text-white">Gửi liên hệ</button>
+                    <button type="submit" class="btn btn-primary text-white">Đăng ký</button>
                 </form>
             </div>
         </div>

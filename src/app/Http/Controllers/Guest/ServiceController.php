@@ -12,7 +12,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $list = Service::OfStatus(Service::STATUS_ACTIVE)->select('id', 'slug', 'name', 'image')->paginate(8);
+        $list = Service::OfStatus(Service::STATUS_ACTIVE)->select('id', 'slug', 'name', 'image', 'description')->paginate(8);
         return view('guest.service.index', compact('list'));
     }
 

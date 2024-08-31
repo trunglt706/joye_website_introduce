@@ -33,11 +33,11 @@
                     <form action="{{ route('contact.create') }}" method="post">
                         @csrf
                         <div class="row">
-                            <div class="form-group col-md-4 mb-2">
+                            <div class="form-group col-md-4 mb-2 pe-0">
                                 <input type="text" class="form-control" id="name" name="name"
                                     placeholder="Nhập họ tên *" required="">
                             </div>
-                            <div class="form-group col-md-4 mb-2">
+                            <div class="form-group col-md-4 mb-2 pe-0">
                                 <input class="form-control" id="email" name="email" placeholder="Nhập Email *"
                                     required="">
                             </div>
@@ -49,7 +49,7 @@
                         <div class="form-group mb-2">
                             <textarea class="form-control" id="comment" name="comment" rows="2" placeholder="Gửi nội dung" required=""></textarea>
                         </div>
-                        <button type="submit" class="btn btn-danger text-white">Đăng ký</button>
+                        <button type="submit" class="btn btn-primary text-white">Đăng ký</button>
                     </form>
                 </div>
             </div>
