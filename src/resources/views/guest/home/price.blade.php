@@ -20,10 +20,11 @@
                     <div class="pricing-tbl-single text-center">
                         <h4>LIVESTREAM ĐIỆN THOẠI</h4>
                         <div class="price-amount">
-                            <h4>800.000 <sub>/ h</sub></h4>
+                            <h4>800.000 <sub>/ PHIÊN</sub></h4>
                         </div>
                         <div class="price-details">
                             <ul>
+                                <li>Phiên Livestream 2H</li>
                                 <li>Kịch bản Livestream, khuyến mãi</li>
                                 <li>Vận hành Livestream</li>
                                 <li>Sử dụng điện thoại thông minh</li>
@@ -42,17 +43,18 @@
                 <!--start pricing table single-->
                 <div class="col-lg-4 col-md-6">
                     <div class="pricing-tbl-single text-center">
-                        <h4>MEGA LIVESTREAM</h4>
+                        <h4>LIVESTREAM MÁY TÍNH</h4>
                         <div class="price-amount">
-                            <h4>100.000.000 <sub>/ PHIÊN</sub></h4>
+                            <h4>1.100.000 <sub>/ PHIÊN</sub></h4>
                         </div>
                         <div class="price-details">
                             <ul>
+                                <li>Phiên Livestream 2H</li>
                                 <li>Kịch bản Livestream, khuyến mãi</li>
                                 <li>Vận hành Livestream</li>
                                 <li>Sử dụng máy ảnh</li>
                                 <li>Livestream lên đến 6 nền tảng CÙNG LÚC</li>
-                                <li>Số lượng camera và góc máy theo nhu cầu</li>
+                                <li>1 camera - 1 góc máy</li>
                                 <li>Sử dụng phông xanh và phần mềm OBS</li>
                                 <li>Được nhận bảng phân tích và đánh giá</li>
                             </ul>
@@ -66,17 +68,18 @@
                 <!--start pricing table single-->
                 <div class="col-lg-4 col-md-6">
                     <div class="pricing-tbl-single text-center">
-                        <h4>LIVESTREAM MÁY TÍNH</h4>
+                        <h4>MEGA LIVESTREAM</h4>
                         <div class="price-amount">
-                            <h4>1.100.000 <sub>/ 2H</sub></h4>
+                            <h4>100.000.000 <sub>/ PHIÊN</sub></h4>
                         </div>
                         <div class="price-details">
                             <ul>
+                                <li>Phiên Livestream 2H</li>
                                 <li>Kịch bản Livestream, khuyến mãi</li>
                                 <li>Vận hành Livestream</li>
                                 <li>Sử dụng máy ảnh</li>
                                 <li>Livestream lên đến 6 nền tảng CÙNG LÚC</li>
-                                <li>1 camera - 1 góc máy</li>
+                                <li>Số lượng camera và góc máy theo nhu cầu</li>
                                 <li>Sử dụng phông xanh và phần mềm OBS</li>
                                 <li>Được nhận bảng phân tích và đánh giá</li>
                             </ul>

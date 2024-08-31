@@ -19,10 +19,10 @@
                     </div>
                     <div class="-content">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-6">
                                 <p><i class="fas fa-phone"></i> 0948-410-214</p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-6">
                                 <p><i class="fas fa-envelope"></i> info@joye.vn</p>
                             </div>
                         </div>

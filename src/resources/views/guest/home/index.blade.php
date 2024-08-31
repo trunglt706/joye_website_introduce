@@ -12,7 +12,7 @@
                 <div class="col-lg-6 col-md-8">
                     <div class="caption">
                         <h4>JOYE AGENCY</h4>
-                        <h2 class="mb-5">GIẢI PHÁP MARKETING TỔNG THỂ CHO DOANH NGHIỆP</h2>
+                        <h3 class="mb-5">GIẢI PHÁP MARKETING TỔNG THỂ CHO DOANH NGHIỆP</h3>
                         <h5>
                             JoyE phát triển mạnh mẽ nhờ vào tư duy cởi mở, luôn thử nghiệm và điều chỉnh ý tưởng mới một
                             cách nhanh chóng và tích cực. Chúng tôi mang đến các cơ hội đặc biệt để phát triển nhanh hơn và

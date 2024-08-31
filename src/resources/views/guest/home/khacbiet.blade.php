@@ -18,12 +18,9 @@
                             <img src="/style/images/icon-glass.png" class="img-fluid" alt="">
                         </div>
                     </div>
-                    <h2>Tầm nhìn táo bạo</h2>
+                    <h2>CHUYÊN GIA</h2>
                     <p>
-                        Chúng tôi tin vào sức mạnh của
-                        tầm nhìn táo bạo. Bị cười nhạo lúc
-                        ban đầu là cái giá phải trả để đạt
-                        được đẳng cấp thế giới.
+                        Chúng tôi sở hữu những chuyên gia với năng lực đặc biệt nhất trong lĩnh vực của mình
                     </p>
                 </div>
             </div>
@@ -36,12 +33,10 @@
                             <img src="/style/images/icon-user.png" class="img-fluid" alt="">
                         </div>
                     </div>
-                    <h2>Sự phát triển liên tục</h2>
+                    <h2>KINH NGHIỆM</h2>
                     <p>
-                        Phát triển là nền tảng sinh học của
-                        con người và điều này luôn diễn ra.
-                        Nếu bạn không phát triển , bạn sẽ
-                        bị lạc hậu
+                        Chúng tôi đã có những trải nghiệm với rất nhiều các chiến dịch bán hàng cùng các thương hiệu
+                        trong và ngoài nước
                     </p>
                 </div>
             </div>
@@ -54,11 +49,10 @@
                             <img src="/style/images/icon-user-single.png" class="img-fluid" alt="">
                         </div>
                     </div>
-                    <h2>Sự xuất chúng</h2>
+                    <h2>TIẾN HOÁ</h2>
                     <p>
-                        Luôn suy nghĩ và hành động khác
-                        biệt như một người lãnh đạo xuất
-                        chúng
+                        Chúng tôi luôn cập nhật công nghệ mới và ứng dụng cho đối tác của mình với mức độ tiến hóa cao
+                        nhất
                     </p>
                 </div>
             </div>

@@ -42,7 +42,7 @@ body {
 }
 
 body {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 400;
     color: #143250;
     position: relative;
@@ -131,7 +131,7 @@ p {
     border: 1px solid #3C03BC;
     padding: 12px 45px;
     border-radius: 30px;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     transition: all 0.3s;
@@ -307,9 +307,9 @@ p {
 
 .navbar-nav .nav-link {
     font-weight: 600;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     text-transform: uppercase;
-    color: #143250
+    color: #3C03BC
 }
 
 .navbar-nav .nav-link:hover,
@@ -356,7 +356,7 @@ p {
 }
 
 #header.sticky .ver-2 .nav-link {
-    color: #143250
+    color: #3C03BC
 }
 
 .logo-default,
@@ -397,7 +397,7 @@ p {
 .caption h4 {
     font-weight: 600;
     color: #3C03BC;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 28px;
     line-height: 38px;
 }
@@ -409,7 +409,7 @@ p {
 
 .caption h5 {
     font-weight: 300;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     color: #2b4661;
     font-size: 24px;
     line-height: 34px;
@@ -420,7 +420,7 @@ p {
     border: 1px solid #3C03BC;
     padding: 12px 45px;
     border-radius: 30px;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     margin-right: 20px;
@@ -686,7 +686,7 @@ p {
 .strm-cont h4 {
     color: #3C03BC;
     font-weight: 600;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     margin-bottom: 15px;
 }
 
@@ -697,7 +697,7 @@ p {
 }
 
 .strm-cont h5 {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 300;
 }
 
@@ -737,13 +737,13 @@ p {
 
 .flatfrm-list li {
     display: inline-block;
-    padding: 0 42px 40px 0;
+    padding: 0 30px 40px 0;
 }
 
 .flatfrm-list h5 a {
     display: inline-block;
     font-weight: 600;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 .flatfrm-list h5 a:hover {
@@ -870,7 +870,7 @@ p {
 .counter-single p {
     /* text-transform: uppercase; */
     color: #fff;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 .platform-section{
@@ -945,7 +945,7 @@ p {
 }
 
 .platform-item .title{
-    color: #143250;
+    color: #3C03BC;
     font-weight: 600;
     margin-top: 10px;
 }
@@ -976,7 +976,7 @@ p {
 .sec-heading h4 {
     color: #3C03BC;
     font-weight: 600;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     margin-bottom: 14px;
 }
 
@@ -987,7 +987,7 @@ p {
 }
 
 .sec-heading h5 {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 300;
 }
 
@@ -1025,7 +1025,7 @@ p {
 .feat-cont h5 {
     color: #3C03BC;
     font-weight: 600;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 .feat-cont h3 {
@@ -1038,7 +1038,7 @@ p {
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     margin-bottom: 32px;
 }
 
@@ -1054,7 +1054,7 @@ p {
 }
 
 .rec-icon {
-    background-color: #143250;
+    background-color: #3C03BC;
     width: 120px;
     height: 120px;
     line-height: 120px;
@@ -1075,7 +1075,7 @@ p {
 }
 
 .rec-icon span {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 15px;
 }
 
@@ -1229,7 +1229,7 @@ p {
 }
 
 .price-details li {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     color: #2b4661;
     border-bottom: 2px dotted #7672853d;
     padding: 10px 0;
@@ -1241,7 +1241,7 @@ p {
     border-radius: 30px;
     background-color: #3C03BC;
     color: #fff;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(20, 50, 80, 0.4);
@@ -1304,7 +1304,7 @@ p {
 
 .addons li {
     display: inline-block;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(20, 50, 80, 0.25);
     box-shadow: 0px 5px 10px 0px rgba(20, 50, 80, 0.25);
     padding: 12px 20px;
@@ -1314,7 +1314,7 @@ p {
 }
 
 .addons li sup {
-    border: 1px solid #143250;
+    border: 1px solid #3C03BC;
     border-radius: 50%;
     display: inline-block;
     width: 15px;
@@ -1367,7 +1367,7 @@ p {
 
 .down-cont h5 {
     color: #3C03BC;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -1381,7 +1381,7 @@ p {
 .down-cont p {
     font-size: 20px;
     line-height: 30px;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 300;
     color: #fff;
 }
@@ -1421,7 +1421,7 @@ p {
 
 .down-btn a small {
     font-size: 12px;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
 }
 
@@ -1544,7 +1544,7 @@ p {
 
 .chanl-cont p {
     font-size: 12px;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     color: #fff;
     margin-bottom: 0px;
     text-align: center;
@@ -1569,7 +1569,7 @@ p {
 }
 
 .calendr-item p {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     font-size: 14px;
     color: #4a5867;
@@ -1715,7 +1715,7 @@ p {
 .search-left .month-style{
     color: #2b4661;
     font-weight: 600;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
 
 }
 .search-left .nice-select{
@@ -1740,7 +1740,7 @@ p {
 .search-left .nice-select .current{
     color: #2b4661;
     font-weight: 500;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
 }
 .search-left .nice-select .list{
@@ -1752,21 +1752,21 @@ p {
     border: 1px solid #dddddd;
     padding: 0px 4px;
     font-weight: 500;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
 }
 .search-left .nice-select .option.focus, .nice-select .option.selected.focus {
     background-color: #3C03BC;
     color: #fff;
     font-weight: 500;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
 }
 .search-left .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
     background-color: #3C03BC;
     color: #fff;
     font-weight: 500;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
 }
 /*nice select customize*/
@@ -1775,7 +1775,7 @@ p {
 .selc-month select,
 .sort-by p,
 .selc-sports select {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
 }
 
@@ -1886,7 +1886,7 @@ select {
 }
 
 .card-body {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 18px;
     line-height: 28px;
     padding: 27px 30px 28px;
@@ -2014,14 +2014,14 @@ select {
 }
 
 .footer-btm {
-    border-top: 1px solid #585273;
+    border-top: 1px solid #3C03BC;
     margin-top: 30px;
     padding: 30px 0;
 }
 
 .copyright-text p {
     color: #e3e6fc;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 14px;
 }
 
@@ -2063,7 +2063,7 @@ select {
 #footer.default {
     background-image: none;
     padding: 0;
-    background-color: #153250
+    background-color: #3C03BC
 }
 
 
@@ -2104,7 +2104,7 @@ select {
 .breadcrumb-cont ul li {
     display: inline-block;
     color: #fff;
-    font-family: VerdanaPro-Bold, Times New Roman Bold
+    font-family: "Source Sans 3", sans-serif
 }
 .breadcrumb-cont ul li.active {
     color: #D69960 !important;
@@ -2159,7 +2159,7 @@ select {
 .post-cont h6 a {
     display: inline-block;
     padding: 0 20px 6px 0;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     color: #3d446f;
     font-size: 15px
 }
@@ -2170,7 +2170,7 @@ select {
 
 .post-cont p {
     color: #555;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
     line-height: 28px;
     margin-top: 15px;
@@ -2193,7 +2193,7 @@ select {
 .post-btn a {
     display: inline-block;
     color: #3d446f;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     text-decoration: underline;
     margin: 10px 0 0
@@ -2218,7 +2218,7 @@ select {
     border-bottom: 1px solid #eeeeee;
     margin: 0 0 20px;
     padding: 0 0 10px;
-    color: #000
+    color: #3C03BC
 }
 
 .sidebar-widget ul li {
@@ -2228,7 +2228,7 @@ select {
 .sidebar-widget li a {
     display: block;
     color: #3d446f;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
     line-height: 26px
 }
@@ -2239,7 +2239,7 @@ select {
 
 .sidebar-widget input {
     font-size: 14px;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     border-radius: 0;
     height: 42px;
     border: 1px solid #e6f0fa;
@@ -2307,7 +2307,7 @@ select {
     height: 48px;
     background-color: #f1f5f7;
     border-radius: 50%;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     margin: 0 4px;
     position: relative;
     display: flex;
@@ -2437,7 +2437,7 @@ select {
 }
 
 .comnt-text>p {
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     color: #777
 }
 
@@ -2450,7 +2450,7 @@ select {
     height: 55px;
     padding-left: 20px;
     border: 1px solid #e6f0fa;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     border-radius: 30px;
     margin-bottom: 24px;
 }
@@ -2466,7 +2466,7 @@ select {
     font-size: 14px;
     padding-left: 20px;
     border: 1px solid #e6f0fa;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     border-radius: 30px;
     outline: none;
 }
@@ -2483,7 +2483,7 @@ select {
     padding: 14px 40px;
     border-radius: 30px;
     color: #fff;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     margin: 25px 0 0;
     -webkit-box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
     box-shadow: 0px 10px 30px 0px rgba(21, 10, 82, 0.35);
@@ -2613,8 +2613,8 @@ select {
     font-weight: 600;
     line-height: 1;
     height: 12px;
-    color: #143250;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    color: #3C03BC;
+    font-family: "Source Sans 3", sans-serif;
     text-align: center;
     padding-top: 3px;
 }
@@ -2799,14 +2799,14 @@ select {
 }
 /*Addition*/
 .about-testimonial {
-    background: #000;
+    background: #3C03BC;
     padding: 25px;
     border-radius: 10px;
     margin-top: 30px;
 }
 .about-testimonial *{
     color: #FFF;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
 }
 .about-testimonial img{
     width: 100%;
@@ -2837,11 +2837,11 @@ select {
     text-align: center;
 }
 .about-feature strong {
-    color: #3C03BC;
+    color: #D69960;
 }
 .about-feature *{
     color: #555;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
     line-height: 28px;
 }
@@ -2849,8 +2849,8 @@ select {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    font-family: VerdanaPro-Bold, Times New Roman Bold;
-    color: #3C03BC;
+    font-family: "Source Sans 3", sans-serif;
+    color: #D69960;
 }
 .about-feature .description{
     font-size: 16px;
@@ -2869,7 +2869,7 @@ select {
     flex-direction: row;
     align-items: center;
     border-radius: 10px;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #3C03BC;
     margin-bottom: 15px;
     background: #FFF;
 }
@@ -3059,6 +3059,9 @@ select {
     .phone-bar {
         display:none;
     }
+    #strm-flatfrm {
+        padding: 40px 0px 193px !important;
+    }
 }
 
 #contact-vr .phone-vr-circle-fill {
@@ -3113,3 +3116,4 @@ select {
 #page-cont {
     padding-bottom: 50px;
 }
+

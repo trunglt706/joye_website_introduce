@@ -578,7 +578,8 @@
         line-height: 24px
     }
     .home-img {
-        display: none;
+        /* display: none; */
+        opacity: 0.5;
     }
     #home-area {
         padding: 150px 0 0;
@@ -903,6 +904,13 @@
     }
     .testimonial-section{
         padding-top: 120px;
+    }
+    .box-contact-page {
+        flex-direction: column;
+    }
+    .box-contact-page .block-contact-map,
+    .box-contact-page .block-contact-information {
+        width: 100%;
     }
 }
 
@@ -1814,8 +1822,8 @@
         width: 100% !important;
     }
     .platform-area .sec-heading {
-        padding-bottom: 215px;
-        margin-top: -90px;
+        /* padding-bottom: 215px;
+        margin-top: -90px; */
     }
     .down-cont{
         padding: 80px 16px 80px;
