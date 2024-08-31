@@ -36,7 +36,6 @@
 <script src="/style/js/custom.js"></script>
 <script>
     $(document).ready(function() {
-        checkShowSocial();
         $('.service-icon').mouseenter(function() {
             $(this).find('.service-name').addClass('active');
         });
@@ -44,21 +43,4 @@
             $(this).find('.service-name').removeClass('active');
         });
     });
-
-    $(window).on('scroll', function() {
-        checkShowSocial();
-    });
-
-    function checkShowSocial() {
-        if ($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
-            $('#button-contact-vr').addClass('d-none');
-        } else {
-            $('#button-contact-vr').removeClass('d-none');
-        }
-        if ($(window).scrollTop() + $(window).height() > $(window).height() + 30) {
-            $('.scroll-to-top').removeClass('d-none');
-        } else {
-            $('.scroll-to-top').addClass('d-none');
-        }
-    }
 </script>
