@@ -347,8 +347,11 @@ p {
     position: absolute;
     right: 0;
     top: 0;
-    width: 52%;
+    /* width: 52%; */
     z-index: 5;
+}
+.home-img>img {
+    max-height: 700px;
 }
 
 .caption h4 {
@@ -625,19 +628,28 @@ p {
 #strm-flatfrm .service-name {
     display: none;
     position: absolute;
-    top: -96px;
+    top: -58px;
     background: #D69960;
-    border-radius: 6px;
-    width: 175px;
+    border-radius: 32px;
+    width: 215px;
     color: #fff;
     transition: opacity 0.3s ease;
     opacity: 0;
+    line-height: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 6px 12px;
+    height: 55px;
+    overflow: hidden;
 }
 #strm-flatfrm .service-name.active {
-    display: block;
     z-index: 10;
     text-align: center;
     opacity: 1;
+    display: flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    text-align: center; /* Canh giữa văn bản */
 }
 
 .strm-cont h4 {
@@ -771,6 +783,10 @@ p {
     position: relative;
     margin: 19px auto 0;
     top: 20px;
+}
+.counter-single .icon-inner>img {
+    border-radius: 50%;
+    padding: 8px;
 }
 
 .counter-single .icon:before {
@@ -2035,10 +2051,11 @@ select {
 }
 
 .breadcrumb-cont h2 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     color: #fff;
     margin: 0 0 15px;
+    text-transform: uppercase;
 }
 
 .breadcrumb-cont ul li {
@@ -3092,5 +3109,25 @@ select {
     text-align: justify;
     line-height: 16px;
     height: 32px;
+    overflow: hidden;
+}
+.page-blog .chanl-single {
+    position: unset;
+    border: 0px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(20, 50, 80, 0.4);
+        box-shadow: 0px 10px 20px 0px rgba(20, 50, 80, 0.4);
+}
+.page-blog .chanl-single .chanl-cont {
+    position: unset;
+    background: #fff;
+    padding: 12px;
+    height: 73px;
+    overflow: hidden;
+}
+.page-blog .chanl-single .title {
+font-weight: bold;
+    margin-bottom: 8px;
+    line-height: 22px;
+    height: 48px;
     overflow: hidden;
 }

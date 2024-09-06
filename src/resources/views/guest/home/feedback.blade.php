@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                 <div class="sec-heading text-center">
-                    <h2>Khách hàng nói gì về Joye</h2>
+                    <h2 class="text-uppercase">Khách hàng nói gì về Joye</h2>
                 </div>
             </div>
         </div>
@@ -21,20 +21,19 @@
                     </div>
                     <div class="client-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="client-item">
-                                    <div class="client-thumb">
-                                        <img src="/style/images/comment1.png" alt="image">
-                                    </div>
-                                    <h5 class="title">Isadora</h5>
-                                    <span class="sub-title">Bách hoá ngon</span>
-                                    <div class="client-icon">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
+                            @foreach ($data['customers'] as $item)
+                                <div class="swiper-slide">
+                                    <div class="client-item">
+                                        <div class="client-thumb">
+                                            <img src="{{ $item->image ?? '/img/user.png' }}" alt="image">
+                                        </div>
+                                        <h5 class="title">{{ $item->name }}</h5>
+                                        <span class="sub-title">{{ $item->description }}</span>
+                                        <div class="client-icon">
+                                            @for ($i = 0; $i < $item->start; $i++)
+                                                <i class="fas fa-star"></i>
+                                            @endfor
+                                        </div>
                                     <p>“Kết quả thay đổi rõ rệt sau khi hợp tác với agency. Đội ngũ hỗ trợ tận tình và
                                         giúp tối ưu hóa chiến lược. Kết quả tuyệt vời!”</p>
                                 </div>

@@ -32,7 +32,8 @@
                 <!--start video button-->
                 <div class="col-lg-6 col-md-4">
                     <div class="video-ply-btn">
-                        <a class="popup-video mfp-iframe" href="https://www.youtube.com/watch?v=668nUCeBHyY"><i
+                        <a class="popup-video mfp-iframe"
+                            href="https://drive.google.com/file/d/1XCEhTW42QpnHFmliyT039mAIwxj2uybe/preview"><i
                                 class="icofont-ui-play"></i></a>
                     </div>
                 </div>

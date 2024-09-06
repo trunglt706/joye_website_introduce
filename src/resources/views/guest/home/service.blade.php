@@ -3,7 +3,7 @@
         <div class="row">
             <div class="offset-md-6 col-md-6 px-5">
                 <div class="strm-cont wow fadeInUp" data-wow-delay="0.5s">
-                    <h2>Dịch vụ của chúng tôi</h2>
+                    <h2 class="text-uppercase">Dịch vụ của chúng tôi</h2>
                     <h5>
                         Chúng tôi cung cấp các dịch vụ Đào tạo chuyên sâu, giải pháp Ecommerce toàn diện, dịch vụ
                         Livestream chuyên nghiệp, cùng với Xây dựng nội dung chất lượng tối ưu hóa thương hiệu. Tất cả
@@ -24,7 +24,7 @@
                         <li>
                             <a href="{{ route('service') }}" class="service-icon">
                                 <div class="service-name">
-                                    Đào tạo chuyên sâu
+                                    Giải pháp Ecommerce toàn diện
                                 </div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             </a>
@@ -32,7 +32,7 @@
                         <li>
                             <a href="{{ route('service') }}" class="service-icon">
                                 <div class="service-name">
-                                    Đào tạo chuyên sâu
+                                    Dịch vụ Livestream chuyên nghiệp
                                 </div>
                                 <i class="fas fa-users"></i>
                             </a>
@@ -40,7 +40,7 @@
                         <li>
                             <a href="{{ route('service') }}" class="service-icon">
                                 <div class="service-name">
-                                    Đào tạo chuyên sâu
+                                    Xây dựng nội dung chất lượng tối ưu hóa thương hiệu
                                 </div>
                                 <i class="fas fa-copy"></i>
                             </a>

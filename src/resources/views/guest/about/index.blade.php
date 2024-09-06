@@ -27,8 +27,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="post-cont">
-                                        <h3><a href="#" style="font-size: 40px;">“Welcome To Our Joy <b
-                                                    style="color: #e4118c">E</b>”</a></h3>
+                                        <h3><a href="#" style="font-size: 40px;">“Welcome to JoyE”</a></h3>
                                         <div class="text-justify">
                                             <p>JoyE là một tổ chức dành giúp những Nhà sáng tạo nội dung
                                                 và các Doanh nghiệp,

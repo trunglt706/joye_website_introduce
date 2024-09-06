@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(seed_service::class);
         $this->call(seed_social::class);
         $this->call(seed_project::class);
+        $this->call(seed_customer::class);
     }
 }

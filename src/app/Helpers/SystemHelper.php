@@ -6,6 +6,8 @@ use App\Models\AdminMenu;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManagerStatic as Image;
 
 // color
 if (!defined('COLOR_PRIMARY')) {
@@ -163,26 +165,43 @@ if (!function_exists('get_link_public')) {
 }
 
 if (!function_exists('get_url')) {
-    function get_url($uri)
+    function get_url($uri, $storage = false)
     {
-        $dropbox =  new DropboxController();
-        return $dropbox->url($uri);
+        if ($storage) {
+            $dropbox =  new DropboxController();
+            return $dropbox->url($uri);
+        }
+        return $uri;
     }
 }
 
 if (!function_exists('store_file')) {
-    function store_file($file, $uri)
+    function store_file($file, $uri, $storage = false)
     {
-        $dropbox =  new DropboxController();
-        return $dropbox->store($file, $uri);
+        if ($storage) {
+            $dropbox =  new DropboxController();
+            return $dropbox->store($file, $uri);
+        } else {
+            $name_random = time() . generateRandomString(5);
+            $filename = $name_random . '.' . $file->getClientOriginalExtension();
+            $path = $uri . '/' . $filename;
+            if (!File::exists($uri)) {
+                File::makeDirectory($uri, $mode = 0777, true, true);
+            }
+            Image::make($file)->save($path);
+            return $path;
+        }
     }
 }
 
 if (!function_exists('delete_file')) {
-    function delete_file($uri)
+    function delete_file($uri, $storage = false)
     {
-        $dropbox =  new DropboxController();
-        return $dropbox->delete($uri);
+        if ($storage) {
+            $dropbox =  new DropboxController();
+            return $dropbox->delete($uri);
+        }
+        return File::delete($uri);
     }
 }
 

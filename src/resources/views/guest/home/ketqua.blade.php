@@ -4,7 +4,7 @@
             <!--start section heading-->
             <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                 <div class="sec-heading text-center">
-                    <h2>Kết quả nổi bật</h2>
+                    <h2 class="text-uppercase">Kết quả nổi bật</h2>
                 </div>
             </div>
             <!--end section heading-->

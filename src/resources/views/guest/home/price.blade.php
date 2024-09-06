@@ -5,7 +5,7 @@
                 <!--start section heading-->
                 <div class="col-lg-7 col-md-8">
                     <div class="sec-heading">
-                        <h2 class="text-white">Dịch vụ nổi bật</h2>
+                        <h2 class="text-white text-uppercase">Dịch vụ nổi bật</h2>
                     </div>
                 </div>
                 <!--end section heading-->
