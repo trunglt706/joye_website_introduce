@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Project;
+use App\Models\Customer;
 use Illuminate\Support\Facades\DB;
 
-class ProjectController extends Controller
+class CustomerController extends Controller
 {
     protected $limit_default, $admin, $dir;
 
@@ -14,7 +14,7 @@ class ProjectController extends Controller
     {
         $this->limit_default = 10;
         $this->admin = auth('admin')->user();
-        $this->dir = 'uploads/project';
+        $this->dir = 'uploads/customer';
     }
 
     /**
@@ -23,9 +23,9 @@ class ProjectController extends Controller
     public function index()
     {
         $data = [
-            'status' => Project::get_status(),
+            'status' => Customer::get_status(),
         ];
-        return view('admin.project.index', compact('data'));
+        return view('admin.customer.index', compact('data'));
     }
 
     /**
@@ -37,14 +37,14 @@ class ProjectController extends Controller
         $search = request('search', '');
         $status = request('status', '');
 
-        $list = Project::query();
+        $list = Customer::query();
         $list = $search != '' ? $list->search($search) : $list;
         $list = $status != '' ? $list->ofStatus($status) : $list;
         $list = $list->latest()->paginate($limit);
 
         return response()->json([
             'status' => 200,
-            'data' => view('admin.project.table', compact('list'))->render()
+            'data' => view('admin.customer.table', compact('list'))->render()
         ]);
     }
 
@@ -53,8 +53,8 @@ class ProjectController extends Controller
      */
     public function detail($id)
     {
-        $data = Project::findOrFail($id);
-        return view('admin.project.detail', compact('data'));
+        $data = Customer::findOrFail($id);
+        return view('admin.customer.detail', compact('data'));
     }
 
     /**
@@ -65,14 +65,14 @@ class ProjectController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_ACTIVE;
+            $data['active'] = isset($data['active']) && $data['active'] == Customer::STATUS_ACTIVE ? Customer::STATUS_ACTIVE : Customer::STATUS_ACTIVE;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir);
             }
-            $data = Project::create($data);
+            $data = Customer::create($data);
             DB::commit();
-            admin_save_log("Dự án #$data->name vừa mới được tạo", route("admin.project.detail", ['id' => $data->id]), $this->admin->id);
+            admin_save_log("Khách hàng #$data->name vừa mới được tạo", route("admin.customer.detail", ['id' => $data->id]), $this->admin->id);
             return response()->json([
                 'status' => 200,
                 'message' => 'Tạo mới thành công',
@@ -97,17 +97,17 @@ class ProjectController extends Controller
         try {
             DB::beginTransaction();
             $id = request('id', '');
-            $data = Project::findOrFail($id);
-            $_request = request()->only('name', 'link', 'status', 'description', 'content');
+            $data = Customer::findOrFail($id);
+            $_request = request()->only('name', 'comment', 'status', 'description', 'start');
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
                 $_request['image'] = store_file($file, $this->dir);
             }
-            $data['status'] = isset($_request['status']) && $_request['status'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
+            $data['status'] = isset($_request['status']) && $_request['status'] == Customer::STATUS_ACTIVE ? Customer::STATUS_ACTIVE : Customer::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
-            admin_save_log("Dự án #$data->name vừa mới được cập nhật thông", route("admin.project.detail", ['id' => $data->id]), $this->admin->id);
+            admin_save_log("Khách hàng #$data->name vừa mới được cập nhật thông", route("admin.customer.detail", ['id' => $data->id]), $this->admin->id);
             return response()->json([
                 'status' => 200,
                 'message' => 'Cập nhật thành công',
@@ -125,16 +125,16 @@ class ProjectController extends Controller
     }
 
     /**
-     * Xóa Dự án
+     * Xóa Khách hàng
      */
     public function destroy()
     {
         DB::beginTransaction();
         try {
-            $data = Project::find(request('id'));
+            $data = Customer::find(request('id'));
             if (!is_null($data)) {
                 $data->delete();
-                admin_save_log("Dự án #$data->name vừa mới bị xóa");
+                admin_save_log("Khách hàng #$data->name vừa mới bị xóa");
                 DB::commit();
                 return response()->json([
                     'status' => 200,

@@ -1,5 +1,5 @@
 @php
-    use App\Models\Social;
+    use App\Models\Project;
 @endphp
 @if ($list->count() > 0)
     @php
@@ -7,12 +7,12 @@
     @endphp
     @foreach ($list as $item)
         @php
-            $status = Social::get_status($item->status);
+            $status = Project::get_status($item->status);
         @endphp
         <tr id="tr-{{ $item->id }}">
             <td class="text-nowrap">
                 <a data-coreui-toggle="tooltip" title="Xem chi tiết"
-                    href="{{ route('admin.social.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
+                    href="{{ route('admin.project.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
                     <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                     </svg>

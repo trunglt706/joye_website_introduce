@@ -66,7 +66,7 @@ class seed_admin_menu extends Seeder
         $content = AdminMenu::create([
             'name' => 'Quản lý nội dung',
             'icon' => 'copy',
-            'active_route_name' => json_encode(['admin.service.index', 'admin.service.detail', 'admin.faq.index', 'admin.faq.detail', 'admin.contact.index', 'admin.contact.detail'])
+            'active_route_name' => json_encode(['admin.service.index', 'admin.service.detail', 'admin.faq.index', 'admin.faq.detail', 'admin.contact.index', 'admin.contact.detail', 'admin.project.index', 'admin.project.detail', 'admin.customer.index', 'admin.customer.detail'])
         ]);
         AdminMenu::create([
             'parent_id' => $content->id,
@@ -85,6 +85,18 @@ class seed_admin_menu extends Seeder
             'name' => 'Câu hỏi thường gặp',
             'route_name' => route('admin.faq.index'),
             'active_route_name' => json_encode(['admin.faq.index', 'admin.faq.detail'])
+        ]);
+        AdminMenu::create([
+            'parent_id' => $content->id,
+            'name' => 'Quản lý dự án',
+            'route_name' => route('admin.project.index'),
+            'active_route_name' => json_encode(['admin.project.index', 'admin.project.detail'])
+        ]);
+        AdminMenu::create([
+            'parent_id' => $content->id,
+            'name' => 'Quản lý khách hàng',
+            'route_name' => route('admin.customer.index'),
+            'active_route_name' => json_encode(['admin.customer.index', 'admin.customer.detail'])
         ]);
 
         // cài đặt

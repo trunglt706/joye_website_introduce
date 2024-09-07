@@ -5,8 +5,10 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogGroupController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\LogActionController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
@@ -84,6 +86,22 @@ Route::name('admin.')->prefix('admin')->group(function () {
             Route::get('/{id}', [SocialController::class, 'detail'])->name('detail');
             Route::post('create', [SocialController::class, 'create'])->name('create');
             Route::post('update', [SocialController::class, 'update'])->name('update');
+        });
+        Route::name('project.')->prefix('project')->group(function () {
+            Route::get('', [ProjectController::class, 'index'])->name('index');
+            Route::get('table', [ProjectController::class, 'table'])->name('table');
+            Route::get('destroy', [ProjectController::class, 'destroy'])->name('destroy');
+            Route::get('/{id}', [ProjectController::class, 'detail'])->name('detail');
+            Route::post('create', [ProjectController::class, 'create'])->name('create');
+            Route::post('update', [ProjectController::class, 'update'])->name('update');
+        });
+        Route::name('customer.')->prefix('customer')->group(function () {
+            Route::get('', [CustomerController::class, 'index'])->name('index');
+            Route::get('table', [CustomerController::class, 'table'])->name('table');
+            Route::get('destroy', [CustomerController::class, 'destroy'])->name('destroy');
+            Route::get('/{id}', [CustomerController::class, 'detail'])->name('detail');
+            Route::post('create', [CustomerController::class, 'create'])->name('create');
+            Route::post('update', [CustomerController::class, 'update'])->name('update');
         });
     });
 });

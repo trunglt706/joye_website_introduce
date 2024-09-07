@@ -34,48 +34,12 @@
                                                 <i class="fas fa-star"></i>
                                             @endfor
                                         </div>
-                                    <p>“Kết quả thay đổi rõ rệt sau khi hợp tác với agency. Đội ngũ hỗ trợ tận tình và
-                                        giúp tối ưu hóa chiến lược. Kết quả tuyệt vời!”</p>
+                                        <p>“Kết quả thay đổi rõ rệt sau khi hợp tác với agency. Đội ngũ hỗ trợ tận tình
+                                            và
+                                            giúp tối ưu hóa chiến lược. Kết quả tuyệt vời!”</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="client-item">
-                                    <div class="client-thumb">
-                                        <img src="/style/images/comment2.png" alt="image">
-                                    </div>
-                                    <h5 class="title">Mr. Nguyên Hữu Thái Hòa</h5>
-                                    <span class="sub-title">
-                                        Giám đốc Trung Tâm Khoa Học Tư Duy CTS, VIỆN TRÍ VIỆT
-                                    </span>
-                                    <div class="client-icon">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p>“Rất hài lòng với dịch vụ của JOYE. Lượng người xem và tương tác trên trang tăng
-                                        gấp đôi sau một tháng hợp tác! Rất đáng đầu tư!”</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="client-item">
-                                    <div class="client-thumb">
-                                        <img src="/style/images/comment3.png" alt="image">
-                                    </div>
-                                    <h5 class="title">Jezebel Tro</h5>
-                                    <span class="sub-title">Hương thuận hoà </span>
-                                    <div class="client-icon">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p>“Đây là lần đầu tiên tôi thực sự ấn tượng. Dịch vụ livestream rất chuyên nghiệp
-                                        và hiệu quả. Rất đáng thử!”</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
