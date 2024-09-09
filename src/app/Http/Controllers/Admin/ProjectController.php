@@ -36,9 +36,18 @@ class ProjectController extends Controller
         $limit = request('limit', $this->limit_default);
         $search = request('search', '');
         $status = request('status', '');
+        $type = request('type', '');
 
         $list = Project::query();
         $list = $search != '' ? $list->search($search) : $list;
+        if ($type != '') {
+            if ($type == 'project') {
+                $list = $list->ofProject(1);
+            }
+            if ($type == 'customer') {
+                $list = $list->ofCustomer(1);
+            }
+        }
         $list = $status != '' ? $list->ofStatus($status) : $list;
         $list = $list->latest()->paginate($limit);
 
