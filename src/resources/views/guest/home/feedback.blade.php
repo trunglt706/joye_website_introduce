@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                 <div class="sec-heading text-center">
-                    <h2 class="text-uppercase">Khách hàng nói gì về Joye</h2>
+                    <h3 class="text-uppercase">Khách hàng nói gì về Joye</h3>
                 </div>
             </div>
         </div>
@@ -34,9 +34,7 @@
                                                 <i class="fas fa-star"></i>
                                             @endfor
                                         </div>
-                                        <p>“Kết quả thay đổi rõ rệt sau khi hợp tác với agency. Đội ngũ hỗ trợ tận tình
-                                            và
-                                            giúp tối ưu hóa chiến lược. Kết quả tuyệt vời!”</p>
+                                        <p>“{!! $item->comment !!}”</p>
                                     </div>
                                 </div>
                             @endforeach

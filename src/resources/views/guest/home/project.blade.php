@@ -4,13 +4,11 @@
             <!--start section heading-->
             <div class="col-md-10 offset-md-1 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="sec-heading text-center">
-                    <h2 class="counter-title text-uppercase">Các dự án nổi bật</h2>
+                    <h3 class="counter-title text-uppercase">Dự án nổi bật</h3>
                     <h5>
-                        Đội ngũ nhân sự của JoyE không chỉ có kinh nghiệm triển khai nhiều dự án lớn mà còn chuyên sâu
-                        trong từng mảng dịch vụ như Đào tạo, Livestream, Ecommerce và Xây kênh. Chúng tôi đã quản lý và
-                        hợp tác với hơn 200 KOLs, KOCs trong các dự án đa dạng, từ quy mô nhỏ đến quy mô lớn. Đặc biệt,
-                        đội ngũ của chúng tôi đã xây dựng mối quan hệ bền chặt với các nền tảng hàng đầu như TikTok Việt
-                        Nam và Facebook Gaming
+                        Đội ngũ JoyE có kinh nghiệm triển khai nhiều dự án lớn và chuyên sâu trong các lĩnh vực Đào tạo,
+                        Livestream, Thương mại điện tử, và Xây dựng kênh. Chúng tôi đã hợp tác với hơn 200 KOLs, KOCs và
+                        xây dựng mối quan hệ vững chắc với các nền tảng hàng đầu như TikTok Việt Nam và Facebook Gaming.
                     </h5>
                 </div>
             </div>

@@ -30,13 +30,13 @@
                 </div>
                 <!--end caption-->
                 <!--start video button-->
-                <div class="col-lg-6 col-md-4">
+                {{-- <div class="col-lg-6 col-md-4 d-none">
                     <div class="video-ply-btn">
                         <a class="popup-video mfp-iframe"
                             href="https://drive.google.com/file/d/1XCEhTW42QpnHFmliyT039mAIwxj2uybe/preview"><i
                                 class="icofont-ui-play"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <!--end video button-->
             </div>
         </div>
@@ -44,10 +44,14 @@
             <img src="/style/images/home-img.png" class="img-fluid" alt="">
         </div>
     </section>
-    @include('guest.home.khacbiet')
-    @include('guest.home.service')
+    @include('guest.home.intro')
     @include('guest.home.project')
-    @include('guest.home.price')
-    @include('guest.home.ketqua')
     @include('guest.home.feedback')
+    @include('guest.home.customer')
+    {{-- @include('guest.home.khacbiet') --}}
+    @include('guest.home.service')
+    @include('guest.home.staff')
+    @include('guest.home.register')
+    {{-- @include('guest.home.price')
+    @include('guest.home.ketqua') --}}
 @endsection

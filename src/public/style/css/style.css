@@ -659,7 +659,7 @@ p {
     margin-bottom: 15px;
 }
 
-.strm-cont h2 {
+.strm-cont h3 {
     font-weight: 700;
     margin-bottom: 10px;
     color: #3C03BC;
@@ -668,6 +668,8 @@ p {
 .strm-cont h5 {
     font-family: "Source Sans 3", sans-serif;
     font-weight: 300;
+    text-align: justify;
+    line-height: 28px;
 }
 
 .flatfrm-list {
@@ -853,7 +855,7 @@ p {
 
 .platform-area{
     margin-top: -130px;
-    padding-top: 50px;
+    padding-top: 60px;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -879,7 +881,7 @@ p {
     margin-top: -10px;
 }
 
-.platform-area .sec-heading h2{
+.platform-area .sec-heading h3{
     color: #D69960;
 }
 
@@ -899,6 +901,9 @@ p {
     margin: 30px 10px 30px 7px;
     transition: all 0.4s;
 }
+.my-service .platform-item {
+height: 385px;
+}
 .platform-item:hover{
     box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.067);
 }
@@ -913,6 +918,8 @@ p {
     transition: all 0.4s;
     max-width: 90%;
     border-radius: 8px;
+    width: 75px;
+    margin-bottom: 8px;
 }
 
 .platform-item .title{
@@ -951,7 +958,7 @@ p {
     margin-bottom: 14px;
 }
 
-.sec-heading h2 {
+.sec-heading h3 {
     font-weight: 700;
     margin-bottom: 20px;
     color: #D69960;
@@ -2577,7 +2584,7 @@ select {
 }
 
 .testimonial-section{
-    padding-top: 0px;
+    padding-top: 60px;
     overflow: hidden;
 }
 
@@ -3019,6 +3026,9 @@ select {
     #strm-flatfrm {
         padding: 40px 0px 193px !important;
     }
+    .footer-btm h5 {
+        width: 100% !important;
+    }
 }
 
 #contact-vr .phone-vr-circle-fill {
@@ -3130,4 +3140,30 @@ font-weight: bold;
     line-height: 22px;
     height: 48px;
     overflow: hidden;
+}
+#staff-section,
+#customer-section,
+#intro-section {
+    margin-top: 110px;
+    margin-bottom: 190px;
+}
+
+#intro-section h3 {
+    color: #D69960;
+    margin-bottom: 20px;
+}
+.customer-item img {
+    width: 100px;
+    height: 100px;
+}
+.customer-item .title {
+    margin-top: 12px;
+}
+
+#register-section {
+    margin-top: -100px;
+}
+
+#register-section .card {
+    border-radius: 18px !important;
 }

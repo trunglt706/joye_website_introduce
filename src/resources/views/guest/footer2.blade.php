@@ -1,16 +1,12 @@
 <!--start footer-->
 <footer id="footer" class="default">
     <div class="container">
-        <div class="footer-btm mt-0 row">
-            <div class="col-lg-8">
-                <h5 class="text-white">JOYE - CUNG CẤP GIẢI PHÁP MARKETING TOÀN DIỆN CHO CÁC THƯƠNG HIỆU VÀ DOANH
+        <div class="footer-btm mt-0 row text-white">
+            <div class="col-md-5">
+                <h5 class="text-white" style="width: 80%">JOYE - CUNG CẤP GIẢI PHÁP MARKETING TOÀN DIỆN CHO CÁC THƯƠNG
+                    HIỆU VÀ DOANH
                     NGHIỆP</h5>
                 <div class="copyright-text">
-                    <p class="m-0">
-                        Liên hệ ngay tới JOYE và chúng tôi sẽ hỗ trợ quý khách kết nối tới các CHUYÊN GIA am hiểu
-                        lĩnh
-                        vực của bạn sớm nhất nhé!
-                    </p>
                     <p class="m-0">
                         <i class="fa fa-phone me-2" aria-hidden="true"></i> 0903.414.993
                     </p>
@@ -23,29 +19,43 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4 text-white">
-                <h5 class="text-uppercase">Đăng ký nhận tư vấn</h5>
-                <form action="{{ route('contact.create') }}" method="post">
-                    @csrf
-                    <div class="row">
-                        <div class="form-group col-md-4 mb-2 pe-0">
-                            <input type="text" class="form-control" id="name" name="name"
-                                placeholder="Nhập họ tên *" required="">
-                        </div>
-                        <div class="form-group col-md-4 mb-2 pe-0">
-                            <input class="form-control" id="email" name="email" placeholder="Nhập Email *"
-                                required="">
-                        </div>
-                        <div class="form-group col-md-4 mb-2">
-                            <input class="form-control" id="phone" name="phone" placeholder="Nhập số ĐT *"
-                                required="">
-                        </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase">Giới thiêu</h5>
+                        <ul>
+                            <li>
+                                <a class="text-white" href="{{ route('about') }}">Về chúng tôi</a>
+                            </li>
+                            <li>
+                                <a class="text-white" href="{{ route('service') }}">Dịch vụ</a>
+                            </li>
+                            <li>
+                                <a class="text-white" href="{{ route('blog') }}">Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-white" href="{{ route('faq') }}">FAQs</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="form-group mb-2">
-                        <textarea class="form-control" id="comment" name="comment" rows="2" placeholder="Gửi nội dung" required=""></textarea>
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase">Dịch vụ</h5>
+                        <ul>
+                            <li>Livestream trọn gói</li>
+                            <li>Mega livestream</li>
+                            <li>Ecommerce</li>
+                            <li>Xây dựng nội dung sáng tạo</li>
+                        </ul>
                     </div>
-                    <button type="submit" class="btn btn-primary text-white">Đăng ký</button>
-                </form>
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase">Đào tạo</h5>
+                        <ul>
+                            <li>Đào tạo livestream</li>
+                            <li>Đào tạo Ecommerce</li>
+                            <li>Đạo tạo vận hành thương hiệu</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
