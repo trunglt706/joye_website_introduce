@@ -9,6 +9,13 @@
         </div>
         <div class="d-flex justify-content-end">
             <div class="me-1 w-200px hide-mobile">
+                <select class="form-select form-filter" name="type">
+                    <option value="">-- Phân loại --</option>
+                    <option value="project">Dự án</option>
+                    <option value="customer">Khách hàng</option>
+                </select>
+            </div>
+            <div class="me-1 w-200px hide-mobile">
                 <select class="form-select form-filter" name="status">
                     <option value="">-- Trạng thái --</option>
                     @foreach ($data['status'] as $key => $item)

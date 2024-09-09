@@ -33,8 +33,11 @@
                 </div>
             </td>
             <td class="text-center">
-                @if ($item->link)
-                    <a href="{{ $item->link }}" target="_blank">Liên kết</a>
+                @if ($item->project)
+                    <span class="badge bg-secondary">Dự án</span>
+                @endif
+                @if ($item->customer)
+                    <span class="badge bg-secondary">Khách hàng</span>
                 @endif
             </td>
             <td class="text-end">

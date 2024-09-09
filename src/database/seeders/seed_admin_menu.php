@@ -88,13 +88,13 @@ class seed_admin_menu extends Seeder
         ]);
         AdminMenu::create([
             'parent_id' => $content->id,
-            'name' => 'Quản lý dự án',
+            'name' => 'Dự án & khách hàng',
             'route_name' => route('admin.project.index'),
             'active_route_name' => json_encode(['admin.project.index', 'admin.project.detail'])
         ]);
         AdminMenu::create([
             'parent_id' => $content->id,
-            'name' => 'Quản lý khách hàng',
+            'name' => 'Khách hàng nói gì',
             'route_name' => route('admin.customer.index'),
             'active_route_name' => json_encode(['admin.customer.index', 'admin.customer.detail'])
         ]);

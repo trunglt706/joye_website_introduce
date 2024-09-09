@@ -24,7 +24,7 @@ class ContactController extends Controller
     {
         try {
             DB::beginTransaction();
-            $data = request()->only('name', 'phone', 'comment');
+            $data = request()->all();
             Contact::create($data);
             DB::commit();
             return redirect()->back()->with('success', 'Gửi liên hệ thành công');

@@ -30,6 +30,22 @@
                         <label class="form-label">Mô tả</label>
                         <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả"></textarea>
                     </div>
+                    <div class="d-flex justify-content-between my-2">
+                        <div class="form-check form-switch my-2">
+                            <input class="form-check-input" type="checkbox" role="switch" name="project" value="1"
+                                id="flexSwitchCheckproject" checked>
+                            <label class="form-check-label" for="flexSwitchCheckproject">
+                                Là dự án
+                            </label>
+                        </div>
+                        <div class="form-check form-switch my-2">
+                            <input class="form-check-input" type="checkbox" role="switch" name="customer"
+                                value="1" id="flexSwitchCheckcustomer" checked>
+                            <label class="form-check-label" for="flexSwitchCheckcustomer">
+                                Là khách hàng
+                            </label>
+                        </div>
+                    </div>
                     <div class="form-check form-switch my-2">
                         <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
                             id="flexSwitchCheckStatus" checked>

@@ -66,6 +66,8 @@ class ProjectController extends Controller
             DB::beginTransaction();
             $data = request()->all();
             $data['active'] = isset($data['active']) && $data['active'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_ACTIVE;
+            $data['project'] = isset($data['project']) && $data['project'] == 1 ? 1 : 0;
+            $data['customer'] = isset($data['customer']) && $data['customer'] == 1 ? 1 : 0;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir);
@@ -98,13 +100,15 @@ class ProjectController extends Controller
             DB::beginTransaction();
             $id = request('id', '');
             $data = Project::findOrFail($id);
-            $_request = request()->only('name', 'link', 'status', 'description', 'content');
+            $_request = request()->all();
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
                 $_request['image'] = store_file($file, $this->dir);
             }
             $data['status'] = isset($_request['status']) && $_request['status'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
+            $data['project'] = isset($data['project']) && $data['project'] == 1 ? 1 : 0;
+            $data['customer'] = isset($data['customer']) && $data['customer'] == 1 ? 1 : 0;
             $data->update($_request);
             DB::commit();
             admin_save_log("Dự án #$data->name vừa mới được cập nhật thông", route("admin.project.detail", ['id' => $data->id]), $this->admin->id);

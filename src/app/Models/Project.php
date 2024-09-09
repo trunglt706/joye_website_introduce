@@ -18,7 +18,9 @@ class Project extends Model
         'description',
         'content',
         'status',
-        'link'
+        'link',
+        'project',
+        'customer'
     ];
 
     protected $hidden = [];
@@ -30,6 +32,8 @@ class Project extends Model
         self::creating(function ($model) {
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->code = $model->code ?? Str::slug($model->name);
+            $model->project = $model->project ?? 1;
+            $model->customer = $model->customer ?? 1;
         });
         self::created(function ($model) {});
         self::updated(function ($model) {});
@@ -50,6 +54,16 @@ class Project extends Model
             self::STATUS_BLOCKED => ['Đã khóa', 'danger'],
         ];
         return $status == '' ? $_status : $_status["$status"];
+    }
+
+    public function scopeOfCustomer($query, $customer)
+    {
+        return $query->where('projects.customer', $customer);
+    }
+
+    public function scopeOfProject($query, $project)
+    {
+        return $query->where('projects.project', $project);
     }
 
     public function scopeOfCode($query, $code)

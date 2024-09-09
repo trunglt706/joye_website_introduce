@@ -7,7 +7,7 @@
                     <li class="breadcrumb-item">
                         <a href="{{ route('admin.index') }}">Trang chủ</a>
                     </li>
-                    <li class="breadcrumb-item active">Quản lý dự án</li>
+                    <li class="breadcrumb-item active">Dự án & khách hàng</li>
                 </ol>
             </nav>
         </div>
@@ -17,9 +17,9 @@
                 <thead class="fw-semibold text-nowrap">
                     <tr class="align-middle">
                         <th class="bg-body-secondary text-center w-100px">#</th>
-                        <th class="bg-body-secondary">Tên dự án</th>
+                        <th class="bg-body-secondary">Tên dự án/ KH</th>
                         <th class="bg-body-secondary w-150px text-center">Hình ảnh</th>
-                        <th class="bg-body-secondary w-150px text-center">Liên kết</th>
+                        <th class="bg-body-secondary w-150px text-center">Phân loại</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
                         <th class="bg-body-secondary text-end w-150px">Ngày tạo</th>
                     </tr>

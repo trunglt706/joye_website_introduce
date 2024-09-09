@@ -16,7 +16,8 @@ class Contact extends Model
         'phone',
         'question',
         'comment',
-        'status'
+        'status',
+        'service'
     ];
     protected $hidden = [];
     protected $casts = [];
