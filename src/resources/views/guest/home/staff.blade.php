@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 mb-2">
                 <div class="strm-cont wow fadeInUp" data-wow-delay="0.5s">
-                    <h3 class="text-uppercase">Đội ngủ Joy-er</h3>
+                    <h3 class="text-uppercase">ĐỘI NGŨ JOY-ER</h3>
                     <h5 class="text-justify" style="line-height: 40px;">
                         Đối với mỗi thành viên của JoyE, đây không chỉ là môi trường để họ theo đuổi đam mê và tham gia
                         vào những dự án sáng tạo, mà còn là mái nhà chung gắn kết chúng tôi lại với nhau. JoyE trân quý

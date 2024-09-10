@@ -11,7 +11,7 @@
                     <a href="{{ route('admin.index') }}">Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('admin.customer.index') }}">Quản lý khách hàng</a>
+                    <a href="{{ route('admin.customer.index') }}">Khách hàng nói gì</a>
                 </li>
                 <li class="breadcrumb-item active">Chi tiết #{{ $data->name }}</li>
             </ol>

@@ -116,8 +116,8 @@ class ProjectController extends Controller
                 $_request['image'] = store_file($file, $this->dir);
             }
             $data['status'] = isset($_request['status']) && $_request['status'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
-            $data['project'] = isset($data['project']) && $data['project'] == 1 ? 1 : 0;
-            $data['customer'] = isset($data['customer']) && $data['customer'] == 1 ? 1 : 0;
+            $data['project'] = isset($_request['project']) && $_request['project'] == 1 ? 1 : 0;
+            $data['customer'] = isset($_request['customer']) && $_request['customer'] == 1 ? 1 : 0;
             $data->update($_request);
             DB::commit();
             admin_save_log("Dự án #$data->name vừa mới được cập nhật thông", route("admin.project.detail", ['id' => $data->id]), $this->admin->id);

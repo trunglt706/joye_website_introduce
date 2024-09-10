@@ -1,7 +1,7 @@
 <section id="register-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                 <div class="card card-body">
                     <h5 class="text-uppercase">Đăng ký nhận tư vấn</h5>
                     <form action="{{ route('contact.create') }}" method="post">
@@ -31,7 +31,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-8 mb-3">
                 <div class="strm-cont wow fadeInUp" data-wow-delay="0.5s">
                     <h3 class="text-uppercase">Để Joye hiểu hơn về bạn</h3>
                     <h5 style="font-weight: bold;">JOYE - CUNG CẤP GIẢI PHÁP MARKETING TOÀN DIỆN CHO CÁC THƯƠNG HIỆU VÀ
