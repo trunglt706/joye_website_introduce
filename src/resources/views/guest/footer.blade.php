@@ -8,9 +8,10 @@
             <!--start footer bottom-->
             <div class="footer-btm row justify-content-between justify-content-md-start text-white">
                 <div class="col-md-5">
-                    <h5 class="text-white" style="width: 80%">JOYE - CUNG CẤP GIẢI PHÁP MARKETING TOÀN DIỆN CHO CÁC THƯƠNG
-                        HIỆU VÀ DOANH
-                        NGHIỆP</h5>
+                    <h5 class="text-white" style="width: 80%">
+                        JOYE CORPORATION<br />
+                        GIẢI PHÁP MARKETING TOÀN DIỆN CHO CÁC THƯƠNG HIỆU VÀ DOANH NGHIỆP
+                    </h5>
                     <div class="copyright-text">
                         <p class="m-0">
                             <i class="fa fa-phone me-2" aria-hidden="true"></i> 0903.414.993
