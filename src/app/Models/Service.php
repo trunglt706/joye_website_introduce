@@ -20,6 +20,7 @@ class Service extends Model
         'content',
         'status',
         'important',
+        'price'
     ];
 
     protected $hidden = [];

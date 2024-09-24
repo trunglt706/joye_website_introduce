@@ -19,10 +19,10 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="logo logo-light" href="/">
-                    <img src="{{ get_option('seo-logo') }}" alt="logo" height="42">
+                    <img src="{{ asset(get_option('seo-logo')) }}" alt="logo" height="42">
                 </a>
                 <a href="/" class="logo-default">
-                    <img src="{{ get_option('seo-logo') }}" alt="logo" height="42">
+                    <img src="{{ asset(get_option('seo-logo')) }}" alt="logo" height="42">
                 </a>
                 <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#NavbarContent">
                     <span class="icofont-navigation-menu"></span>
@@ -55,7 +55,8 @@
                     </ul>
                     <ul class="nav navbar-nav login-btn">
                         <li class="nav-item log-btn">
-                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#open-contact" onclick='return false'>Đăng ký tư vấn</a>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#open-contact"
+                                onclick='return false'>Đăng ký tư vấn</a>
                         </li>
                     </ul>
                 </div>

@@ -24,7 +24,7 @@
                     <div class="platform-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="platform-item">
+                                <div class="platform-item my-service-item">
                                     <h5 class="title">ĐÀO TẠO CHUYÊN SÂU</h5>
                                     <img src="{{ asset('style/images/service/daotao.png') }}" alt="image">
                                     <p>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="platform-item">
+                                <div class="platform-item my-service-item">
                                     <h5 class="title">LIVESTREAM</h5>
                                     <img src="{{ asset('style/images/service/livestream.png') }}" alt="image">
                                     <p>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="platform-item">
+                                <div class="platform-item my-service-item">
                                     <h5 class="title">ECOMMERCE</h5>
                                     <img src="{{ asset('style/images/service/ecommerce.png') }}" alt="image">
                                     <p>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="platform-item">
+                                <div class="platform-item my-service-item">
                                     <h5 class="title">XÂY DỰNG NỘI DUNG</h5>
                                     <img src="{{ asset('style/images/service/content.png') }}" alt="image">
                                     <p>

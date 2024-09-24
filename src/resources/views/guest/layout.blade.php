@@ -4,11 +4,11 @@
 <head>
     @include('guest.meta')
     @include('guest.style')
-    @if (in_array(Route::currentRouteName(), ['blog.detail', 'service.detail']))
+    {{-- @if (in_array(Route::currentRouteName(), ['blog.detail', 'service.detail']))
         <script type="text/javascript"
             src="https://platform-api.sharethis.com/js/sharethis.js#property=65dd20dcd41ded001ab5b52f&product=inline-share-buttons&source=platform"
             async="async"></script>
-    @endif
+    @endif --}}
 </head>
 
 <body>

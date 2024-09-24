@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateContactRequest;
 use App\Models\Contact;
+use App\Models\Service;
 use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
@@ -14,7 +15,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('guest.contact.index');
+        $list = Service::OfStatus(Service::STATUS_ACTIVE)->select('id', 'name')->get();
+        return view('guest.contact.index', compact('list'));
     }
 
     /**
@@ -24,7 +26,11 @@ class ContactController extends Controller
     {
         try {
             DB::beginTransaction();
-            $data = request()->all();
+            $data = request()->only('name', 'phone', 'email', 'comment');
+            if (request('service_id', '') != '') {
+                $service = Service::find(request('service_id', ''));
+                $data['service'] = $service->name;
+            }
             Contact::create($data);
             DB::commit();
             return redirect()->back()->with('success', 'Gửi liên hệ thành công');

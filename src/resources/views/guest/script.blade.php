@@ -44,3 +44,4 @@
 <script src="/style/js/tilt.jquery.min.js"></script>
 <!--custom js-->
 <script src="/style/js/custom.js"></script>
+@stack('js')

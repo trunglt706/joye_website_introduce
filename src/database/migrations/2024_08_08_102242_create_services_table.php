@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->string('name');
             $table->string('image')->nullable();
+            $table->string('price')->nullable();
             $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->integer('important')->nullable()->default(0);

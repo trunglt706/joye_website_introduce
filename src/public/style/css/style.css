@@ -895,7 +895,7 @@ p {
 
 .platform-item{
     box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.15);
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     border-radius: 16px;
     margin: 30px 10px 30px 7px;
@@ -910,15 +910,19 @@ height: 385px;
 .platform-item:hover img{
     box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.067);
     width: 70px;
+    height: 75px;
     border-radius: 8px;
 }
-
+.my-service-item img {
+    width: 70px !important;
+    height: 75px!important;
+}
 .platform-item img{
-    height: 75px;
+    height: 135px;
     transition: all 0.4s;
-    max-width: 90%;
+    /* max-width: 90%; */
     border-radius: 8px;
-    width: 75px;
+    width: 100%;
     margin-bottom: 8px;
 }
 
@@ -932,9 +936,10 @@ height: 385px;
     margin-left: auto;
     margin-right: auto;
     color: #2b4661;
-    font-weight: 500;
-    height: 50px;
+    /* font-weight: 500; */
+    height: 38px;
     overflow: hidden;
+    line-height: 20px;
 }
 
 .owl-carousel .owl-item img {
@@ -1910,6 +1915,9 @@ select {
     background: #0E0700;
     font-size: 14px;
     font-weight: bold;
+}
+.block-contact-information .block-article .-content p{
+    font-size: 18px;
 }
 .block-contact-information .block-article .-content {
     font-size: 14px;
@@ -3095,9 +3103,10 @@ select {
     border-radius: 8px;
 }
 .page-service .chanl-single {
-    position: unset;
-    display: flex;
-    border: 0px;
+    /* position: unset;
+    display: flex; */
+    border: 1px solid #bab8b8;
+    border-radius: 4px;
 }
 .page-service .chanl-single .chanl-cont {
     position: unset;
@@ -3106,13 +3115,28 @@ select {
     height: 100%;
 }
 .page-service .chanl-single img {
-    width: 120px;
-    height: 100px;
+    /* width: 120px;
+    height: 100px; */
+}
+.page-service .chanl-single .key {
+    padding: 1px 10px;
+    background: #f0ebeb;
+}
+.page-service .chanl-single .price i{
+    margin-left: 6px;
+}
+.page-service .chanl-single .price {
+    font-weight: 600;
+    color: red;
+    margin-top: 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
 }
 .page-service .chanl-single .title {
     font-weight: bold;
     margin-bottom: 8px;
-    height: 48px;
+    max-height: 45px;
     overflow: hidden;
     line-height: 22px;
 }
@@ -3168,4 +3192,23 @@ font-weight: bold;
 
 #register-section .card {
     border-radius: 18px !important;
+}
+.service-price {
+    border: 1px solid #ebe5e5; border-radius: 6px; padding: 8px;
+        padding: 10px;
+        position: relative;
+        /* Initial position */
+        z-index: 1000;
+        /* Keep it above other elements */
+}
+.service-price .title {
+    font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 16px;
+}
+.service-price .start i {
+    color: #e09b36
+}
+.service-price .price {
+    font-weight: bold;
 }

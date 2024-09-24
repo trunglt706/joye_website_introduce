@@ -52,15 +52,20 @@
                     <form action="{{ route('admin.service.update') }}" method="POST" class="form-update">
                         @csrf
                         <input type="hidden" name="id" value="{{ $data->id }}">
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Tên dịch vụ *</label>
+                            <input type="text" required class="form-control" placeholder="Nhập tên dịch vụ"
+                                name="name" value="{{ $data->name }}">
+                        </div>
                         <div class="row">
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <div class="mb-2 form-group">
-                                    <label class="form-label">Tên dịch vụ *</label>
-                                    <input type="text" required class="form-control" placeholder="Nhập tên dịch vụ"
-                                        name="name" value="{{ $data->name }}">
+                                    <label class="form-label">Giá cả</label>
+                                    <input type="text" class="form-control" placeholder="VD: 2 triệu / phiên"
+                                        name="price" value="{{ $data->price }}">
                                 </div>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <div class="mb-2 form-group">
                                     <label class="form-label">Ảnh đại diện</label>
                                     <input type="file" class="form-control" name="image" accept="image/*">

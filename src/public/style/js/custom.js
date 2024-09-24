@@ -47,9 +47,9 @@
             var swiper = new Swiper(".platform-slider", {
                 slidesPerView: 4,
                 spaceBetween: 0,
-                loop: true,
+                loop: false,
                 autoplay: {
-                    delay: 1000,
+                    delay: 20000,
                 },
                 speed: 2000,
                 breakpoints: {

@@ -4,7 +4,7 @@
 @section('description', '')
 @section('image', '')
 @section('content')
-    <div class="container position-relative" style="z-index: 5; padding-top: 100px;">
+    <div class="container position-relative" style="z-index: 5; padding-top: 100px; min-height: calc(100vh - 265px);">
         <div class="box-contact-page mt-1">
             <div class="block-contact-information">
                 <div class="block-images">
@@ -49,9 +49,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Nhập email">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="service_id" class="form-label">Dịch vụ quan tâm</label>
+                                <select name="service_id" id="service_id" class="form-control form-select">
+                                    <option value="">-- Chọn --</option>
+                                    @foreach ($list as $item)
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="comment" class="form-label">Nội dung *</label>
-                        <textarea class="form-control" id="comment" name="comment" rows="8" placeholder="Gửi nội dung" required></textarea>
+                        <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Gửi nội dung" required></textarea>
                     </div>
                     <button type="submit">Gửi liên hệ</button>
                 </form>

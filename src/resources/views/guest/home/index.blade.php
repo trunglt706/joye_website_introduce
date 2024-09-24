@@ -42,7 +42,7 @@
         </div>
         <div class="home-img">
             {{-- <img src="/style/images/home-img.png" class="img-fluid" alt=""> --}}
-            <img src="/img/logo.png" class="img-fluid" alt="">
+            <img src="/style/images/home-img.png" class="img-fluid" alt="">
         </div>
     </section>
     @include('guest.home.intro')

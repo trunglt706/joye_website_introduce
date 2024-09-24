@@ -1,65 +1,50 @@
 @extends('guest.layout2')
-@section('title', $data['service']->name)
+@section('title', $service->name)
 @section('keywords', '')
-@section('description', '')
-@section('image', '')
+@section('description', $service->description)
+@section('image', $service->image)
 @section('content')
+    <style>
+        .page-breadcrumb {
+            padding: 0px 0 80px !important;
+        }
+    </style>
     <!--start page content-->
     <section id="page-cont">
         <div class="page-breadcrumb">
-            <div class="container">
-                <div class="breadcrumb-cont text-center">
-                    <h2>{{ $data['service']->name }}</h2>
-                    <ul>
-                        <li><a href="{{ route('home') }}"><i class="icofont-home"></i> Trang chủ</a></li>
-                        <li><small>></small></li>
-                        <li>Dịch vụ</li>
-                    </ul>
-                </div>
-            </div>
         </div>
-        <div class="pt-3">
+        <div class="pt-3" style="padding-top: -100px">
             <div class="container">
                 <div class="row">
                     <div class="col-md-9 mb-2">
+                        <img src="{{ asset($service->image) }}" alt="" class="img-fluid w-100 mb-2">
                         <!--start blog single-->
                         <div class="blog-single">
-                            {{-- <div class="post-media">
-                                <img src="/style/images/blog-2.jpg" class="img-fluid" alt="{{ $data['service']->name }}">
-                            </div> --}}
                             <div class="post-cont">
-                                <h3>
-                                    {{ $data['service']->name }}
-                                </h3>
                                 <div class="mt-3">
-                                    {!! $data['service']->content !!}
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0">
-                                        <i class="fa fa-user"></i> Admin
-                                        <span class="maydate ms-3"><i class="fa fa-calendar-alt"></i>
-                                            {{ date('d/m/Y', strtotime($data['service']->created_at)) }}</span>
-                                    </h6>
-                                    <div class="footer-social text-end">
-                                        <div class="sharethis-inline-share-buttons"></div>
-                                    </div>
+                                    {!! $service->content !!}
                                 </div>
                             </div>
                         </div>
                         <!--end blog single-->
                     </div>
                     <div class="col-md-3 mb-2">
-                        @foreach ($data['other'] as $item)
-                            <a href="{{ route('service.detail', ['slug' => $item->slug]) }}">
-                                <div class="chanl-single">
-                                    <img src="{{ $item->image }}" class="img-fluid" alt="">
-                                    <div class="chanl-cont">
-                                        <p>{{ $item->name }}</p>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach
+                        <div class="service-price">
+                            <div class="title">
+                                {{ $service->name }}
+                            </div>
+                            <div class="start">
+                                @for ($i = 0; $i < 5; $i++)
+                                    <i class="fa fa-star me-1" aria-hidden="true"></i>
+                                @endfor
+                            </div>
+                            <div class="price text-danger">
+                                {{ $service->price ?? 'Đang cập nhật' }}
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-danger w-100">Mua ngay</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,3 +52,34 @@
     </section>
     <!--end page content-->
 @endsection
+@push('js')
+    <script>
+        $(document).ready(function() {
+            var element = $('.service-price');
+            var offset = element.offset().top; // Get the original top offset of the element
+            var container = $('.col-md-3');
+
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+
+                // Check if the scroll position has passed the top offset of the element
+                if (scrollTop > offset) {
+                    // Fix the element within the container's boundaries
+                    element.css({
+                        'position': 'fixed',
+                        'top': '110px',
+                        // 'right': container.offset().left + 'px', // Align right with col-md-3
+                        'width': container.width() + 'px' // Maintain same width as col-md-3
+                    });
+                } else {
+                    // Return element to its original position when scrolled back up
+                    element.css({
+                        'position': 'relative',
+                        'top': '0px',
+                        'width': '100%'
+                    });
+                }
+            });
+        });
+    </script>
+@endpush
