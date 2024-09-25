@@ -4,6 +4,29 @@
 @section('description', '')
 @section('image', '')
 @section('content')
+    <style>
+        .post-cont p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .about-testimonial .description {
+            font-size: 18px;
+            line-height: 30px;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .about-testimonial {
+                margin-top: -25px;
+            }
+
+            .about-testimonial .description {
+                margin-top: 30px;
+                text-align: center;
+            }
+        }
+    </style>
     <!--start page content-->
     <section>
         <div class="page-breadcrumb">
@@ -46,19 +69,20 @@
                                     <div class="post-cont">
                                         <div class="about-testimonial">
                                             <div class="row">
-                                                <div class="col-6">
-                                                    <div class="img"><img src="/style/images/about-ceo.png"
-                                                            alt=""></div>
-                                                    <div class="name">Nguyễn Thế Vi</div>
-                                                    <div class="mini-text">(CEO JOYE)</div>
+                                                <div class="col-md-4">
+                                                    <div class="img">
+                                                        <img src="/style/images/about-ceo.png" alt="">
+                                                    </div>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-md-8">
                                                     <div class="description text-justify">
                                                         &ldquo;
                                                         Chúng tôi cung cấp các giải pháp tốt nhất về Thương mại điện tử và
                                                         LiveStreamming đến người dùng đã tin và sử dụng dịch vụ của Joye
                                                         &rdquo;
                                                     </div>
+                                                    <div class="name">Nguyễn Thế Vi</div>
+                                                    <div class="mini-text">(CEO JOYE)</div>
                                                 </div>
                                             </div>
                                         </div>

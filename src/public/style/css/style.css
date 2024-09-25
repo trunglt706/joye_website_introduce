@@ -3039,6 +3039,18 @@ select {
     .footer-btm h5 {
         width: 100% !important;
     }
+    .footer-right {
+        display: none;
+    }
+    .block-contact-map button[type="submit"] {
+        width: 100%;
+    }
+    .card-header a::after {
+        top: 12px !important;
+    }
+    #faq-area {
+        min-height: calc(100vh - 560px);
+    }
 }
 
 #contact-vr .phone-vr-circle-fill {

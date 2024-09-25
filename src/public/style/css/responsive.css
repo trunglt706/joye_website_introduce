@@ -2,6 +2,17 @@
     laptop, desktop
 ---------------------------------------------------------------*/
 
+@media only screen and (max-width: 1919px) {
+.box-contact-page {
+    flex-direction: column;
+}
+
+.box-contact-page .block-contact-map,
+.box-contact-page .block-contact-information {
+    width: 100%;
+}
+}
+
 @media only screen and (min-width: 1280px) and (max-width: 1919px) {
     .video-ply-btn {
         padding-top: 30%;
