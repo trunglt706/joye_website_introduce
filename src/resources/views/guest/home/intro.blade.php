@@ -2,8 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mb-2">
-                <iframe width="100%" height="360"
-                    src="https://drive.google.com/file/d/1XCEhTW42QpnHFmliyT039mAIwxj2uybe/preview">
+                <iframe width="100%" height="360" src="https://shorturl.at/K2hNm">
                 </iframe>
             </div>
             <div class="col-md-6 mb-2">

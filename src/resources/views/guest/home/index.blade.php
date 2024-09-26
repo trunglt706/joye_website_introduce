@@ -4,6 +4,64 @@
 @section('description', '')
 @section('image', '')
 @section('content')
+    <style>
+        .my-service-item ul {
+            text-align: left;
+        }
+
+        .my-service-item ul li {
+            padding-left: 6px;
+        }
+
+        @media(max-width: 736px) {
+            #intro-section {
+                margin-top: 32px;
+            }
+
+            #intro-section iframe {
+                height: 240px !important;
+            }
+
+            .home-img>img {
+                max-height: 185px;
+            }
+
+            .home-img {
+                display: block !important;
+            }
+
+            #staff-section {
+                margin-top: 30px;
+                padding: 0px 12px;
+                margin-bottom: 125px;
+            }
+
+            #register-section .col-md-8 {
+                display: none;
+            }
+
+            #home-area .caption-btn a {
+                width: 46% !important;
+                text-align: center !important;
+            }
+
+            .sec-heading {
+                padding-bottom: 0px !important;
+            }
+
+            #register-section button[type="submit"] {
+                width: 100%;
+            }
+
+            .platform-section {
+                margin-top: 0px !important;
+            }
+
+            #staff-section h5 {
+                line-height: 30px !important;
+            }
+        }
+    </style>
     <!--start home area-->
     <section id="home-area" data-scroll-index="1">
         <div class="container">
@@ -28,20 +86,9 @@
                         </div>
                     </div>
                 </div>
-                <!--end caption-->
-                <!--start video button-->
-                {{-- <div class="col-lg-6 col-md-4 d-none">
-                    <div class="video-ply-btn">
-                        <a class="popup-video mfp-iframe"
-                            href="https://drive.google.com/file/d/1XCEhTW42QpnHFmliyT039mAIwxj2uybe/preview"><i
-                                class="icofont-ui-play"></i></a>
-                    </div>
-                </div> --}}
-                <!--end video button-->
             </div>
         </div>
         <div class="home-img">
-            {{-- <img src="/style/images/home-img.png" class="img-fluid" alt=""> --}}
             <img src="/style/images/home-img.png" class="img-fluid" alt="">
         </div>
     </section>
@@ -49,10 +96,7 @@
     @include('guest.home.project')
     @include('guest.home.feedback')
     @include('guest.home.customer')
-    {{-- @include('guest.home.khacbiet') --}}
     @include('guest.home.service')
     @include('guest.home.staff')
     @include('guest.home.register')
-    {{-- @include('guest.home.price')
-    @include('guest.home.ketqua') --}}
 @endsection

@@ -34,13 +34,13 @@
                                     </p>
                                     <ul>
                                         <li>
-                                            Đào tạo từ cơ bản đến nâng cao
+                                            - Đào tạo từ cơ bản đến nâng cao
                                         </li>
                                         <li>
-                                            Tư vấn chiến lược và cách thực hiện hiệu quả.
+                                            - Tư vấn chiến lược và cách thực hiện hiệu quả.
                                         </li>
                                         <li>
-                                            Kết nối và học hỏi từ cộng đồng chuyên gia.
+                                            - Kết nối và học hỏi từ cộng đồng chuyên gia.
                                         </li>
                                     </ul>
                                 </div>
@@ -56,13 +56,13 @@
                                     </p>
                                     <ul>
                                         <li>
-                                            Livestream Đa Nền Tảng
+                                            - Livestream Đa Nền Tảng
                                         </li>
                                         <li>
-                                            Xây Dựng Kịch Bản, Thiết Bị Cao Cấp
+                                            - Xây Dựng Kịch Bản, Thiết Bị Cao Cấp
                                         </li>
                                         <li>
-                                            Cung Cấp Báo Cáo Phân Tích
+                                            - Cung Cấp Báo Cáo Phân Tích
                                         </li>
                                     </ul>
                                 </div>
@@ -78,13 +78,13 @@
                                     </p>
                                     <ul>
                                         <li>
-                                            Tư vấn chiến lược bán hàng tối ưu.
+                                            - Tư vấn chiến lược bán hàng tối ưu.
                                         </li>
                                         <li>
-                                            Quản lý gian hàng và tối ưu trải nghiệm khách hàng.
+                                            - Quản lý gian hàng và tối ưu trải nghiệm khách hàng.
                                         </li>
                                         <li>
-                                            Phân tích dữ liệu để cải thiện hiệu quả bán hàng.
+                                            - Phân tích dữ liệu để cải thiện hiệu quả bán hàng.
                                         </li>
                                     </ul>
                                 </div>
@@ -100,13 +100,13 @@
                                     </p>
                                     <ul>
                                         <li>
-                                            Sản xuất nội dung đa dạng: video, hình ảnh, bài viết.
+                                            - Sản xuất nội dung đa dạng: video, hình ảnh, bài viết.
                                         </li>
                                         <li>
-                                            Chỉnh sửa chuyên nghiệp với thiết bị hiện đại.
+                                            - Chỉnh sửa chuyên nghiệp với thiết bị hiện đại.
                                         </li>
                                         <li>
-                                            Phân tích và điều chỉnh chiến lược nội dung theo thị trường.
+                                            - Phân tích và điều chỉnh chiến lược nội dung theo thị trường.
                                         </li>
                                     </ul>
                                 </div>

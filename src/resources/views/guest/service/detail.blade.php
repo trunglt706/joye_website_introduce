@@ -8,6 +8,13 @@
         .page-breadcrumb {
             padding: 0px 0 80px !important;
         }
+
+
+        @media(max-width: 736px) {
+            .service-price {
+                z-index: 0 !important;
+            }
+        }
     </style>
     <!--start page content-->
     <section id="page-cont">
