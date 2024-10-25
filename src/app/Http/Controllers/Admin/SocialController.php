@@ -65,10 +65,10 @@ class SocialController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Social::STATUS_ACTIVE ? Social::STATUS_ACTIVE : Social::STATUS_ACTIVE;
+            $data['active'] = isset($data['active']) && $data['active'] == Social::STATUS_ACTIVE ? Social::STATUS_ACTIVE : Social::STATUS_BLOCKED;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
-                $data['image'] = store_file($file, $this->dir);
+                $data['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $data = Social::create($data);
             DB::commit();
@@ -102,7 +102,7 @@ class SocialController extends Controller
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
-                $_request['image'] = store_file($file, $this->dir);
+                $_request['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $data['status'] = isset($_request['status']) && $_request['status'] == Social::STATUS_ACTIVE ? Social::STATUS_ACTIVE : Social::STATUS_BLOCKED;
             $data->update($_request);

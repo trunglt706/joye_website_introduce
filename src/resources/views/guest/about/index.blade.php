@@ -25,6 +25,18 @@
                 margin-top: 30px;
                 text-align: center;
             }
+
+            .about-testimonial .description {
+                font-size: 16px !important;
+            }
+
+            .about-feature .title {
+                font-size: 26px !important;
+            }
+
+            .post-cont h3 a {
+                font-size: 32px !important;
+            }
         }
     </style>
     <!--start page content-->

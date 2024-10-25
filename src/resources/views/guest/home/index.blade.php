@@ -14,8 +14,10 @@
         }
 
         @media(max-width: 736px) {
+
             #intro-section {
                 margin-top: 32px;
+                margin-bottom: 135px;
             }
 
             #intro-section iframe {
@@ -59,6 +61,23 @@
 
             #staff-section h5 {
                 line-height: 30px !important;
+            }
+
+            .platform-slider-area .platform-item img {
+                height: 200px !important;
+            }
+
+            .testimonial-section .client-item p {
+                font-size: 16px !important;
+                font-weight: 400;
+            }
+
+            .my-service .platform-slider-area .platform-item img {
+                height: 75px !important;
+            }
+
+            .my-service .platform-item {
+                height: auto !important;
             }
         }
     </style>

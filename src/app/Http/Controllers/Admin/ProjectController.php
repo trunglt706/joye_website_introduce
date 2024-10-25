@@ -74,12 +74,12 @@ class ProjectController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_ACTIVE;
+            $data['active'] = isset($data['active']) && $data['active'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
             $data['project'] = isset($data['project']) && $data['project'] == 1 ? 1 : 0;
             $data['customer'] = isset($data['customer']) && $data['customer'] == 1 ? 1 : 0;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
-                $data['image'] = store_file($file, $this->dir);
+                $data['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $data = Project::create($data);
             DB::commit();
@@ -113,7 +113,7 @@ class ProjectController extends Controller
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
-                $_request['image'] = store_file($file, $this->dir);
+                $_request['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $data['status'] = isset($_request['status']) && $_request['status'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
             $data['project'] = isset($_request['project']) && $_request['project'] == 1 ? 1 : 0;

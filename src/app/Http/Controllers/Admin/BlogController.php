@@ -74,9 +74,9 @@ class BlogController extends Controller
             $data = request()->all();
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
-                $data['image'] = store_file($file, $this->dir);
+                $data['image'] = store_file($file, $this->dir, false, 500, 500);
             }
-            $data['active'] = isset($data['active']) && $data['active'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_ACTIVE;
+            $data['active'] = isset($data['active']) && $data['active'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data = Blog::create($data);
             DB::commit();
             admin_save_log("Bài viết #$data->name vừa mới được tạo", route("admin.blog.detail", ['id' => $data->id]), $this->admin->id);
@@ -108,7 +108,7 @@ class BlogController extends Controller
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
-                $_request['image'] = store_file($file, $this->dir);
+                $_request['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $_request['status'] = isset($_request['status']) && $_request['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data->update($_request);

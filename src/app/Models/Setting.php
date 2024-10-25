@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Setting extends Model
 {
@@ -38,7 +39,9 @@ class Setting extends Model
             $model->numering = $model->numering ?? self::getOrder($model->group_id);
         });
         self::created(function ($model) {});
-        self::updated(function ($model) {});
+        self::updated(function ($model) {
+            Cache::forget("option-$model->code");
+        });
         self::deleted(function ($model) {});
     }
 

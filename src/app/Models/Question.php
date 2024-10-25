@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Question extends Model
 {
@@ -30,9 +31,15 @@ class Question extends Model
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->numering = $model->numering ?? self::getOrder();
         });
-        self::created(function ($model) {});
-        self::updated(function ($model) {});
-        self::deleted(function ($model) {});
+        self::created(function ($model) {
+            Cache::forget('guest-faq');
+        });
+        self::updated(function ($model) {
+            Cache::forget('guest-faq');
+        });
+        self::deleted(function ($model) {
+            Cache::forget('guest-faq');
+        });
     }
 
     const STATUS_ACTIVE = 'active';

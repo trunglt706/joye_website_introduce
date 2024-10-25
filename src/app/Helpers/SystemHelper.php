@@ -4,6 +4,7 @@ use App\Http\Controllers\DropboxController;
 use App\Models\AdminLog;
 use App\Models\AdminMenu;
 use App\Models\Setting;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
@@ -139,10 +140,21 @@ if (!function_exists('admin_save_log')) {
     }
 }
 
+if (!defined('CACHE_TIME')) {
+    define('CACHE_TIME', 60000);
+}
+
 if (!function_exists('get_menu_admin')) {
     function get_menu_admin()
     {
-        return AdminMenu::with('menus')->whereNull('parent_id')->orderBy('numering', 'ASC')->get();
+        if (Cache::has('menu_admin')) {
+            $data = Cache::get('menu_admin');
+        } else {
+            $data = Cache::remember('menu_admin', CACHE_TIME, function () {
+                return AdminMenu::with('menus')->whereNull('parent_id')->orderBy('numering', 'ASC')->get();
+            });
+        }
+        return $data;
     }
 }
 if (!function_exists('check_active_menu')) {
@@ -176,7 +188,7 @@ if (!function_exists('get_url')) {
 }
 
 if (!function_exists('store_file')) {
-    function store_file($file, $uri, $storage = false)
+    function store_file($file, $uri, $storage = false, $width = null, $height = null)
     {
         if ($storage) {
             $dropbox =  new DropboxController();
@@ -188,7 +200,14 @@ if (!function_exists('store_file')) {
             if (!File::exists($uri)) {
                 File::makeDirectory($uri, $mode = 0777, true, true);
             }
-            Image::make($file)->save($path);
+            if ($width && $height) {
+                Image::make($file)->resize($width, $height, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($path);
+            } else {
+                Image::make($file)->save($path);
+            }
             return $path;
         }
     }
@@ -208,10 +227,18 @@ if (!function_exists('delete_file')) {
 if (!function_exists('get_option')) {
     function get_option($code, $default = '')
     {
-        $setting = Setting::ofCode($code)->first();
-        if ($setting->type == Setting::TYPE_FILE) {
-            return get_url($setting->value) ?? $default;
+        $key = "option-$code";
+        if (Cache::has($key)) {
+            $data = Cache::get($key);
+        } else {
+            $data = Cache::remember($key, CACHE_TIME, function () use ($code, $default) {
+                $setting = Setting::ofCode($code)->select('type', 'value')->first();
+                if ($setting && $setting->type == Setting::TYPE_FILE) {
+                    return get_url($setting->value) ?? $default;
+                }
+                return $setting && $setting->value ? $setting->value : $default;
+            });
         }
-        return $setting->value ?? $default;
+        return $data;
     }
 }

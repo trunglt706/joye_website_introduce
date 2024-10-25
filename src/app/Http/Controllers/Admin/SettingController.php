@@ -51,7 +51,7 @@ class SettingController extends Controller
                                 $file = request()->file($setting->code);
                                 // delete old image
                                 delete_file($setting->value);
-                                $data['value'] = store_file($file, $this->dir);
+                                $data['value'] = store_file($file, $this->dir, false, 500, 500);
                             }
                             break;
                         case Setting::TYPE_IMAGES:
@@ -59,7 +59,7 @@ class SettingController extends Controller
                                 $old_image = $setting->value ? json_decode($setting->value) : [];
                                 $new_image = [];
                                 foreach (request()->file($setting->code) as $file) {
-                                    array_push($new_image, store_file($file, $this->dir));
+                                    array_push($new_image, store_file($file, $this->dir, false, 500, 500));
                                 }
                                 $data['value'] = json_encode($new_image);
                                 // delete old image

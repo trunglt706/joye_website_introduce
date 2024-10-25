@@ -27,12 +27,17 @@ class ContactController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->only('name', 'phone', 'email', 'comment');
+            $requestCount = session()->get('contact_request_count', 0);
+            if ($requestCount >= 1) {
+                return redirect()->back()->with('error', 'Rất tiết, bạn đã vượt quá số lượng gửi yêu cầu trong ngày!');
+            }
             if (request('service_id', '') != '') {
                 $service = Service::find(request('service_id', ''));
                 $data['service'] = $service->name;
             }
             Contact::create($data);
             DB::commit();
+            session()->put('contact_request_count', $requestCount + 1);
             return redirect()->back()->with('success', 'Gửi liên hệ thành công');
         } catch (\Throwable $th) {
             DB::rollBack();

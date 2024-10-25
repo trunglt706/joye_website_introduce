@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class AdminMenu extends Model
 {
@@ -40,10 +41,13 @@ class AdminMenu extends Model
             $model->numering = $model->numering ?? self::getOrder($parent_id);
         });
         self::created(function ($model) {
+            Cache::forget('menu_admin');
         });
         self::updated(function ($model) {
+            Cache::forget('menu_admin');
         });
         self::deleted(function ($model) {
+            Cache::forget('menu_admin');
         });
     }
 

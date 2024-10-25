@@ -67,9 +67,9 @@ class ServiceController extends Controller
             $data = request()->all();
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
-                $data['image'] = store_file($file, $this->dir);
+                $data['image'] = store_file($file, $this->dir, false, 500, 500);
             }
-            $data['active'] = isset($data['active']) && $data['active'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_ACTIVE;
+            $data['active'] = isset($data['active']) && $data['active'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data = Service::create($data);
             DB::commit();
             admin_save_log("Dịch vụ #$data->name vừa mới được tạo", route("admin.service.detail", ['id' => $data->id]), $this->admin->id);
@@ -102,7 +102,7 @@ class ServiceController extends Controller
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');
-                $_request['image'] = store_file($file, $this->dir);
+                $_request['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $_request['status'] = isset($_request['status']) && $_request['status'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data->update($_request);
