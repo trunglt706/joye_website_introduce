@@ -9,7 +9,7 @@
             <div class="container">
                 <h2 class="bl-title center">Thông tin liên hệ</h2>
                 <div class="bl-description center">
-                    Muốn biết được thêm thông tin về dịch? Đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ bạn
+                    Muốn biết được thêm thông tin về dịch?<br />Đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ bạn
                 </div>
             </div>
         </div>

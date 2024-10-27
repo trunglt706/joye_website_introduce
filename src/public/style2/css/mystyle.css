@@ -155,7 +155,7 @@ body {
     background: linear-gradient(0deg, #3F007F, #B191D1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 @media (max-width: 576px) {
     .bl-title {
@@ -433,7 +433,7 @@ body {
     margin-bottom: 30px;
 }
 .bl-about-description {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 .bl-about-description .banner {
     border-radius: 10px;
@@ -1375,5 +1375,8 @@ header .register .btn:hover {
     }
     .f-50 {
         width: 50% !important;
+    }
+    .bl-about-description {
+        padding-top: 80px;
     }
 }

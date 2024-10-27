@@ -26,115 +26,33 @@
                     <div class="item"><a href="#">Đào tạo</a></div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="bl-item-5">
-                            <div class="name-project">Tối ưu chi phí</div>
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/project/Project.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#">Dịch vụ Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
-                            </div>
-                            <div class="view-more">
-                                <a href="#">
-                                    Xem chi tiết <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="bl-item-5">
-                            <div class="name-project">Tối ưu chi phí</div>
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/project/Project.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#">Dịch vụ Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
-                            </div>
-                            <div class="view-more">
-                                <a href="#">Xem chi tiết</a>
+                    @for ($i = 0; $i < 6; $i++)
+                        <div class="col-lg-4">
+                            <div class="bl-item-5">
+                                <div class="name-project">Tối ưu chi phí</div>
+                                <div class="img">
+                                    <a href="{{ route('v2.service.detail', 'abc') }}"><img
+                                            src="/style2/images/project/Project.png" alt="Image"></a>
+                                </div>
+                                <div class="title">
+                                    <h3><a href="{{ route('v2.service.detail', 'abc') }}">Dịch vụ Livestream</a></h3>
+                                </div>
+                                <div class="description">
+                                    Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
+                                </div>
+                                <div class="view-more">
+                                    <a href="{{ route('v2.service.detail', 'abc') }}">
+                                        Xem chi tiết <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="bl-item-5">
-                            <div class="name-project">Tối ưu chi phí</div>
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/project/Project.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#">Dịch vụ Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
-                            </div>
-                            <div class="view-more">
-                                <a href="#">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="bl-item-5">
-                            <div class="name-project">Tối ưu chi phí</div>
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/project/Project.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#">Dịch vụ Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
-                            </div>
-                            <div class="view-more">
-                                <a href="#">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="bl-item-5">
-                            <div class="name-project">Tối ưu chi phí</div>
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/project/Project.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#">Dịch vụ Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
-                            </div>
-                            <div class="view-more">
-                                <a href="#">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="bl-item-5">
-                            <div class="name-project">Tối ưu chi phí</div>
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/project/Project.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#">Dịch vụ Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
-                            </div>
-                            <div class="view-more">
-                                <a href="#">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endfor
                 </div>
                 <div class="bl-pagination">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i
-                                    class="fa-solid fa-angle-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a>
+                        </li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item active"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
