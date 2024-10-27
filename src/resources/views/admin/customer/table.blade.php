@@ -32,7 +32,7 @@
             </td>
             <td>
                 <div class="text-center">
-                    <img src="{{ $item->image ?? asset('img/user.png') }}" alt="" class="h-30px">
+                    <img src="{{ $item->image ?? asset('img/user.png') }}" alt="Image" class="h-30px">
                 </div>
             </td>
             <td class="text-end">

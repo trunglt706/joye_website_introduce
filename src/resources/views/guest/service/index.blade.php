@@ -25,7 +25,7 @@
                         <div class="col-md-3 mb-2">
                             <a href="{{ route('service.detail', ['slug' => $item->slug]) }}">
                                 <div class="chanl-single">
-                                    <img src="{{ asset($item->image) }}" class="img-fluid" alt="">
+                                    <img src="{{ asset($item->image) }}" class="img-fluid" alt="Image">
                                     <div class="chanl-cont">
                                         <div class="title">{{ $item->name }}</div>
                                         <p class="description">

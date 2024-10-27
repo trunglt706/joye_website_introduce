@@ -4,7 +4,7 @@
 @section('description', '')
 @section('image', '')
 @section('content')
-    <main class="bg-grey">
+    <main class="bg-grey service">
         <div class="bl-contact-title">
             <div class="container">
                 <h2 class="bl-title center">Thông tin liên hệ</h2>
@@ -24,9 +24,9 @@
                             <div class="description">Liên hệ ngay với JoyE, để được ngay những thông tin về dịch vụ mà
                                 bạn quan tâm nhé!</div>
                             <div class="social">
-                                <a href="#"><img src="/style2/images/zalo.png" alt=""></a>
-                                <a href="#"><img src="/style2/images/messenger.png" alt=""></a>
-                                <a href="#"><img src="/style2/images/facebook.png" alt=""></a>
+                                <a href="#"><img src="/style2/images/zalo.png" alt="Image"></a>
+                                <a href="#"><img src="/style2/images/messenger.png" alt="Image"></a>
+                                <a href="#"><img src="/style2/images/facebook.png" alt="Image"></a>
                             </div>
                             <div class="info">
                                 <div class="item"><i class="fa-solid fa-phone"></i>0903 414 993</div>
@@ -61,8 +61,7 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <textarea name="" id="" class="form-control" rows="4"
-                                                placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
+                                            <textarea name="" id="" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
                                         </div>
                                         <br><br>
                                     </div>

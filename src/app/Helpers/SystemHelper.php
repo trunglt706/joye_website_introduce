@@ -242,3 +242,31 @@ if (!function_exists('get_option')) {
         return $data;
     }
 }
+
+if (!function_exists('get_menu')) {
+    function get_menu()
+    {
+        return [
+            [
+                'code' => 'v2.about',
+                'name' => 'Về JOYE'
+            ],
+            [
+                'code' => 'v2.service',
+                'name' => 'Dịch vụ'
+            ],
+            [
+                'code' => 'v2.blog',
+                'name' => 'Blog'
+            ],
+            [
+                'code' => 'v2.contact',
+                'name' => 'Liên hệ'
+            ],
+            [
+                'code' => 'v2.home',
+                'name' => 'Big Heart MCN'
+            ],
+        ];
+    }
+}

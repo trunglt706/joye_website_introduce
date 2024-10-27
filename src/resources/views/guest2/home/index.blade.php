@@ -9,37 +9,37 @@
             <br><br>
             <div class="container">
                 <div class="title-head">
-                    <h2>Giải pháp Marketing toàn diện cho doanh nghiệp</h2>
+                    <h2>Giải pháp Marketing toàn diện<br />cho doanh nghiệp</h2>
                 </div>
                 <div class="description">
-                    <span>JoyE mang đến các cơ hội đặc biệt để phát triển nhanh hơn và dẫn đầu xu hướng kinh
+                    <span>JoyE mang đến các cơ hội đặc biệt để phát triển nhanh hơn<br />và dẫn đầu xu hướng kinh
                         doanh.</span>
                 </div>
                 <div class="bl-button-link">
-                    <a href="#"><button class="btn">Liên hệ ngay</button></a>
-                    <a href="#"><button class="btn">Về chúng tôi</button></a>
+                    <a href="{{ route('v2.contact') }}"><button class="btn active">Liên hệ ngay</button></a>
+                    <a href="{{ route('v2.about') }}"><button class="btn">Về chúng tôi</button></a>
                 </div>
                 <div class="video">
-                    <img src="/style2/images/video.jpg" alt="">
+                    <img src="/style2/images/video.jpg" alt="Image">
                     <div class="bg"></div>
                     <div class="icon-play">
-                        <a href="#"><img src="/style2/images/Play-Button.png" alt=""></a>
+                        <a href="#"><img src="/style2/images/Play-Button.png" alt="Image"></a>
                     </div>
                 </div>
                 <div class="partner">
                     <div class="text">Được tin tưởng hợp tác cùng các nhãn hàng & chương trình</div>
                     <div class="slide slide-1">
                         <div class="list">
-                            <div><img src="/style2/images/hobe bar.png" alt=""></div>
-                            <div><img src="/style2/images/Dell.png" alt=""></div>
-                            <div><img src="/style2/images/safabay.png" alt=""></div>
-                            <div><img src="/style2/images/miss.png" alt=""></div>
-                            <div><img src="/style2/images/nang sen.png" alt=""></div>
-                            <div><img src="/style2/images/hobe bar.png" alt=""></div>
-                            <div><img src="/style2/images/Dell.png" alt=""></div>
-                            <div><img src="/style2/images/safabay.png" alt=""></div>
-                            <div><img src="/style2/images/miss.png" alt=""></div>
-                            <div><img src="/style2/images/nang sen.png" alt=""></div>
+                            <div><img src="/style2/images/hobe bar.png" alt="Image"></div>
+                            <div><img src="/style2/images/Dell.png" alt="Image"></div>
+                            <div><img src="/style2/images/safabay.png" alt="Image"></div>
+                            <div><img src="/style2/images/miss.png" alt="Image"></div>
+                            <div><img src="/style2/images/nang sen.png" alt="Image"></div>
+                            <div><img src="/style2/images/hobe bar.png" alt="Image"></div>
+                            <div><img src="/style2/images/Dell.png" alt="Image"></div>
+                            <div><img src="/style2/images/safabay.png" alt="Image"></div>
+                            <div><img src="/style2/images/miss.png" alt="Image"></div>
+                            <div><img src="/style2/images/nang sen.png" alt="Image"></div>
                         </div>
                     </div>
                 </div>
@@ -56,10 +56,11 @@
                     <div class="col-lg-6">
                         <div class="bl-item-1">
                             <div class="img">
-                                <a href="#"><img src="/style2/images/Image Service.jpg" alt=""></a>
+                                <a href="#"><img src="/style2/images/service/Ecommerce.jpg" alt="Image"></a>
                             </div>
                             <div class="title">
-                                <h3><a href="#"><img src="/style2/images/trend-up.png" alt="">Ecommerce</a></h3>
+                                <h3><a href="#"><img src="/style2/images/trend-up.png" alt="Image">Ecommerce</a>
+                                </h3>
                             </div>
                             <div class="description">
                                 Giúp doanh nghiệp tăng trưởng vượt bậc, đảm bảo mọi khía cạnh kinh doanh trực tuyến đều
@@ -75,18 +76,19 @@
                     <div class="col-lg-6">
                         <div class="bl-item-1">
                             <div class="img">
-                                <a href="#"><img src="/style2/images/Image Service.jpg" alt=""></a>
+                                <a href="#"><img src="/style2/images/service/Content.png" alt="Image"></a>
                             </div>
                             <div class="title">
-                                <h3><a href="#"><img src="/style2/images/video-play.png" alt="">Ecommerce</a></h3>
+                                <h3><a href="#"><img src="/style2/images/video-play.png" alt="Image">Xây dựng nội
+                                        dung</a>
+                                </h3>
                             </div>
                             <div class="description">
-                                Giúp doanh nghiệp tăng trưởng vượt bậc, đảm bảo mọi khía cạnh kinh doanh trực tuyến đều
-                                được chăm sóc chu đáo
+                                Dịch vụ sáng tạo nội dung chuyên nghiệp giúp thương hiệu của bạn nổi bật trên mọi nền tảng
                                 <ul>
-                                    <li>Tư vấn chiến lược bán hàng tối ưu</li>
-                                    <li>Quản lý gian hàng và tối ưu trải nghiệm khách hàng</li>
-                                    <li>Phân tích dữ liệu để cải thiện hiệu quả bán hàng</li>
+                                    <li>Sản xuất nội dung đa dạng (video, hình ảnh, bài viết)</li>
+                                    <li>Chỉnh sửa chuyên nghiệp với thiết bị hiện đại</li>
+                                    <li>Phân tích và điều chỉnh chiến lược nội dung theo thị trường</li>
                                 </ul>
                             </div>
                         </div>
@@ -94,18 +96,18 @@
                     <div class="col-lg-6">
                         <div class="bl-item-1">
                             <div class="img">
-                                <a href="#"><img src="/style2/images/Image Service.jpg" alt=""></a>
+                                <a href="#"><img src="/style2/images/service/Livestream.png" alt="Image"></a>
                             </div>
                             <div class="title">
-                                <h3><a href="#"><img src="/style2/images/microphone-2.png" alt="">Ecommerce</a></h3>
+                                <h3><a href="#"><img src="/style2/images/microphone-2.png"
+                                            alt="Image">Livestream</a></h3>
                             </div>
                             <div class="description">
-                                Giúp doanh nghiệp tăng trưởng vượt bậc, đảm bảo mọi khía cạnh kinh doanh trực tuyến đều
-                                được chăm sóc chu đáo
+                                Thiết bị hiện đại và nội dung sáng tạo, giúp bạn tối ưu hóa tương tác và chuyển đổi:
                                 <ul>
-                                    <li>Tư vấn chiến lược bán hàng tối ưu</li>
-                                    <li>Quản lý gian hàng và tối ưu trải nghiệm khách hàng</li>
-                                    <li>Phân tích dữ liệu để cải thiện hiệu quả bán hàng</li>
+                                    <li>Livestream đa nền tảng</li>
+                                    <li>Xây dựng kịch bản, thiết bị cao cấp</li>
+                                    <li>Cung cấp báo cáo phân tích</li>
                                 </ul>
                             </div>
                         </div>
@@ -113,18 +115,19 @@
                     <div class="col-lg-6">
                         <div class="bl-item-1">
                             <div class="img">
-                                <a href="#"><img src="/style2/images/Image Service.jpg" alt=""></a>
+                                <a href="#"><img src="/style2/images/service/DaoTao.png" alt="Image"></a>
                             </div>
                             <div class="title">
-                                <h3><a href="#"><img src="/style2/images/book.png" alt="">Ecommerce</a></h3>
+                                <h3><a href="#"><img src="/style2/images/book.png" alt="Image">Đào tạo chuyên
+                                        sâu</a></h3>
                             </div>
                             <div class="description">
-                                Giúp doanh nghiệp tăng trưởng vượt bậc, đảm bảo mọi khía cạnh kinh doanh trực tuyến đều
-                                được chăm sóc chu đáo
+                                Cung cấp các khóa đào tạo chuyên sâu, nâng cao năng lực cá nhân và đội nhóm qua những buổi
+                                học thực tiễn
                                 <ul>
-                                    <li>Tư vấn chiến lược bán hàng tối ưu</li>
-                                    <li>Quản lý gian hàng và tối ưu trải nghiệm khách hàng</li>
-                                    <li>Phân tích dữ liệu để cải thiện hiệu quả bán hàng</li>
+                                    <li>Đào tạo từ cơ bản đến nâng cao</li>
+                                    <li>Tư vấn chiến lược và các thực hiện hiệu quả</li>
+                                    <li>Kết nối và học hỏi từ cộng đồng chuyên gia</li>
                                 </ul>
                             </div>
                         </div>
@@ -143,15 +146,15 @@
             <div class="container-only-left">
                 <div class="slide slide-2">
                     <div class="nav-button">
-                        <img class="click-prev" src="/style2/images/arrow-left.png" alt="">
-                        <img class="click-next" src="/style2/images/arrow-right.png" alt="">
+                        <img class="click-prev" src="/style2/images/arrow-left.png" alt="Image">
+                        <img class="click-next" src="/style2/images/arrow-right.png" alt="Image">
                     </div>
                     <div class="list">
 
                         <div class="bl-item-2">
                             <div class="name-project">Ecommerce</div>
                             <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
+                                <img src="/style2/images/project/Project.png" alt="Image">
                             </div>
                             <div class="title">
                                 <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
@@ -161,7 +164,8 @@
                                     <div class="col-4">
                                         <div class="item">
                                             <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
+                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
+                                                    alt="Image">
                                             </div>
                                             <div class="text-des">
                                                 <div>Lượt truy cập</div>
@@ -178,19 +182,20 @@
                             </div>
                         </div>
                         <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
+                            <div class="name-project">Livestream</div>
                             <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
+                                <img src="/style2/images/project/Project.png" alt="Image">
                             </div>
                             <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
+                                <h3><label>Hoa Khôi SVVN - </label> Tổ chức vận hành và triển khai chương trình</h3>
                             </div>
                             <div class="p-index">
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="item">
                                             <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
+                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
+                                                    alt="Image">
                                             </div>
                                             <div class="text-des">
                                                 <div>Lượt truy cập</div>
@@ -207,19 +212,21 @@
                             </div>
                         </div>
                         <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
+                            <div class="name-project">Đào tạo</div>
                             <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
+                                <img src="/style2/images/project/Project.png" alt="Image">
                             </div>
                             <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
+                                <h3><label>Nangsen Farm - </label> Triển khai Livestream và các chiến dịch tiếp thị liên kết
+                                </h3>
                             </div>
                             <div class="p-index">
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="item">
                                             <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
+                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
+                                                    alt="Image">
                                             </div>
                                             <div class="text-des">
                                                 <div>Lượt truy cập</div>
@@ -236,19 +243,20 @@
                             </div>
                         </div>
                         <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
+                            <div class="name-project">Tổ chức</div>
                             <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
+                                <img src="/style2/images/project/Project.png" alt="Image">
                             </div>
                             <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
+                                <h3><label>Hobe Bar - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
                             </div>
                             <div class="p-index">
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="item">
                                             <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
+                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
+                                                    alt="Image">
                                             </div>
                                             <div class="text-des">
                                                 <div>Lượt truy cập</div>
@@ -264,181 +272,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/Image Service.jpg" alt="">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png" alt="">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -458,7 +291,7 @@
                                 </div>
                                 <div class="author">
                                     <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="">
+                                        <img src="/style2/images/Avatars.png" alt="Image">
                                     </div>
                                     <div class="name">
                                         <div class="fullname">Ms. Khánh Duy</div>
@@ -477,7 +310,7 @@
                                 </div>
                                 <div class="author">
                                     <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="">
+                                        <img src="/style2/images/Avatars.png" alt="Image">
                                     </div>
                                     <div class="name">
                                         <div class="fullname">Ms. Khánh Duy</div>
@@ -496,7 +329,7 @@
                                 </div>
                                 <div class="author">
                                     <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="">
+                                        <img src="/style2/images/Avatars.png" alt="Image">
                                     </div>
                                     <div class="name">
                                         <div class="fullname">Ms. Khánh Duy</div>
@@ -515,7 +348,7 @@
                                 </div>
                                 <div class="author">
                                     <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="">
+                                        <img src="/style2/images/Avatars.png" alt="Image">
                                     </div>
                                     <div class="name">
                                         <div class="fullname">Ms. Khánh Duy</div>
@@ -534,7 +367,7 @@
                                 </div>
                                 <div class="author">
                                     <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="">
+                                        <img src="/style2/images/Avatars.png" alt="Image">
                                     </div>
                                     <div class="name">
                                         <div class="fullname">Ms. Khánh Duy</div>
@@ -553,7 +386,7 @@
                                 </div>
                                 <div class="author">
                                     <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="">
+                                        <img src="/style2/images/Avatars.png" alt="Image">
                                     </div>
                                     <div class="name">
                                         <div class="fullname">Ms. Khánh Duy</div>
@@ -650,9 +483,9 @@
                             <div class="description">Liên hệ ngay với JoyE, để được ngay những thông tin về dịch vụ mà
                                 bạn quan tâm nhé!</div>
                             <div class="social">
-                                <a href="#"><img src="/style2/images/zalo.png" alt=""></a>
-                                <a href="#"><img src="/style2/images/messenger.png" alt=""></a>
-                                <a href="#"><img src="/style2/images/facebook.png" alt=""></a>
+                                <a href="#"><img src="/style2/images/zalo.png" alt="Image"></a>
+                                <a href="#"><img src="/style2/images/messenger.png" alt="Image"></a>
+                                <a href="#"><img src="/style2/images/facebook.png" alt="Image"></a>
                             </div>
                             <div class="info">
                                 <div class="item"><i class="fa-solid fa-phone"></i>0903 414 993</div>
@@ -678,7 +511,8 @@
                                         </div>
                                         <div class="input-group">
                                             <select name="" id="" class="form-control">
-                                                <option value="" class="first">Chọn dịch vụ mà bạn quan tâm</option>
+                                                <option value="" class="first">Chọn dịch vụ mà bạn quan tâm
+                                                </option>
                                                 <option value="">Dịch vụ 1</option>
                                                 <option value="">Dịch vụ 2</option>
                                                 <option value="">Dịch vụ 3</option>
@@ -687,8 +521,7 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <textarea name="" id="" class="form-control" rows="4"
-                                                placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
+                                            <textarea name="" id="" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
                                         </div>
                                         <br><br>
                                     </div>

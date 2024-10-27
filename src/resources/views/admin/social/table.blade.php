@@ -29,7 +29,7 @@
             </td>
             <td>
                 <div class="text-center">
-                    <img src="{{ $item->image }}" alt="" class="h-30px">
+                    <img src="{{ $item->image }}" alt="Image" class="h-30px">
                 </div>
             </td>
             <td class="text-center">

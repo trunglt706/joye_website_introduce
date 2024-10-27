@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9 mb-2">
-                        <img src="{{ asset($service->image) }}" alt="" class="img-fluid w-100 mb-2">
+                        <img src="{{ asset($service->image) }}" alt="Image" class="img-fluid w-100 mb-2">
                         <!--start blog single-->
                         <div class="blog-single">
                             <div class="post-cont">

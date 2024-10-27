@@ -23,7 +23,7 @@
                     <td>{{ $data->name }}</td>
                     <td class="bg-body-secondary w-175px text-nowrap">- Hình ảnh</td>
                     <td>
-                        <img src="{{ $data->image ?? asset('img/user.png') }}" alt="" class="h-30px">
+                        <img src="{{ $data->image ?? asset('img/user.png') }}" alt="Image" class="h-30px">
                     </td>
                 </tr>
                 <tr>

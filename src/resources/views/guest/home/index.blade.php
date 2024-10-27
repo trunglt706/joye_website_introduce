@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="home-img">
-            <img src="/style/images/home-img.png" class="img-fluid" alt="">
+            <img src="/style/images/home-img.png" class="img-fluid" alt="Image">
         </div>
     </section>
     @include('guest.home.intro')

@@ -83,7 +83,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="img">
-                                                        <img src="/style/images/about-ceo.png" alt="">
+                                                        <img src="/style/images/about-ceo.png" alt="Image">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
@@ -118,7 +118,7 @@
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/businessman.png" alt="">
+                                                        <img src="/style/images/businessman.png" alt="Image">
                                                     </div>
                                                     <div class="text text-justify">
                                                         <strong>Chuyên gia</strong><br />
@@ -133,7 +133,7 @@
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/like.png" alt="">
+                                                        <img src="/style/images/like.png" alt="Image">
                                                     </div>
                                                     <div class="text text-justify">
                                                         <strong>Kinh nghiệm</strong><br />
@@ -148,7 +148,7 @@
                                             <div class="col-md-4">
                                                 <div class="item">
                                                     <div class="img">
-                                                        <img src="/style/images/trustworthy.png" alt="">
+                                                        <img src="/style/images/trustworthy.png" alt="Image">
                                                     </div>
                                                     <div class="text text-justify">
                                                         <strong>Tiến hóa</strong><br />
