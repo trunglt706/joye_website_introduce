@@ -4,7 +4,7 @@
             @csrf
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tạo mới khách hàng</h5>
+                    <h5 class="modal-title">Tạo mới khách hàng nói gì</h5>
                     <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-4 py-1">

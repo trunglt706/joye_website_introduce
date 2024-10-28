@@ -1,7 +1,7 @@
 @extends('guest2.layout')
 @section('title', 'Tin tức')
 @section('keywords', '')
-@section('description', '')
+@section('description', 'Tin tức')
 @section('image', '')
 @section('content')
     <main class="bg-grey service">
@@ -19,39 +19,35 @@
         <div class="bl-list-post">
             <div class="container">
                 <div class="row">
-                    @for ($i = 0; $i < 6; $i++)
+                    @foreach ($list as $item)
                         <div class="col-lg-4">
                             <div class="bl-item-5">
-                                <div class="name-project">Tối ưu chi phí</div>
+                                <div class="name-project">{{ $item->group_name }}</div>
                                 <div class="img">
-                                    <a href="{{ route('v2.blog.detail', 'abc') }}"><img
-                                            src="/style2/images/project/Project.png" alt="Image"></a>
+                                    <a href="{{ route('v2.blog.detail', $item->slug) }}"><img
+                                            src="{{ get_url($item->image) }}" alt="{{ $item->name }}"></a>
                                 </div>
                                 <div class="title">
-                                    <h3><a href="{{ route('v2.blog.detail', 'abc') }}">Dịch vụ Livestream</a></h3>
+                                    <h3>
+                                        <a href="{{ route('v2.blog.detail', $item->slug) }}">
+                                            {{ $item->name }}
+                                        </a>
+                                    </h3>
                                 </div>
                                 <div class="description">
-                                    Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
+                                    {{ $item->description }}
                                 </div>
                                 <div class="view-more">
-                                    <a href="{{ route('v2.blog.detail', 'abc') }}">
+                                    <a href="{{ route('v2.blog.detail', $item->slug) }}">
                                         Xem chi tiết <i class="fa fa-angle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
                 <div class="bl-pagination">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i
-                                    class="fa-solid fa-angle-right"></i></a></li>
-                    </ul>
+                    {!! $list->appends(request()->all())->links() !!}
                 </div>
             </div>
         </div>

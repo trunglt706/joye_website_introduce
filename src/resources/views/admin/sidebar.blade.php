@@ -25,7 +25,7 @@
                         @foreach ($item->menus as $menu)
                             <li class="nav-item">
                                 <a class="nav-link {{ in_array($routeName, json_decode($menu->active_route_name)) ? 'active' : '' }}"
-                                    href="{{ $menu->route_name }}">
+                                    href="{{ route($menu->route_name) }}">
                                     <span class="nav-icon"><span class="nav-icon-bullet"></span></span>
                                     {{ $menu->name }}
                                 </a>
@@ -36,7 +36,7 @@
             @else
                 <li class="nav-item">
                     <a class="nav-link {{ in_array($routeName, json_decode($item->active_route_name)) ? 'active' : '' }}"
-                        href="{{ $item->route_name }}">
+                        href="{{ route($item->route_name) }}">
                         <svg class="nav-icon">
                             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-{{ $item->icon }}"></use>
                         </svg> {{ $item->name }}

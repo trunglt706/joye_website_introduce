@@ -14,14 +14,12 @@ class Blog extends Model
     protected $fillable = [
         'group_id',
         'slug',
-        'code',
         'name',
         'image',
         'description',
         'content',
-        'tags',
+        'background',
         'status',
-        'important',
     ];
 
     protected $hidden = [];
@@ -31,16 +29,17 @@ class Blog extends Model
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->code = $model->code ?? generateRandomString();
             $model->slug = $model->slug ?? Str::slug($model->name);
             $model->status = $model->status ?? self::STATUS_UN_ACTIVE;
-            $model->important = $model->important ?? 0;
         });
         self::created(function ($model) {});
         self::updated(function ($model) {});
         self::deleted(function ($model) {
             if ($model->image) {
                 delete_file($model->image);
+            }
+            if ($model->background) {
+                delete_file($model->background);
             }
         });
     }
@@ -57,16 +56,6 @@ class Blog extends Model
             self::STATUS_BLOCKED => ['Đã khóa', 'danger'],
         ];
         return $status == '' ? $_status : $_status["$status"];
-    }
-
-    public function scopeOfImportant($query, $important)
-    {
-        return $query->where('blogs.important', $important);
-    }
-
-    public function scopeOfCode($query, $code)
-    {
-        return $query->where('blogs.code', $code);
     }
 
     public function scopeOfSlug($query, $slug)
@@ -87,9 +76,7 @@ class Blog extends Model
     public function scopeSearch($query, $search)
     {
         return $query->where(function ($query) use ($search) {
-            $query->where('blogs.code', 'LIKE', "%$search%")
-                ->orWhere('blogs.name', 'LIKE', "%$search%")
-                ->orWhereJsonContains('blogs.tags', $search);
+            $query->where('blogs.name', 'LIKE', "%$search%");
         });
     }
 

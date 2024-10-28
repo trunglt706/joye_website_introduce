@@ -179,11 +179,11 @@ if (!function_exists('get_link_public')) {
 if (!function_exists('get_url')) {
     function get_url($uri, $storage = false)
     {
-        if ($storage) {
-            $dropbox =  new DropboxController();
-            return $dropbox->url($uri);
-        }
-        return $uri;
+        // if ($storage) {
+        //     $dropbox =  new DropboxController();
+        //     return $dropbox->url($uri);
+        // }
+        return asset($uri);
     }
 }
 
@@ -269,4 +269,28 @@ if (!function_exists('get_menu')) {
             ],
         ];
     }
+}
+
+if (!defined('GUEST_PARTNER')) {
+    define('GUEST_PARTNER', 'guest-partners');
+}
+
+if (!defined('GUEST_SERVICE_GROUP')) {
+    define('GUEST_SERVICE_GROUP', 'guest-service_groups');
+}
+
+if (!defined('GUEST_SERVICE_GROUP_SHORT')) {
+    define('GUEST_SERVICE_GROUP_SHORT', 'guest-service_groups_short');
+}
+
+if (!defined('GUEST_PROJECT')) {
+    define('GUEST_PROJECT', 'guest-projects');
+}
+
+if (!defined('GUEST_FEEDBACK')) {
+    define('GUEST_FEEDBACK', 'guest-feedbacks');
+}
+
+if (!defined('GUEST_FAQ')) {
+    define('GUEST_FAQ', 'guest-fas');
 }

@@ -5,19 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 
-class Customer extends Model
+class ServiceGroup extends Model
 {
     use HasFactory;
-    protected $table = 'customers';
+    protected $table = 'service_groups';
 
     protected $fillable = [
+        'slug',
         'name',
-        'description',
         'image',
-        'start',
         'status',
-        'position',
+        'description',
+        'icon'
     ];
 
     protected $hidden = [];
@@ -27,19 +28,25 @@ class Customer extends Model
     {
         parent::boot();
         self::creating(function ($model) {
+            $model->slug = $model->slug ?? Str::slug($model->name);
             $model->status = $model->status ?? self::STATUS_ACTIVE;
-            $model->start = $model->start ?? 5;
         });
         self::created(function ($model) {
-            Cache::forget(GUEST_FEEDBACK);
+            Cache::forget(GUEST_SERVICE_GROUP);
+            Cache::forget(GUEST_SERVICE_GROUP_SHORT);
         });
         self::updated(function ($model) {
-            Cache::forget(GUEST_FEEDBACK);
+            Cache::forget(GUEST_SERVICE_GROUP);
+            Cache::forget(GUEST_SERVICE_GROUP_SHORT);
         });
         self::deleted(function ($model) {
-            Cache::forget(GUEST_FEEDBACK);
+            Cache::forget(GUEST_SERVICE_GROUP);
+            Cache::forget(GUEST_SERVICE_GROUP_SHORT);
             if ($model->image) {
                 delete_file($model->image);
+            }
+            if ($model->icon) {
+                delete_file($model->icon);
             }
         });
     }
@@ -56,16 +63,25 @@ class Customer extends Model
         return $status == '' ? $_status : $_status["$status"];
     }
 
+    public function scopeOfSlug($query, $slug)
+    {
+        return $query->where('service_groups.slug', $slug);
+    }
+
     public function scopeOfStatus($query, $status)
     {
-        return $query->where('customers.status', $status);
+        return $query->where('service_groups.status', $status);
     }
 
     public function scopeSearch($query, $search)
     {
         return $query->where(function ($query) use ($search) {
-            $query->where('customers.description', 'LIKE', "%$search%")
-                ->orWhere('customers.name', 'LIKE', "%$search%");
+            $query->where('service_groups.name', 'LIKE', "%$search%");
         });
+    }
+
+    public function services()
+    {
+        return $this->hasMany(Service::class, 'group_id');
     }
 }

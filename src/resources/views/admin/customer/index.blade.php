@@ -7,7 +7,7 @@
                     <li class="breadcrumb-item">
                         <a href="{{ route('admin.index') }}">Trang chủ</a>
                     </li>
-                    <li class="breadcrumb-item active">Quản lý khách hàng</li>
+                    <li class="breadcrumb-item active">Khách hàng nói gì</li>
                 </ol>
             </nav>
         </div>

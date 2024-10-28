@@ -1,7 +1,7 @@
 @extends('guest2.layout')
 @section('title', 'Liên hệ')
 @section('keywords', '')
-@section('description', '')
+@section('description', 'Liên hệ')
 @section('image', '')
 @section('content')
     <main class="bg-grey service">
@@ -41,27 +41,27 @@
                                 <div class="title-head">
                                     <h3>Đăng ký tư vấn miễn phí!</h3>
                                 </div>
-                                <form action="">
+                                <form action="{{ route('contact.create') }}" method="post">
+                                    @csrf
                                     <div class="form-detail">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Họ và tên của bạn">
+                                            <input type="text" class="form-control" placeholder="Họ và tên của bạn"
+                                                name="name">
                                         </div>
                                         <div class="input-group">
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="email"
                                                 placeholder="Email hoặc số điện thoại">
                                         </div>
                                         <div class="input-group">
-                                            <select name="" id="" class="form-control">
+                                            <select name="group_id" class="form-control form-select">
                                                 <option value="" class="first">Chọn dịch vụ mà bạn quan tâm</option>
-                                                <option value="">Dịch vụ 1</option>
-                                                <option value="">Dịch vụ 2</option>
-                                                <option value="">Dịch vụ 3</option>
-                                                <option value="">Dịch vụ 4</option>
-                                                <option value="">Dịch vụ 5</option>
+                                                @foreach ($groups as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <textarea name="" id="" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
+                                            <textarea name="description" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
                                         </div>
                                         <br><br>
                                     </div>
@@ -78,74 +78,21 @@
         <section class="bl-faq">
             <div class="container">
                 <h2 class="bl-title center">Câu hỏi thường gặp</h2>
-                <!-- Avtive -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-1" aria-expanded="true">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-1" class="collapse show" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
+                @foreach ($fas as $item)
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapse-{{ $item->id }}"
+                                aria-expanded="false">
+                                {{ $item->name }}
+                            </a>
+                        </div>
+                        <div id="collapse-{{ $item->id }}" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                {!! $item->description !!}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Not Active -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-2" aria-expanded="false">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-2" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
-                        </div>
-                    </div>
-                </div>
-                <!-- Not Active -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-3" aria-expanded="false">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-3" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
-                        </div>
-                    </div>
-                </div>
-                <!-- Not Active -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-4" aria-expanded="false">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-4" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
     </main>

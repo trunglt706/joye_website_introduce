@@ -13,7 +13,7 @@
                 <li class="breadcrumb-item">
                     <a href="{{ route('admin.customer.index') }}">Khách hàng nói gì</a>
                 </li>
-                <li class="breadcrumb-item active">Chi tiết #{{ $data->name }}</li>
+                <li class="breadcrumb-item active">Khách hàng #{{ $data->name }}</li>
             </ol>
         </nav>
         <div class="table-responsive">
@@ -46,7 +46,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>
-                            Thông tin khách hàng
+                            Thông tin khách hàng nói gì
                         </h5>
                     </div>
                     <div class="card-body">

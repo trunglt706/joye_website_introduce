@@ -7,7 +7,7 @@ use App\Http\Controllers\Guest2\ContactControllerV2;
 use App\Http\Controllers\Guest2\ServiceControllerV2;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('v2')->name('v2.')->group(function () {
+Route::prefix('')->name('v2.')->group(function () {
     Route::get('', [HomeControllerV2::class, 'index'])->name('home');
     Route::get('gioi-thieu', [AboutControllerV2::class, 'index'])->name('about');
     Route::get('dich-vu', [ServiceControllerV2::class, 'index'])->name('service');

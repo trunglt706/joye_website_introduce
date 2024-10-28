@@ -30,16 +30,9 @@
                     <div class="text">Được tin tưởng hợp tác cùng các nhãn hàng & chương trình</div>
                     <div class="slide slide-1">
                         <div class="list">
-                            <div><img src="/style2/images/hobe bar.png" alt="Image"></div>
-                            <div><img src="/style2/images/Dell.png" alt="Image"></div>
-                            <div><img src="/style2/images/safabay.png" alt="Image"></div>
-                            <div><img src="/style2/images/miss.png" alt="Image"></div>
-                            <div><img src="/style2/images/nang sen.png" alt="Image"></div>
-                            <div><img src="/style2/images/hobe bar.png" alt="Image"></div>
-                            <div><img src="/style2/images/Dell.png" alt="Image"></div>
-                            <div><img src="/style2/images/safabay.png" alt="Image"></div>
-                            <div><img src="/style2/images/miss.png" alt="Image"></div>
-                            <div><img src="/style2/images/nang sen.png" alt="Image"></div>
+                            @foreach ($partners as $item)
+                                <div><img src="{{ get_url($item->image) }}" alt="{{ $item->name }}"></div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -53,85 +46,28 @@
                     giúp doanh nghiệp tối ưu tiềm năng và bứt phá trong mọi lĩnh vực.
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="bl-item-1">
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/service/Ecommerce.jpg" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#"><img src="/style2/images/trend-up.png" alt="Image">Ecommerce</a>
-                                </h3>
-                            </div>
-                            <div class="description">
-                                Giúp doanh nghiệp tăng trưởng vượt bậc, đảm bảo mọi khía cạnh kinh doanh trực tuyến đều
-                                được chăm sóc chu đáo
-                                <ul>
-                                    <li>Tư vấn chiến lược bán hàng tối ưu</li>
-                                    <li>Quản lý gian hàng và tối ưu trải nghiệm khách hàng</li>
-                                    <li>Phân tích dữ liệu để cải thiện hiệu quả bán hàng</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="bl-item-1">
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/service/Content.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#"><img src="/style2/images/video-play.png" alt="Image">Xây dựng nội
-                                        dung</a>
-                                </h3>
-                            </div>
-                            <div class="description">
-                                Dịch vụ sáng tạo nội dung chuyên nghiệp giúp thương hiệu của bạn nổi bật trên mọi nền tảng
-                                <ul>
-                                    <li>Sản xuất nội dung đa dạng (video, hình ảnh, bài viết)</li>
-                                    <li>Chỉnh sửa chuyên nghiệp với thiết bị hiện đại</li>
-                                    <li>Phân tích và điều chỉnh chiến lược nội dung theo thị trường</li>
-                                </ul>
+                    @foreach ($service_groups as $item)
+                        <div class="col-lg-6">
+                            <div class="bl-item-1">
+                                <div class="img">
+                                    <a href="{{ route('v2.service') }}?q={{ $item->slug }}">
+                                        <img src="{{ get_url($item->image) }}" alt="{{ $item->name }}">
+                                    </a>
+                                </div>
+                                <div class="title">
+                                    <h3>
+                                        <a href="{{ route('v2.service') }}?q={{ $item->slug }}">
+                                            <img src="{{ get_url($item->icon) }}" alt="Image">
+                                            {{ $item->name }}
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="description">
+                                    {!! $item->description !!}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="bl-item-1">
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/service/Livestream.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#"><img src="/style2/images/microphone-2.png"
-                                            alt="Image">Livestream</a></h3>
-                            </div>
-                            <div class="description">
-                                Thiết bị hiện đại và nội dung sáng tạo, giúp bạn tối ưu hóa tương tác và chuyển đổi:
-                                <ul>
-                                    <li>Livestream đa nền tảng</li>
-                                    <li>Xây dựng kịch bản, thiết bị cao cấp</li>
-                                    <li>Cung cấp báo cáo phân tích</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="bl-item-1">
-                            <div class="img">
-                                <a href="#"><img src="/style2/images/service/DaoTao.png" alt="Image"></a>
-                            </div>
-                            <div class="title">
-                                <h3><a href="#"><img src="/style2/images/book.png" alt="Image">Đào tạo chuyên
-                                        sâu</a></h3>
-                            </div>
-                            <div class="description">
-                                Cung cấp các khóa đào tạo chuyên sâu, nâng cao năng lực cá nhân và đội nhóm qua những buổi
-                                học thực tiễn
-                                <ul>
-                                    <li>Đào tạo từ cơ bản đến nâng cao</li>
-                                    <li>Tư vấn chiến lược và các thực hiện hiệu quả</li>
-                                    <li>Kết nối và học hỏi từ cộng đồng chuyên gia</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -150,128 +86,38 @@
                         <img class="click-next" src="/style2/images/arrow-right.png" alt="Image">
                     </div>
                     <div class="list">
-
-                        <div class="bl-item-2">
-                            <div class="name-project">Ecommerce</div>
-                            <div class="img">
-                                <img src="/style2/images/project/Project.png" alt="Image">
-                            </div>
-                            <div class="title">
-                                <h3><label>Dell - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
-                                                    alt="Image">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
+                        @foreach ($projects as $item)
+                            <div class="bl-item-2">
+                                <div class="name-project">{{ $item->group_name }}</div>
+                                <div class="img">
+                                    <img src="{{ get_url($item->image) }}" alt="{{ $item->name }}">
+                                </div>
+                                <div class="title">
+                                    <h3><label>{{ $item->name }} - </label> {{ $item->description }}</h3>
+                                </div>
+                                <div class="p-index">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="item">
+                                                <div class="percent">
+                                                    <div>{{ $item->truy_cap }}</div> <img
+                                                        src="/style2/images/Percentage Arrow.png" alt="Image">
+                                                </div>
+                                                <div class="text-des">
+                                                    <div>Lượt truy cập</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
+                                        <div class="col-4">
+                                            <div class="item">
+                                                <div class="percent">{{ $item->doanh_thu }}</div>
+                                                <div class="text-des">Doanh thu</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Livestream</div>
-                            <div class="img">
-                                <img src="/style2/images/project/Project.png" alt="Image">
-                            </div>
-                            <div class="title">
-                                <h3><label>Hoa Khôi SVVN - </label> Tổ chức vận hành và triển khai chương trình</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
-                                                    alt="Image">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Đào tạo</div>
-                            <div class="img">
-                                <img src="/style2/images/project/Project.png" alt="Image">
-                            </div>
-                            <div class="title">
-                                <h3><label>Nangsen Farm - </label> Triển khai Livestream và các chiến dịch tiếp thị liên kết
-                                </h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
-                                                    alt="Image">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bl-item-2">
-                            <div class="name-project">Tổ chức</div>
-                            <div class="img">
-                                <img src="/style2/images/project/Project.png" alt="Image">
-                            </div>
-                            <div class="title">
-                                <h3><label>Hobe Bar - </label> Đồng hành cùng nhãn hàng trong tất cả các hoạt động TMĐT</h3>
-                            </div>
-                            <div class="p-index">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">
-                                                <div>18.74%</div> <img src="/style2/images/Percentage Arrow.png"
-                                                    alt="Image">
-                                            </div>
-                                            <div class="text-des">
-                                                <div>Lượt truy cập</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="item">
-                                            <div class="percent">x3</div>
-                                            <div class="text-des">Doanh thu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -281,120 +127,24 @@
                 <h2 class="bl-title center">Khách hàng nói gì về JoyE</h2>
                 <div class="list-customer">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="bl-item-3">
-                                <div class="description">
-                                    JOYE đã làm cho các buổi livestream của chúng tôi trở nên sống động và cuốn hút hơn!
-                                    Nhờ sự sáng tạo và chuyên nghiệp của đội ngũ, lượng tương tác và đơn hàng đều tăng
-                                    vượt bậc.
-                                    Tôi rất hài lòng
-                                </div>
-                                <div class="author">
-                                    <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="Image">
+                        @foreach ($feedbacks as $item)
+                            <div class="col-md-4">
+                                <div class="bl-item-3">
+                                    <div class="description">
+                                        {{ $item->description }}
                                     </div>
-                                    <div class="name">
-                                        <div class="fullname">Ms. Khánh Duy</div>
-                                        <div class="text-des">HKSV VN</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bl-item-3">
-                                <div class="description">
-                                    JOYE đã làm cho các buổi livestream của chúng tôi trở nên sống động và cuốn hút hơn!
-                                    Nhờ sự sáng tạo và chuyên nghiệp của đội ngũ, lượng tương tác và đơn hàng đều tăng
-                                    vượt bậc.
-                                    Tôi rất hài lòng
-                                </div>
-                                <div class="author">
-                                    <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="Image">
-                                    </div>
-                                    <div class="name">
-                                        <div class="fullname">Ms. Khánh Duy</div>
-                                        <div class="text-des">HKSV VN</div>
+                                    <div class="author">
+                                        <div class="thumb">
+                                            <img src="{{ get_url($item->image) }}" alt="{{ $item->name }}">
+                                        </div>
+                                        <div class="name">
+                                            <div class="fullname">{{ $item->name }}</div>
+                                            <div class="text-des">{{ $item->position }}</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bl-item-3">
-                                <div class="description">
-                                    JOYE đã làm cho các buổi livestream của chúng tôi trở nên sống động và cuốn hút hơn!
-                                    Nhờ sự sáng tạo và chuyên nghiệp của đội ngũ, lượng tương tác và đơn hàng đều tăng
-                                    vượt bậc.
-                                    Tôi rất hài lòng
-                                </div>
-                                <div class="author">
-                                    <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="Image">
-                                    </div>
-                                    <div class="name">
-                                        <div class="fullname">Ms. Khánh Duy</div>
-                                        <div class="text-des">HKSV VN</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bl-item-3">
-                                <div class="description">
-                                    JOYE đã làm cho các buổi livestream của chúng tôi trở nên sống động và cuốn hút hơn!
-                                    Nhờ sự sáng tạo và chuyên nghiệp của đội ngũ, lượng tương tác và đơn hàng đều tăng
-                                    vượt bậc.
-                                    Tôi rất hài lòng
-                                </div>
-                                <div class="author">
-                                    <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="Image">
-                                    </div>
-                                    <div class="name">
-                                        <div class="fullname">Ms. Khánh Duy</div>
-                                        <div class="text-des">HKSV VN</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bl-item-3">
-                                <div class="description">
-                                    JOYE đã làm cho các buổi livestream của chúng tôi trở nên sống động và cuốn hút hơn!
-                                    Nhờ sự sáng tạo và chuyên nghiệp của đội ngũ, lượng tương tác và đơn hàng đều tăng
-                                    vượt bậc.
-                                    Tôi rất hài lòng
-                                </div>
-                                <div class="author">
-                                    <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="Image">
-                                    </div>
-                                    <div class="name">
-                                        <div class="fullname">Ms. Khánh Duy</div>
-                                        <div class="text-des">HKSV VN</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bl-item-3">
-                                <div class="description">
-                                    JOYE đã làm cho các buổi livestream của chúng tôi trở nên sống động và cuốn hút hơn!
-                                    Nhờ sự sáng tạo và chuyên nghiệp của đội ngũ, lượng tương tác và đơn hàng đều tăng
-                                    vượt bậc.
-                                    Tôi rất hài lòng
-                                </div>
-                                <div class="author">
-                                    <div class="thumb">
-                                        <img src="/style2/images/Avatars.png" alt="Image">
-                                    </div>
-                                    <div class="name">
-                                        <div class="fullname">Ms. Khánh Duy</div>
-                                        <div class="text-des">HKSV VN</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -402,74 +152,21 @@
         <section class="bl-faq">
             <div class="container">
                 <h2 class="bl-title center">Câu hỏi thường gặp</h2>
-                <!-- Avtive -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-1" aria-expanded="true">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-1" class="collapse show" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
+                @foreach ($fas as $item)
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapse-{{ $item->id }}"
+                                aria-expanded="false">
+                                {{ $item->name }}
+                            </a>
+                        </div>
+                        <div id="collapse-{{ $item->id }}" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                {!! $item->description !!}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Not Active -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-2" aria-expanded="false">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-2" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
-                        </div>
-                    </div>
-                </div>
-                <!-- Not Active -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-3" aria-expanded="false">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-3" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
-                        </div>
-                    </div>
-                </div>
-                <!-- Not Active -->
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapse-4" aria-expanded="false">
-                            Tại sao chọn JoyE làm đối tác chiến lược?
-                        </a>
-                    </div>
-                    <div id="collapse-4" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            JoyE mang đến giải pháp toàn diện và sáng tạo, kết hợp với đội ngũ chuyên gia giàu kinh
-                            nghiệm.
-                            Chúng tôi không chỉ cung cấp dịch vụ chất lượng mà còn đồng hành với
-                            doanh nghiệp trong hành trình phát triển dài hạn,
-                            đảm bảo tối ưu hiệu quả và tăng trưởng bền vững.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
         <section class="bl-contact">

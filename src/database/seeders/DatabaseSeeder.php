@@ -17,7 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call(seed_setting::class);
         $this->call(seed_service::class);
         $this->call(seed_social::class);
+        $this->call(seed_partner::class);
+        $this->call(seed_blog::class);
         $this->call(seed_project::class);
-        $this->call(seed_customer::class);
+        $this->call(seed_feedback::class);
+        $this->call(seed_fas::class);
     }
 }

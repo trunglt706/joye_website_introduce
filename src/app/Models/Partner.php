@@ -6,18 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 
-class Customer extends Model
+class Partner extends Model
 {
     use HasFactory;
-    protected $table = 'customers';
+    protected $table = 'partners';
 
     protected $fillable = [
         'name',
-        'description',
         'image',
-        'start',
+        'description',
         'status',
-        'position',
+        'link',
     ];
 
     protected $hidden = [];
@@ -28,16 +27,15 @@ class Customer extends Model
         parent::boot();
         self::creating(function ($model) {
             $model->status = $model->status ?? self::STATUS_ACTIVE;
-            $model->start = $model->start ?? 5;
         });
         self::created(function ($model) {
-            Cache::forget(GUEST_FEEDBACK);
+            Cache::forget(GUEST_PARTNER);
         });
         self::updated(function ($model) {
-            Cache::forget(GUEST_FEEDBACK);
+            Cache::forget(GUEST_PARTNER);
         });
         self::deleted(function ($model) {
-            Cache::forget(GUEST_FEEDBACK);
+            Cache::forget(GUEST_PARTNER);
             if ($model->image) {
                 delete_file($model->image);
             }
@@ -51,21 +49,21 @@ class Customer extends Model
     {
         $_status = [
             self::STATUS_ACTIVE => ['Đang kích hoạt', 'success'],
-            self::STATUS_BLOCKED => ['Đã bị khóa', 'danger'],
+            self::STATUS_BLOCKED => ['Đã khóa', 'danger'],
         ];
         return $status == '' ? $_status : $_status["$status"];
     }
 
     public function scopeOfStatus($query, $status)
     {
-        return $query->where('customers.status', $status);
+        return $query->where('partners.status', $status);
     }
 
     public function scopeSearch($query, $search)
     {
         return $query->where(function ($query) use ($search) {
-            $query->where('customers.description', 'LIKE', "%$search%")
-                ->orWhere('customers.name', 'LIKE', "%$search%");
+            $query->where('partners.description', 'LIKE', "%$search%")
+                ->orWhere('partners.name', 'LIKE', "%$search%");
         });
     }
 }

@@ -12,13 +12,7 @@
                     <img src="/style2/images/banner.jpg" alt="Image">
                 </div>
                 <div class="bl-description center">
-                    JoyE là một tổ chức dành giúp những Nhà sáng tạo nội dung và các Doanh nghiệp,
-                    Nhãn hàng có thể giới thiệu và cung cấp sản phẩm,
-                    dịch vụ của mình tới khách hàng mục tiêu thông qua nền tảng đa phương tiện.
-                    <br />
-                    Sứ mệnh của chúng tôi là làm cho trải nghiệm của người mua với thương mại điện tử
-                    trở nên sáng tạo hơn, vui vẻ hơn. Qua đó, giúp các Nhà sáng tạo nội dung,
-                    Nhà bán hàng và các Doanh nghiệp, thương hiệu phát triển và thành công với những gì họ làm.
+                    {!! $data !!}
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('guest2.layout')
 @section('title', 'Dịch vụ')
 @section('keywords', '')
-@section('description', '')
+@section('description', 'Dịch vụ')
 @section('image', '')
 @section('content')
     <main class="bg-grey service">
@@ -20,45 +20,44 @@
                 <div class="bl-filter">
                     <div class="name">Bộ lọc: </div>
                     <div class="item"><a href="#" class="active">Tất cả</a></div>
-                    <div class="item"><a href="#">Livestream</a></div>
-                    <div class="item"><a href="#">Ecommerce</a></div>
-                    <div class="item"><a href="#">Xây dựng nội dung</a></div>
-                    <div class="item"><a href="#">Đào tạo</a></div>
+                    @foreach ($groups as $item)
+                        <div class="item">
+                            <a href="{{ route('v2.service') }}?g={{ $item->slug }}">
+                                {{ $item->name }}
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="row">
-                    @for ($i = 0; $i < 6; $i++)
+                    @foreach ($list as $item)
                         <div class="col-lg-4">
                             <div class="bl-item-5">
-                                <div class="name-project">Tối ưu chi phí</div>
+                                <div class="name-project">{{ $item->group_name }}</div>
                                 <div class="img">
-                                    <a href="{{ route('v2.service.detail', 'abc') }}"><img
-                                            src="/style2/images/project/Project.png" alt="Image"></a>
+                                    <a href="{{ route('v2.service.detail', $item->slug) }}"><img
+                                            src="{{ get_url($item->image) }}" alt="{{ $item->name }}"></a>
                                 </div>
                                 <div class="title">
-                                    <h3><a href="{{ route('v2.service.detail', 'abc') }}">Dịch vụ Livestream</a></h3>
+                                    <h3>
+                                        <a href="{{ route('v2.service.detail', $item->slug) }}">
+                                            {{ $item->name }}
+                                        </a>
+                                    </h3>
                                 </div>
                                 <div class="description">
-                                    Livestream trên các nền tảng social và ecommerce như Tiktok, Facebook và Shopee
+                                    {{ $item->description }}
                                 </div>
                                 <div class="view-more">
-                                    <a href="{{ route('v2.service.detail', 'abc') }}">
+                                    <a href="{{ route('v2.service.detail', $item->slug) }}">
                                         Xem chi tiết <i class="fa fa-angle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
                 <div class="bl-pagination">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i
-                                    class="fa-solid fa-angle-right"></i></a></li>
-                    </ul>
+                    {!! $list->appends(request()->all())->links() !!}
                 </div>
             </div>
         </div>
@@ -101,13 +100,12 @@
                                         </div>
                                         <div class="input-group">
                                             <select name="" id="" class="form-control">
-                                                <option value="" class="first">Chọn dịch vụ mà bạn quan tâm
+                                                <option value="" class="first">
+                                                    Chọn dịch vụ mà bạn quan tâm
                                                 </option>
-                                                <option value="">Dịch vụ 1</option>
-                                                <option value="">Dịch vụ 2</option>
-                                                <option value="">Dịch vụ 3</option>
-                                                <option value="">Dịch vụ 4</option>
-                                                <option value="">Dịch vụ 5</option>
+                                                @foreach ($groups as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="input-group">

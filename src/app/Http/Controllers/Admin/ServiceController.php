@@ -69,6 +69,10 @@ class ServiceController extends Controller
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);
             }
+            if (request()->hasFile('icon')) {
+                $file = request()->file('icon');
+                $data['icon'] = store_file($file, $this->dir, false, 100, 100);
+            }
             $data['active'] = isset($data['active']) && $data['active'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data = Service::create($data);
             DB::commit();
@@ -103,6 +107,11 @@ class ServiceController extends Controller
                 delete_file($data->image);
                 $file = request()->file('image');
                 $_request['image'] = store_file($file, $this->dir, false, 500, 500);
+            }
+            if (request()->hasFile('icon')) {
+                delete_file($data->icon);
+                $file = request()->file('icon');
+                $_request['icon'] = store_file($file, $this->dir, false, 100, 100);
             }
             $_request['status'] = isset($_request['status']) && $_request['status'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data->update($_request);

@@ -13,14 +13,15 @@ class Service extends Model
 
     protected $fillable = [
         'slug',
-        'code',
         'name',
         'image',
         'description',
         'content',
         'status',
-        'important',
-        'price'
+        'price',
+        'dinh_kem',
+        'cam_ket',
+        'group_id'
     ];
 
     protected $hidden = [];
@@ -30,10 +31,8 @@ class Service extends Model
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->code = $model->code ?? generateRandomString();
             $model->slug = $model->slug ?? Str::slug($model->name);
             $model->status = $model->status ?? self::STATUS_ACTIVE;
-            $model->important = $model->important ?? 0;
         });
         self::created(function ($model) {});
         self::updated(function ($model) {});
@@ -58,16 +57,6 @@ class Service extends Model
         return $status == '' ? $_status : $_status["$status"];
     }
 
-    public function scopeOfImportant($query, $important)
-    {
-        return $query->where('services.important', $important);
-    }
-
-    public function scopeOfCode($query, $code)
-    {
-        return $query->where('services.code', $code);
-    }
-
     public function scopeOfSlug($query, $slug)
     {
         return $query->where('services.slug', $slug);
@@ -78,11 +67,20 @@ class Service extends Model
         return $query->where('services.status', $status);
     }
 
+    public function scopeGroupId($query, $group_id)
+    {
+        return $query->where('services.group_id', $group_id);
+    }
+
     public function scopeSearch($query, $search)
     {
         return $query->where(function ($query) use ($search) {
-            $query->where('services.code', 'LIKE', "%$search%")
-                ->orWhere('services.name', 'LIKE', "%$search%");
+            $query->where('services.name', 'LIKE', "%$search%");
         });
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(ServiceGroup::class, 'group_id');
     }
 }

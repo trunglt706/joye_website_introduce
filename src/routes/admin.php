@@ -8,9 +8,11 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\LogActionController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ServiceGroupController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SocialController;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +54,14 @@ Route::name('admin.')->prefix('admin')->group(function () {
             Route::get('/{id}', [BlogGroupController::class, 'detail'])->name('detail');
             Route::post('create', [BlogGroupController::class, 'create'])->name('create');
             Route::post('update', [BlogGroupController::class, 'update'])->name('update');
+        });
+        Route::name('service_group.')->prefix('service_group')->group(function () {
+            Route::get('', [ServiceGroupController::class, 'index'])->name('index');
+            Route::get('table', [ServiceGroupController::class, 'table'])->name('table');
+            Route::get('destroy', [ServiceGroupController::class, 'destroy'])->name('destroy');
+            Route::get('/{id}', [ServiceGroupController::class, 'detail'])->name('detail');
+            Route::post('create', [ServiceGroupController::class, 'create'])->name('create');
+            Route::post('update', [ServiceGroupController::class, 'update'])->name('update');
         });
         Route::name('service.')->prefix('service')->group(function () {
             Route::get('', [ServiceController::class, 'index'])->name('index');
@@ -102,6 +112,14 @@ Route::name('admin.')->prefix('admin')->group(function () {
             Route::get('/{id}', [CustomerController::class, 'detail'])->name('detail');
             Route::post('create', [CustomerController::class, 'create'])->name('create');
             Route::post('update', [CustomerController::class, 'update'])->name('update');
+        });
+        Route::name('partner.')->prefix('partner')->group(function () {
+            Route::get('', [PartnerController::class, 'index'])->name('index');
+            Route::get('table', [PartnerController::class, 'table'])->name('table');
+            Route::get('destroy', [PartnerController::class, 'destroy'])->name('destroy');
+            Route::get('/{id}', [PartnerController::class, 'detail'])->name('detail');
+            Route::post('create', [PartnerController::class, 'create'])->name('create');
+            Route::post('update', [PartnerController::class, 'update'])->name('update');
         });
     });
 });

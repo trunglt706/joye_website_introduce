@@ -13,11 +13,9 @@ class Contact extends Model
         'code',
         'name',
         'email',
-        'phone',
-        'question',
-        'comment',
+        'description',
         'status',
-        'service'
+        'group_id'
     ];
     protected $hidden = [];
     protected $casts = [];
@@ -63,18 +61,17 @@ class Contact extends Model
         return $query->where('contacts.email', $email);
     }
 
-    public function scopeOfPhone($query, $phone)
-    {
-        return $query->where('contacts.phone', $phone);
-    }
-
     public function scopeSearch($query, $search)
     {
         return $query->where(function ($query) use ($search) {
             $query->where('contacts.code', 'LIKE', "%$search%")
                 ->orWhere('contacts.name', 'LIKE', "%$search%")
-                ->orWhere('contacts.phone', 'LIKE', "%$search%")
                 ->orWhere('contacts.email', 'LIKE', "%$search%");
         });
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(ServiceGroup::class, 'group_id');
     }
 }

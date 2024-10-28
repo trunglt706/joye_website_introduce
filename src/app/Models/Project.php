@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 
 class Project extends Model
 {
@@ -12,15 +12,14 @@ class Project extends Model
     protected $table = 'projects';
 
     protected $fillable = [
-        'code',
         'name',
         'image',
         'description',
-        'content',
         'status',
         'link',
-        'project',
-        'customer'
+        'group_id',
+        'truy_cap',
+        'doanh_thu'
     ];
 
     protected $hidden = [];
@@ -31,13 +30,15 @@ class Project extends Model
         parent::boot();
         self::creating(function ($model) {
             $model->status = $model->status ?? self::STATUS_ACTIVE;
-            $model->code = $model->code ?? Str::slug($model->name);
-            $model->project = $model->project ?? 1;
-            $model->customer = $model->customer ?? 1;
         });
-        self::created(function ($model) {});
-        self::updated(function ($model) {});
+        self::created(function ($model) {
+            Cache::forget(GUEST_PROJECT);
+        });
+        self::updated(function ($model) {
+            Cache::forget(GUEST_PROJECT);
+        });
         self::deleted(function ($model) {
+            Cache::forget(GUEST_PROJECT);
             if ($model->image) {
                 delete_file($model->image);
             }
@@ -56,19 +57,9 @@ class Project extends Model
         return $status == '' ? $_status : $_status["$status"];
     }
 
-    public function scopeOfCustomer($query, $customer)
+    public function scopeGroupId($query, $group_id)
     {
-        return $query->where('projects.customer', $customer);
-    }
-
-    public function scopeOfProject($query, $project)
-    {
-        return $query->where('projects.project', $project);
-    }
-
-    public function scopeOfCode($query, $code)
-    {
-        return $query->where('projects.code', $code);
+        return $query->where('projects.group_id', $group_id);
     }
 
     public function scopeOfStatus($query, $status)
@@ -82,5 +73,10 @@ class Project extends Model
             $query->where('projects.description', 'LIKE', "%$search%")
                 ->orWhere('projects.name', 'LIKE', "%$search%");
         });
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(ServiceGroup::class, 'group_id');
     }
 }
