@@ -10,6 +10,7 @@
     @include('guest2.header')
     @yield('content')
     @include('guest2.footer')
+    @include('guest2.general.modal-contact')
     @include('guest2.script')
 </body>
 

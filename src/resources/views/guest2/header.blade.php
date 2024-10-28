@@ -19,7 +19,7 @@
                     @endforeach
                 </ul>
                 <div class="register">
-                    <a href="#"><button class="btn">Đăng ký tư vấn</button></a>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModalContact">Đăng ký tư vấn</button>
                 </div>
             </div>
         </div>

@@ -1,41 +1,47 @@
-<!-- The Modal -->
-<div class="modal fade" id="open-contact">
-    <div class="modal-dialog modal-md">
+<div class="modal fade" id="myModalContact">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <!-- Modal body -->
-            <div class="modal-header">
-                <h5 class="modal-title">Đăng ký tư vấn</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('contact.create') }}" method="post">
-                    @csrf
-                    <div class="row">
-                        <div class="form-group col-md-6 mb-2">
-                            <input type="text" class="form-control" id="name" name="name"
-                                placeholder="Nhập họ tên *" required="">
-                        </div>
-                        <div class="form-group col-md-6 mb-2">
-                            <input class="form-control" id="email" name="email" placeholder="Nhập Email *"
-                                required="">
+            <section class="bl-contact">
+                <div class="container">
+                    <div class="bg-inner">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="bl-form-contact">
+                                    <div class="title-head">
+                                        <h3>Đăng ký tư vấn miễn phí!</h3>
+                                    </div>
+                                    <form action="{{ route('contact.create') }}" method="post">
+                                        @csrf
+                                        <div class="form-detail">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Họ và tên của bạn" name="name" required>
+                                            </div>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="email" required placeholder="Email hoặc số điện thoại">
+                                            </div>
+                                            <div class="input-group">
+                                                <select name="group_id" required class="form-control form-select">
+                                                    <option value="" class="first">
+                                                        Chọn dịch vụ mà bạn quan tâm
+                                                    </option>
+                                                    <option value="1">Lựa chọn 1</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-group">
+                                                <textarea name="description" required class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
+                                            </div>
+                                            <br><br>
+                                        </div>
+                                        <div class="btn-submit">
+                                            <button type="submit" class="btn">Đăng ký</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-6 mb-2">
-                            <input class="form-control" id="phone" name="phone" placeholder="Nhập số ĐT *"
-                                required="">
-                        </div>
-                        <div class="form-group col-md-6 mb-3">
-                            <input class="form-control" id="service" name="service" placeholder="Dịch vụ cần tư vấn *"
-                                required="">
-                        </div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Yêu cầu thêm (nếu có)"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary text-white">Đăng ký</button>
-                </form>
-            </div>
+                </div>
+            </section>
         </div>
     </div>
 </div>

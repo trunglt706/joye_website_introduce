@@ -1,44 +1,5 @@
 /**Slick */
 $(document).ready(function(){
-    $('.slide.slide-1 .list').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        swipeToSlide:true,
-        variableWidth: true,
-        loop:true,
-        autoplay:true,
-        responsive: [
-            {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-            }
-            },
-            {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
     $('.slide.slide-2 .list').slick({
         dots: false,
         infinite: true,
@@ -49,6 +10,7 @@ $(document).ready(function(){
         variableWidth: true,
         loop:true,
         autoplay:false,
+        draggable:true,
         responsive: [
             {
             breakpoint: 1024,
@@ -81,12 +43,13 @@ $(document).ready(function(){
         ]
     });
     // Trigger cho nút Next
-    $('.slide.slide-2 .click-next').on('click', function(){
+    $('.slide.slide-2 .click-next').on('click', function() {
+        console.log(111)
         $('.slide.slide-2 .list').slick('slickNext');
     });
 
     // Trigger cho nút Prev
-    $('.slide.slide-2 .click-prev').on('click', function(){
+    $('.slide.slide-2 .click-prev').on('click', function() {
         $('.slide.slide-2 .list').slick('slickPrev');
     });
 });
