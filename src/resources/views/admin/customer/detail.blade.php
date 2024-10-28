@@ -17,7 +17,7 @@
             </ol>
         </nav>
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered text-nowrap">
                 <tr>
                     <td class="bg-body-secondary w-175px text-nowrap">- Tên khách hàng</td>
                     <td>{{ $data->name }}</td>

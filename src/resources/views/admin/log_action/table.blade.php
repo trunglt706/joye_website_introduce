@@ -27,7 +27,7 @@
                     @endif
                 </div>
             </td>
-            <td>
+            <td class="text-nowrap">
                 {!! $item->content !!}
             </td>
         </tr>

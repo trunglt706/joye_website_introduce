@@ -40,7 +40,7 @@
     @endforeach
     @if ($paginate != '')
         <tr>
-            <td colspan="5">
+            <td colspan="6">
                 <div class="mt-2">
                     {{ $paginate }}
                 </div>
@@ -49,7 +49,7 @@
     @endif
 @else
     <tr>
-        <td colspan="5" class="text-center empty-data">
+        <td colspan="6" class="text-center empty-data">
             Không có dữ liệu
         </td>
     </tr>

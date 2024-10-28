@@ -27,7 +27,7 @@
             <td>
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
-            <td>
+            <td class="text-nowrap">
                 {{ $item->position }}
             </td>
             <td>

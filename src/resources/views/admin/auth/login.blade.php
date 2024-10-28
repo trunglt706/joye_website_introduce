@@ -1,5 +1,12 @@
 @extends('admin.base')
 @section('content')
+    <style>
+        @media only screen and (max-width: 991px) {
+            .card-group {
+                padding: 12px;
+            }
+        }
+    </style>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4">
