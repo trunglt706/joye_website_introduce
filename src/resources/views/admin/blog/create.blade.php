@@ -8,11 +8,14 @@
                     <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-4 py-1">
-                    <div class="mb-2 form-group">
-                        <label class="form-label">Tiêu đề *</label>
-                        <input type="text" required class="form-control" placeholder="Nhập tên" name="name">
-                    </div>
                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-2 form-group">
+                                <label class="form-label">Tiêu đề *</label>
+                                <input type="text" required class="form-control" placeholder="Nhập tên"
+                                    name="name">
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <label class="form-label">Nhóm</label>
                             <select class="form-select" name="group_id">
@@ -22,10 +25,18 @@
                                 @endforeach
                             </select>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="mb-2 form-group">
                                 <label class="form-label">Ảnh đại diện</label>
                                 <input type="file" class="form-control" name="image" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-2 form-group">
+                                <label class="form-label">Ảnh nền</label>
+                                <input type="file" class="form-control" name="background" accept="image/*">
                             </div>
                         </div>
                     </div>

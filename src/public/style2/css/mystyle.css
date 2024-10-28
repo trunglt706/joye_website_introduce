@@ -78,6 +78,7 @@ body {
 .bl-mv .bl-button-link a:not(:last-child) {
     margin-right: 20px;
 }
+.bl-mv .bl-button-link .btn.active,
 .bl-mv .bl-button-link .btn:hover {
     background-color: #FFF;
     color: #4A0095;
@@ -154,7 +155,7 @@ body {
     background: linear-gradient(0deg, #3F007F, #B191D1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 @media (max-width: 576px) {
     .bl-title {
@@ -176,6 +177,7 @@ body {
 @media (max-width: 576px) {
     .bl-description {
         width: 100%;
+        line-height: 26px;
     }
 }
 .bl-description.center {
@@ -431,12 +433,7 @@ body {
     margin-bottom: 30px;
 }
 .bl-about-description {
-    padding: 80px 0;
-}
-@media (max-width: 576px) {
-    .bl-about-description {
-        padding: 40px 0;
-    }
+    padding-top: 40px;
 }
 .bl-about-description .banner {
     border-radius: 10px;
@@ -467,14 +464,19 @@ body {
         padding: 40px 0;
     }
 }
-@media (max-width: 991px) {
-    .bl-person .thumb {
-        margin-bottom: 30px;
-    }
-}
 .bl-person .thumb img {
     width: 100%;
     border-radius: 10px;
+}
+@media (max-width: 991px) {
+    .bl-person .thumb {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .bl-person .thumb img {
+        width: 60%;
+    }
 }
 .bl-person .description {
     font-size: 2.8rem;
@@ -482,11 +484,14 @@ body {
     color: #06000C;
     line-height: 3.6rem;
     margin-bottom: 30px;
+    padding-right: 120px;
 }
 @media (max-width: 576px) {
     .bl-person .description {
         font-size: 2.2rem;
         line-height: 2.8rem;
+        padding-right: 0px;
+        text-align: center;
     }
 }
 .bl-person .name {
@@ -499,6 +504,7 @@ body {
     .bl-person .name {
         font-size: 2.2rem;
         line-height: 2.8rem;
+        text-align: center;
     }
 }
 .bl-person .outer {
@@ -624,12 +630,17 @@ body {
     font-weight: 600;
     line-height: 2.2rem;
 }
+.bl-pagination .pagination li>span,
 .bl-pagination .pagination a {
     border: 1px solid #4A0095;
     min-width: 35px;
     min-height: 35px;
     text-align: center;
     border-radius: 50px;
+}
+.bl-pagination .pagination li>span {
+    border: 0px;
+    font-size: 2.6rem;
 }
 .bl-pagination .pagination li:first-child a,
 .bl-pagination .pagination li:last-child a {
@@ -641,6 +652,7 @@ body {
 .bl-pagination .pagination li {
     padding: 0 5px;
 }
+.bl-pagination .pagination li>span,
 .bl-pagination .pagination li a {
     background-color: transparent;
     color: #4A0095;
@@ -670,11 +682,6 @@ body {
 }
 .bl-breadcrumb label {
     margin: 0 5px;
-}
-@media (max-width: 576px) {
-    .bl-service-detail {
-        padding: 40px 0;
-    }
 }
 .bl-service-detail .banner{
     margin-bottom: 30px;
@@ -939,7 +946,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 9;
-    border: 1px solid #CCC;
+    /* border: 1px solid #CCC; */
 }
 header .logo img {
     height: 40px;
@@ -1358,4 +1365,30 @@ header .register .btn:hover {
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 2rem;
+}
+@media only screen and (max-width: 991px) {
+    .bg-grey.service {
+        padding-top: 70px;
+    }
+    .bl-contact-title {
+        padding: 20px;
+    }
+    .service .bl-contact {
+        padding: 0px 8px;
+    }
+    .bl-faq .card-header a {
+        width: 90%;
+    }
+    .f-50 {
+        width: 50% !important;
+    }
+    .bl-about-description {
+        padding-top: 80px;
+    }
+    .wsmobileheader .smllogo img {
+        height: 35px;
+    }
+    footer {
+    padding: 15px;
+}
 }

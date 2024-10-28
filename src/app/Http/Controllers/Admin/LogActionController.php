@@ -22,7 +22,7 @@ class LogActionController extends Controller
     public function index()
     {
         $data = [
-            'admins' => Admin::select('id', 'name')->get(),
+            'admins' => get_admins(),
         ];
         return view('admin.log_action.index', compact('data'));
     }

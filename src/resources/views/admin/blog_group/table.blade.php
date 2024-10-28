@@ -10,7 +10,7 @@
             $status = BlogGroup::get_status($item->status);
         @endphp
         <tr id="tr-{{ $item->id }}">
-            <td>
+            <td class="text-nowrap">
                 <a data-coreui-toggle="tooltip" title="Xem chi tiết"
                     href="{{ route('admin.blog_group.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
                     <svg class="icon">

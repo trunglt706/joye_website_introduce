@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Customer extends Model
 {
@@ -16,7 +17,7 @@ class Customer extends Model
         'image',
         'start',
         'status',
-        'comment',
+        'position',
     ];
 
     protected $hidden = [];
@@ -29,9 +30,14 @@ class Customer extends Model
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->start = $model->start ?? 5;
         });
-        self::created(function ($model) {});
-        self::updated(function ($model) {});
+        self::created(function ($model) {
+            Cache::forget(GUEST_FEEDBACK);
+        });
+        self::updated(function ($model) {
+            Cache::forget(GUEST_FEEDBACK);
+        });
         self::deleted(function ($model) {
+            Cache::forget(GUEST_FEEDBACK);
             if ($model->image) {
                 delete_file($model->image);
             }

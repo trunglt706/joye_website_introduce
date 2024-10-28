@@ -66,7 +66,7 @@ class AdminController extends Controller
             DB::beginTransaction();
             $data = request()->all();
             $data['password'] = Hash::make($data['password']);
-            $data['active'] = isset($data['active']) && $data['active'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_ACTIVE;
+            $data['active'] = isset($data['active']) && $data['active'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_BLOCKED;
             $data = Admin::create($data);
             DB::commit();
             admin_save_log("Quản trị viên #$data->name vừa mới được tạo", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);
@@ -95,7 +95,7 @@ class AdminController extends Controller
             DB::beginTransaction();
             $id = request('id', '');
             $data = Admin::findOrFail($id);
-            $_request = request()->only('name', 'role_id', 'status');
+            $_request = request()->all();
             $data['status'] = isset($_request['status']) && $_request['status'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();
@@ -125,7 +125,7 @@ class AdminController extends Controller
             DB::beginTransaction();
             $id = request('id', '');
             $data = Admin::findOrFail($id);
-            $data->password = Hash::make($data['new_password']);
+            $data->password = Hash::make(request('new_password'));
             $data->save();
             DB::commit();
             admin_save_log("Quản trị viên #$data->name vừa mới được cập nhật mật khẩu", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);

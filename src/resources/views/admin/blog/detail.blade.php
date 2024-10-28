@@ -46,23 +46,28 @@
             <div class="me-2">
                 <img src="{{ $data['blog']->image ? get_url($data['blog']->image) : asset('img/no-image.jpg') }}"
                     class="img-thumbnail preview w-100px" alt="img">
+                <hr>
+                <img src="{{ $data['blog']->background ? get_url($data['blog']->background) : asset('img/no-image.jpg') }}"
+                    class="img-thumbnail preview w-100px" alt="img">
             </div>
             <div class="card w-100">
                 <div class="card-header">
                     <h5>
-                        Thông tin dịch vụ
+                        Thông tin bài viết
                     </h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('admin.blog.update') }}" method="POST" class="form-update">
                         @csrf
                         <input type="hidden" name="id" value="{{ $data['blog']->id }}">
-                        <div class="mb-2 form-group">
-                            <label class="form-label">Tiêu đề *</label>
-                            <input type="text" required class="form-control" placeholder="Nhập tiêu đề" name="name"
-                                value="{{ $data['blog']->name }}">
-                        </div>
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-2 form-group">
+                                    <label class="form-label">Tiêu đề *</label>
+                                    <input type="text" required class="form-control" placeholder="Nhập tiêu đề"
+                                        name="name" value="{{ $data['blog']->name }}">
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <label class="form-label">Nhóm</label>
                                 <select class="form-select" name="group_id">
@@ -75,10 +80,18 @@
                                     @endforeach
                                 </select>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-2 form-group">
                                     <label class="form-label">Ảnh đại diện</label>
                                     <input type="file" class="form-control" name="image" accept="image/*">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-2 form-group">
+                                    <label class="form-label">Ảnh nền</label>
+                                    <input type="file" class="form-control" name="background" accept="image/*">
                                 </div>
                             </div>
                         </div>

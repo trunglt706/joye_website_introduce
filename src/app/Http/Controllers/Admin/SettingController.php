@@ -25,7 +25,7 @@ class SettingController extends Controller
     {
         $type = request('type', 'seo');
         $data = [
-            'groups' => SettingGroup::ofStatus(SettingGroup::STATUS_ACTIVE)->orderBy('numering', 'asc')->select('code', 'name', 'icon', 'id')->get(),
+            'groups' => get_setting_groups(),
             'group' => SettingGroup::with('settings')->ofCode($type)->ofStatus(SettingGroup::STATUS_ACTIVE)->firstOrFail()
         ];
         return view('admin.setting.index', compact('data'));

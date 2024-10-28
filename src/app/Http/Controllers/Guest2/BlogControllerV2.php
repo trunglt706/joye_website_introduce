@@ -7,22 +7,22 @@ use App\Models\Blog;
 
 class BlogControllerV2 extends Controller
 {
-    /**
-     * Chuyến đến trang danh sách bài viết
-     * Hiển thị danh sách danh mục bài viết mới nhất
-     * Hiển thị danh sách bài viết mới nhất
-     */
+
     public function index()
     {
-        return view('guest2.blog.index');
+        $list = Blog::join('blog_groups', 'blogs.group_id', '=', 'blog_groups.id')->ofStatus(Blog::STATUS_ACTIVE)
+            ->select('blogs.slug', 'blogs.name', 'blogs.image', 'blogs.description', 'blog_groups.name as group_name', 'blogs.created_at')
+            ->latest('blogs.created_at')->paginate(6);
+        return view('guest2.blog.index', compact('list'));
     }
 
-    /**
-     * Chuyến đến trang chi tiết bài viết
-     * Hiển thị thêm 5 bài viết liên quan, cùng danh mục
-     */
+
     public function detail($slug)
     {
-        return view('guest2.blog.detail');
+        $data = Blog::ofSlug($slug)->ofStatus(Blog::STATUS_ACTIVE)->firstOrFail();
+        $list = Blog::join('blog_groups', 'blogs.group_id', '=', 'blog_groups.id')->ofStatus(Blog::STATUS_ACTIVE)
+            ->where('blogs.id', '<>', $data->id)->select('blogs.slug', 'blogs.name', 'blogs.image', 'blogs.description', 'blog_groups.name as group_name')
+            ->latest('blogs.created_at')->limit(3)->get();
+        return view('guest2.blog.detail', compact('data', 'list'));
     }
 }

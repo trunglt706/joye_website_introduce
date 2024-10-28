@@ -2,7 +2,7 @@
     <div class="sidebar-header border-bottom">
         <div class="sidebar-brand d-flex justify-content-center w-100">
             <a href="{{ route('admin.index') }}" class="sidebar-brand-full">
-                <img src="{{ get_option('seo-logo') }}" alt="Logo" class="h-60px">
+                <img src="{{ get_option('seo-logo') }}" alt="Logo" class="">
             </a>
         </div>
         <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark"
@@ -25,7 +25,7 @@
                         @foreach ($item->menus as $menu)
                             <li class="nav-item">
                                 <a class="nav-link {{ in_array($routeName, json_decode($menu->active_route_name)) ? 'active' : '' }}"
-                                    href="{{ $menu->route_name }}">
+                                    href="{{ route($menu->route_name) }}">
                                     <span class="nav-icon"><span class="nav-icon-bullet"></span></span>
                                     {{ $menu->name }}
                                 </a>
@@ -36,7 +36,7 @@
             @else
                 <li class="nav-item">
                     <a class="nav-link {{ in_array($routeName, json_decode($item->active_route_name)) ? 'active' : '' }}"
-                        href="{{ $item->route_name }}">
+                        href="{{ route($item->route_name) }}">
                         <svg class="nav-icon">
                             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-{{ $item->icon }}"></use>
                         </svg> {{ $item->name }}

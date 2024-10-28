@@ -15,7 +15,7 @@
                 <div class="counter-single text-center">
                     <div class="icon">
                         <div class="icon-inner">
-                            <img src="/style/images/icon-user-single.png" class="img-fluid" alt="">
+                            <img src="/style/images/icon-user-single.png" class="img-fluid" alt="Image">
                         </div>
                     </div>
                     <h2>CHUYÊN GIA</h2>
@@ -30,7 +30,7 @@
                 <div class="counter-single text-center">
                     <div class="icon">
                         <div class="icon-inner">
-                            <img src="/style/images/gift-box.png" class="img-fluid" alt="">
+                            <img src="/style/images/gift-box.png" class="img-fluid" alt="Image">
                         </div>
                     </div>
                     <h2>KINH NGHIỆM</h2>
@@ -46,7 +46,7 @@
                 <div class="counter-single text-center">
                     <div class="icon">
                         <div class="icon-inner">
-                            <img src="/style/images/growth.png" class="img-fluid" alt="">
+                            <img src="/style/images/growth.png" class="img-fluid" alt="Image">
                         </div>
                     </div>
                     <h2>TIẾN HOÁ</h2>

@@ -10,7 +10,7 @@
             $status = Admin::get_status($item->status);
         @endphp
         <tr id="tr-{{ $item->id }}">
-            <td class="text-center">
+            <td class="text-center text-nowrap">
                 <a data-coreui-toggle="tooltip" title="Xem chi tiết"
                     href="{{ route('admin.admin.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
                     <svg class="icon">

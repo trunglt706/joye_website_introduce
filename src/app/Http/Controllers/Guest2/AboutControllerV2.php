@@ -9,7 +9,9 @@ class AboutControllerV2 extends Controller
     /**
      * Chuyến đến trang giới thiệu công ty
      */
-    public function index() {
-        return view('guest2.about.index');
+    public function index()
+    {
+        $data = get_option('about-content');
+        return view('guest2.about.index', compact('data'));
     }
 }

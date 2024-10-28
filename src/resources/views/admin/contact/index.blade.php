@@ -16,13 +16,14 @@
                     <tr class="align-middle">
                         <th class="bg-body-secondary text-center w-100px">#</th>
                         <th class="bg-body-secondary">Họ tên</th>
-                        <th class="bg-body-secondary">Số ĐT</th>
+                        <th class="bg-body-secondary">Số ĐT/Email</th>
+                        <th class="bg-body-secondary">Dịch vụ</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
                         <th class="bg-body-secondary text-end w-150px">Thời gian</th>
                     </tr>
                 </thead>
                 <tbody id="load-table">
-                    <td colspan="5" class="text-center empty-data">
+                    <td colspan="6" class="text-center empty-data">
                         <div class="text-center">
                             Không có dữ liệu
                         </div>

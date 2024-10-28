@@ -93,7 +93,7 @@ class BlogGroupController extends Controller
             DB::beginTransaction();
             $id = request('id', '');
             $data = BlogGroup::findOrFail($id);
-            $_request = request()->only('name', 'image', 'status');
+            $_request = request()->all();
             $data['status'] = isset($_request['status']) && $_request['status'] == BlogGroup::STATUS_ACTIVE ? BlogGroup::STATUS_ACTIVE : BlogGroup::STATUS_BLOCKED;
             $data->update($_request);
             DB::commit();

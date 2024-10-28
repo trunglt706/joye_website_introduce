@@ -13,17 +13,18 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id()->index();
+            $table->unsignedBigInteger('group_id')->index()->nullable();
             $table->string('slug')->unique();
-            $table->string('code')->unique();
             $table->string('name');
             $table->string('image')->nullable();
-            $table->string('price')->nullable();
+            $table->text('price')->nullable();
             $table->text('description')->nullable();
+            $table->text('dinh_kem')->nullable();
+            $table->text('cam_ket')->nullable();
             $table->text('content')->nullable();
-            $table->integer('important')->nullable()->default(0);
-            $table->json('tags')->nullable();
             $table->enum('status', ['draft', 'active', 'blocked'])->index()->nullable()->default('draft');
             $table->timestamps();
+            $table->foreign('group_id')->references('id')->on('service_groups');
         });
     }
 

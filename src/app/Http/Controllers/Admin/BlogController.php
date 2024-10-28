@@ -25,7 +25,7 @@ class BlogController extends Controller
     {
         $data = [
             'status' => Blog::get_status(),
-            'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+            'group' => get_blog_groups(),
         ];
         return view('admin.blog.index', compact('data'));
     }
@@ -59,7 +59,7 @@ class BlogController extends Controller
     {
         $data = [
             'blog' => Blog::findOrFail($id),
-            'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+            'group' => get_blog_groups(),
         ];
         return view('admin.blog.detail', compact('data'));
     }
@@ -75,6 +75,10 @@ class BlogController extends Controller
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);
+            }
+            if (request()->hasFile('background')) {
+                $file = request()->file('background');
+                $data['background'] = store_file($file, $this->dir, false, 1500, 1500);
             }
             $data['active'] = isset($data['active']) && $data['active'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data = Blog::create($data);
@@ -109,6 +113,11 @@ class BlogController extends Controller
                 delete_file($data->image);
                 $file = request()->file('image');
                 $_request['image'] = store_file($file, $this->dir, false, 500, 500);
+            }
+            if (request()->hasFile('background')) {
+                delete_file($data->background);
+                $file = request()->file('background');
+                $_request['background'] = store_file($file, $this->dir, false, 1500, 1500);
             }
             $_request['status'] = isset($_request['status']) && $_request['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data->update($_request);

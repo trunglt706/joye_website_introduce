@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->nullable();
+            $table->unsignedBigInteger('group_id')->index()->nullable();
             $table->string('name');
             $table->string('image')->nullable();
             $table->string('link')->nullable();
+            $table->string('truy_cap')->nullable();
+            $table->string('doanh_thu')->nullable();
             $table->string('description')->nullable();
-            $table->text('content')->nullable();
             $table->enum('status', ['active', 'blocked'])->index()->nullable()->default('active');
-            $table->boolean('project')->nullable()->default(1);
-            $table->boolean('customer')->nullable()->default(1);
             $table->timestamps();
+            $table->foreign('group_id')->references('id')->on('service_groups');
         });
     }
 

@@ -12,7 +12,6 @@ class Question extends Model
     protected $table = 'questions';
 
     protected $fillable = [
-        'code',
         'name',
         'description',
         'status',
@@ -27,18 +26,20 @@ class Question extends Model
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->code = $model->code ?? generateRandomString();
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->numering = $model->numering ?? self::getOrder();
         });
         self::created(function ($model) {
             Cache::forget('guest-faq');
+            Cache::forget(GUEST_FAQ);
         });
         self::updated(function ($model) {
             Cache::forget('guest-faq');
+            Cache::forget(GUEST_FAQ);
         });
         self::deleted(function ($model) {
             Cache::forget('guest-faq');
+            Cache::forget(GUEST_FAQ);
         });
     }
 
@@ -54,11 +55,6 @@ class Question extends Model
         return $status == '' ? $_status : $_status["$status"];
     }
 
-    public function scopeOfCode($query, $code)
-    {
-        return $query->where('questions.code', $code);
-    }
-
     public function scopeOfStatus($query, $status)
     {
         return $query->where('questions.status', $status);
@@ -67,8 +63,7 @@ class Question extends Model
     public function scopeSearch($query, $search)
     {
         return $query->where(function ($query) use ($search) {
-            $query->where('questions.code', 'LIKE', "%$search%")
-                ->orWhere('questions.name', 'LIKE', "%$search%");
+            $query->where('questions.name', 'LIKE', "%$search%");
         });
     }
 

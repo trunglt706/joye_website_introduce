@@ -4,7 +4,7 @@
             @csrf
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tạo mới khách hàng</h5>
+                    <h5 class="modal-title">Tạo mới khách hàng nói gì</h5>
                     <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-4 py-1">
@@ -19,8 +19,7 @@
                         <div class="col-md-6">
                             <div class="mb-2 form-group">
                                 <label class="form-label">Chức vụ</label>
-                                <input type="text" class="form-control" placeholder="Nhập chức vụ"
-                                    name="description">
+                                <input type="text" class="form-control" placeholder="Nhập chức vụ" name="position">
                             </div>
                         </div>
                     </div>
@@ -47,7 +46,7 @@
                     </div>
                     <div class="mb-2 form-group">
                         <label class="form-label">Nội dung bình luận</label>
-                        <textarea name="comment" rows="2" class="form-control" placeholder="Nhập nội dung"></textarea>
+                        <textarea name="description" id="description" rows="2" class="form-control" placeholder="Nhập nội dung"></textarea>
                     </div>
                     <div class="form-check form-switch my-2">
                         <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"

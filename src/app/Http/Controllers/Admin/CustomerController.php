@@ -98,7 +98,7 @@ class CustomerController extends Controller
             DB::beginTransaction();
             $id = request('id', '');
             $data = Customer::findOrFail($id);
-            $_request = request()->only('name', 'comment', 'status', 'description', 'start');
+            $_request = request()->all();
             if (request()->hasFile('image')) {
                 delete_file($data->image);
                 $file = request()->file('image');

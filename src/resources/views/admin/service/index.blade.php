@@ -56,6 +56,38 @@
                 filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
                 filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
             });
+            CKEDITOR.replace('dinh_kem', {
+                height: 280,
+                toolbar: 'Full',
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+            CKEDITOR.replace('cam_ket', {
+                height: 280,
+                toolbar: 'Full',
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+            CKEDITOR.replace('price', {
+                height: 280,
+                toolbar: [{
+                        name: 'basicstyles',
+                        items: ['Bold', 'Italic', 'Underline', 'Strike']
+                    },
+                    {
+                        name: 'paragraph',
+                        items: ['BulletedList']
+                    }
+                ],
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
 
             $(document).on('click', 'button[type="submit"]', function() {
                 for (var instanceName in CKEDITOR.instances) {

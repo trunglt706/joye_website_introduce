@@ -7,7 +7,7 @@
                     <li class="breadcrumb-item">
                         <a href="{{ route('admin.index') }}">Trang chủ</a>
                     </li>
-                    <li class="breadcrumb-item active">Quản lý khách hàng</li>
+                    <li class="breadcrumb-item active">Khách hàng nói gì</li>
                 </ol>
             </nav>
         </div>
@@ -37,6 +37,8 @@
     @include('admin.customer.create')
 @endsection
 @push('js')
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
     <script>
         const routeList = "{{ route('admin.customer.table') }}";
         filterTable();
@@ -48,5 +50,30 @@
         function confirmDelete(id) {
             deleteData(id, "{{ route('admin.customer.destroy') }}");
         }
+
+        $(document).ready(function() {
+            CKEDITOR.replace('description', {
+                height: 280,
+                toolbar: [{
+                        name: 'basicstyles',
+                        items: ['Bold', 'Italic', 'Underline', 'Strike']
+                    },
+                    {
+                        name: 'paragraph',
+                        items: ['BulletedList']
+                    }
+                ],
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+
+            $(document).on('click', 'button[type="submit"]', function() {
+                for (var instanceName in CKEDITOR.instances) {
+                    CKEDITOR.instances[instanceName].updateElement();
+                }
+            })
+        })
     </script>
 @endpush

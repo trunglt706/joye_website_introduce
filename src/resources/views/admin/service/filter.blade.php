@@ -5,9 +5,17 @@
             <div class="w-250px">
                 <input name="search" class="form-control" placeholder="Tìm kiếm ...">
             </div>
-            {!! generate_limit_select() !!}
+            <div class="hide-mobile">{!! generate_limit_select() !!}</div>
         </div>
         <div class="d-flex justify-content-end">
+            <div class="me-1 w-200px hide-mobile">
+                <select class="form-select form-filter" name="group_id">
+                    <option value="" selected>-- Nhóm --</option>
+                    @foreach ($data['group'] as $item)
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                    @endforeach
+                </select>
+            </div>
             <div class="me-1 w-200px hide-mobile">
                 <select class="form-select form-filter" name="status">
                     <option value="">-- Trạng thái --</option>

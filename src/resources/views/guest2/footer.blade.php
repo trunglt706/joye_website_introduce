@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="logo-footer">
-                    <img src="./style2/images/logo.png" alt="">
+                    <img src="{{ asset('style2/images/logo.png') }}" alt="Image">
                 </div>
                 <div class="description">
                     Giải pháp Marketing toàn diện cho các thương hiệu và doanh nghiệp
@@ -17,18 +17,21 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 f-50">
                         <div class="menu-footer">
                             <h3>Giới thiệu</h3>
                             <ul>
-                                <li><a href="#">Về chúng tôi</a></li>
-                                <li><a href="#">Dịch vụ</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Liên hệ</a></li>
+                                @foreach (get_menu() as $item)
+                                    <li>
+                                        <a href="{{ $item['code'] }}">
+                                            {{ $item['name'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 f-50">
                         <div class="menu-footer">
                             <h3>Dịch vụ</h3>
                             <ul>

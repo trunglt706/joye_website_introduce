@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
 <meta name="description" content="@yield('description')">
 <meta name="keyword" content="@yield('keyword')">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ asset(get_option('seo-favico')) }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ get_option('seo-favico') }}">
 <meta name="theme-color" content="#ffffff">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -31,5 +31,5 @@
 <meta name="twitter:description" content="@yield('description')" />
 <meta name="twitter:image" content="@yield('image')" />
 <meta name="twitter:site" content="{{ Request::url() }}" />
-<meta name="twitter:creator" content="Kim Thành Hoa" />
+<meta name="twitter:creator" content="Joye" />
 <!-- End Twitter Card -->

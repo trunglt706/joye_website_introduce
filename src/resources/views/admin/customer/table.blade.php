@@ -27,12 +27,12 @@
             <td>
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
-            <td>
-                {{ $item->description }}
+            <td class="text-nowrap">
+                {{ $item->position }}
             </td>
             <td>
                 <div class="text-center">
-                    <img src="{{ $item->image ?? asset('img/user.png') }}" alt="" class="h-30px">
+                    <img src="{{ get_url($item->image) ?? asset('img/user.png') }}" alt="Image" class="h-30px">
                 </div>
             </td>
             <td class="text-end">

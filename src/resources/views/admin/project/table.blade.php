@@ -27,18 +27,8 @@
             <td>
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
-            <td>
-                <div class="text-center">
-                    <img src="{{ $item->image }}" alt="" class="h-30px">
-                </div>
-            </td>
             <td class="text-center">
-                @if ($item->project)
-                    <span class="badge bg-secondary">Dự án</span>
-                @endif
-                @if ($item->customer)
-                    <span class="badge bg-secondary">Khách hàng</span>
-                @endif
+                {{ $item->group ? $item->group->name : '-' }}
             </td>
             <td class="text-end">
                 <span class="badge bg-{{ $status[1] }}">
@@ -53,7 +43,7 @@
     @endforeach
     @if ($paginate != '')
         <tr>
-            <td colspan="6">
+            <td colspan="5">
                 <div class="mt-2">
                     {{ $paginate }}
                 </div>
@@ -62,7 +52,7 @@
     @endif
 @else
     <tr>
-        <td colspan="6" class="text-center empty-data">
+        <td colspan="5" class="text-center empty-data">
             Không có dữ liệu
         </td>
     </tr>

@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="chanl-single">
-                    <img src="{{ asset('img/result/hobebar.JPG') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/result/hobebar.JPG') }}" class="img-fluid" alt="Image">
                     <div class="chanl-cont-area">
                         <div class="chanl-cont">
                             <h5 class="m-0 text-center">
@@ -24,7 +24,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="chanl-single">
-                    <img src="{{ asset('img/result/nangsenfarm.JPG') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/result/nangsenfarm.JPG') }}" class="img-fluid" alt="Image">
                     <div class="chanl-cont-area">
                         <div class="chanl-cont">
                             <h5 class="m-0 text-center">
@@ -36,7 +36,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="chanl-single">
-                    <img src="{{ asset('img/result/thtvietnam.JPG') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/result/thtvietnam.JPG') }}" class="img-fluid" alt="Image">
                     <div class="chanl-cont-area">
                         <div class="chanl-cont">
                             <h5 class="m-0 text-center">
@@ -48,7 +48,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="chanl-single">
-                    <img src="{{ asset('img/result/tinne.JPG') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/result/tinne.JPG') }}" class="img-fluid" alt="Image">
                     <div class="chanl-cont-area">
                         <div class="chanl-cont">
                             <h5 class="m-0 text-center">
@@ -60,7 +60,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="chanl-single">
-                    <img src="{{ asset('img/result/dell.JPG') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/result/dell.JPG') }}" class="img-fluid" alt="Image">
                     <div class="chanl-cont-area">
                         <div class="chanl-cont">
                             <h5 class="m-0 text-center">
@@ -72,7 +72,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="chanl-single">
-                    <img src="{{ asset('img/result/theworkshop.JPG') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('img/result/theworkshop.JPG') }}" class="img-fluid" alt="Image">
                     <div class="chanl-cont-area">
                         <div class="chanl-cont">
                             <h5 class="m-0 text-center">

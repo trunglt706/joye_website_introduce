@@ -53,7 +53,7 @@
                         @foreach ($data['other'] as $item)
                             <a href="{{ route('blog.detail', ['slug' => $item->slug]) }}">
                                 <div class="chanl-single">
-                                    <img src="/style/images/blog-2.jpg" class="img-fluid" alt="">
+                                    <img src="/style/images/blog-2.jpg" class="img-fluid" alt="Image">
                                     <div class="chanl-cont">
                                         <p>{{ $item->name }}</p>
                                     </div>

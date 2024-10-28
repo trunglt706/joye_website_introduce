@@ -24,6 +24,7 @@ class ServiceController extends Controller
     {
         $data = [
             'status' => Service::get_status(),
+            'group' => get_service_groups(),
         ];
         return view('admin.service.index', compact('data'));
     }
@@ -36,10 +37,12 @@ class ServiceController extends Controller
         $limit = request('limit', $this->limit_default);
         $search = request('search', '');
         $status = request('status', '');
+        $group_id = request('group_id', '');
 
         $list = Service::query();
         $list = $search != '' ? $list->search($search) : $list;
         $list = $status != '' ? $list->ofStatus($status) : $list;
+        $list = $group_id != '' ? $list->groupId($group_id) : $list;
         $list = $list->latest()->paginate($limit);
 
         return response()->json([
@@ -54,7 +57,8 @@ class ServiceController extends Controller
     public function detail($id)
     {
         $data = Service::findOrFail($id);
-        return view('admin.service.detail', compact('data'));
+        $groups = get_service_groups();
+        return view('admin.service.detail', compact('data', 'groups'));
     }
 
     /**
@@ -68,6 +72,10 @@ class ServiceController extends Controller
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);
+            }
+            if (request()->hasFile('icon')) {
+                $file = request()->file('icon');
+                $data['icon'] = store_file($file, $this->dir, false, 100, 100);
             }
             $data['active'] = isset($data['active']) && $data['active'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data = Service::create($data);
@@ -103,6 +111,11 @@ class ServiceController extends Controller
                 delete_file($data->image);
                 $file = request()->file('image');
                 $_request['image'] = store_file($file, $this->dir, false, 500, 500);
+            }
+            if (request()->hasFile('icon')) {
+                delete_file($data->icon);
+                $file = request()->file('icon');
+                $_request['icon'] = store_file($file, $this->dir, false, 100, 100);
             }
             $_request['status'] = isset($_request['status']) && $_request['status'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data->update($_request);

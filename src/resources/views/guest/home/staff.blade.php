@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-md-6 mb-2">
-                <img src="/style/images/staff.webp" class="img-fluid" alt="" style="border-radius: 12px;">
+                <img src="/style/images/staff.webp" class="img-fluid" alt="Image" style="border-radius: 12px;">
             </div>
         </div>
     </div>
