@@ -248,24 +248,29 @@ if (!function_exists('get_menu')) {
     {
         return [
             [
-                'code' => 'v2.about',
-                'name' => 'Về JOYE'
+                'code' => route('v2.about'),
+                'name' => 'Về JOYE',
+                'active' => ['v2.about']
             ],
             [
-                'code' => 'v2.service',
-                'name' => 'Dịch vụ'
+                'code' => route('v2.service'),
+                'name' => 'Dịch vụ',
+                'active' => ['v2.service', 'v2.service.detail']
             ],
             [
-                'code' => 'v2.blog',
-                'name' => 'Blog'
+                'code' => route('v2.blog'),
+                'name' => 'Blog',
+                'active' => ['v2.blog', 'v2.blog.detail']
             ],
             [
-                'code' => 'v2.contact',
-                'name' => 'Liên hệ'
+                'code' => route('v2.contact'),
+                'name' => 'Liên hệ',
+                'active' => ['v2.contact']
             ],
             [
-                'code' => 'v2.home',
-                'name' => 'Big Heart MCN'
+                'code' => route('v2.home'),
+                'name' => 'Big Heart MCN',
+                'active' => []
             ],
         ];
     }

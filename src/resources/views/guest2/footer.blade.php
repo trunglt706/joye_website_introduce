@@ -23,7 +23,7 @@
                             <ul>
                                 @foreach (get_menu() as $item)
                                     <li>
-                                        <a href="{{ route($item['code']) }}">
+                                        <a href="{{ $item['code'] }}">
                                             {{ $item['name'] }}
                                         </a>
                                     </li>

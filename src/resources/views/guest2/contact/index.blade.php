@@ -46,14 +46,14 @@
                                     <div class="form-detail">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="Họ và tên của bạn"
-                                                name="name">
+                                                name="name" required>
                                         </div>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="email"
+                                            <input type="text" class="form-control" name="email" required
                                                 placeholder="Email hoặc số điện thoại">
                                         </div>
                                         <div class="input-group">
-                                            <select name="group_id" class="form-control form-select">
+                                            <select name="group_id" class="form-control form-select" required>
                                                 <option value="" class="first">Chọn dịch vụ mà bạn quan tâm</option>
                                                 @foreach ($groups as $item)
                                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
@@ -61,7 +61,7 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <textarea name="description" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
+                                            <textarea name="description" required class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
                                         </div>
                                         <br><br>
                                     </div>

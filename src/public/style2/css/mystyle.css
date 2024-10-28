@@ -1385,4 +1385,10 @@ header .register .btn:hover {
     .bl-about-description {
         padding-top: 80px;
     }
+    .wsmobileheader .smllogo img {
+        height: 35px;
+    }
+    footer {
+    padding: 15px;
+}
 }

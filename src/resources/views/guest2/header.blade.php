@@ -11,8 +11,8 @@
                 <ul class="outer-menu">
                     @foreach (get_menu() as $item)
                         <li>
-                            <a class="{{ $currentRoute == $item['code'] ? 'active' : '' }}"
-                                href="{{ route($item['code']) }}">
+                            <a class="{{ in_array($currentRoute, $item['active']) ? 'active' : '' }}"
+                                href="{{ $item['code'] }}">
                                 {{ $item['name'] }}
                             </a>
                         </li>
@@ -36,9 +36,15 @@
     <nav class="wsmenu clearfix">
         <div class="overlapblackbg"></div>
         <ul class="wsmenu-list">
+            <li>
+                <a class="{{ $currentRoute == 'v2.home' ? 'active' : '' }}" href="{{ route('v2.home') }}">
+                    Trang chủ
+                </a>
+            </li>
             @foreach (get_menu() as $item)
                 <li>
-                    <a class="{{ $currentRoute == $item['code'] ? 'active' : '' }}" href="{{ route($item['code']) }}">
+                    <a class="{{ in_array($currentRoute, $item['active']) ? 'active' : '' }}"
+                        href="{{ $item['code'] }}">
                         {{ $item['name'] }}
                     </a>
                 </li>
