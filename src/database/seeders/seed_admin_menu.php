@@ -64,7 +64,7 @@ class seed_admin_menu extends Seeder
 
         // Quản lý dich vụ
         $service = AdminMenu::create([
-            'name' => 'Quản lý nội dung',
+            'name' => 'Quản lý dịch vụ',
             'icon' => 'layers',
             'active_route_name' => json_encode(['admin.service.index', 'admin.service.detail', 'admin.service_group.index', 'admin.service_group.detail'])
         ]);

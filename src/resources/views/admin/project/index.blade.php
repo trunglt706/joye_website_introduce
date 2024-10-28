@@ -7,7 +7,7 @@
                     <li class="breadcrumb-item">
                         <a href="{{ route('admin.index') }}">Trang chủ</a>
                     </li>
-                    <li class="breadcrumb-item active">Dự án & khách hàng</li>
+                    <li class="breadcrumb-item active">Dự án</li>
                 </ol>
             </nav>
         </div>
@@ -17,15 +17,14 @@
                 <thead class="fw-semibold text-nowrap">
                     <tr class="align-middle">
                         <th class="bg-body-secondary text-center w-100px">#</th>
-                        <th class="bg-body-secondary">Tên dự án/ KH</th>
-                        <th class="bg-body-secondary w-150px text-center">Hình ảnh</th>
-                        <th class="bg-body-secondary w-150px text-center">Phân loại</th>
+                        <th class="bg-body-secondary">Tên dự án</th>
+                        <th class="bg-body-secondary w-150px text-center">Dịch vụ</th>
                         <th class="bg-body-secondary text-end w-150px">Trạng thái</th>
                         <th class="bg-body-secondary text-end w-150px">Ngày tạo</th>
                     </tr>
                 </thead>
                 <tbody id="load-table">
-                    <td colspan="6" class="text-center empty-data">
+                    <td colspan="5" class="text-center empty-data">
                         <div class="text-center">
                             Không có dữ liệu
                         </div>

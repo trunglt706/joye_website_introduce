@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use App\Models\ServiceGroup;
 use Illuminate\Support\Facades\DB;
 
 class ServiceController extends Controller
@@ -24,6 +25,7 @@ class ServiceController extends Controller
     {
         $data = [
             'status' => Service::get_status(),
+            'group' => ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
         ];
         return view('admin.service.index', compact('data'));
     }
@@ -36,10 +38,12 @@ class ServiceController extends Controller
         $limit = request('limit', $this->limit_default);
         $search = request('search', '');
         $status = request('status', '');
+        $group_id = request('group_id', '');
 
         $list = Service::query();
         $list = $search != '' ? $list->search($search) : $list;
         $list = $status != '' ? $list->ofStatus($status) : $list;
+        $list = $group_id != '' ? $list->groupId($group_id) : $list;
         $list = $list->latest()->paginate($limit);
 
         return response()->json([
@@ -54,7 +58,8 @@ class ServiceController extends Controller
     public function detail($id)
     {
         $data = Service::findOrFail($id);
-        return view('admin.service.detail', compact('data'));
+        $groups = ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+        return view('admin.service.detail', compact('data', 'groups'));
     }
 
     /**

@@ -1,5 +1,5 @@
 @php
-    use App\Models\Project;
+    use App\Models\ServiceGroup;
 @endphp
 @if ($list->count() > 0)
     @php
@@ -7,28 +7,31 @@
     @endphp
     @foreach ($list as $item)
         @php
-            $status = Project::get_status($item->status);
+            $status = ServiceGroup::get_status($item->status);
         @endphp
         <tr id="tr-{{ $item->id }}">
-            <td class="text-nowrap">
+            <td>
                 <a data-coreui-toggle="tooltip" title="Xem chi tiết"
-                    href="{{ route('admin.project.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
+                    href="{{ route('admin.service_group.detail', ['id' => $item->id]) }}"
+                    class="btn btn-sm btn-secondary">
                     <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                     </svg>
                 </a>
-                <button data-bs-toggle="tooltip" title="Xóa" class="btn btn-danger btn-sm btn-delete"
-                    onclick="confirmDelete('{{ $item->id }}')">
-                    <svg class="icon">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash"></use>
-                    </svg>
-                </button>
+                @if ($item->services_count == 0)
+                    <button data-bs-toggle="tooltip" title="Xóa" class="btn btn-danger btn-sm btn-delete"
+                        onclick="confirmDelete('{{ $item->id }}')">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-trash"></use>
+                        </svg>
+                    </button>
+                @endif
             </td>
             <td>
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
-            <td class="text-center">
-                {{ $item->group ? $item->group->name : '-' }}
+            <td>
+                <div class="text-end">{{ $item->services_count }}</div>
             </td>
             <td class="text-end">
                 <span class="badge bg-{{ $status[1] }}">

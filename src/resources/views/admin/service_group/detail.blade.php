@@ -1,6 +1,6 @@
 @php
-    use App\Models\Blog;
-    $status = Blog::get_status($data['blog']->status);
+    use App\Models\ServiceGroup;
+    $status = ServiceGroup::get_status($data->status);
 @endphp
 @extends('admin.index')
 @section('content')
@@ -11,20 +11,18 @@
                     <a href="{{ route('admin.index') }}">Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('admin.blog.index') }}">Danh sách bài viết</a>
+                    <a href="{{ route('admin.service_group.index') }}">Nhóm dịch vụ</a>
                 </li>
-                <li class="breadcrumb-item active">Bài viết #{{ $data['blog']->code }}</li>
+                <li class="breadcrumb-item active">Nhóm #{{ $data->code }}</li>
             </ol>
         </nav>
         <div class="table-responsive">
             <table class="table table-bordered">
                 <tr>
-                    <td class="bg-body-secondary w-175px text-nowrap">- Tiêu đề</td>
-                    <td>{{ $data['blog']->name }}</td>
-                    <td class="bg-body-secondary text-nowrap">- Nhóm</td>
-                    <td>
-                        {{ $data['blog']->group ? $data['blog']->group->name : '' }}
-                    </td>
+                    <td class="bg-body-secondary w-175px text-nowrap">- Tên nhóm</td>
+                    <td>{{ $data->name }}</td>
+                    <td class="bg-body-secondary w-175px text-nowrap">- SL dịch vụ</td>
+                    <td>{{ $data->services_count }}</td>
                 </tr>
                 <tr>
                     <td class="bg-body-secondary text-nowrap">- Trạng thái</td>
@@ -36,50 +34,33 @@
                     <td class="bg-body-secondary text-nowrap">- Ngày tạo</td>
                     <td>
                         <div class="text-nowrap">
-                            {{ $data['blog']->created_at ? date('H:i d/m/Y', strtotime($data['blog']->created_at)) : '-' }}
-                        </div>
+                            {{ $data->created_at ? date('H:i d/m/Y', strtotime($data->created_at)) : '-' }}</div>
                     </td>
                 </tr>
             </table>
         </div>
         <div class="d-flex">
             <div class="me-2">
-                <img src="{{ $data['blog']->image ? get_url($data['blog']->image) : asset('img/no-image.jpg') }}"
+                <img src="{{ $data->image ? get_url($data->image) : asset('img/no-image.jpg') }}"
                     class="img-thumbnail preview w-100px" alt="img">
                 <hr>
-                <img src="{{ $data['blog']->background ? get_url($data['blog']->background) : asset('img/no-image.jpg') }}"
+                <img src="{{ $data->icon ? get_url($data->icon) : asset('img/no-image.jpg') }}"
                     class="img-thumbnail preview w-100px" alt="img">
             </div>
-            <div class="card w-100">
+            <div class="card">
                 <div class="card-header">
                     <h5>
-                        Thông tin bài viết
+                        Thông tin nhóm
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.blog.update') }}" method="POST" class="form-update">
+                    <form action="{{ route('admin.service_group.update') }}" method="POST" class="form-update">
                         @csrf
-                        <input type="hidden" name="id" value="{{ $data['blog']->id }}">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-2 form-group">
-                                    <label class="form-label">Tiêu đề *</label>
-                                    <input type="text" required class="form-control" placeholder="Nhập tiêu đề"
-                                        name="name" value="{{ $data['blog']->name }}">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Nhóm</label>
-                                <select class="form-select" name="group_id">
-                                    <option value="" selected>-- Chọn --</option>
-                                    @foreach ($data['group'] as $item)
-                                        <option value="{{ $item->id }}"
-                                            {{ $item->id == $data['blog']->group_id ? 'selected' : '' }}>
-                                            {{ $item->name }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
+                        <input type="hidden" name="id" value="{{ $data->id }}">
+                        <div class="mb-2 form-group">
+                            <label class="form-label">Tên nhóm *</label>
+                            <input type="text" required class="form-control" placeholder="Nhập tên nhóm" name="name"
+                                value="{{ $data->name }}">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -90,24 +71,20 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-2 form-group">
-                                    <label class="form-label">Ảnh nền</label>
-                                    <input type="file" class="form-control" name="background" accept="image/*">
+                                    <label class="form-label">Icon</label>
+                                    <input type="file" class="form-control" name="icon" accept="image/*">
                                 </div>
                             </div>
                         </div>
                         <div class="mb-2 form-group">
                             <label class="form-label">Mô tả ngắn</label>
-                            <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả ngắn">{{ $data['blog']->description }}</textarea>
-                        </div>
-                        <div class="mb-2 form-group">
-                            <label class="form-label">Nội dung *</label>
-                            <textarea name="content" rows="3" id="ckeditor" class="form-control" placeholder="Nhập nội dung">{{ $data['blog']->content }}</textarea>
+                            <textarea name="description" id="ckeditor" rows="2" class="form-control" placeholder="Nhập mô tả">{{ $data->description }}</textarea>
                         </div>
                         <div class="form-check form-switch mb-4">
                             <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
-                                id="flexSwitchCheckStatus" {{ $data['blog']->status == 'active' ? 'checked' : '' }}>
+                                id="flexSwitchCheckStatus" {{ $data->status == 'active' ? 'checked' : '' }}>
                             <label class="form-check-label" for="flexSwitchCheckStatus">
-                                Kích hoạt bài viết
+                                Kích hoạt nhóm
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary">

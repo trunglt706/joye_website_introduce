@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\ServiceGroup;
 use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
@@ -24,6 +25,7 @@ class ProjectController extends Controller
     {
         $data = [
             'status' => Project::get_status(),
+            'group' => ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
         ];
         return view('admin.project.index', compact('data'));
     }
@@ -36,19 +38,12 @@ class ProjectController extends Controller
         $limit = request('limit', $this->limit_default);
         $search = request('search', '');
         $status = request('status', '');
-        $type = request('type', '');
+        $group_id = request('group_id', '');
 
         $list = Project::query();
         $list = $search != '' ? $list->search($search) : $list;
-        if ($type != '') {
-            if ($type == 'project') {
-                $list = $list->ofProject(1);
-            }
-            if ($type == 'customer') {
-                $list = $list->ofCustomer(1);
-            }
-        }
         $list = $status != '' ? $list->ofStatus($status) : $list;
+        $list = $group_id != '' ? $list->groupId($group_id) : $list;
         $list = $list->latest()->paginate($limit);
 
         return response()->json([
@@ -63,7 +58,8 @@ class ProjectController extends Controller
     public function detail($id)
     {
         $data = Project::findOrFail($id);
-        return view('admin.project.detail', compact('data'));
+        $groups = ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+        return view('admin.project.detail', compact('data', 'groups'));
     }
 
     /**
@@ -75,8 +71,6 @@ class ProjectController extends Controller
             DB::beginTransaction();
             $data = request()->all();
             $data['active'] = isset($data['active']) && $data['active'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
-            $data['project'] = isset($data['project']) && $data['project'] == 1 ? 1 : 0;
-            $data['customer'] = isset($data['customer']) && $data['customer'] == 1 ? 1 : 0;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);
@@ -116,8 +110,6 @@ class ProjectController extends Controller
                 $_request['image'] = store_file($file, $this->dir, false, 500, 500);
             }
             $data['status'] = isset($_request['status']) && $_request['status'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
-            $data['project'] = isset($_request['project']) && $_request['project'] == 1 ? 1 : 0;
-            $data['customer'] = isset($_request['customer']) && $_request['customer'] == 1 ? 1 : 0;
             $data->update($_request);
             DB::commit();
             admin_save_log("Dự án #$data->name vừa mới được cập nhật thông", route("admin.project.detail", ['id' => $data->id]), $this->admin->id);

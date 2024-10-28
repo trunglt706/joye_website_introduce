@@ -76,6 +76,10 @@ class BlogController extends Controller
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);
             }
+            if (request()->hasFile('background')) {
+                $file = request()->file('background');
+                $data['background'] = store_file($file, $this->dir, false, 1500, 1500);
+            }
             $data['active'] = isset($data['active']) && $data['active'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data = Blog::create($data);
             DB::commit();
@@ -109,6 +113,11 @@ class BlogController extends Controller
                 delete_file($data->image);
                 $file = request()->file('image');
                 $_request['image'] = store_file($file, $this->dir, false, 500, 500);
+            }
+            if (request()->hasFile('background')) {
+                delete_file($data->background);
+                $file = request()->file('background');
+                $_request['background'] = store_file($file, $this->dir, false, 1500, 1500);
             }
             $_request['status'] = isset($_request['status']) && $_request['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data->update($_request);

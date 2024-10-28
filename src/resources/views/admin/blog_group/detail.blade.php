@@ -11,7 +11,7 @@
                     <a href="{{ route('admin.index') }}">Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('admin.admin.index') }}">Nhóm bài viết</a>
+                    <a href="{{ route('admin.blog_group.index') }}">Nhóm bài viết</a>
                 </li>
                 <li class="breadcrumb-item active">Nhóm #{{ $data->code }}</li>
             </ol>

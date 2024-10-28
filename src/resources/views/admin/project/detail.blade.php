@@ -11,7 +11,7 @@
                     <a href="{{ route('admin.index') }}">Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('admin.project.index') }}">Dự án & khách hàng</a>
+                    <a href="{{ route('admin.project.index') }}">Dự án</a>
                 </li>
                 <li class="breadcrumb-item active">Chi tiết #{{ $data->name }}</li>
             </ol>
@@ -53,10 +53,26 @@
                         <form action="{{ route('admin.project.update') }}" method="POST" class="form-update">
                             @csrf
                             <input type="hidden" name="id" value="{{ $data->id }}">
-                            <div class="mb-2 form-group">
-                                <label class="form-label">Tên dự án *</label>
-                                <input type="text" required class="form-control" placeholder="Nhập tên" name="name"
-                                    value="{{ $data->name }}">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2 form-group">
+                                        <label class="form-label">Tên dự án *</label>
+                                        <input type="text" required class="form-control" placeholder="Nhập tên"
+                                            name="name" value="{{ $data->name }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Dịch vụ</label>
+                                    <select class="form-select" name="group_id">
+                                        <option value="" selected>-- Chọn --</option>
+                                        @foreach ($groups as $item)
+                                            <option value="{{ $item->id }}"
+                                                {{ $item->id == $data->group_id ? 'selected' : '' }}>
+                                                {{ $item->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-2">
@@ -73,25 +89,25 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <div class="mb-2 form-group">
+                                        <label class="form-label">Lượt truy cập</label>
+                                        <input type="text" class="form-control" name="truy_cap"
+                                            value="{{ $data->truy_cap }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="form-group">
+                                        <label class="form-label">Doanh thu</label>
+                                        <input type="text" class="form-control" name="doanh_thu"
+                                            value="{{ $data->doanh_thu }}">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="mb-2 form-group">
                                 <label class="form-label">Mô tả</label>
                                 <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả">{{ $data->description }}</textarea>
-                            </div>
-                            <div class="d-flex justify-content-between my-2">
-                                <div class="form-check form-switch my-2">
-                                    <input class="form-check-input" type="checkbox" role="switch" name="project"
-                                        value="1" id="flexSwitchCheckproject" {{ $data->project ? 'checked' : '' }}>
-                                    <label class="form-check-label" for="flexSwitchCheckproject">
-                                        Là dự án
-                                    </label>
-                                </div>
-                                <div class="form-check form-switch my-2">
-                                    <input class="form-check-input" type="checkbox" role="switch" name="customer"
-                                        value="1" id="flexSwitchCheckcustomer" {{ $data->customer ? 'checked' : '' }}>
-                                    <label class="form-check-label" for="flexSwitchCheckcustomer">
-                                        Là khách hàng
-                                    </label>
-                                </div>
                             </div>
                             <div class="form-check form-switch mb-4">
                                 <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
