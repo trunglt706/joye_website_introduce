@@ -299,3 +299,7 @@ if (!defined('GUEST_FEEDBACK')) {
 if (!defined('GUEST_FAQ')) {
     define('GUEST_FAQ', 'guest-fas');
 }
+
+if (!defined('ADMIN_SETTING_GROUP')) {
+    define('ADMIN_SETTING_GROUP', 'admin-setting-group');
+}

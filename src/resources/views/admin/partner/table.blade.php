@@ -1,5 +1,5 @@
 @php
-    use App\Models\Customer;
+    use App\Models\Partner;
 @endphp
 @if ($list->count() > 0)
     @php
@@ -7,12 +7,12 @@
     @endphp
     @foreach ($list as $item)
         @php
-            $status = Customer::get_status($item->status);
+            $status = Partner::get_status($item->status);
         @endphp
         <tr id="tr-{{ $item->id }}">
             <td class="text-nowrap">
                 <a data-coreui-toggle="tooltip" title="Xem chi tiết"
-                    href="{{ route('admin.customer.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
+                    href="{{ route('admin.partner.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-secondary">
                     <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                     </svg>
@@ -28,12 +28,14 @@
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
             <td>
-                {{ $item->position }}
-            </td>
-            <td>
                 <div class="text-center">
-                    <img src="{{ get_url($item->image) ?? asset('img/user.png') }}" alt="Image" class="h-30px">
+                    <img src="{{ get_url($item->image) }}" alt="Image" class="h-30px">
                 </div>
+            </td>
+            <td class="text-center">
+                @if ($item->link)
+                    <a href="{{ $item->link }}" target="_blank">Liên kết</a>
+                @endif
             </td>
             <td class="text-end">
                 <span class="badge bg-{{ $status[1] }}">

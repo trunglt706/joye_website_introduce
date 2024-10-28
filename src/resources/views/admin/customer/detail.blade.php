@@ -64,8 +64,8 @@
                                 <div class="col-md-6">
                                     <div class="mb-2 form-group">
                                         <label class="form-label">Chức vụ</label>
-                                        <input type="text" value="{{ $data->description }}" class="form-control"
-                                            placeholder="Nhập chức vụ" name="description">
+                                        <input type="text" value="{{ $data->position }}" class="form-control"
+                                            placeholder="Nhập chức vụ" name="position">
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="mb-2 form-group">
                                 <label class="form-label">Nội dung bình luận</label>
-                                <textarea name="comment" rows="2" class="form-control" placeholder="Nhập nội dung">{{ $data->comment }}</textarea>
+                                <textarea name="description" id="description" rows="2" class="form-control" placeholder="Nhập nội dung">{{ $data->description }}</textarea>
                             </div>
                             <div class="form-check form-switch mb-4">
                                 <input class="form-check-input" type="checkbox" role="switch" name="status" value="active"
@@ -114,3 +114,33 @@
         </div>
     </div>
 @endsection
+@push('js')
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            CKEDITOR.replace('description', {
+                height: 280,
+                toolbar: [{
+                        name: 'basicstyles',
+                        items: ['Bold', 'Italic', 'Underline', 'Strike']
+                    },
+                    {
+                        name: 'paragraph',
+                        items: ['BulletedList']
+                    }
+                ],
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+
+            $(document).on('click', 'button[type="submit"]', function() {
+                for (var instanceName in CKEDITOR.instances) {
+                    CKEDITOR.instances[instanceName].updateElement();
+                }
+            })
+        })
+    </script>
+@endpush

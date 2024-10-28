@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class SettingGroup extends Model
 {
@@ -32,9 +33,15 @@ class SettingGroup extends Model
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->numering = $model->numering ?? self::getOrder();
         });
-        self::created(function ($model) {});
-        self::updated(function ($model) {});
-        self::deleted(function ($model) {});
+        self::created(function ($model) {
+            Cache::forget(ADMIN_SETTING_GROUP);
+        });
+        self::updated(function ($model) {
+            Cache::forget(ADMIN_SETTING_GROUP);
+        });
+        self::deleted(function ($model) {
+            Cache::forget(ADMIN_SETTING_GROUP);
+        });
     }
 
     const STATUS_ACTIVE = 'active';
