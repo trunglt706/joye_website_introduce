@@ -51,4 +51,10 @@ class HomeController extends Controller
         Cache::flush();
         return redirect()->route('admin.index')->with('success', 'Đăng xuất thành công');
     }
+
+    public function clear_cache()
+    {
+        Cache::flush();
+        return redirect()->back()->with('success', 'Clear cache thành công');
+    }
 }

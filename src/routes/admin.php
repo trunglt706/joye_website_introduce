@@ -23,6 +23,7 @@ Route::post('login', [AuthController::class, 'login_post'])->name('login_post');
 Route::name('admin.')->prefix('admin')->group(function () {
     Route::middleware(['checkAdmin'])->group(function () {
         Route::get('', [HomeController::class, 'index'])->name('index');
+        Route::get('clear_cache', [HomeController::class, 'clear_cache'])->name('clear_cache');
         Route::get('doupload', [HomeController::class, 'upload_editor'])->name('upload_editor');
         Route::get('logout', [HomeController::class, 'logout'])->name('logout');
         Route::name('log_action.')->prefix('log_action')->group(function () {
