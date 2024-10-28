@@ -25,7 +25,7 @@ class BlogController extends Controller
     {
         $data = [
             'status' => Blog::get_status(),
-            'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+            'group' => get_blog_groups(),
         ];
         return view('admin.blog.index', compact('data'));
     }
@@ -59,7 +59,7 @@ class BlogController extends Controller
     {
         $data = [
             'blog' => Blog::findOrFail($id),
-            'group' => BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+            'group' => get_blog_groups(),
         ];
         return view('admin.blog.detail', compact('data'));
     }

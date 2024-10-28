@@ -37,10 +37,10 @@
         <div class="table-responsive">
             <table class="table table-bordered">
                 <tr>
-                    <td class="bg-body-secondary w-175px text-nowrap">- Họ tên</td>
-                    <td>{{ $data->name }}</td>
-                    <td class="bg-body-secondary w-175px text-nowrap">- Số ĐT</td>
-                    <td>{{ $data->phone }}</td>
+                    <td class="bg-body-secondary w-175px text-nowrap">- Số ĐT/ Email</td>
+                    <td>{{ $data->email }}</td>
+                    <td class="bg-body-secondary w-175px text-nowrap">- Dịch vụ</td>
+                    <td>{{ $data->group ? $data->group->name : '-' }}</td>
                 </tr>
                 <tr>
                     <td class="bg-body-secondary text-nowrap">- Trạng thái</td>

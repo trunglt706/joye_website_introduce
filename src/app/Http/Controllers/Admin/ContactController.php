@@ -22,6 +22,7 @@ class ContactController extends Controller
     {
         $data = [
             'status' => Contact::get_status(),
+            'group' => get_service_groups(),
         ];
         return view('admin.contact.index', compact('data'));
     }
@@ -34,10 +35,12 @@ class ContactController extends Controller
         $limit = request('limit', $this->limit_default);
         $search = request('search', '');
         $status = request('status', '');
+        $group_id = request('group_id', '');
 
         $list = Contact::query();
         $list = $search != '' ? $list->search($search) : $list;
         $list = $status != '' ? $list->ofStatus($status) : $list;
+        $list = $group_id != '' ? $list->groupId($group_id) : $list;
         $list = $list->latest()->paginate($limit);
 
         return response()->json([

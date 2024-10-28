@@ -22,7 +22,10 @@
                 <div class="text-nowrap">{{ $item->name }}</div>
             </td>
             <td>
-                <div class="text-nowrap">{{ $item->phone }}</div>
+                <div class="text-nowrap">{{ $item->email }}</div>
+            </td>
+            <td>
+                <div class="text-nowrap">{{ $item->group ? $item->group->name : '-' }}</div>
             </td>
             <td class="text-end">
                 <span class="badge bg-{{ $status[1] }}">

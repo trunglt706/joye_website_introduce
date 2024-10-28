@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
 class BlogGroup extends Model
@@ -31,9 +32,14 @@ class BlogGroup extends Model
             $model->slug = $model->slug ?? Str::slug($model->name);
             $model->status = $model->status ?? self::STATUS_ACTIVE;
         });
-        self::created(function ($model) {});
-        self::updated(function ($model) {});
+        self::created(function ($model) {
+            Cache::forget(ADMIN_BLOG_GROUP);
+        });
+        self::updated(function ($model) {
+            Cache::forget(ADMIN_BLOG_GROUP);
+        });
         self::deleted(function ($model) {
+            Cache::forget(ADMIN_BLOG_GROUP);
             if ($model->image) {
                 delete_file($model->image);
             }

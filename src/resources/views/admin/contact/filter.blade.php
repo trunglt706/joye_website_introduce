@@ -13,6 +13,14 @@
                     placeholder="Thời gian">
             </div>
             <div class="me-1 w-200px hide-mobile">
+                <select class="form-select form-filter" name="group_id">
+                    <option value="" selected>-- Dịch vụ --</option>
+                    @foreach ($data['group'] as $item)
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="me-1 w-200px hide-mobile">
                 <select class="form-select form-filter" name="status">
                     <option value="">-- Trạng thái --</option>
                     @foreach ($data['status'] as $key => $item)

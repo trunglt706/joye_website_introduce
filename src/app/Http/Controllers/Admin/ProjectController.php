@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
-use App\Models\ServiceGroup;
 use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
@@ -25,7 +24,7 @@ class ProjectController extends Controller
     {
         $data = [
             'status' => Project::get_status(),
-            'group' => ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+            'group' => get_service_groups(),
         ];
         return view('admin.project.index', compact('data'));
     }
@@ -58,7 +57,7 @@ class ProjectController extends Controller
     public function detail($id)
     {
         $data = Project::findOrFail($id);
-        $groups = ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+        $groups = get_service_groups();
         return view('admin.project.detail', compact('data', 'groups'));
     }
 

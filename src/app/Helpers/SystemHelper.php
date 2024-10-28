@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\DropboxController;
+use App\Models\Admin;
 use App\Models\AdminLog;
 use App\Models\AdminMenu;
+use App\Models\BlogGroup;
+use App\Models\ServiceGroup;
 use App\Models\Setting;
+use App\Models\SettingGroup;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
@@ -243,6 +247,66 @@ if (!function_exists('get_option')) {
     }
 }
 
+if (!function_exists('get_service_groups')) {
+    function get_service_groups()
+    {
+        $key = GUEST_SERVICE_GROUP;
+        if (Cache::has($key)) {
+            $data = Cache::get($key);
+        } else {
+            $data = Cache::remember($key, CACHE_TIME, function () {
+                return ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+            });
+        }
+        return $data;
+    }
+}
+
+if (!function_exists('get_setting_groups')) {
+    function get_setting_groups()
+    {
+        $key = ADMIN_SETTING_GROUP;
+        if (Cache::has($key)) {
+            $data = Cache::get($key);
+        } else {
+            $data = Cache::remember($key, CACHE_TIME, function () {
+                return SettingGroup::ofStatus(SettingGroup::STATUS_ACTIVE)->orderBy('numering', 'asc')->select('code', 'name', 'icon', 'id')->get();
+            });
+        }
+        return $data;
+    }
+}
+
+if (!function_exists('get_blog_groups')) {
+    function get_blog_groups()
+    {
+        $key = ADMIN_BLOG_GROUP;
+        if (Cache::has($key)) {
+            $data = Cache::get($key);
+        } else {
+            $data = Cache::remember($key, CACHE_TIME, function () {
+                return BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+            });
+        }
+        return $data;
+    }
+}
+
+if (!function_exists('get_admins')) {
+    function get_admins()
+    {
+        $key = ADMIN_ADMIN;
+        if (Cache::has($key)) {
+            $data = Cache::get($key);
+        } else {
+            $data = Cache::remember($key, CACHE_TIME, function () {
+                return Admin::select('id', 'name')->get();
+            });
+        }
+        return $data;
+    }
+}
+
 if (!function_exists('get_menu')) {
     function get_menu()
     {
@@ -302,4 +366,12 @@ if (!defined('GUEST_FAQ')) {
 
 if (!defined('ADMIN_SETTING_GROUP')) {
     define('ADMIN_SETTING_GROUP', 'admin-setting-group');
+}
+
+if (!defined('ADMIN_BLOG_GROUP')) {
+    define('ADMIN_BLOG_GROUP', 'admin-blog-group');
+}
+
+if (!defined('ADMIN_ADMIN')) {
+    define('ADMIN_ADMIN', 'admin-admin');
 }

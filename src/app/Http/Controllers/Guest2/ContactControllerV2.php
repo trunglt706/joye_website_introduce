@@ -7,7 +7,6 @@ use App\Http\Requests\CreateContactRequest;
 use App\Models\Contact;
 use App\Models\Question;
 use App\Models\Service;
-use App\Models\ServiceGroup;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
@@ -18,22 +17,9 @@ class ContactControllerV2 extends Controller
      */
     public function index()
     {
-        $groups = self::get_service_groups();
+        $groups = get_service_groups();
         $fas = self::get_fas();
         return view('guest2.contact.index', compact('groups', 'fas'));
-    }
-
-    public function get_service_groups()
-    {
-        $key = GUEST_SERVICE_GROUP;
-        if (Cache::has($key)) {
-            $data = Cache::get($key);
-        } else {
-            $data = Cache::remember($key, CACHE_TIME, function () {
-                return ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
-            });
-        }
-        return $data;
     }
 
     public function get_fas()

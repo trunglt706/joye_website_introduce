@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
-use App\Models\ServiceGroup;
 use Illuminate\Support\Facades\DB;
 
 class ServiceController extends Controller
@@ -25,7 +24,7 @@ class ServiceController extends Controller
     {
         $data = [
             'status' => Service::get_status(),
-            'group' => ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get(),
+            'group' => get_service_groups(),
         ];
         return view('admin.service.index', compact('data'));
     }
@@ -58,7 +57,7 @@ class ServiceController extends Controller
     public function detail($id)
     {
         $data = Service::findOrFail($id);
-        $groups = ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+        $groups = get_service_groups();
         return view('admin.service.detail', compact('data', 'groups'));
     }
 

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use App\Models\SettingGroup;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class SettingController extends Controller
@@ -26,23 +25,10 @@ class SettingController extends Controller
     {
         $type = request('type', 'seo');
         $data = [
-            'groups' => self::get_setting_groups(),
+            'groups' => get_setting_groups(),
             'group' => SettingGroup::with('settings')->ofCode($type)->ofStatus(SettingGroup::STATUS_ACTIVE)->firstOrFail()
         ];
         return view('admin.setting.index', compact('data'));
-    }
-
-    public function get_setting_groups()
-    {
-        $key = ADMIN_SETTING_GROUP;
-        if (Cache::has($key)) {
-            $data = Cache::get($key);
-        } else {
-            $data = Cache::remember($key, CACHE_TIME, function () {
-                return SettingGroup::ofStatus(SettingGroup::STATUS_ACTIVE)->orderBy('numering', 'asc')->select('code', 'name', 'icon', 'id')->get();
-            });
-        }
-        return $data;
     }
 
     /**

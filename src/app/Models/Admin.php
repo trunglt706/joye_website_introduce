@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 
 class Admin extends Authenticatable
 {
@@ -37,10 +38,16 @@ class Admin extends Authenticatable
             $model->status = $model->status ?? self::STATUS_ACTIVE;
             $model->code = $model->code ?? generateRandomString(8, true);
         });
-        self::created(function ($model) {});
+        self::created(function ($model) {
+            Cache::forget(ADMIN_ADMIN);
+        });
         self::updating(function ($model) {});
-        self::updated(function ($model) {});
-        self::deleted(function ($model) {});
+        self::updated(function ($model) {
+            Cache::forget(ADMIN_ADMIN);
+        });
+        self::deleted(function ($model) {
+            Cache::forget(ADMIN_ADMIN);
+        });
     }
 
     const STATUS_ACTIVE = 'active';
