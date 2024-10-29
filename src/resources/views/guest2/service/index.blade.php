@@ -19,10 +19,12 @@
             <div class="container">
                 <div class="bl-filter">
                     <div class="name">Bộ lọc: </div>
-                    <div class="item"><a href="#" class="active">Tất cả</a></div>
+                    <div class="item"><a href="{{ route('v2.service') }}"
+                            class="{{ !isset($_GET['g']) || !$_GET['g'] ? 'active' : '' }}">Tất cả</a></div>
                     @foreach ($groups as $item)
                         <div class="item">
-                            <a href="{{ route('v2.service') }}?g={{ $item->slug }}">
+                            <a class="{{ isset($_GET['g']) && $_GET['g'] == $item->slug ? 'active' : '' }}"
+                                href="{{ route('v2.service') }}?g={{ $item->slug }}">
                                 {{ $item->name }}
                             </a>
                         </div>
@@ -85,39 +87,7 @@
                         </div>
                         <div class="col-lg-2"></div>
                         <div class="col-lg-5">
-                            <div class="bl-form-contact">
-                                <div class="title-head">
-                                    <h3>Đăng ký tư vấn miễn phí!</h3>
-                                </div>
-                                <form action="">
-                                    <div class="form-detail">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Họ và tên của bạn">
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                placeholder="Email hoặc số điện thoại">
-                                        </div>
-                                        <div class="input-group">
-                                            <select name="" id="" class="form-control">
-                                                <option value="" class="first">
-                                                    Chọn dịch vụ mà bạn quan tâm
-                                                </option>
-                                                @foreach ($groups as $item)
-                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="input-group">
-                                            <textarea name="" id="" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
-                                        </div>
-                                        <br><br>
-                                    </div>
-                                    <div class="btn-submit">
-                                        <button type="submit" class="btn">Đăng ký</button>
-                                    </div>
-                                </form>
-                            </div>
+                            @include('guest2.general.form-contact')
                         </div>
                     </div>
                 </div>

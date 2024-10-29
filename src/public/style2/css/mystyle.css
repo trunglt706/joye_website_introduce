@@ -412,6 +412,7 @@ body {
     background-color: #FFF;
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
 }
 .bl-form-contact .title-head h3 {
     font-size: 2rem;

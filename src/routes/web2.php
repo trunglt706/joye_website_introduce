@@ -15,4 +15,5 @@ Route::prefix('')->name('v2.')->group(function () {
     Route::get('tin-tuc', [BlogControllerV2::class, 'index'])->name('blog');
     Route::get('tin-tuc/{slug}', [BlogControllerV2::class, 'detail'])->name('blog.detail');
     Route::get('lien-he', [ContactControllerV2::class, 'index'])->name('contact');
+    Route::post('lien-he', [ContactControllerV2::class, 'create'])->name('contact.create');
 });
