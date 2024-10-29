@@ -34,7 +34,7 @@ body {
     letter-spacing: 2px;
     width: 80%;
 }
-@media (max-width: 576px) {
+@media (max-width: 991px) {
     .bl-mv .title-head h2 {
         color: #FFF;
         font-size: 3.6rem;
@@ -56,7 +56,7 @@ body {
     line-height: 2.6rem;
     width: 50%;
 }
-@media (max-width: 576px) {
+@media (max-width: 991px) {
     .bl-mv .description span {
         width: 100%;
     }
@@ -148,6 +148,11 @@ body {
 .bl-mv .partner .slide  img {
     height: 80px;
 }
+@media only screen and (max-width: 1400px) {
+    .bl-mv .partner .slide  img {
+        height: 60px;
+    }
+}
 .bl-mv .partner .slide.slide-1 .list {
     display: flex;
     flex-direction: row;
@@ -156,6 +161,16 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px 30px;
+}
+@media only screen and (max-width: 991px) {
+    .bl-mv .partner .slide.slide-1 .list {
+        justify-content: center;
+        gap: 35px 40px;
+    }
+    .bl-mv .partner .slide.slide-1 .list .order-2 {
+        width: 100%;
+        text-align: center;
+    }
 }
 .bl-title {
     font-weight: 700;
@@ -1069,6 +1084,13 @@ header .register .btn {
     border-radius: 50px;
     padding: 5px 15px;
 }
+header .register.register-sidebar {
+    padding: 15px 12px;
+}
+header .register.register-sidebar .btn {
+    width: 100%;
+    font-size: 1.6rem
+}
 header .register .btn:hover {
     opacity: 0.8;
 }
@@ -1093,8 +1115,14 @@ header .register .btn:hover {
         z-index: 9999;
     }
 }
+@media only screen and (max-width: 991px) {
+    .wsmenu>.wsmenu-list>li>a.active {
+        background: #4a0095;
+        color: #fff;
+    }
+}
 #myModalContact .modal-dialog .bl-contact {
-    padding: 10px 0;
+    padding: 0;
     color: #FFF;
     background-color: #fdfcfd;
     border-radius: 15px;
@@ -1102,6 +1130,21 @@ header .register .btn:hover {
 #myModalContact .modal-dialog .modal-content {
     background: transparent;
     border: none;
+}
+@media only screen and (max-width: 991px) {
+    .bl-contact .bg-inner {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .only-pc-992 {
+        display: none!important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .only-sp-991 {
+        display: none!important;
+    }
 }
 /*block - item*/
 .bl-item-1 {

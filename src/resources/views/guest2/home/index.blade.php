@@ -29,9 +29,22 @@
                 <div class="partner">
                     <div class="text">Được tin tưởng hợp tác cùng các nhãn hàng & chương trình</div>
                     <div class="slide slide-1">
-                        <div class="list">
+                        <div class="list only-pc-992">
                             @foreach ($partners as $item)
                                 <div><img src="{{ get_url($item->image) }}" alt="{{ $item->name }}"></div>
+                            @endforeach
+                        </div>
+                        <div class="list only-sp-991">
+                            @foreach ($partners as $key => $item)
+                                @php
+                                    $order = 0;
+                                    if($key == 1 || $key == 3) {
+                                        $order = 1;
+                                    } else {
+                                        $order = 2;
+                                    }
+                                @endphp
+                                <div class="order-{{$order}}"><img src="{{ get_url($item->image) }}" alt="{{ $item->name }}"></div>
                             @endforeach
                         </div>
                     </div>
