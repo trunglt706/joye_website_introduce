@@ -4,7 +4,7 @@
             <section class="bl-contact">
                 <div class="bg-inner">
                     <div class="row">
-                        <div class="col-lg-5 d-none d-lg-block d-xl-none">
+                        <div class="col-lg-5 d-none d-lg-block">
                             <div class="title-head">
                                 <h3>Đã có 200+ doanh nghiệp đối tác lựa chọn đồng hành cùng JoyE</h3>
                             </div>
