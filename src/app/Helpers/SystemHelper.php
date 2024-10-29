@@ -255,7 +255,7 @@ if (!function_exists('get_service_groups')) {
             $data = Cache::get($key);
         } else {
             $data = Cache::remember($key, CACHE_TIME, function () {
-                return ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+                return ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('id', 'name', 'slug')->get();
             });
         }
         return $data;
