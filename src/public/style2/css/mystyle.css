@@ -1132,7 +1132,7 @@ header .register .btn:hover {
     border: none;
 }
 @media only screen and (max-width: 991px) {
-    .bl-contact .bg-inner {
+    #myModalContact .bl-contact .bg-inner {
         padding: 0;
     }
 }
