@@ -24,31 +24,35 @@
             </div>
         </div>
     </div>
-</header>
-<!-- Mobile Header -->
-<div class="wsmobileheader clearfix ">
-    <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-    <span class="smllogo"><a href="{{ route('v2.home') }}"><img src="{{ asset('style2/images/logo.png') }}"
-                width="80" alt="Image"></a></span>
-</div>
-<!-- Mobile Header -->
-<div class="wsmainwp clearfix menu-sp">
-    <nav class="wsmenu clearfix">
-        <div class="overlapblackbg"></div>
-        <ul class="wsmenu-list">
-            <li>
-                <a class="{{ $currentRoute == 'v2.home' ? 'active' : '' }}" href="{{ route('v2.home') }}">
-                    Trang chủ
-                </a>
-            </li>
-            @foreach (get_menu() as $item)
+    <!-- Mobile Header -->
+    <div class="wsmobileheader clearfix ">
+        <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+        <span class="smllogo"><a href="{{ route('v2.home') }}"><img src="{{ asset('style2/images/logo.png') }}"
+                    width="80" alt="Image"></a></span>
+    </div>
+    <!-- Mobile Header -->
+    <div class="wsmainwp clearfix menu-sp">
+        <nav class="wsmenu clearfix">
+            <div class="overlapblackbg"></div>
+            <ul class="wsmenu-list">
                 <li>
-                    <a class="{{ in_array($currentRoute, $item['active']) ? 'active' : '' }}"
-                        href="{{ $item['code'] }}">
-                        {{ $item['name'] }}
+                    <a class="{{ $currentRoute == 'v2.home' ? 'active' : '' }}" href="{{ route('v2.home') }}">
+                        Trang chủ
                     </a>
                 </li>
-            @endforeach
-        </ul>
-    </nav>
-</div>
+                @foreach (get_menu() as $item)
+                    <li>
+                        <a class="{{ in_array($currentRoute, $item['active']) ? 'active' : '' }}"
+                            href="{{ $item['code'] }}">
+                            {{ $item['name'] }}
+                        </a>
+                    </li>
+                @endforeach
+                <div class="register register-sidebar">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModalContact">Đăng ký tư vấn</button>
+                </div>
+            </ul>
+        </nav>
+    </div>
+</header>
+
