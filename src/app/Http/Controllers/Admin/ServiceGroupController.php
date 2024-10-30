@@ -65,7 +65,7 @@ class ServiceGroupController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == ServiceGroup::STATUS_ACTIVE ? ServiceGroup::STATUS_ACTIVE : ServiceGroup::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == ServiceGroup::STATUS_ACTIVE ? ServiceGroup::STATUS_ACTIVE : ServiceGroup::STATUS_BLOCKED;
 
             if (request()->hasFile('image')) {
                 $file = request()->file('image');

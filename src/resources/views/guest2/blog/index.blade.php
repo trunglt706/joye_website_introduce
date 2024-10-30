@@ -75,40 +75,7 @@
                         </div>
                         <div class="col-lg-2"></div>
                         <div class="col-lg-5">
-                            <div class="bl-form-contact">
-                                <div class="title-head">
-                                    <h3>Đăng ký tư vấn miễn phí!</h3>
-                                </div>
-                                <form action="">
-                                    <div class="form-detail">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Họ và tên của bạn">
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                placeholder="Email hoặc số điện thoại">
-                                        </div>
-                                        <div class="input-group">
-                                            <select name="" id="" class="form-control">
-                                                <option value="" class="first">Chọn dịch vụ mà bạn quan tâm
-                                                </option>
-                                                <option value="">Dịch vụ 1</option>
-                                                <option value="">Dịch vụ 2</option>
-                                                <option value="">Dịch vụ 3</option>
-                                                <option value="">Dịch vụ 4</option>
-                                                <option value="">Dịch vụ 5</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-group">
-                                            <textarea name="" id="" class="form-control" rows="4" placeholder="Yêu cầu cụ thể (nếu có)"></textarea>
-                                        </div>
-                                        <br><br>
-                                    </div>
-                                    <div class="btn-submit">
-                                        <button type="submit" class="btn">Đăng ký</button>
-                                    </div>
-                                </form>
-                            </div>
+                            @include('guest2.general.form-contact')
                         </div>
                     </div>
                 </div>

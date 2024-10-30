@@ -14,9 +14,9 @@ class ServiceControllerV2 extends Controller
      */
     public function index()
     {
-        $q = request('', '');
+        $g = request('g', '');
         $list = Service::join('service_groups', 'services.group_id', '=', 'service_groups.id')->ofStatus(Service::STATUS_ACTIVE);
-        $list = $q != '' ? $list->where('service_groups.slug', $q) : $list;
+        $list = $g != '' ? $list->where('service_groups.slug', $g) : $list;
         $list = $list->select('services.slug', 'services.name', 'services.image', 'services.description', 'service_groups.name as group_name')
             ->latest('services.created_at')->paginate(6);
         $groups = self::get_service_groups();

@@ -66,7 +66,7 @@ class AdminController extends Controller
             DB::beginTransaction();
             $data = request()->all();
             $data['password'] = Hash::make($data['password']);
-            $data['active'] = isset($data['active']) && $data['active'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Admin::STATUS_ACTIVE ? Admin::STATUS_ACTIVE : Admin::STATUS_BLOCKED;
             $data = Admin::create($data);
             DB::commit();
             admin_save_log("Quản trị viên #$data->name vừa mới được tạo", route("admin.admin.detail", ['id' => $data->id]), $this->admin->id);

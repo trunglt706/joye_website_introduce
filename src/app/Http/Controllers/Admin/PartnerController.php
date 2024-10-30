@@ -65,7 +65,7 @@ class PartnerController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Partner::STATUS_ACTIVE ? Partner::STATUS_ACTIVE : Partner::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Partner::STATUS_ACTIVE ? Partner::STATUS_ACTIVE : Partner::STATUS_BLOCKED;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);

@@ -64,7 +64,7 @@ class BlogGroupController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == BlogGroup::STATUS_ACTIVE ? BlogGroup::STATUS_ACTIVE : BlogGroup::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == BlogGroup::STATUS_ACTIVE ? BlogGroup::STATUS_ACTIVE : BlogGroup::STATUS_BLOCKED;
             $data = BlogGroup::create($data);
             DB::commit();
             admin_save_log("Nhóm bài viết #$data->name vừa mới được tạo", route("admin.blog_group.detail", ['id' => $data->id]), $this->admin->id);

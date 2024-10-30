@@ -64,7 +64,7 @@ class QuestionController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Question::STATUS_ACTIVE ? Question::STATUS_ACTIVE : Question::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Question::STATUS_ACTIVE ? Question::STATUS_ACTIVE : Question::STATUS_BLOCKED;
             $data = Question::create($data);
             DB::commit();
             admin_save_log("Câu hỏi #$data->name vừa mới được tạo", route("admin.faq.detail", ['id' => $data->id]), $this->admin->id);

@@ -80,7 +80,7 @@ class BlogController extends Controller
                 $file = request()->file('background');
                 $data['background'] = store_file($file, $this->dir, false, 1500, 1500);
             }
-            $data['active'] = isset($data['active']) && $data['active'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Blog::STATUS_ACTIVE ? Blog::STATUS_ACTIVE : Blog::STATUS_BLOCKED;
             $data = Blog::create($data);
             DB::commit();
             admin_save_log("Bài viết #$data->name vừa mới được tạo", route("admin.blog.detail", ['id' => $data->id]), $this->admin->id);

@@ -7,7 +7,6 @@ use App\Models\Customer;
 use App\Models\Partner;
 use App\Models\Project;
 use App\Models\Question;
-use App\Models\ServiceGroup;
 use Illuminate\Support\Facades\Cache;
 
 class HomeControllerV2 extends Controller
@@ -18,7 +17,7 @@ class HomeControllerV2 extends Controller
     public function index()
     {
         $partners = self::get_partners();
-        $service_groups = self::get_service_groups();
+        $service_groups = get_service_groups();
         $projects = self::get_projects();
         $feedbacks = self::get_feedbacks();
         $fas = self::get_fas();
@@ -33,19 +32,6 @@ class HomeControllerV2 extends Controller
         } else {
             $data = Cache::remember($key, CACHE_TIME, function () {
                 return Partner::ofStatus(Partner::STATUS_ACTIVE)->select('name', 'image')->get();
-            });
-        }
-        return $data;
-    }
-
-    public function get_service_groups()
-    {
-        $key = GUEST_SERVICE_GROUP;
-        if (Cache::has($key)) {
-            $data = Cache::get($key);
-        } else {
-            $data = Cache::remember($key, CACHE_TIME, function () {
-                return ServiceGroup::ofStatus(ServiceGroup::STATUS_ACTIVE)->select('slug', 'name', 'image', 'icon', 'description')->get();
             });
         }
         return $data;

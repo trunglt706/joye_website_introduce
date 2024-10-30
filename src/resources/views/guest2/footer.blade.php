@@ -35,10 +35,13 @@
                         <div class="menu-footer">
                             <h3>Dịch vụ</h3>
                             <ul>
-                                <li><a href="#">Livestream trọn gói</a></li>
-                                <li><a href="#">Mega Livestream</a></li>
-                                <li><a href="#">Ecommerce</a></li>
-                                <li><a href="#">Xây dựng nội dung</a></li>
+                                @foreach (get_service_groups() as $item)
+                                    <li>
+                                        <a href="{{ route('v2.service') }}?g={{ $item->slug }}">
+                                            {{ $item->name }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
