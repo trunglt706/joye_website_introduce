@@ -94,10 +94,15 @@
                 </div>
             </div>
             <div class="container-only-left">
+                @php
+                    $count_project = count($projects) > 3;
+                @endphp
                 <div class="slide slide-2">
                     <div class="nav-button">
-                        <img class="click-prev" src="/style2/images/arrow-left.png" alt="Image">
-                        <img class="click-next" src="/style2/images/arrow-right.png" alt="Image">
+                        @if ($count_project)
+                            <img class="click-prev" src="/style2/images/arrow-left.png" alt="Image">
+                            <img class="click-next" src="/style2/images/arrow-right.png" alt="Image">
+                        @endif
                     </div>
                     <div class="list">
                         @foreach ($projects as $item)
