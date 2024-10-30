@@ -65,7 +65,7 @@ class SocialController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Social::STATUS_ACTIVE ? Social::STATUS_ACTIVE : Social::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Social::STATUS_ACTIVE ? Social::STATUS_ACTIVE : Social::STATUS_BLOCKED;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);

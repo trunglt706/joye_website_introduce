@@ -69,7 +69,7 @@ class ProjectController extends Controller
         try {
             DB::beginTransaction();
             $data = request()->all();
-            $data['active'] = isset($data['active']) && $data['active'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Project::STATUS_ACTIVE ? Project::STATUS_ACTIVE : Project::STATUS_BLOCKED;
             if (request()->hasFile('image')) {
                 $file = request()->file('image');
                 $data['image'] = store_file($file, $this->dir, false, 500, 500);

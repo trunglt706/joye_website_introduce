@@ -24,7 +24,7 @@
                                         </svg>
                                     </span>
                                     <input class="form-control" type="text" required name="email"
-                                        placeholder="Nhập email" value="admin@gmail.com">
+                                        placeholder="Nhập email">
                                 </div>
                                 <div class="input-group mb-4">
                                     <span class="input-group-text">
@@ -33,7 +33,7 @@
                                         </svg>
                                     </span>
                                     <input class="form-control" type="password" name="password" required
-                                        placeholder="Nhập mật khẩu" value="123456@#">
+                                        placeholder="Nhập mật khẩu">
                                 </div>
                                 <div class="row">
                                     <button type="submit" class="btn btn-primary px-4 btn-submit" type="button">

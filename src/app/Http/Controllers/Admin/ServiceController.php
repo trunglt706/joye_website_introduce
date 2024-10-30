@@ -77,7 +77,7 @@ class ServiceController extends Controller
                 $file = request()->file('icon');
                 $data['icon'] = store_file($file, $this->dir, false, 100, 100);
             }
-            $data['active'] = isset($data['active']) && $data['active'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
+            $data['status'] = isset($data['status']) && $data['status'] == Service::STATUS_ACTIVE ? Service::STATUS_ACTIVE : Service::STATUS_BLOCKED;
             $data = Service::create($data);
             DB::commit();
             admin_save_log("Dịch vụ #$data->name vừa mới được tạo", route("admin.service.detail", ['id' => $data->id]), $this->admin->id);
