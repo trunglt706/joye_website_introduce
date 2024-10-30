@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/LatoVietHoa/Lato\ Regular.ttf');
+}
 html {
     font-size: 10px;
 }
