@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Dịch vụ')
+@section('title', 'Dịch vụ của Joye')
 @section('keywords', '')
-@section('description', 'Dịch vụ')
-@section('image', '')
+@section('description', 'Dịch vụ của Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main class="bg-grey service">
         <div class="bl-banner-title">

@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Liên hệ')
+@section('title', 'Liên hệ với Joye')
 @section('keywords', '')
-@section('description', 'Liên hệ')
-@section('image', '')
+@section('description', 'Liên hệ với Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main class="bg-grey service">
         <div class="bl-contact-title">

@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Trang chủ')
+@section('title', 'Joye')
 @section('keywords', '')
-@section('description', '')
-@section('image', '')
+@section('description', 'Giới thiệu về Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main>
         <section class="bl-mv">

@@ -2,7 +2,7 @@
 @section('title', 'Câu hỏi thường gặp')
 @section('keywords', 'FAQ')
 @section('description', 'Câu hỏi thường gặp')
-@section('image', '')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <!--start faq area-->
     <div class="page-breadcrumb">
