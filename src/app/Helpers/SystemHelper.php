@@ -331,11 +331,6 @@ if (!function_exists('get_menu')) {
                 'name' => 'Liên hệ',
                 'active' => ['v2.contact']
             ],
-            [
-                'code' => route('v2.home'),
-                'name' => 'Big Heart MCN',
-                'active' => []
-            ],
         ];
     }
 }
