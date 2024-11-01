@@ -33,11 +33,14 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="list-link">
-                            <div class="title-head">Mục lục</div>
+                            <div class="title-head">Danh mục blog</div>
                             <div class="list">
-                                <a href="#goto1">SEO là gì? SEO website là gì?</a>
-                                <a href="#goto2">Cách thức SEO hoạt động</a>
-                                <a href="#goto3">Một số loại hình SEO phổ biến trên thị trường hiện nay</a>
+                                @foreach (get_blog_groups() as $item)
+                                    <a class="{{ isset($_GET['g']) && $_GET['g'] == $item->slug ? 'active' : '' }}"
+                                        href="{{ route('v2.blog') }}?g={{ $item->slug }}">
+                                        {{ $item->name }}
+                                    </a>
+                                @endforeach
                             </div>
                         </div>
                     </div>

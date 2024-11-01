@@ -727,6 +727,7 @@ body {
     background-color: #FFF;
     color: #000;
     margin-bottom: 20px;
+    text-align: justify;
 }
 .bl-service-detail .main-contain .nav-tabs a {
     font-size: 1.6rem;
@@ -859,6 +860,7 @@ body {
     line-height: 2.2rem;
     color: #241F29;
     font-weight: 400;
+    text-align: justify;
 }
 .bl-blog-detail-main-content .blog-long-content h2 {
     font-size: 3.2rem;
