@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Liên hệ')
+@section('title', 'Liên hệ với Joye')
 @section('keywords', '')
-@section('description', 'Liên hệ')
-@section('image', '')
+@section('description', 'Liên hệ với Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main class="bg-grey service">
         <div class="bl-contact-title">
@@ -45,22 +45,24 @@
         </section>
         <section class="bl-faq">
             <div class="container">
-                <h2 class="bl-title center">Câu hỏi thường gặp</h2>
-                @foreach ($fas as $item)
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="btn" data-bs-toggle="collapse" href="#collapse-{{ $item->id }}"
-                                aria-expanded="false">
-                                {{ $item->name }}
-                            </a>
-                        </div>
-                        <div id="collapse-{{ $item->id }}" class="collapse" data-bs-parent="#accordion">
-                            <div class="card-body">
-                                {!! $item->description !!}
+                <div class="accordion" id="accordionFAQ">
+                    <h2 class="bl-title center">Câu hỏi thường gặp</h2>
+                    @foreach ($fas as $item)
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="btn" data-bs-toggle="collapse" href="#collapse-{{ $item->id }}"
+                                    aria-expanded="false">
+                                    {{ $item->name }}
+                                </a>
+                            </div>
+                            <div id="collapse-{{ $item->id }}" class="collapse" data-bs-parent="#accordionFAQ">
+                                <div class="card-body">
+                                    {!! $item->description !!}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </section>
     </main>

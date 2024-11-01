@@ -22,7 +22,7 @@ html {
     font-size: 10px;
 }
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Lato";
     font-weight: 400;
 }
 .clear-both {
@@ -212,6 +212,7 @@ body {
         margin-bottom: 20px;
         font-size: 3.2rem;
         line-height: 4rem;
+        padding: 0px 8px;
     }
 }
 .bl-title.center {
@@ -310,6 +311,7 @@ body {
     }
     .bl-projects .bl-description {
         margin-bottom: 70px;
+        padding: 0px 8px;
     }
 }
 .bl-projects .nav-button img {
@@ -764,6 +766,7 @@ body {
     background-color: #FFF;
     color: #000;
     margin-bottom: 20px;
+    text-align: justify;
 }
 .bl-service-detail .main-contain .nav-tabs a {
     font-size: 1.6rem;
@@ -885,13 +888,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-.bl-blog-detail-main-content .list-link .list a {
+.bl-blog-detail-main-content .list-link .list * {
     text-decoration: none;
     color: #000000;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .bl-blog-detail-main-content .list-link .list a.active,
 .bl-blog-detail-main-content .list-link .list a:hover {
@@ -904,6 +907,7 @@ body {
     line-height: 2.2rem;
     color: #241F29;
     font-weight: 400;
+    text-align: justify;
 }
 .bl-blog-detail-main-content .blog-long-content h2 {
     font-size: 3.2rem;
@@ -1257,6 +1261,8 @@ header .register .btn:hover {
     font-weight: 400;
     line-height: 2.2rem;
     margin-bottom: 20px;
+    height: 115px;
+        overflow: hidden;
 }
 .bl-item-2 {
     width: 420px;
@@ -1507,7 +1513,7 @@ header .register .btn:hover {
 }
 @media only screen and (max-width: 991px) {
     .bg-grey.service {
-        padding-top: 70px;
+        padding: 60px 10px 0px;
     }
     .bl-contact-title {
         padding: 20px;
@@ -1529,5 +1535,21 @@ header .register .btn:hover {
     }
     footer {
         padding: 15px;
+    }
+    .bl-mv .video iframe {
+        height: 230px;
+    }
+    .bl-item-1 .description {
+        height: auto;
+        overflow: auto;
+    }
+    .bl-blog-detail-main-content .list-link .list {
+        margin-bottom: 12px;
+    }
+    .bl-faq .card-body {
+        text-align: justify;
+    }
+    .bl-blog-detail-title h1 {
+        font-size: 3rem;
     }
 }

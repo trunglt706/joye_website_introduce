@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Trang chủ')
+@section('title', 'Joye')
 @section('keywords', '')
-@section('description', '')
-@section('image', '')
+@section('description', 'Giới thiệu về Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main>
         <section class="bl-mv">
@@ -20,11 +20,16 @@
                     <a href="{{ route('v2.about') }}"><button class="btn">Về chúng tôi</button></a>
                 </div>
                 <div class="video">
-                    <img src="/style2/images/video.jpg" alt="Image">
+                    <iframe width="100%" height="652" src="https://www.youtube.com/embed/MseC9tOpn5g?autoplay=1&mute=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    {{-- <img src="/style2/images/video.jpg" alt="Image">
                     <div class="bg"></div>
                     <div class="icon-play">
-                        <a href="#"><img src="/style2/images/Play-Button.png" alt="Image"></a>
-                    </div>
+                        <a href="https://youtu.be/MseC9tOpn5g" target="_blank"><img src="/style2/images/Play-Button.png"
+                                alt="Image"></a>
+                    </div> --}}
                 </div>
                 <div class="partner">
                     <div class="text">Được tin tưởng hợp tác cùng các nhãn hàng & chương trình</div>

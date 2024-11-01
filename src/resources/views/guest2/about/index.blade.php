@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Giới thiệu')
+@section('title', 'Về Joye')
 @section('keywords', '')
-@section('description', '')
-@section('image', '')
+@section('description', 'Giới thiệu về Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main>
         <div class="bl-about-description">

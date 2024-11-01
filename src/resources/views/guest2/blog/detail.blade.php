@@ -35,9 +35,7 @@
                         <div class="list-link">
                             <div class="title-head">Mục lục</div>
                             <div class="list">
-                                <a href="#goto1">SEO là gì? SEO website là gì?</a>
-                                <a href="#goto2">Cách thức SEO hoạt động</a>
-                                <a href="#goto3">Một số loại hình SEO phổ biến trên thị trường hiện nay</a>
+                                {!! $data->muc_luc !!}
                             </div>
                         </div>
                     </div>
@@ -46,10 +44,7 @@
                             {!! $data->content !!}
                         </div>
                         <div class="bl-SNS">
-                            <a href="#"><img src="/style2/images/Facebook-black.png" alt="Image"></a>
-                            <a href="#"><img src="/style2/images/Messenger-black.png" alt="Image"></a>
-                            <a href="#"><img src="/style2/images/Instagram-black.png" alt="Image"></a>
-                            <a href="#"><img src="/style2/images/Telegram-black.png" alt="Image"></a>
+                            <div class="sharethis-inline-share-buttons"></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>

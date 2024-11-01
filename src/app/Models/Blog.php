@@ -20,6 +20,7 @@ class Blog extends Model
         'content',
         'background',
         'status',
+        'muc_luc',
     ];
 
     protected $hidden = [];

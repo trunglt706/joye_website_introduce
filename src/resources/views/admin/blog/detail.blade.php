@@ -4,6 +4,11 @@
 @endphp
 @extends('admin.index')
 @section('content')
+    <style>
+        #cke_2_contents {
+            height: 100px !important;
+        }
+    </style>
     <div class="container-lx px-4 mb-3">
         <nav aria-label="breadcrumb" class="hide-mobile">
             <ol class="breadcrumb">
@@ -100,6 +105,10 @@
                             <textarea name="description" rows="2" class="form-control" placeholder="Nhập mô tả ngắn">{{ $data['blog']->description }}</textarea>
                         </div>
                         <div class="mb-2 form-group">
+                            <label class="form-label">Mục lục</label>
+                            <textarea name="muc_luc" id="muc_luc" rows="3" class="form-control">{{ $data['blog']->muc_luc }}</textarea>
+                        </div>
+                        <div class="mb-2 form-group">
                             <label class="form-label">Nội dung *</label>
                             <textarea name="content" rows="3" id="ckeditor" class="form-control" placeholder="Nhập nội dung">{{ $data['blog']->content }}</textarea>
                         </div>
@@ -130,6 +139,23 @@
             CKEDITOR.replace('ckeditor', {
                 height: 280,
                 toolbar: 'Full',
+                filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
+                filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
+                filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+            });
+
+            CKEDITOR.replace('muc_luc', {
+                height: 280,
+                toolbar: [{
+                        name: 'basicstyles',
+                        items: ['Bold', 'Strike']
+                    },
+                    {
+                        name: 'paragraph',
+                        items: ['BulletedList']
+                    }
+                ],
                 filebrowserBrowseUrl: "{{ route('admin.upload_editor') }}",
                 filebrowserImageBrowseUrl: "{{ route('admin.upload_editor') . '?type=Images' }}",
                 filebrowserUploadUrl: "{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",

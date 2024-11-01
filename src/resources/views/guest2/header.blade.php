@@ -17,9 +17,15 @@
                             </a>
                         </li>
                     @endforeach
+                    <li>
+                        <a href="https://bigheart.vn">
+                            Big Heart MCN
+                        </a>
+                    </li>
                 </ul>
                 <div class="register">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModalContact">Đăng ký tư vấn</button>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModalContact">Đăng ký tư
+                        vấn</button>
                 </div>
             </div>
         </div>
@@ -48,11 +54,16 @@
                         </a>
                     </li>
                 @endforeach
+                <li>
+                    <a href="https://bigheart.vn">
+                        Big Heart MCN
+                    </a>
+                </li>
                 <div class="register register-sidebar">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModalContact">Đăng ký tư vấn</button>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModalContact">Đăng ký tư
+                        vấn</button>
                 </div>
             </ul>
         </nav>
     </div>
 </header>
-

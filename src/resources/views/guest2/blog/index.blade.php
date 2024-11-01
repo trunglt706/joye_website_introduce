@@ -1,8 +1,8 @@
 @extends('guest2.layout')
-@section('title', 'Tin tức')
+@section('title', 'Tin tức về Joye')
 @section('keywords', '')
-@section('description', 'Tin tức')
-@section('image', '')
+@section('description', 'Các bài viết về Joye')
+@section('image', asset('style2/images/logo.png'))
 @section('content')
     <main class="bg-grey service">
         <div class="bl-banner-title">
@@ -18,6 +18,19 @@
         </div>
         <div class="bl-list-post">
             <div class="container">
+                <div class="bl-filter">
+                    <div class="name">Bộ lọc: </div>
+                    <div class="item"><a href="{{ route('v2.blog') }}"
+                            class="{{ !isset($_GET['g']) || !$_GET['g'] ? 'active' : '' }}">Tất cả</a></div>
+                    @foreach (get_blog_groups() as $item)
+                        <div class="item">
+                            <a class="{{ isset($_GET['g']) && $_GET['g'] == $item->slug ? 'active' : '' }}"
+                                href="{{ route('v2.blog') }}?g={{ $item->slug }}">
+                                {{ $item->name }}
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
                 <div class="row">
                     @foreach ($list as $item)
                         <div class="col-lg-4">

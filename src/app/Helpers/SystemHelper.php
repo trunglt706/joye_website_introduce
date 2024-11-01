@@ -285,7 +285,7 @@ if (!function_exists('get_blog_groups')) {
             $data = Cache::get($key);
         } else {
             $data = Cache::remember($key, CACHE_TIME, function () {
-                return BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+                return BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name', 'slug')->get();
             });
         }
         return $data;
@@ -330,11 +330,6 @@ if (!function_exists('get_menu')) {
                 'code' => route('v2.contact'),
                 'name' => 'Liên hệ',
                 'active' => ['v2.contact']
-            ],
-            [
-                'code' => route('v2.home'),
-                'name' => 'Big Heart MCN',
-                'active' => []
             ],
         ];
     }
