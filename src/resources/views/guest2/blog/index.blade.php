@@ -22,14 +22,10 @@
                     <div class="name">Bộ lọc: </div>
                     <div class="item"><a href="{{ route('v2.blog') }}"
                             class="{{ !isset($_GET['g']) || !$_GET['g'] ? 'active' : '' }}">Tất cả</a></div>
-                    <div class="item"><a href="{{ route('v2.blog') }}?g=Tin tức"
-                            class="{{ isset($_GET['g']) && $_GET['g'] == 'Tin tức' ? 'active' : '' }}">Tin tức</a></div>
-                    <div class="item"><a href="{{ route('v2.blog') }}?g=Giải trí"
-                            class="{{ isset($_GET['g']) && $_GET['g'] == 'Giải trí' ? 'active' : '' }}">Giải trí</a></div>
-                    @foreach (get_service_groups() as $item)
+                    @foreach (get_blog_groups() as $item)
                         <div class="item">
-                            <a class="{{ isset($_GET['g']) && $_GET['g'] == $item->name ? 'active' : '' }}"
-                                href="{{ route('v2.blog') }}?g={{ $item->name }}">
+                            <a class="{{ isset($_GET['g']) && $_GET['g'] == $item->slug ? 'active' : '' }}"
+                                href="{{ route('v2.blog') }}?g={{ $item->slug }}">
                                 {{ $item->name }}
                             </a>
                         </div>

@@ -23,7 +23,8 @@
                     <img src="/style2/images/video.jpg" alt="Image">
                     <div class="bg"></div>
                     <div class="icon-play">
-                        <a href="#"><img src="/style2/images/Play-Button.png" alt="Image"></a>
+                        <a href="https://drive.google.com/file/d/1XCEhTW42QpnHFmliyT039mAIwxj2uybe/view?autoplay=1&mute=1"
+                            target="_blank"><img src="/style2/images/Play-Button.png" alt="Image"></a>
                     </div>
                 </div>
                 <div class="partner">

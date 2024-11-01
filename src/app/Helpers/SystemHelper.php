@@ -285,7 +285,7 @@ if (!function_exists('get_blog_groups')) {
             $data = Cache::get($key);
         } else {
             $data = Cache::remember($key, CACHE_TIME, function () {
-                return BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name')->get();
+                return BlogGroup::ofStatus(BlogGroup::STATUS_ACTIVE)->select('id', 'name', 'slug')->get();
             });
         }
         return $data;
