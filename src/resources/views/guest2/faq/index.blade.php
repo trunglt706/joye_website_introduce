@@ -22,18 +22,16 @@
             <div class="row">
                 <!--start faq accordian-->
                 <div class="col-lg-10 offset-lg-1">
-                    <div id="accordion" role="tablist">
-                        @foreach ($data as $key => $item)
+                    <div id="accordionFAQ" role="tablist">
+                        @foreach ($data as $item)
                             <div class="card">
-                                <div class="card-header {{ $key == 0 ? 'active' : '' }}" role="tab"
-                                    id="faq{{ $key }}">
-                                    <a data-toggle="collapse" href="#collapse{{ $key }}" aria-expanded="true"
-                                        aria-controls="collapse{{ $key }}">
+                                <div class="card-header">
+                                    <a class="btn" data-bs-toggle="collapse" href="#collapse-{{ $item->id }}"
+                                        aria-expanded="false">
                                         {{ $item->name }}
                                     </a>
                                 </div>
-                                <div id="collapse{{ $key }}" class="collapse {{ $key == 0 ? 'show' : '' }}"
-                                    role="tabpanel" aria-labelledby="faq{{ $key }}" data-parent="#accordion">
+                                <div id="collapse-{{ $item->id }}" class="collapse" data-bs-parent="#accordionFAQ">
                                     <div class="card-body">
                                         {!! $item->description !!}
                                     </div>

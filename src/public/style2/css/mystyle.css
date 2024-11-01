@@ -190,6 +190,7 @@ body {
         margin-bottom: 20px;
         font-size: 3.2rem;
         line-height: 4rem;
+        padding: 0px 8px;
     }
 }
 .bl-title.center {
@@ -287,6 +288,7 @@ body {
     }
     .bl-projects .bl-description {
         margin-bottom: 70px;
+        padding: 0px 8px;
     }
 }
 .bl-projects .nav-button img {
@@ -1445,7 +1447,7 @@ header .register .btn:hover {
 }
 @media only screen and (max-width: 991px) {
     .bg-grey.service {
-        padding-top: 70px;
+        padding: 60px 10px 0px;
     }
     .bl-contact-title {
         padding: 20px;
@@ -1477,5 +1479,11 @@ header .register .btn:hover {
     }
     .bl-blog-detail-main-content .list-link .list {
         margin-bottom: 12px;
+    }
+    .bl-faq .card-body {
+        text-align: justify;
+    }
+    .bl-blog-detail-title h1 {
+        font-size: 3rem;
     }
 }
