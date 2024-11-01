@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('background')->nullable();
             $table->text('description')->nullable();
             $table->text('content')->nullable();
+            $table->text('muc_luc')->nullable();
             $table->enum('status', ['draft', 'active', 'blocked'])->index()->nullable()->default('draft');
             $table->timestamps();
             $table->foreign('group_id')->references('id')->on('blog_groups');

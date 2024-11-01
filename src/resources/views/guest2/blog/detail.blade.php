@@ -33,14 +33,9 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="list-link">
-                            <div class="title-head">Danh mục blog</div>
+                            <div class="title-head">Mục lục</div>
                             <div class="list">
-                                @foreach (get_blog_groups() as $item)
-                                    <a class="{{ isset($_GET['g']) && $_GET['g'] == $item->slug ? 'active' : '' }}"
-                                        href="{{ route('v2.blog') }}?g={{ $item->slug }}">
-                                        {{ $item->name }}
-                                    </a>
-                                @endforeach
+                                {!! $data->muc_luc !!}
                             </div>
                         </div>
                     </div>
@@ -49,10 +44,7 @@
                             {!! $data->content !!}
                         </div>
                         <div class="bl-SNS">
-                            <a href="#"><img src="/style2/images/Facebook-black.png" alt="Image"></a>
-                            <a href="#"><img src="/style2/images/Messenger-black.png" alt="Image"></a>
-                            <a href="#"><img src="/style2/images/Instagram-black.png" alt="Image"></a>
-                            <a href="#"><img src="/style2/images/Telegram-black.png" alt="Image"></a>
+                            <div class="sharethis-inline-share-buttons"></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
