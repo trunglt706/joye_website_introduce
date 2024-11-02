@@ -863,6 +863,7 @@ body {
     color: #241F29;
     font-weight: 400;
     text-align: justify;
+    font-family: "Lato" !important;
 }
 .bl-blog-detail-main-content .blog-long-content h2 {
     font-size: 3.2rem;
@@ -1010,8 +1011,11 @@ header .bl-menu {
 }
 
 header .bl-menu ul {
-    padding-left: 0;
+    padding: 30px;
     margin-bottom: 0;
+}
+.sticky .outer-menu {
+    padding: 5px;
 }
 header .bl-menu li {
     list-style-type: none;
@@ -1020,15 +1024,15 @@ header .bl-menu li {
     display: inline-block;
     border-right: 1px solid #FFF;
     padding: 0 20px;
-    min-width: 90px;
+    /* min-width: 90px; */
     text-align: center;
 }
 header .bl-menu ul.outer-menu > li {
-    padding: 35px 0;
+    /* padding: 35px 0; */
     transition: all 0.5s ease;
 }
 header.sticky .bl-menu ul.outer-menu > li {
-    padding: 15px 0;
+    padding: 15px;
 }
 header .bl-menu li a {
     color: #06000C;
