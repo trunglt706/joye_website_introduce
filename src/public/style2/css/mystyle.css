@@ -16,7 +16,7 @@ body {
     background-color: #FDFDFD;
 }
 .bl-mv {
-    background-image: url('../images/mv-background.jpg');
+    background-image: url('../images/mv-background.webp');
     min-height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -857,13 +857,15 @@ body {
     color: #4A0095;
     font-weight: 600;
 }
+.blog-long-content * {
+    font-family: "Lato" !important;
+}
 .bl-blog-detail-main-content .blog-long-content {
     font-size: 1.6rem;
     line-height: 2.2rem;
     color: #241F29;
     font-weight: 400;
     text-align: justify;
-    font-family: "Lato" !important;
 }
 .bl-blog-detail-main-content .blog-long-content h2 {
     font-size: 3.2rem;

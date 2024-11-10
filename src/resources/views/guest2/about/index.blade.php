@@ -9,7 +9,7 @@
             <div class="container">
                 <h2 class="bl-title center">Welcome to JoyE</h2>
                 <div class="banner">
-                    <img src="/style2/images/banner.jpg" alt="Image">
+                    <img src="/style2/images/banner.webp" alt="Image">
                 </div>
                 <div class="bl-description center">
                     {!! $data !!}
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="thumb">
-                            <img src="/style2/images/thumb-person.jpg" alt="Image">
+                            <img src="/style2/images/thumb-person.webp" alt="Image">
                         </div>
                     </div>
                     <div class="col-lg-1"></div>

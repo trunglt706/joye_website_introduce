@@ -198,8 +198,8 @@ if (!function_exists('store_file')) {
             $dropbox =  new DropboxController();
             return $dropbox->store($file, $uri);
         } else {
-            $name_random = time() . generateRandomString(5);
-            $filename = $name_random . '.' . $file->getClientOriginalExtension();
+            $name_random = time() . generateRandomString();
+            $filename = $name_random . '.webp';
             $path = $uri . '/' . $filename;
             if (!File::exists($uri)) {
                 File::makeDirectory($uri, $mode = 0777, true, true);

@@ -24,7 +24,7 @@
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    {{-- <img src="/style2/images/video.jpg" alt="Image">
+                    {{-- <img src="/style2/images/video.webp" alt="Image">
                     <div class="bg"></div>
                     <div class="icon-play">
                         <a href="https://youtu.be/MseC9tOpn5g" target="_blank"><img src="/style2/images/Play-Button.png"

@@ -23,11 +23,13 @@
                 <h1>{{ $data->name }}</h1>
             </div>
         </div>
-        <div class="banner-blog">
-            <div class="container">
-                <img src="{{ get_url($data->background) }}" alt="{{ $data->name }}">
+        @if ($data->background)
+            <div class="banner-blog">
+                <div class="container">
+                    <img src="{{ get_url($data->background) }}" alt="{{ $data->name }}">
+                </div>
             </div>
-        </div>
+        @endif
         <div class="bl-blog-detail-main-content">
             <div class="container">
                 <div class="row">
